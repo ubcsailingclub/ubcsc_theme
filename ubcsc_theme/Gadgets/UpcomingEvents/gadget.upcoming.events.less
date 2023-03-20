@@ -1,0 +1,137 @@
+/* ----- Gadget Upcoming events ----- */
+
+.WaGadgetUpcomingEvents
+{
+
+    .gadgetStyleTitle {
+      h4 {}
+    }
+
+    .gadgetStyleBody
+    {
+
+        ul
+        {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li
+            {
+                padding: 0;
+                margin: 0 0 15px 0;
+                position: relative;
+
+                .title
+                {
+                    padding: 0;
+
+                    a
+                    {
+                        text-decoration: underline;
+                    }
+                }
+
+                .date
+                {
+                }
+
+                .location
+                {
+
+                }
+
+                &.last
+                {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &.gadgetStyleNone  // default style
+    {
+
+        ul
+        {
+
+            li
+            {
+
+                .date
+                {
+                    font: @Gadget-UpcomingEvents-StyleNone-EventDate-Font;
+                }
+
+                .location
+                {
+                    font: @Gadget-UpcomingEvents-StyleNone-Location-Font;
+
+                    a
+                    {
+                        font: @Gadget-UpcomingEvents-StyleNone-Location-Font;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &.gadgetStyle001 // gadget style001
+    {
+
+        ul
+        {
+
+            li
+            {
+
+                .date
+                {
+                    font: @Gadget-UpcomingEvents-Style001-EventDate-Font;
+                }
+
+                .location
+                {
+                    font: @Gadget-UpcomingEvents-Style001-Location-Font;
+
+                    a
+                    {
+                        font: @Gadget-UpcomingEvents-Style001-Location-Font;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &.gadgetStyle002 // gadget style002
+    {
+        /*
+        ul
+        {
+
+            li
+            {
+                display: table;
+
+                .date
+                {
+                    display: table-header-group;
+                    font: @Gadget-UpcomingEvents-Style002-EventDate-Font;
+                }
+
+                .title
+                {
+                  display: table-footer-group;
+                }
+
+                .location
+                {
+                  display: none;
+                }
+            }
+        }
+        */
+    }
+}

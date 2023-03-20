@@ -1,0 +1,79 @@
+/* ---- Shared members table adaptive behavior. State 3 ---- */
+.gadget-finDocument-state3()
+{
+
+    .WaGadgetFinDocument
+    {
+        .paymentDetailsForm
+        {
+            .membersTable
+            {
+
+                tr,
+                tr:hover
+                {
+                    td
+                    {
+                        border: none;
+                        padding: 0 0 0 45%;
+                        position: relative;
+                        text-align: left;
+                        width: auto;
+                    }
+                }
+
+                tr
+                {
+                    border-top: none;
+                    border-bottom: 1px solid @Shared-Table-Row-Border-Color;
+
+                    td
+                    {
+                        &:before
+                        {
+                            display: inline-block;
+                            left: 0;
+                            top: 0;
+                            position: absolute;
+                            width: 45%;
+                        }
+
+                        &:nth-of-type(1):before
+                        {
+                            content: 'Item';
+                        }
+
+                        &:nth-of-type(2):before
+                        {
+                            content: 'Amount';
+                        }
+                    }
+                }
+
+                tr.subtotalRow,
+                tr.taxRow,
+                tr.totalRow
+                {
+                    border: none;
+
+                    td
+                    {
+                        display: inline-block;
+                        padding: 0;
+
+                        &:before
+                        {
+                            content: '';
+                            display: none;
+                        }
+
+                        &:first-child
+                        {
+                            padding: 0 0 0 45%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

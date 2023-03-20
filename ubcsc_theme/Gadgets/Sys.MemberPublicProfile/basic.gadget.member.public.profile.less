@@ -1,0 +1,159 @@
+
+/****************************************************************************************************/
+/*	WaGadgetMemberPublicProfile                                                                       */
+/*		WaGadgetMemberPublicProfileStateMain                                                               */
+/*		WaGadgetMemberPublicProfileStatePhotoAlbums                                                        */
+/*		WaGadgetMemberPublicProfileStatePhoto                                                              */
+/****************************************************************************************************/
+
+.WaGadgetMemberPublicProfile { overflow: visible; }
+
+/* mode: WaGadgetMemberPublicProfileStateMain ( public profile ) */
+/*****************************************************************************************************/
+.WaGadgetMemberPublicProfileStateMain {
+	.pageTitleOuterContainer { margin: 0 0 20px 0;
+		.pageBackContainer {
+			a {  } // link "back"
+		}
+	}
+	.memberDirectoryDetailsOuterContainer {
+		.profileHeaderContainer {
+			h2 {
+				.sendMailButtonContainer { display: inline-block; vertical-align: middle; margin-left: 30px;
+					input.typeButton {  }
+				}
+			}
+			h3 {  }
+		}
+		.formOuterContainer {  // form
+			.bundlContact { margin: 20px 0 20px 0; }
+		}
+	}
+	.captionOuterContainer {  }  // form caption
+	.sectionOuterContainer {
+		ul.albumsContainerUL { margin-top: 20px; } // albums list ->
+	}
+}
+
+// -> albums list
+.WaGadgetMemberPublicProfile {
+	ul.albumsContainerUL { margin: 0 auto; padding: 0; list-style: none; text-align: center;
+		li.photoGalleryItemContainerLi { width: 142px; margin: 0 8px 25px 8px; text-align: center; vertical-align: top; display: -moz-inline-stack; display: inline-block; *display: inline; zoom: 1;
+			[class^="photoGalleryItemThumbnailImage"] { border: 1px solid #c5c5c5; padding: 6px; background: #fff; text-align: center;
+				a { display: inline-block; margin: 0 0 0px 0; vertical-align: top; }
+				img { max-width: 128px; max-height: 128px; display: inline-block; border: none; padding: 0; vertical-align: top; }
+			}
+			.photoGalleryItemThumbnailImageHover { border: 1px solid #c5c5c5; background: #eaeaea; }
+			.photoGalleryItemDescription { padding: 5px 0 0 0;
+				a {  }
+			}
+		}
+	}
+}
+
+
+/* mode: WaGadgetMemberPublicProfileStatePhotoAlbums ( list photos in album profile ) */
+/*****************************************************************************************************/
+.WaGadgetMemberPublicProfileStatePhotoAlbums {
+	#idMemberPhotoAlbumContainer {
+		#idPhotoAlbumHeaderContainer { .clearfix; margin: 0 0 20px 0;
+			.pageBackContainer { float: left; padding: 0px 0 0 0;
+				a {  } // link back to albums
+			}
+		}
+		#idPhotoAlbumTitleMainContainer { .clearfix; margin: 0 0 20px 0;
+			.titleLeftContainer { float: left;
+				h1.pageTitle { margin: 0; font-size: 24px; } // album name
+			}
+			.titleRightContainer { float: right;
+				span.photoLabel {  } // text created/updated date
+			}
+		}
+		#idPhotoAlbumMainContainer {
+			.descriptionContainer { margin: 0 0 20px 0;
+				span.photoLabel {  } // album name
+			}
+			.photosContainer {
+				ul.photosContainerUL { margin: 0 auto; padding: 0; list-style: none; text-align: center;
+					li.photoAlbumItemContainerLi { width: 142px; margin: 0 8px 25px 8px; text-align: center; vertical-align: top; display: -moz-inline-stack; display: inline-block; *display: inline; zoom: 1;
+						.photoInnerContainer {  } // photo item ->
+					}
+					li.photoAlbumItemContainerLi.coverPhoto {  // photo cover
+						.photoInnerContainer { border: 1px solid transparent; background: #eaeaea; } // photo item ->
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// -> photo item
+.WaGadgetMemberPublicProfileStatePhotoAlbums {
+	.photosContainerUL {
+		[class^="photoInnerContainer"] { border: 1px solid #c5c5c5; padding: 6px; background: #fff; text-align: center;
+			[class^="photoAlbumItemThumbnailPhoto"] {
+				a { display: inline-block; margin: 0 0 5px 0;
+					img.photoAlbumItemThumbnailPhoto { max-width: 128px; max-height: 128px; display: inline-block; border: none; padding: 0; vertical-align: top; }
+				}
+				.smallDescriptionContainer { display: block; overflow: hidden; white-space: nowrap;
+					.smallDescriptionInnerContainer {
+						span {  } //  photo description
+					}
+				}
+			}
+			.fullDescriptionContainer { text-align: left; word-break: break-all;
+				span {  }
+			}
+			.processingTextContainer { text-align: left;
+				img {  } // img loading
+				span {  } // text "Please wait..."
+			}
+			.innerButtonsContainer {
+				div {
+					.buttonInnerDiv {
+						a {  } // button "delete"
+					}
+				}
+			}
+		}
+		.photoInnerContainerOver { background: #eaeaea; border: 1px solid #c5c5c5; position: relative;
+			.photoAlbumItemThumbnailPhotoHover {  }
+		}
+	}
+}
+
+
+/* mode: WaGadgetMemberPublicProfileStatePhoto ( current photo ) */
+/*****************************************************************************************************/
+.WaGadgetMemberPublicProfileStatePhoto {
+	#idPhotoHeaderContainer { .clearfix; margin: 0 0 20px 0;
+		.pageBackContainer { float: left; padding: 0px 0 0 0;
+			a {  }
+		}
+	}
+	#idPhotoMainContainer {
+		.pageTitleOuterContainer { margin-bottom: 20px;
+			.pageTitleContainer {
+				h1 { margin: 0; font-size: 24px; }
+			}
+		}
+		#idMenuHeaderContainer { margin: 0 0 20px 0; .clearfix; text-align: center;
+			.linkContainer { margin: 0 10px; display: -moz-inline-stack; display: inline-block; *display: inline; zoom: 1;
+				a {  }
+			}
+		}
+		#idPhotoMainSectionContainer {
+			#idImageContainer { text-align: center; padding: 0 0 10px 0;
+				a {
+					img { display: inline-block; vertical-align: top; max-width: 100%; }
+				}
+			}
+			#idCaptionContainer { text-align: center;
+				.photoLabel { display: inline; }
+			}
+		}
+	}
+}
+
+

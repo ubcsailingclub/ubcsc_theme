@@ -1,0 +1,522 @@
+/* ----- Gadget login form ----- */
+
+.WaGadgetLoginForm
+{
+    font: @Gadget-Login-Form-Font;
+    overflow: visible;
+
+    .loginContainerWrapper
+    {
+
+        .loginContainerInnerWrapper
+        {
+            position: relative;
+            display: inline-block;
+
+            .loginLink // link Login
+            {
+                display: inline-block;
+                color: @Gadget-Login-Button-Color;
+                background-color: transparent;
+                cursor: pointer;
+                font: @Gadget-Login-Button-Font;
+                .opacity(@Gadget-Login-Button-Opacity);
+                position: relative;
+                text-decoration: none;
+                vertical-align: top;
+
+                &:before // icon
+                {
+                    background-color: @Gadget-Login-Icon-Background-Color;
+                    color: @Gadget-Login-Icon-Color;
+                    content: '\e613';
+                    display: inline-block;
+                    font: @Gadget-Login-Icon-Font;
+                    height: 11px;
+                    margin-right: 5px;
+                    padding: 3px;
+                    text-align: center;
+                    vertical-align: top;
+                    width: 11px;
+                }
+
+                &:after // arrow
+                {
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                    border-bottom: 7px solid #fff;
+                    content: '';
+                    display: none;
+                    height: 0;
+                    margin-left: 3px;
+                    position: absolute;
+                    bottom: -7px;
+                    width: 0;
+                    z-index: 4002;
+                }
+
+                &.showLoginContainer // onclick styles
+                {
+                    .opacity(@Gadget-Login-Button-OnClick-Opacity);
+
+                    &:before
+                    {
+                        background: @Gadget-Login-Button-OnClick-Bg;
+                        color: @Gadget-Login-Button-OnClick-Color;
+                    }
+
+                    &:after // arrow
+                    {
+                        display: block;
+                    }
+
+                    + .loginContainer
+                    {
+                        display: block;
+                    }
+                }
+            }
+
+            .loginContainer // login container (show/hide )
+            {
+                background: @Gadget-Login-Form-Wrapper-Bg;
+                display: none;
+                margin-top: 5px;
+                position: absolute;
+                text-align: left;
+                z-index: 4001;
+
+                .loginContainerShadowBox
+                {
+                    padding: 25px;
+                    position: relative;
+                    z-index: 0;
+                    .box-shadow(@Gadget-Login-Form-Shadow-Display);
+
+                    &:before,
+                    &:after
+                    {
+                        background-repeat: no-repeat;
+                        bottom: 0;
+                        content: "";
+                        display: @Gadget-Login-Form-ShadowBox-Display;
+                        position: absolute;
+                        width: 15%;
+                        z-index: -1;
+                    }
+
+                    &:before
+                    {
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAH0CAYAAAB/+X6sAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTA1NjUwODE3NjBFMTFFNDkxRjdEN0NDMDkzMUMwQTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTA1NjUwODI3NjBFMTFFNDkxRjdEN0NDMDkzMUMwQTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1MDU2NTA3Rjc2MEUxMUU0OTFGN0Q3Q0MwOTMxQzBBMSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1MDU2NTA4MDc2MEUxMUU0OTFGN0Q3Q0MwOTMxQzBBMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnFz6dgAABH8SURBVHja7F2Bbuy4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');
+                        background-position: right bottom;
+                        left: -15%;
+                    }
+
+                    &:after
+                    {
+                        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAH0CAYAAAB/+X6sAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDFDNkRFMTY3NjBFMTFFNDgzQzJBQTI1NkE4NTdCREQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDFDNkRFMTc3NjBFMTFFNDgzQzJBQTI1NkE4NTdCREQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0MUM2REUxNDc2MEUxMUU0ODNDMkFBMjU2QTg1N0JERCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0MUM2REUxNTc2MEUxMUU0ODNDMkFBMjU2QTg1N0JERCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PnXp+X4AABJ3SURBVHja7F3tbuQ4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');
+                        background-position: left bottom;
+                        right: -15%;
+                    }
+                }
+
+                .loginContainerForm // for non authenticated
+                {
+                    position: relative;
+
+                    form
+                    {
+
+                        > div {}
+
+                        [class$="Label"]
+                        {
+
+                            label
+                            {
+                                color: #8a8a8a;
+                                font-size: 11px;
+                                font-style: italic;
+                            }
+                        }
+
+                        [class$="TextBox"]
+                        {
+
+                            input[class$="TextBoxControl"]
+                            {
+                                border: 1px solid rgba(0, 0, 0, 0.21);
+                                .border-radius(2px);
+                                color: #8a8a8a;
+                                font-size: 11px;
+                                font-style: italic;
+                                width: 168px;
+                            }
+                        }
+
+                        .loginAction
+                        {
+
+                            input.loginButton
+                            {
+                              .functionalButton();
+
+                              &:hover
+                              {
+                              }
+                            }
+                        }
+
+                        .loginActionRememberMe
+                        {
+                            margin: 0;
+
+                            input.rememberMeCheckboxControl
+                            {
+                            }
+
+                            label
+                            {
+                                color: #a39d9d;
+                            }
+                        }
+
+                        .loginPasswordForgot
+                        {
+
+                            a
+                            {
+                                font: @Gadget-Login-Form-Link-Font;
+                                color: @Gadget-Login-Form-LinkPopup-Color;
+                                &:hover
+                                {
+                                  color: @Gadget-Login-Form-Link-Hover-Color;
+                                }
+                            }
+                        }
+                    }
+
+                    &.orientationHorizontal
+                    {
+
+                        width: 540px;
+
+                        .loginContainerShadowBox
+                        {
+
+                            &:before,
+                            &:after
+                            {
+                                background-size: 50% 100%;
+                                top: 0;
+                            }
+                        }
+
+                        form
+                        {
+
+                            > div
+                            {
+                                padding-right: 120px; // space for absolute positioned button 'Login'
+
+                                + div
+                                {
+                                    padding: 3px 0 0 0;
+
+
+                                }
+                            }
+
+                            .loginActionRememberMe
+                            {
+                              width: 190px;
+                            }
+
+                            .loginUserName
+                            {
+                                margin: 0;
+                            }
+
+                            .loginPassword
+                            {
+                                margin: 0 0 0 13px;
+                            }
+
+                            .loginAction
+                            {
+                                bottom: 50px;
+                                margin: 0;
+                                position: absolute;
+                                top: 25px;
+                                right: 25px;
+
+                                input.loginButton
+                                {
+                                }
+                            }
+
+                            .loginPasswordForgot
+                            {
+                                margin: 0;
+                                text-align: center;
+                                width: 105px;
+                            }
+                        }
+
+                        &.oAuthIstrue // with active openAuth buttons
+                        {
+
+                            .openAuthFormContainer
+                            {
+                                margin-bottom: 13px;
+
+                                .oAuthButtonsContainer
+                                {
+                                    margin: 0;
+
+                                    .wa-authenticateLoginLink
+                                    {
+                                        margin: 0 0 0 13px;
+                                        max-width: 178px;
+
+                                        &:first-child
+                                        {
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.orientationVertical
+                    {
+
+                        .loginContainerShadowBox
+                        {
+
+                            &:before,
+                            &:after
+                            {
+                                background-size: 75% 100%;
+                                top: 50%;
+                            }
+                        }
+
+                        form
+                        {
+
+                            [class$="TextBox"]
+                            {
+
+                                input[class$="TextBoxControl"]
+                                {
+                                    width: 120px;
+                                }
+                            }
+
+                            .loginUserName,
+                            .loginPassword,
+                            .loginActionRememberMe,
+                            .loginAction
+                            {
+                                margin: 0 0 15px 0;
+                                font-style: normal;
+                            }
+
+                            .loginAction
+                            {
+
+                                display: block;
+
+                                input.loginButton
+                                {
+                                  .functionalButton();
+                                }
+                            }
+
+                            .loginPasswordForgot
+                            {
+                                margin: 0;
+                            }
+                        }
+
+                        &.oAuthIstrue
+                        {
+
+                            .oAuthForm
+                            {
+
+                                .oAuthButtonsContainer
+                                {
+
+                                    .wa-authenticateLoginLink
+                                    {
+                                        max-width: 130px;
+                                        margin-bottom: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.alignLeft
+        {
+
+            .loginContainer
+            {
+
+                left: -20px;
+
+                &:before
+                {
+                    left: 20px;
+                }
+            }
+        }
+
+        &.alignCenter
+        {
+            text-align: center;
+
+            .loginContainer
+            {
+
+                &.orientationHorizontal
+                {
+                    left: -270px;
+
+                    &:before
+                    {
+                        left: 50%;
+                    }
+                }
+
+                &.orientationVertical
+                {
+                    left: -80px;
+
+                    &:before
+                    {
+                        left: 80px
+                    }
+                }
+            }
+        }
+
+        &.alignRight
+        {
+            text-align: right;
+
+            .loginContainer
+            {
+                right: 0;
+
+                &:before
+                {
+                    right: 45px;
+                }
+
+            }
+        }
+
+
+        &.authenticated  // for authenticated
+        {
+
+            .loginContainer
+            {
+                width: 332px;
+
+                .loginContainerShadowBox
+                {
+                    &:before,
+                    &:after
+                    {
+                        background-size: 50% 100%;
+                        top: 0;
+                    }
+                }
+
+                .profileBox
+                {
+                    display: inline-block;
+                    margin: 0;
+
+                    + .profileBox
+                    {
+                        margin-left: 15px;
+                    }
+
+                    a
+                    {
+                        font: @Gadget-Login-Form-Link-Font;
+                        color: @Gadget-Login-Form-LinkPopup-Color;
+                        &:hover
+                        {
+                          color: @Gadget-Login-Form-Link-Hover-Color;
+                        }
+                    }
+                }
+
+                .loggedAction
+                {
+
+                    .loginBoxLogout
+                    {
+                        background: none;
+                        border: none;
+                        color: @Gadget-Login-Form-LinkPopup-Color;
+                        font: @Gadget-Login-Form-Link-Font;
+                        outline: none;
+                        text-decoration: underline;
+
+                        &:hover
+                        {
+                            color: @Gadget-Login-Form-Link-Hover-Color;
+                        }
+                    }
+                }
+            }
+
+            &.alignLeft {}
+
+            &.alignCenter
+            {
+
+                .loginContainer
+                {
+                    left: -166px;
+
+                    &:before
+                    {
+                        left: 50%;
+                    }
+                }
+            }
+
+            &.alignRight
+            {
+
+                .loginContainer
+                {
+                    &:before
+                    {
+                        right: 132px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---- Gadget login form adaptive behavior ---- */
+
+@import 'gadget.login.form.state3.less';
+@media only screen and (max-width:@state3-maxwidth)
+{
+    .gadget-loginForm-state3();
+}

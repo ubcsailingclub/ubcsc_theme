@@ -1,0 +1,135 @@
+/* ----- Gadget Email member ----- */
+
+.WaGadgetEmailMember
+{
+    .pageTitleOuterContainer
+    {
+      .pageBackContainer a
+      {
+        font: @Gadget-Member-Public-Profile-Secondary-Link-Font;
+        color: @Gadget-Member-Public-Profile-Secondary-Link-Color;
+      }
+    }
+
+    #idSendMailMainContainer
+    {
+
+        .generalFormContainer
+        {
+
+            .memberDirectoryDetailsHeaderContainer
+            {
+                h2
+                {
+                    font: @Gadget-Member-Public-Profile-Title-Font;
+                    color: @Gadget-Member-Public-Profile-Title-Color;
+                    text-transform: uppercase;
+
+                    &:after
+                    {
+                        display: none;
+                    }
+
+                    .sendMailButtonContainer
+                    {
+                        margin-left: 15px;
+
+                        input.typeButton
+                        {
+                            .functionalButton;
+                        }
+                    }
+                }
+
+                h3
+                {
+                  font: @Typography-Header4-Font;
+                  color: @Typography-Header-Alternative-Color;
+                }
+            }
+
+            .formOuterContainer
+            {
+
+                .captionOuterContainer
+                {
+                    border-bottom: 1px solid @Shared-Form-Title-Border-Color;
+
+                    .fieldLabel
+                    {
+                        display: none;
+                    }
+
+                    .fieldBody
+                    {
+
+                        h4
+                        {
+                            color: @Shared-Form-Title-Color;
+                            font: @Shared-Form-Title-Font;
+
+                            &:after
+                            {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .sectionOuterContainer
+                {
+
+                    .mandatoryFieldsTitle
+                    {
+
+                        position: absolute;
+                        right: 0;
+                        top: -20px;
+                        font: @Shared-Form-Title-Font;
+                        margin: -30px 0 30px 0;
+
+                        span
+                        {
+                            color: @Shared-Form-MandatorySymbol-Color;
+                        }
+
+                        strong
+                        {
+                            font: @Shared-Form-Title-Font;
+                            color: @Shared-Form-Title-Color;
+                        }
+                    }
+                }
+
+                .buttonsContainer
+                {
+                    margin: 0;
+
+                    .fieldSubContainer
+                    {
+                        margin: 0;
+
+                        .fieldLabel
+                        {
+                            display: none;
+                        }
+
+                        .fieldBody
+                        {
+                            float: none;
+                            padding: 0 0 0 25%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ---- Gadget member public profile adaptive behavior ---- */
+// state 3
+@import 'gadget.email.member.state3.less';
+@media only screen and (max-width:@state3-maxwidth)
+{
+  .gadget-emailMember-state3();
+}

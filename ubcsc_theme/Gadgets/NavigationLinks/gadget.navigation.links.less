@@ -1,0 +1,203 @@
+/* ----- Gadget Navigation links ----- */
+
+.WaGadgetNavigationLinks
+{
+
+    .gadgetStyleBody
+    {
+        font: inherit;
+        padding: 0;
+
+        ul
+        {
+            border: none;
+            margin: 0;
+            padding: 0;
+
+            li
+            {
+
+                a
+                {
+                    display: inline-block;
+                    text-decoration: none;
+                    background: none;
+
+                    &:hover
+                    {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &.orientationHorizontal
+            {
+
+                li
+                {
+                    display: inline-block;
+                    margin: 0;
+                    padding: 0;
+
+                    a
+                    {
+                        margin-right: 4px;
+                        padding: 2px 0;
+                    }
+
+                    &:before
+                    {
+                        display: none;
+                    }
+
+                    &:after
+                    {
+                        margin-right: 7px;
+                    }
+
+                    &:last-child
+                    {
+
+                        &:after
+                        {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &.orientationVertical
+            {
+                list-style: none;
+
+                li
+                {
+                    margin: 5px 0;
+                    padding: 0;
+                }
+
+                ul
+                {
+                  padding: 0;
+                }
+            }
+        }
+    }
+
+    &.gadgetStyleNone // default style
+    {
+
+        ul
+        {
+
+            li
+            {
+
+                a
+                {
+                    color: @Gadget-NavigationLinks-StyleNone-Link-Color;
+                    font: @Gadget-NavigationLinks-StyleNone-Link-Font;
+                    text-decoration: underline;
+
+                    &:hover
+                    {
+                        color: @Gadget-NavigationLinks-StyleNone-Link-Hover-Color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &.orientationHorizontal
+            {
+
+                li
+                {
+                    &:before
+                    {
+                        display: none;
+                    }
+
+                    &:after
+                    {
+                        color: @Gadget-NavigationLinks-StyleNone-Separator-Color;
+                        content: "|";
+                    }
+                }
+            }
+
+            &.orientationVertical
+            {
+
+                li
+                {
+
+                    &:before
+                    {
+                        color: @Gadget-NavigationLinks-StyleNone-Link-Color;
+                        content: "•";
+                    }
+                }
+            }
+        }
+    }
+
+    &.gadgetStyle001 // gadget style 001
+    {
+
+        ul
+        {
+
+            li
+            {
+
+
+                a
+                {
+                    color: @Gadget-NavigationLinks-Style001-Link-Color;
+                    font: @Gadget-NavigationLinks-Style001-Link-Font;
+                    text-decoration: underline;
+
+                    &:hover
+                    {
+                        color: @Gadget-NavigationLinks-Style001-Link-Hover-Color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &.orientationHorizontal
+            {
+
+                li:after
+                {
+                    color: @Gadget-NavigationLinks-Style001-Separator-Color;
+                    content: @Gadget-SecondaryMenu-Style001-Separator-Content;
+                }
+            }
+
+            &.orientationVertical
+            {
+
+                li
+                {
+                    &:before
+                    {
+                      color: @Gadget-NavigationLinks-Style001-Separator-Color;
+                      content: "•";
+                    }
+
+                    &:after
+                    {
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                        overflow: hidden;
+                        font-size: 0;
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+}

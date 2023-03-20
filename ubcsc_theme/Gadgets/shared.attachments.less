@@ -1,0 +1,266 @@
+/******************************************************************************/
+/*    shared attachmentsContainer for Discussion Forum and Blog               */
+/*                                                                            */
+/*		.attachmentsContainer - for all modes                                   */
+/*		  .attachmentsContainer .attachmentsPhotosContainer                     */
+/*      .attachmentsContainer .attachmentsLinksContainer                      */
+/*  	  .attachmentsContainer .attachmentsUploadContainer                     */
+/*                                                                            */
+/*		.attachmentsContainer.stateMessageList - message list mode              */
+/******************************************************************************/
+@Attachments-Container-Edit-Mode-Max-Width: 555px;
+@Attachments-FileIcon-Color: #9b9b9b;
+@Attachments-Text-Size: 14px;
+@Attachments-Text-Color: #9b9b9b;
+@Attachments-FileName-Span-Font-Style: normal; /* equal to "a" tag */
+@Attachments-Photo-Container-Bg-Color: @Gadget-PhotoAlbum-StyleNone-Photo-Bg;
+@Attachments-Photo-Container-Hover-Bg-Color: @Gadget-PhotoAlbum-StyleNone-Photo-Hover-Bg;
+@Attachments-FileUpload-ProgressBar-Bg-Color: #e6e6e6;
+@Attachments-FileUpload-ProgressBar-Fill-Bg-Color: #888888;
+
+.attachmentsContainer {
+	max-width: @Attachments-Container-Edit-Mode-Max-Width;
+}
+
+/* block structure */
+.attachmentsContainer .attachmentsPhotosContainer,
+.attachmentsContainer .attachmentsLinksContainer,
+.attachmentsContainer .attachmentsUploadContainer {
+	margin-bottom: 10px;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+/* upload button and notice */
+.attachmentsContainer .attachmentsUploadContainer {
+
+	.inputUploadFile {
+		position: absolute;
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		z-index: -1;
+
+		&:focus + .inputUploadFileLabel {
+			border: 1px solid #7b7b7b;
+			outline: 1px dotted #000;
+			outline: -webkit-focus-ring-color auto 5px;
+		}
+	}
+
+	.inputUploadFileLabel {
+		display: inline-block;
+		margin-right: 10px;
+		padding: 2px 7px;
+		border: 1px solid #9a9a9a;
+		border-radius: 2px;
+		background: linear-gradient(to top, #dedede, #fff);
+		color: #221E1F;
+		box-shadow: inset 0 0 2px #ddd;
+		cursor: pointer;
+
+		&:hover {
+			border: 1px solid #7b7b7b;
+		}
+
+		&:active {
+			background: linear-gradient(to top, #fff, #dedede);
+		}
+	}
+
+	.uploadNotice {
+		display: inline-block;
+		color: @Attachments-Text-Color;
+		font-size: @Attachments-Text-Size;
+	}
+}
+
+/* attached photos */
+.attachmentsContainer .attachmentsPhotosContainer {
+
+	.photosContainerUl {
+		margin: 0 0 0 -5px;
+		padding: 0;
+		font-size: 0;
+		list-style-type: none;
+
+		.photosContainerLi {
+			display: inline-block;
+			position: relative;
+			width: 106px;
+			height: 83px;
+			margin: 0 0 5px 5px;
+			vertical-align: middle;
+
+			&.uploading {
+				.throbberContainer {
+					display: block;
+				}
+			}
+		}
+
+		.throbberContainer {
+			display: none;
+			position: absolute;
+			top: 0;
+			width: 106px;
+			height: 83px;
+			background: @Attachments-Photo-Container-Bg-Color url('data:image/gif;base64,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') no-repeat center;
+			opacity: 0.8;
+		}
+
+		.photoContainer {
+			position: relative;
+			height: 73px;
+			width: 96px;
+			padding: 5px;
+			background: @Attachments-Photo-Container-Bg-Color;
+
+			&:hover {
+				background-color: @Attachments-Photo-Container-Hover-Bg-Color;
+
+				.deleteButton {
+					display: block;
+				}
+			}
+
+			.photoInnerContainer {
+				display: table-cell;
+				width: 96px;
+				height: 73px;
+				vertical-align: middle;
+				text-align: center;
+				cursor: pointer;
+
+				img {
+					max-height: 73px;
+					max-width: 96px;
+					border: none;
+				}
+			}
+
+			.deleteButton {
+				display: none;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 14px;
+				height: 14px;
+				background:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAALVBMVEVsc2js7uqytq/j5uGoraX4+ffu8Ozn6eTl6OPc39r6+/qssajg497V2NTP0c0KL0hlAAAAaklEQVQI12N4rQQE2roMG8uBoLCIwS0hLS2NLYXBkYFRUIBBhMFxAYMgAxeQlmJgYFgIpAUXMHAJijB4dDQwcHS0MDgbA8WNTRicDRhCGZiBNAOrcQADkA4INjZlNWHYM3XmzJkxk2D2AAAwOhfRiVnS4AAAAABJRU5ErkJggg==') no-repeat;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+/* attached links */
+.attachmentsContainer .attachmentsLinksContainer {
+	.linksContainerUl {
+		margin: 0;
+		padding: 0;
+		font-size: @Attachments-Text-Size;
+		list-style-type: none;
+
+		.linksContainerLi {
+			line-height: 1.7em;
+
+			&.uploading {
+				span.fileName,
+				.fileUploadProgressBar {
+					display: inline-block;
+				}
+
+				.deleteButton {
+					display: none;
+				}
+			}
+
+			a.fileName {
+				color: @Typography-Link-Color;
+				font-size: @Attachments-Text-Size;
+				font-weight: normal;
+
+				&:hover {
+					color: @Typography-Link-Hover-Color;
+				}
+			}
+
+			span.fileName {
+				display: none;
+				font-style: @Attachments-FileName-Span-Font-Style;
+			}
+
+			.fileSize, span.fileName {
+				color: @Attachments-Text-Color;
+			}
+
+			.fileName {
+				&:before {
+					display: inline-block;
+					margin-right: 6px;
+					content: '\f0c6';
+					font-family: 'FontAwesome';
+					color: @Attachments-FileIcon-Color;
+					text-decoration: underline;
+				}
+
+				&:before {
+					text-decoration: none;
+				}
+			}
+
+			.fileSize {
+				margin-left: 4px;
+			}
+
+			.fileUploadProgressBar {
+				display: none;
+				width: 112px;
+				height: 8px;
+				margin-left: 8px;
+				margin-right: 12px;
+				border-radius: 2px;
+				border: 0;
+				overflow: hidden;
+				background-color: @Attachments-FileUpload-ProgressBar-Bg-Color;
+
+				.fileUploadProgressBarFill {
+					display: block;
+					width: 0;
+					height: 100%;
+					background-color: @Attachments-FileUpload-ProgressBar-Fill-Bg-Color;
+					-webkit-transition: width 0.1s ease;
+					-moz-transition: width 0.1s ease;
+					-o-transition: width 0.1s ease;
+					transition: width 0.1s ease;
+				}
+			}
+
+			.deleteButton {
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				margin-left: 6px;
+				background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAk1BMVEUAAAD/i4f/NS//NS//My3/OzT/paL/eHT/Pjb/ubf/s7H/op//kI3/NS//NS//NjD/NC7/Miz/MCr/Lyr/LSj/OjT/m5j/mpf/Pjf/Pjf/OTP/OjP/NjD/NjD/NS//NS//NC7/My3/JSL/NzH/PTb/OTL/NC7/NjD/////MSv/GxT/CAH/ODL/Egv/Jh//Ixz/FxCxK1STAAAAJnRSTlMA/u6+gAT+/v79/f399vXqc2VRSzoO/v7w7OXe1NPFuGxDNBQRCpu3vdIAAACASURBVAjXXY5XEoMwDERlG9ITCOm9r1wgyf1Ph0cfMPC+tDM7q0eRTW50drunJKwyCKe1JGY4ZgfGMzZHKH/eOf8t+ZBSAvjtJPzHygNLugDVwM6mVlWAoTmAoKwdBgYW/XjulGVq106920fYR7ECjYZoFRrC8UHCK7lqbfJPPGs52RQKXvudywAAAABJRU5ErkJggg==') no-repeat;
+				vertical-align: text-bottom;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+/******************************************************************************/
+/* attachmentsContainer.stateMessageList - message list mode                  */
+/******************************************************************************/
+
+.attachmentsContainer.stateMessageList {
+	max-width: none;
+	margin: 10px 0;
+}
+
+@media (max-width: 767px) {
+	.attachmentsContainer .attachmentsPhotosContainer .photosContainerUl .photoContainer .deleteButton { display: block; }
+}

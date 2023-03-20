@@ -1,0 +1,114 @@
+.gadget-eventCalendar-state2()
+{
+	.WaGadgetEvents
+	{
+
+		.boxOuterContainer
+		{
+
+			.boxHeaderOuterContainer
+			{}
+
+			.boxBodyOuterContainer
+			{
+
+				.boxBodyContainer
+				{
+
+					.boxBodyInfoOuterContainer
+					{
+						width: 40%;
+					}
+
+					.boxBodyContentOuterContainer
+					{
+						width: 60%;
+					}
+				}
+			}
+
+			.boxFooterOuterContainer
+			{
+
+				.boxFooterContainer
+				{
+					padding: 0 0 0 40%;
+				}
+			}
+		}
+
+		&.WaGadgetEventsStateDetails // Event details
+		{
+
+			.pageTitleContainer
+			{
+				padding: 0 0 0 40%;
+			}
+		}
+
+		&.WaGadgetEventsStateCalendar // Events calendar
+		{
+
+			.EventListCalendar
+			{
+
+				td
+				{
+					padding: 3px;
+
+					&.EventListCalendarHeader
+					{
+						padding: 12px 5px;
+						font: @Gadget-Events-Calendar-Adaptive-State2-VewTypeMonth-Header-Font;
+					}
+				}
+
+				&.viewTypeYear // Year view type of calendar
+				{
+
+					a.yearViewHeader
+					{
+						font: @Gadget-Events-Calendar-Adaptive-State2-ViewTypeYear-Header-Font;
+					}
+
+					td
+					{
+						padding: 10px;
+
+						a
+						{
+							display: block;
+							margin: 2px 0 0 0;
+						}
+					}
+				}
+
+				&.viewTypeWeek // Week view type of calendar
+				{
+
+					td
+					{
+
+						&.EventListCalendarHeader
+						{
+							padding: 10px;
+
+							a.calendarDate
+							{
+								font: @Gadget-Events-Calendar-Adaptive-State2-ViewTypeWeek-Header-Font;
+							}
+						}
+
+						a
+						{
+							display: inline;
+							overflow: inherit;
+							text-overflow: clip;
+							white-space: normal;
+						}
+					}
+				}
+			}
+		}
+	}
+}

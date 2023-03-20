@@ -1,0 +1,59 @@
+/* Styles for print mode. Header, navigation, footer, separators are hidden. */
+@media print {
+
+    body { background: none !important; }
+
+	/* service content */
+    body .switchToAdminContainer,
+    body .switchToAdminShadowContainer,
+    body #WA_messagePopup,
+    body #idFooterPoweredByContainer {display: none; }
+
+	/* hide corners */
+    body #idClipMainContainer *[id$="Corners"] { display: none !important; }
+
+	/* minimize d1-d9 borders */
+	/*
+    body #idClipMainContainer .d1,
+    body #idClipMainContainer .d2,
+    body #idClipMainContainer .d3,
+    body #idClipMainContainer .d4,
+    body #idClipMainContainer .d5,
+    body #idClipMainContainer .d6,
+    body #idClipMainContainer .d7,
+    body #idClipMainContainer .d8,
+    body #idClipMainContainer .d9 { background: none !important; margin: 0 !important; padding: 0 !important; }
+    */
+
+	/* minimize placeholder padding */
+    body .WaPlaceHolder { margin: 0; padding: 0; }
+    body .WaPlaceHolder > div { margin: 0; padding: 20px 0; }
+
+	/*
+    body #idMainContainer #idHeaderContainer,
+    body #idMainContainer #loginBoxAreaContainer,
+    body #idMainContainer #idHeaderSeparator,
+    body #idMainContainer #idNavigationContainer,
+    body #idMainContainer #idFooterContainer,
+    body #idMainContainer #idFooterSeparator { display: none; }
+    */
+
+    .WaGadgetMenuHorizontal,
+    .WaGadgetMenuVertical,
+    .WaGadgetLoginForm,
+	.WaGadgetLoginButton,
+	.WaGadgetSiteSearch	{ display: none; }
+	
+	.WaGadgetDonationGoal .donationGoalProgressContainer .progressBarWrapper:before,
+	.WaGadgetDonationGoal .donationGoalProgressContainer .progressBarWrapper:after 
+	{ 
+		-webkit-box-shadow: none !important;
+		-moz-box-shadow: none !important;
+		box-shadow: none !important;
+		border: 1px solid #eee !important;
+	}
+
+
+
+	.s1_grid_1, .s1_grid_2, .s1_grid_3, .s1_grid_4, .s1_grid_5, .s1_grid_6, .s1_grid_7, .s1_grid_8, .s1_grid_9, .s1_grid_10, .s1_grid_11, .s1_grid_12 { display: block; float: left; }
+}

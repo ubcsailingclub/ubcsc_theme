@@ -1,0 +1,48 @@
+.WaGadgetFeaturedMember {
+	.loadingCap { height: 50px; background: #fff url(<$StaticModel.ThemeUrl$>/Gadgets/FeaturedMember/Images/async-load-progress-01.gif) center center no-repeat; }
+	.loadingError { display: none; padding: 0px 0; }
+
+	ul.layoutVertical { margin: 0 0 0px 0; padding: 0; list-style: none; zoom: 1;
+		&:before { content: ""; display: block; clear: both; height: 0px; margin: 0 0 -40px 0; overflow: hidden; }
+		&:after { content: ""; display: block; clear: both; height: 0px; overflow: hidden; }
+		li { margin: 40px 0 0 0; min-width: 200px; width: 250px; display: inline-block; vertical-align: top; word-wrap: break-word; }
+		li .img { display: none; margin: 0 15px 10px 0; vertical-align: top; }
+		&.showPic li .img { display: inline-block; }
+		li .img img { vertical-align: top; min-width: 40px; max-width: 100%; }
+		li .rightPart {  }
+		li h4 { margin: 0 15px 8px 0; }
+		li .subtitle { margin: 0 15px 8px 0; }
+		li .description { margin: 0 15px 0 0; }
+		li .viewDetails { margin: 8px 0 0 0; }
+	}
+
+	ul.layoutHorizontal { margin: 0 0 0px 0; padding: 0; list-style: none; zoom: 1;
+		&:before { content: ""; display: block; clear: both; height: 0px; margin: 0 0 -40px 0; overflow: hidden; }
+		&:after { content: ""; display: block; clear: both; height: 0px; margin: 0; overflow: hidden; }
+		li { margin: 40px 0 0 0; min-width: 280px; width: 450px; display: inline-block; vertical-align: top; word-wrap: break-word; }
+		li .img { display: none; float: left; margin: 0 15px 10px 0; padding: 0 0px 0 0; }
+		&.showPic li .img { display: block; }
+		li .img img { vertical-align: top; min-width: 40px; max-width: 100%; }
+		li .rightPart {  }
+		li h4 { margin: 0 15px 8px 0px; }
+		li .subtitle { margin: 0 15px 8px 0px; }
+		li .description { margin: 0 15px 0 0px; }
+		li .viewDetails { margin: 8px 0 0 0; }
+	}
+
+	ul.layoutList { margin: 0 0 0px 0; padding: 0; list-style: none; zoom: 1;
+		&:before { content: ""; display: block; clear: both; height: 0px; margin: 0 0 -15px 0; overflow: hidden; }
+		&:after { content: ""; display: block; clear: both; height: 0px; margin: 0; overflow: hidden; }
+		li { margin: 15px 0 0 0; width: 100%; display: inline-block; vertical-align: top; word-wrap: break-word; }
+		li .img { display: none; float: left; margin: 0 10px 0px 0; padding: 0 0px 0 0; }
+		&.showPic li .img { display: block; }
+		li .img img { vertical-align: top; width: 40px; }
+		li .rightPart { overflow: hidden; }
+		li h4 { margin: 0 15px 5px 0px; }
+		li .subtitle { margin: 0 15px 0px 0px; }
+		li .description { display: none; }
+		li .viewDetails { margin: 8px 0 0 0; }
+	}
+
+	.action { margin: 1em 0 0 0; }
+}

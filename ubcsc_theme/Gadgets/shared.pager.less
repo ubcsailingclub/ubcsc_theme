@@ -1,0 +1,131 @@
+/* ----- Shared paging ( Paging for gadgets Blog, Forum e.t.c) ----- */
+
+.pagerOuterContainer
+{
+    clear: both;
+    padding: 0;
+    margin: 6px 0 20px 0;
+
+	.bound,
+	.near,
+	.linkCurrent,
+	a
+    {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 -1px;
+    }
+
+    .forumPagerContainer
+    {
+      a.bound, a.near
+      {
+        color: @Shared-Paging-Link-Color;
+      }
+    }
+
+	a
+    {
+        font: @Shared-Paging-Link-Font;
+        color: @Shared-Paging-Link-Color;
+        padding: 0 5px;
+        text-decoration: none;
+
+        &:visited
+        {
+            color: @Shared-Paging-Link-Color;
+        }
+
+        &:hover
+        {
+            background: @Shared-Paging-Link-Hover-Bg;
+            color: @Shared-Paging-Link-Hover-Color;
+            text-decoration: none;
+        }
+    }
+
+	.linkCurrent
+    {
+        background: @Sharing-Paging-Link-Current-Bg;
+        font: @Shared-Paging-Link-Font;
+        color: @Shared-Paging-Link-Current-Color;
+        padding: 0 5px;
+        text-decoration: none;
+    }
+
+	.bound,
+	.near
+    {
+        height: 20px;
+        background: none;
+        padding: 0;
+        font-size:0 !important;
+        overflow: hidden;
+        //visibility: hidden;
+        width: 15px;
+        color: @Shared-Paging-Arrows-Color;
+
+        &:before
+        {
+            display: block;
+            font: @Shared-Paging-Arrows-Font;
+            text-align: center;
+            visibility: visible;
+        }
+    }
+
+    span.bound,
+    a.bound
+    {
+
+        &:before
+        {
+            content: '\f100'; // double left arrow
+        }
+    }
+
+    span.near,
+    a.near
+    {
+
+
+        &:before
+        {
+            content: '\f104'; // left arrow
+        }
+    }
+
+	.linkCurrent ~ a.bound,
+    .linkCurrent ~ span.bound
+    {
+
+        &:before
+        {
+            content: '\f101'; // double right arrow
+        }
+    }
+
+	.linkCurrent ~ a.near,
+    .linkCurrent ~ span.near
+    {
+
+        &:before
+        {
+            content: '\f105'; // right arrow
+        }
+    }
+
+    a.bound,
+    a.near,
+    .linkCurrent ~ a.bound,
+    .linkCurrent ~ a.near
+    {
+        color: @Shared-Paging-Link-Color;
+
+        &:hover
+        {
+            background:none;
+            color: @Shared-Paging-Arrows-Hover-Color;
+        }
+    }
+}

@@ -1,0 +1,486 @@
+.typeInstruction()
+{
+  padding: 6px 0 0 0; font-style: normal; color: #9b9b9b; font-size: 12px;
+}
+
+// Symbol for required field
+.mandatorySymbol,
+.requiredSymbol { font-weight: normal; }
+
+// Basic structure of form
+.generalFormOuterContainer {
+	.formTitleOuterContainer {  } // title block ->
+	.captionOuterContainer {  } // section divider and name ->
+	.sectionOuterContainer { margin: 0;
+		.sectionContainer {
+			.fieldContainer {  } // different fields ->
+		}
+	}
+	.navigationOuterContainer {} // control link and bottoms under form ->
+}
+
+// Clear selection
+.clearSelectionLabel { cursor: pointer; display: inline-block; margin: 0 0 8px 0; text-decoration: none; font: @Shared-Form-Field-Font; color: @Shared-Form-Title-Color;}
+.clearSelectionLabel:hover { text-decoration: underline; }
+
+// Title block
+.formTitleOuterContainer
+{
+	border-bottom: 1px solid @Divider-Style002-Color;
+	padding-bottom: 10px;
+
+	.formTitleContainer { border-bottom: none;
+		.inner {
+			h3.formTitle // title form
+            {
+				color: @Shared-Form-Title-Color;
+				font: @Shared-Form-Title-Font;
+			}
+
+			.mandatoryFieldsTitle
+			{
+				color: @Shared-Form-Title-Color;
+				font: @Shared-Form-Title-Font;
+				padding: 0;
+
+				span.mandatorySymbol  // symbol "*"
+				{
+					color: @Shared-Form-MandatorySymbol-Color;
+				}
+				strong // text "Mandatory fields"
+				{
+					color: inherit;
+					font-weight: normal;
+				}
+			}
+		}
+	}
+}
+
+
+// Section divider and name
+.captionOuterContainer
+{
+	background: @Shared-Form-Section-Bg;
+	margin: 0;
+	padding: 10px 0 10px 0;
+
+	.captionContainer
+	{
+
+		.fieldLabel
+		{
+			display: none;
+		}
+
+		.fieldBody
+		{
+			width: 100%;
+
+			h4
+			{
+				color: @Typography-Header-Alternative-Color;
+				font: @Typography-Header4-Font;
+				overflow: hidden;
+				white-space: nowrap;
+
+				> div
+				{
+					display: inline;
+				}
+			}
+		}
+	}
+}
+
+#idCaptionContainer0.captionOuterContainer //special rule for empty divider with hidden repeater
+{
+    padding: 0;
+
+    .fieldLabel,
+    .fieldBody h4
+    {
+        font-size: 0;
+
+		&:after
+		{
+			display: none;
+		}
+    }
+}
+
+// Common field
+.fieldSubContainer
+{
+	margin: 20px 0;
+	.clearfix();
+
+	.fieldLabel // label
+	{
+		color: @Shared-Form-Label-Color;
+		font: @Shared-Form-Label-Font;
+
+		span.mandatorySymbol
+		{
+			color: @Shared-Form-MandatorySymbol-Color;
+			font: inherit;
+		}
+
+		span {  } // text of field label
+		strong.mandatoryLabel
+		{
+			font: @Shared-Form-Label-Font;
+
+			strong
+			{
+				font: inherit;
+			}
+		}
+
+		.labeledImage {
+			img {  }
+		}
+		.memberFormCheckBox {
+			input[type=checkbox] {  }
+			label {  }
+		}
+	}
+	// input
+	.fieldBody
+	{
+		font: @Shared-Form-Field-Font;
+		& > .typeInstruction { .typeInstruction; }
+
+
+        a:not(.connectExternalProfileButton)
+        {
+          font: @Shared-Form-One-More-Font;
+          color: @Shared-Form-One-More-Color;
+          &:hover
+          {
+            color: @Shared-Form-One-More-Hover-Color;
+          }
+        }
+
+		.fieldItem
+		{
+			margin: 0 0 10px 0;
+
+			span.typeCheckboxContainer,
+			span.typeRadioContainer
+			{
+				margin: 2px 9px 0 0;
+
+				input.typeCheckbox,
+				input.typeRadio {  }
+			}
+			span.label
+			{
+				font: @Shared-Form-Field-Font;
+
+				.textLine
+				{
+					strong
+					{
+						font-weight: normal;
+					}
+				}
+				img {  }
+				label {
+					span.textLine {  } // text for radiobutton
+				}
+				.typeInstruction {
+					.levelDescription {  }
+				}
+				label.levelProperties {  }
+				.labelSubTitle {  }
+			}
+			&.disabled .label span:first-child label {  }
+		}
+
+        span + span:not(.authenticateLoginText)
+        {
+          //.typeInstruction();
+          vertical-align: bottom;
+
+        }
+
+		.groupBodyVertical { padding-top: 3px; margin-bottom: -10px; font: @Shared-Form-Field-Font;
+			.clearSelectionLabel { position: relative; top: -1px; }
+		}
+
+		& > .fieldItem {  }
+
+		a.inactiveLink {  }
+
+	// just value
+		& > span,
+		& > strong { vertical-align: top; }
+        & > span a { color: @Typography-Link-Alternative-Color; &:hover{ color: @Typography-Link-Alternative-Hover-Color;}}
+		& > a { }
+		ul.list {
+			li {
+				&.checked {  }
+				&.unchecked {  }
+				ul.list {  }
+			}
+		}
+	}
+
+	table {
+		td.left {
+			.fieldLabel {  }
+		}
+		td.right {
+			.fieldBody {  }
+		}
+	}
+}
+
+
+
+
+// Field - text
+.fieldContainer.textFieldContainer {
+	.fieldSubContainer.singleStringContainer {
+		table {
+			td.right {
+				.fieldBody {
+					input.subjectTextBox,
+					input.typeText,
+					input[type=text]
+					{
+                        //width: auto;
+						border: 1px solid @Shared-Form-Field-Border;
+						background: @Shared-Form-Field-Bg;
+						color: @Shared-Form-Field-Color;
+						line-height: normal;
+						font-size: inherit;
+						padding: 2px 4px 3px 4px;
+					}
+
+					input[disabled=disabled]
+					{
+						background: @Shared-Form-Field-Disabled-Bg;
+						line-height: normal;
+						font-family: inherit;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Field - select
+.fieldContainer.dropdownFieldContainer {
+	.fieldSubContainer.singleStringContainer {
+		table {
+			td.right {
+				.fieldBody {
+					select { padding: 1px 1px 2px 1px; font: @Shared-Form-Field-Font;  border: 1px solid @Shared-Form-Field-Border; background: @Shared-Form-Field-Bg; color: @Shared-Form-Field-Color; }
+					select[disabled=disabled] { background: @Shared-Form-Field-Disabled-Bg; }
+				}
+			}
+		}
+	}
+}
+
+
+// Field - donation
+.fieldContainer.donationAmountContainer {
+	.fieldSubContainer {
+		.fieldBody {
+			input.typeText { border: 1px solid @Shared-Form-Field-Border; background: @Shared-Form-Field-Bg; color: @Shared-Form-Field-Color; }
+			input.typeText[disabled=disabled] { background: @Shared-Form-Field-Disabled-Bg; }
+		}
+	}
+}
+
+
+// Field - date picker
+.fieldContainer.textFieldContainer {
+	.fieldSubContainer.singleStringContainer {
+		table {
+            td.left {}
+			td.right {
+				.fieldBody {
+					span {
+						input { width: 140px; border: 1px solid @Shared-Form-Field-Border; background: @Shared-Form-Field-Bg; color: @Shared-Form-Field-Color; float: left } // for input date
+						input[disabled=disabled] { background: @Shared-Form-Field-Disabled-Bg; }
+						.DES_CalPopup {
+                            position: relative;
+                            margin-left: 5px;
+                            /*background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTZGNjk1OTk1MkNGMTFFNDlFRTFDN0JGMzFFMjY1MDciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTZGNjk1OUE1MkNGMTFFNDlFRTFDN0JGMzFFMjY1MDciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBNkY2OTU5NzUyQ0YxMUU0OUVFMUM3QkYzMUUyNjUwNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBNkY2OTU5ODUyQ0YxMUU0OUVFMUM3QkYzMUUyNjUwNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pt4+Uo8AAACsSURBVHjaYvSbusuNgYFhHhBLM5AGXgFxOhOQmEmGZhAQA1kMMkAQTUIBiIWA+BMR4oIsSJwPQPwfiM9D+X+B+D2SPLo42GJkAxQ2Zrl+JNb9/tN2gyzkZ8ElAcQCQPwQGxvZIiYGCgGGC4CmCyBxcbFxGzA8vPAfScMHbGyaecEWiLcATWdEEsPKBrrSBhqgYAPeQzmbgRKkOuA9yAvpQPyMDNe/BuIkgAADAOrYN7AIiQrjAAAAAElFTkSuQmCC');
+                            background-repeat: no-repeat;*/
+                            float: left;
+
+							span // click image - popup calendar
+							{
+								&:before
+								{
+									color: @Shared-Icon-Calendar-Color;
+									content: '\f073';
+									display: inline-block;
+									font: @Shared-Icon-Calendar-Font;
+								}
+
+								img
+								{
+									.opacity(0);
+									cursor: pointer;
+									margin-left: -18px;
+								}
+							}
+						}
+
+						.DES_TPPopup { position: relative; top: -4px; }
+						div[id$="Time_PU"]
+						{
+							background: none;
+
+							span
+							{
+								&:before
+								{
+									color: @Shared-Icon-Clock-Color;
+									content: '\f017';
+									display: inline-block;
+									font: @Shared-Icon-Clock-Font;
+									margin-top: 3px;
+								}
+
+								img
+								{
+									cursor: pointer;
+									.opacity(0);
+									margin-left: -18px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Field - textarea
+.fieldContainer.textFieldContainer {
+	.fieldSubContainer {
+		.fieldBody {
+			textarea { margin: -1px 0 0 0; border: 1px solid @Shared-Form-Field-Border; font-size: 16px; padding: 2px 4px 3px 4px; background: @Shared-Form-Field-Bg; color: @Shared-Form-Field-Color; } // for input text
+			textarea[disabled=disabled] { background: @Shared-Form-Field-Disabled-Bg; }
+		}
+	}
+}
+
+
+// Field - WYSIWYG
+.fieldContainer.textFieldContainer {
+	.fieldSubContainer.singleStringContainer {
+		.fieldBody {
+			#idEditorContainer { border: 1px solid @Shared-Form-Field-Border; background: @Shared-Form-Field-Bg; color: @Shared-Form-Field-Color;
+                #idEditorBodyContainer { border-color: @Shared-Form-Field-Border; }
+                #idEditorFloatingToolbarContainer {border-color: @Shared-Form-Field-Border;}
+				#idEditorToolbarContainer { border-bottom: 1px solid #8cc63f; }
+			}
+		}
+	}
+}
+
+
+// Control links and buttons
+.navigationTopContainer + .formOuterContainer
+{
+	margin-top: 20px;
+}
+
+.navigationOuterContainer
+{
+	border-top: none;
+	margin: 0;
+
+	.navigationContainer
+    {
+
+        input.nextButton,
+        input.typeButton,
+        input[type=submit]  // wizard button
+        {
+            .functionalButton;
+			margin-bottom: 10px;
+
+            &:first-child
+            {
+                margin-right: 10px;
+            }
+
+            &:only-child
+            {
+                margin-right: 0;
+            }
+        }
+
+        a.backLink { .functionalButton(); cursor: pointer; }
+
+		.left {}
+        .right {}
+	}
+}
+
+.generalFieldsContainer
+{
+		input[type=submit],
+		input.typeButton { .functionalButton(); } // wizard button
+}
+
+.commonMessageBox
+{
+  .cww-co
+  {
+    .buttons
+    {
+			input[type="submit"],
+			input.typeButton
+			{
+				.functionalButton();
+			}
+
+      input:first-of-type
+      {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+
+//Captcha
+#idCaptchaTextBoxContainer
+{
+    input[type="text"] { width: 38%; }
+}
+//Buttons
+#idButtonField { margin: 0; }
+
+// donation form fix
+.WaGadgetDonationForm .fieldSubContainer .fieldBody .fieldItem.donationAmount span.label { overflow: inherit; }
+
+/* ----- Shared forms adaptive behavior ----- */
+
+// state2
+@import 'shared.form.state2.less';
+@media only screen and (min-width:@state2-minwidth) and (max-width:@state2-maxwidth)
+{
+	.shared-forms-state2();
+}
+
+
+// state3
+@import 'shared.form.state3.less';
+@media only screen and (max-width:@state3-maxwidth)
+{
+	.shared-forms-state3();
+}

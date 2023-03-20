@@ -1,0 +1,86 @@
+/* gadget: authorization required
+/****************************************************************************************************/
+.WaGadgetAuthorizationRequired {
+	#idLoginForm
+	{
+		padding: 0;
+	}
+	p {
+		margin: 0 0 1em 0;
+		
+		&:first-child
+		{
+			margin: 0;
+		}
+		span.mandatorySymbol { padding-right: 0; } // error message
+	}
+	.loginPageTable {
+		td { padding: 0 0 0 0; }
+		#idLoginBox,
+		#idPasswordBox {
+			span.mandatory {  } // field name
+			span.mandatorySymbol {  } // symbol "*"
+			div { padding: 3px 0 0 0;
+				input[type=text],
+				input[type=password] { width: 200px; border: 1px solid #c5c5c5; margin: 0px 0 0 0; padding: 3px 4px 3px 4px; background: #fff; font-family: Tahoma; font-size: 13px; line-height: 16px; color: #000; }
+			}
+		}
+		#idLoginBox { margin: 0 0 10px 0; }
+		#idPasswordBox { margin: 0 0 10px 0; }
+		#idRememberMe { margin: 0 0 30px 0;
+			input[type=checkbox] { display: inline-block; width: 13px; height: 13px; margin: 1px 2px 0 0; padding: 0; vertical-align: top; }
+			label {  }
+		}
+		#idCaptcha { margin: 0 0 10px; }
+		#idSubmitBox { margin: 0 0 10px 0; overflow: hidden; zoom: 1;
+			#idLoginButtonBox { margin-right: 20px; float: left;
+				span {
+					input.loginButton {  }
+				}
+			}
+			#idForgotLinkBox { padding: 8px 0 0 0; float: left;
+				a {  }
+			}
+		}
+	}
+
+    /* Styles for open Authorization form (Facebook, GooglePlus) */
+    .openAuthFormContainer,
+    .authFormContainer
+    {
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .openAuthFormContainer
+    {
+        border-right: 1px solid #cdcdcd;
+        max-width: 210px;
+        padding-right: 40px;
+    }
+
+    .authFormContainer
+    {
+        padding-left: 40px;
+    }
+
+    .wa-authenticateLoginLink
+    {
+        display: block;
+        max-width: 210px;
+        margin-bottom: 20px;
+    }
+}
+
+.widgetMode
+{
+
+    .WaGadgetAuthorizationRequired
+    {
+
+        .authFormContainer
+        {
+            padding-left: 0;
+        }
+    }
+}

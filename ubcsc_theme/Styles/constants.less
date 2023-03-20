@@ -1,0 +1,715 @@
+/* ----- Theme Colours ----- */
+@Lightest: #ffffff;
+@Light-Primary: #F5F5F4;
+
+@Blue-Primary: #1E1A29;
+@Blue-2: #76ADBC;
+@Blue-3: #647C97;
+
+@Accent: #FF3503;
+@Darkest: #040305;
+/* ----- Layouts ----- */
+
+@Body-Bg-Color: @Blue-Primary;
+@Body-Bg-Image: none;
+@Body-Bg-Repeat: ~'no-repeat';
+@Body-Bg-Position: ~'center top';
+@Body-Bg-Size: ~'100% auto';
+@Body-Bg-Attachment: ~'scroll';
+
+// Header
+@ZoneHeader-Outer-Bg: @Lightest;
+@ZoneHeader-Inner-Bg: @Lightest;
+@ZoneHeader1-Outer-Bg: @Lightest;
+@ZoneHeader1-Inner-Bg: @Lightest;
+
+// Content
+@ZoneContent-Inner-Bg: #FFFFFF;
+
+// Footer
+@ZoneFooter-Outer-Bg: none;
+@ZoneFooter-Inner-Bg: transparent;
+@ZoneFooter1-Outer-Bg: none;
+@ZoneFooter1-Inner-Bg: transparent;
+
+// WA branding
+@ZoneBranding-Outer-Bg: none;
+@ZoneBranding-Inner-Bg: none;
+@ZoneBranding-Text-Color: @Light-Primary;
+.zonebrandingLinkColor{}
+
+// Turn on / off theme shadows (depends on theme)
+@Theme-Shadow-Display: block;
+
+/* ----- Typography ----- */
+
+@Typography-Body-Font: ~'normal 16px/normal Raleway';
+@Typography-Body-Color: @Darkest;
+@Typography-Text-Alternative-Color: @Lightest;
+
+// Titles & headers
+@Typography-Title-Font: ~'normal 60px/normal Roboto Thin';
+@Typography-Title-Color: @Blue-Primary;
+@Typography-Title-Line-Color: @Typography-Title-Color;
+@Typography-PageTitle-Font: ~'normal 48px/1.05em Roboto Condensed';
+@Typography-PageTitle-Color: @Blue-Primary;
+@Typography-Header1-Font: ~'normal 34px/normal Roboto Condensed';
+@Typography-Header1-Color: @Blue-Primary;
+@Typography-Header2-Font: ~'bold 34px/normal Roboto Condensed';
+@Typography-Header2-Color: @Blue-Primary;
+@Typography-Header2-Line-Color: #d1d1d1;
+@Typography-Header3-Font: ~'normal 26px/normal Roboto Condensed';
+@Typography-Header3-Color: @Blue-Primary;
+@Typography-Header4-Font: ~'normal 26px/normal Roboto Condensed';
+@Typography-Header4-Color: @Blue-Primary;
+@Typography-Header-Alternative-Color: @Blue-Primary;
+
+// Links
+@Typography-Link-Font: ~'normal 16px/normal Raleway';
+@Typography-Link-Color: @Blue-2;
+@Typography-Link-Decoration: underline;
+@Typography-Link-Hover-Color: @Blue-3;
+@Typography-Link-Hover-Decoration: underline;
+@Typography-Link-Visited-Color: @Typography-Link-Color;
+@Typography-Link-Visited-Decoration: @Typography-Link-Decoration;
+
+@Typography-Link-Alternative-Weight: bold;
+@Typography-Link-Alternative-Color: @Blue-2;
+@Typography-Link-Alternative-Decoration: underline;
+@Typography-Link-Alternative-Hover-Color: @Blue-3;
+@Typography-Link-Alternative-Hover-Decoration: underline;
+@Typography-Link-Alternative-Visited-Color: @Typography-Link-Alternative-Color;
+@Typography-Link-Alternative-Visited-Decoration: @Typography-Link-Decoration;
+
+//@Typography-Link-Auxiliary-Font: ~'italic 16px/normal Raleway';
+@Typography-Link-Auxiliary-Style: italic;
+@Typography-Link-Auxiliary-Color: #36aff0;
+@Typography-Link-Auxiliary-Decoration: underline;
+@Typography-Link-Auxiliary-Hover-Color: @Blue-2;
+@Typography-Link-Auxiliary-Hover-Decoration: underline;
+@Typography-Link-Auxiliary-Visited-Color: @Typography-Link-Auxiliary-Color;
+@Typography-Link-Auxiliary-Visited-Decoration: @Typography-Link-Auxiliary-Decoration;
+
+@Typography-Link-WhiteBG-Color: @Blue-2;
+@Typography-Link-WhiteBG-Hover-Color: @Blue-Primary;
+
+
+// Quoted text
+@Typography-QuotedText-Font: ~'italic 16px/normal Raleway';
+@Typography-QuotedText-Bg: transparent;
+
+// Captions
+@Typography-Caption-Color: @Blue-2;
+@Typography-Caption-Font: ~'italic 14px/normal Raleway';
+
+
+// Indent block
+@Typography-IndentBlock-Font: @Typography-Body-Font;
+@Typography-IndentBlock-Color: @Darkest;
+
+
+// Promo paragraph style
+@Typography-Promo-Bg: none;
+@Typography-Promo-Font: ~'bold 67px/normal Raleway';
+@Typography-Promo-Color: #fff;
+@Typography-Promo-TextShadow: none;
+
+// Dividers
+@Divider-Style001-Color: @Blue-2;
+@Divider-Style002-Color: @Blue-2;
+
+
+// Link styles
+@Link-Style001-Bg: @Accent;
+@Link-Style001-Color: #fff;
+@Link-Style001-Hover-Bg: darken(@Link-Style001-Bg, 20%);
+@Link-Style001-Hover-Color: @Link-Style001-Color;
+@Link-Style001-Active-Bg: @Link-Style001-Bg;
+@Link-Style001-Active-Color: @Link-Style001-Color;
+
+@Link-Style002-Bg: @Blue-Primary;
+@Link-Style002-Color: #fff;
+@Link-Style002-Hover-Bg: darken(@Link-Style002-Bg, 20%);
+@Link-Style002-Hover-Color: @Link-Style002-Color;
+@Link-Style002-Active-Bg: @Link-Style002-Bg;
+@Link-Style002-Active-Color: @Link-Style002-Color;
+
+@Link-Style003-Bg: @Blue-2;
+@Link-Style003-Color: #fff;
+@Link-Style003-Hover-Bg: darken(@Link-Style003-Bg, 20%);
+@Link-Style003-Hover-Color: @Link-Style003-Color;
+@Link-Style003-Active-Bg: @Link-Style003-Bg;
+@Link-Style003-Active-Color: @Link-Style003-Color;
+
+@Link-Style004-Bg: #F3F2F3;
+@Link-Style004-Color: #333;
+@Link-Style004-Hover-Bg: darken(@Link-Style004-Bg, 20%);
+@Link-Style004-Hover-Color: #333;
+@Link-Style004-Active-Bg: #dbdbdb;
+@Link-Style004-Active-Color: #333;
+
+
+// Functional button
+@FunctionButton-Bg: @Blue-Primary;
+@FunctionButton-Color: #fff;
+@FunctionButton-Hover-Bg: darken(@FunctionButton-Bg, 20%);
+@FunctionButton-Hover-Color: @FunctionButton-Color;
+@FunctionButton-Active-Bg: @FunctionButton-Bg;
+@FunctionButton-Active-Color: @FunctionButton-Color;
+
+/* ----- Gadget Blog ----- */
+
+@Gadget-Blog-PostedOn-Font: ~'normal 15px/normal Raleway';
+@Gadget-Blog-PostedOn-Color: @Blue-2;
+@Gadget-Blog-PostedBy-Font: ~'italic 14px/normal Raleway';
+@Gadget-Blog-PostedBy-Color: @Blue-2;
+@Gadget-Blog-Post-Font: ~'normal 22px/normal Raleway';
+@Gadget-Blog-Buttons-Font: ~'bold 15px/normal Raleway';
+@Gadget-Blog-Buttons-Color: @Blue-2;
+@Gadget-Blog-Icons-Font: ~'normal 24px/normal WA-theme-icons';
+@Gadget-Blog-Icons-Color: @Blue-2;
+@Gadget-Blog-Post-Title-Font: ~'normal 34px/normal Raleway';
+@Gadget-Blog-Post-Title-Color: #626262;
+@Gadget-Blog-Back-Font: ~'italic 16px/normal Raleway';
+@Gadget-Blog-Back-Color: @Blue-2;
+@Gadget-Blog-Comments-Title-Font: ~'normal 24px/normal Raleway';
+@Gadget-Blog-Comments-Title-Color: #333333;
+@Gadget-Blog-Comments-Date-Color: #333333;
+
+
+/* ----- Gadget Discussion Forum ----- */
+
+@Gadget-Forum-Thread-Link-Font: ~'bold 15px/normal Raleway';
+@Gadget-Forum-Thread-Link-Hover-Color: @Blue-3;
+@Gadget-Forum-LastReply-Date-Link-Font: ~'bold 13px/normal Raleway';
+@Gadget-Forum-LastReply-Date-Link-Color: @Blue-2;
+@Gadget-Forum-LastReply-Date-Link-Hover-Color: @Blue-3;
+@Gadget-Forum-LastReply-Name-Font: ~'normal 13px/normal Raleway';
+@Gadget-Forum-LastReply-Name-Color: @Darkest;
+@Gadget-Forum-RepliesCount-Color: @Darkest;
+@Gadget-Forum-RepliesCount-Font: ~'normal 13px/normal Raleway';
+
+@Gadget-Forum-Actions-Font: ~'bold 16px/normal Raleway';
+@Gadget-Forum-Actions-Color: @Blue-2;
+
+@Gadget-Forum-Username-Font: ~'bold 16px/normal Raleway';
+@Gadget-Forum-Username-Color: @Blue-2;
+@Gadget-Forum-Back-Show-Subscribe-Font: ~'italic 16px/normal Raleway';
+@Gadget-Forum-Back-Show-Subscribe-Color: @Blue-2;
+@Gadget-Forum-Back-Show-Subscribe-Hover-Color: @Blue-3;
+@Gadget-Forum-Title-Font: ~'normal 26px/normal Roboto Condensed';
+@Gadget-Forum-Title-Color: @Blue-Primary;
+@Gadget-Forum-Row-Border-Color: #d1d1d1;
+
+@Gadget-Forum-PostedOn-Font: ~'normal 16px/normal Raleway';
+@Gadget-Forum-PostedOn-Color: @Blue-2;
+
+@Gadget-Forum-MessageNumber-Font: ~'normal 16px/normal Raleway';
+@Gadget-Forum-MessageNumber-Color: @Blue-2;
+
+@Gadget-Forum-MessageNumber-Link-Font: ~'bold 16px/normal Raleway';
+@Gadget-Forum-MessageNumber-Link-Color: @Blue-2;
+@Gadget-Forum-ModifyMessage-Font: ~'italic 12px/normal Raleway';
+@Gadget-Forum-ModifyMessage-Color: @Blue-2;
+@Gadget-Forum-PopupTooltip-Bg: #fff;
+@Gadget-Forum-Icon-Color: @Blue-2;
+@Gadget-Forum-Icon-Font: ~'normal 24px/normal WA-theme-icons';
+@Gadget-Forum-IconCheck-Font: ~'normal 16px/normal FontAwesome';
+@Gadget-Forum-IconCheck-Color: @Blue-2;
+
+
+/* ----- Gadget Forum summary ----- */
+
+@Gadget-ForumSummary-Thread-Link-Font: ~'bold 15px/normal Raleway';
+@Gadget-ForumSummary-Thread-Link-Color: #a39d9d;
+@Gadget-ForumSummary-Thread-Link-Hover-Color: @Blue-2;
+@Gadget-ForumSummary-Description-Font: ~'italic 12px/normal Raleway';
+@Gadget-ForumSummary-Description-Color: #b5bac2;
+@Gadget-ForumSummary-LastMessage-Date-Link-Font: ~'bold 13px/normal Raleway';
+@Gadget-ForumSummary-LastMessage-Date-Link-Color: #a39d9d;
+@Gadget-ForumSummary-LastMessage-Date-Link-Hover-Color: @Blue-2;
+@Gadget-ForumSummary-LastMessage-Name-Font: ~'normal 13px/normal Raleway';
+@Gadget-ForumSummary-LastMessage-Name-Color: #a39d9d;
+@Gadget-ForumSummary-LastMessage-Topics-Replies-Font: ~'normal 13px/normal Raleway';
+@Gadget-ForumSummary-LastMessage-Topics-Replies-Color: @Light-Primary;
+@Gadget-ForumSummary-Icon-Color: #a39d9d;
+@Gadget-ForumSummary-Icon-Font: ~'normal 20px/normal WA-theme-icons';
+
+/* ----- Gadget Member directory ----- */
+
+// Members table
+@Shared-Table-Row-Border-Color: #d1d1d1;
+@Shared-Members-Table-Table-Value-Font: ~'normal 15px/normal Raleway';
+
+@Gadget-Member-Directory-Primary-Link-Font: ~'bold 15px/normal Raleway';
+@Gadget-Member-Directory-Primary-Link-Color: @Blue-2;
+@Gadget-Member-Directory-Primary-Link-Hover-Color: @Blue-3;
+
+@Gadget-Member-Directory-Secondary-Link-Font: ~'italic 16px/normal Raleway';
+@Gadget-Member-Directory-Secondary-Link-Color: @Blue-2;
+
+/* ----- Gadget Events list ----- */
+
+@Gadget-Events-Main-Title-Font: ~'normal 34px/normal Roboto Condensed';
+@Gadget-Events-Main-Title-Color: @Blue-Primary;
+
+@Gadget-Events-Aux-Link-Font: ~'italic 16px/normal Raleway';
+@Gadget-Events-Aux-Link-Color: @Blue-2;
+
+@Gadget-Events-Label-Font: ~'italic 12px/normal Raleway';
+@Gadget-Events-Label-Color: @Darkest;
+@Gadget-Events-Secondary-Links-Font: ~'bold 15px/normal Raleway';
+@Gadget-Events-Secondary-Links-Color: @Blue-2;
+@Gadget-Events-Value-Font: ~'normal 14px/normal Raleway';
+@Gadget-Events-Value-Color: inherit;
+@Gadget-Events-PastEvent-Title-Font: ~'bold 16px/normal Raleway';
+@Gadget-Events-PastEvent-Title-Color: @Darkest;
+@Gadget-Events-PastEvent-Label-Font: ~'normal 15px/normal Raleway';
+@Gadget-Events-RegistrationInfo-Font: ~'normal 14px/normal Raleway';
+@Gadget-Events-RegistrationInfo-Color: #333;
+
+//Events calendar
+
+@Gadget-Events-Calendar-Switchers-Color: @Darkest;
+@Gadget-Events-Registrants-Color: @Blue-2;
+@Gadget-Events-Registrants-Guest-Link-Font: ~'bold 15px/normal Raleway';
+@Gadget-Events-Calendar-Date-Color: inherit;
+@Gadget-Events-Calendar-Date-Font: ~'normal 16px/normal Raleway';
+@Gadget-Events-Calendar-Current-Date-Color: @Blue-Primary;
+@Gadget-Events-Calendar-ViewTypeMonth-Header-Bg: transparent;
+@Gadget-Events-Calendar-ViewTypeMonth-Header-Font: ~'normal 16px/normal Raleway';
+@Gadget-Events-Calendar-ViewTypeMonth-Header-Color: inherit;
+@Gadget-Events-Calendar-ViewTypeMonth-Event-Bg: #a0bfd3;
+@Gadget-Events-Calendar-ViewTypeMonth-Event-Font: ~'normal 13px/normal Raleway';
+@Gadget-Events-Calendar-ViewTypeMonth-Event-Hover-Bg:@Blue-Primary;
+@Gadget-Events-Calendar-ViewTypeMonth-Event-Color: #fff;
+@Gadget-Events-Calendar-ViewTypeYear-Header-Bg: transparent;
+@Gadget-Events-Calendar-ViewTypeYear-Header-Color: @Gadget-Events-Calendar-ViewTypeMonth-Header-Color;
+@Gadget-Events-Calendar-ViewTypeYear-Header-Font: ~'100 22px/normal Roboto Condensed';
+@Gadget-Events-Calendar-ViewTypeYear-Header-Hover-Color: @Blue-2;
+@Gadget-Events-Calendar-ViewTypeYear-Event-Font: ~'normal 14px/normal Roboto Condensed';
+@Gadget-Events-Calendar-ViewTypeWeek-Header-Color: inherit;
+@Gadget-Events-Calendar-ViewTypeWeek-Header-Font: ~'normal 22px/normal Raleway';
+@Gadget-Events-Calendar-ViewTypeWeek-Event-Font: ~'bold 15px/normal Raleway';
+@Gadget-Events-Calendar-ViewTypeWeek-Event-Color: @Typography-Link-Alternative-Color;
+@Gadget-Events-Calendar-ViewTypeWeek-Event-Hover-Color: @Typography-Link-Alternative-Hover-Color;
+
+/* ----- Gadget Menu horizontal ----- */
+@Gadget-MenuHorizontal-Border-Top: transparent;
+@Gadget-MenuHorizontal-Border-Bottom: transparent;
+@Gadget-MenuHorizontal-FirstLevel-Bg: @Lightest;
+@Gadget-MenuHorizontal-FirstLevel-Font: ~'normal 18px/normal Roboto Condensed';
+@Gadget-MenuHorizontal-FirstLevel-Color: @Blue-Primary;
+@Gadget-MenuHorizontal-FirstLevel-TextShadow: none;
+@Gadget-MenuHorizontal-FirstLevel-Dot-Color: @Accent;
+@Gadget-MenuHorizontal-FirstLevel-Dot-Hover-Color: @Accent;
+@Gadget-MenuHorizontal-FirstLevel-Hover-Bg: @Gadget-MenuHorizontal-FirstLevel-Color;
+@Gadget-MenuHorizontal-FirstLevel-Hover-Color: @Accent;
+@Gadget-MenuHorizontal-FirstLevel-Line-Color: transparent;
+@Gadget-MenuHorizontal-FirstLevel-Selected-Line-Color: transparent;
+@Gadget-MenuHorizontal-FirstLevel-Hover-PhantomElement-Size: ~'normal 32px/22px Roboto Condensed';
+
+
+@Gadget-MenuHorizontal-SubLevel-Bg: @Blue-Primary;
+@Gadget-MenuHorizontal-SubLevel-Font: ~'normal 16px/normal Roboto Condensed';
+@Gadget-MenuHorizontal-SubLevel-Color: @Lightest;
+@Gadget-MenuHorizontal-SubLevel-TextShadow: @Gadget-MenuHorizontal-FirstLevel-TextShadow;
+@Gadget-MenuHorizontal-SubLevel-Hover-Bg: @Blue-Primary;
+@Gadget-MenuHorizontal-SubLevel-Hover-Color: @Accent;
+@Gadget-MenuHorizontal-SubLevel-Selected-Line-Color: @Accent;
+@Gadget-MenuHorizontal-SubLevel-Dot-Color: transparent;
+@Gadget-MenuHorizontal-SubLevel-Dot-Hover-Color: transparent;
+@Gadget-MenuHorizontal-Style-Hover-PhantomElement-Size: ~'normal 32px/22px Roboto Condensed';
+
+
+@Gadget-MenuHorizontal-GadgetStyle002-FirstLevel-Color: @Blue-Primary;
+
+/* ----- Gadget Menu vertical ----- */
+
+@Gadget-MenuVertical-Left-Border: 1px solid #000;
+@Gadget-MenuVertical-Right-Border: 1px solid #000;
+
+@Gadget-MenuVertical-FirstLevel-Bg: transparent;
+@Gadget-MenuVertical-FirstLevel-Font: ~'normal 13px/normal Roboto Regular';
+@Gadget-MenuVertical-FirstLevel-Color: #000;
+@Gadget-MenuVertical-FirstLevel-TextShadow: none;
+@Gadget-MenuVertical-FirstLevel-Hover-Bg: transparent;
+@Gadget-MenuVertical-FirstLevel-Hover-Color: #1e7890;
+@Gadget-MenuVertical-FirstLevel-Selected-Line-Color: #000;
+
+@Gadget-MenuVertical-SubLevel-Bg: #fff;
+@Gadget-MenuVertical-SubLevel-Font: ~'normal 13px/normal Roboto Regular';
+@Gadget-MenuVertical-SubLevel-Color: #626262;
+@Gadget-MenuVertical-SubLevel-TextShadow: none;
+@Gadget-MenuVertical-SubLevel-Hover-Bg: transparent;
+@Gadget-MenuVertical-SubLevel-Border-Left-Color: #fff;
+@Gadget-MenuVertical-SubLevel-Hover-Color: #1e7890;
+@Gadget-MenuVertical-SubLevel-Selected-Line-Color: #626262;
+
+
+// Gadget Menu vertical( gadgetStyle001 )
+@Gadget-MenuVertical-GadgetStyle001-Left-Border: 1px solid #626262;
+@Gadget-MenuVertical-GadgetStyle001-Right-Border: 1px solid #626262;
+@Gadget-MenuVertical-GadgetStyle001-FirstLevel-Bg: transparent;
+@Gadget-MenuVertical-GadgetStyle001-FirstLevel-Color: #626262;
+@Gadget-MenuVertical-GadgetStyle001-FirstLevel-TextShadow: none;
+@Gadget-MenuVertical-GadgetStyle001-FirstLevel-Hover-Color: #1e7890;
+@Gadget-MenuVertical-GadgetStyle001-FirstLevel-Selected-Color: @Gadget-MenuVertical-GadgetStyle001-FirstLevel-Color;
+@Gadget-MenuVertical-GadgetStyle001-FirstLevel-Selected-Line-Color: #626262;
+
+
+
+/* ----- Gadget Breadcrumbs ----- */
+
+@Gadget-BreadCrumbs-StyleNone-Font: ~'italic 14px/normal Raleway';
+@Gadget-BreadCrumbs-StyleNone-Link-Color: @Blue-2;
+@Gadget-BreadCrumbs-StyleNone-Link-Hover-Color: #1e7890;
+@Gadget-BreadCrumbs-StyleNone-Separator-Color: @Blue-2;
+@Gadget-BreadCrumbs-StyleNone-Text-Color: @Blue-2;
+
+@Gadget-BreadCrumbs-Style001-Font: ~'italic 14px/normal Raleway';
+@Gadget-BreadCrumbs-Style001-Link-Color: #000;
+@Gadget-BreadCrumbs-Style001-Link-Hover-Color: #1e7890;
+@Gadget-BreadCrumbs-Style001-Separator-Color: #000;
+@Gadget-BreadCrumbs-Style001-Text-Color: #000;
+
+/* ----- Gadget Secondary menu----- */
+
+@Gadget-SecondaryMenu-StyleNone-Font: ~'normal 13px/normal Roboto Regular';
+@Gadget-SecondaryMenu-StyleNone-Link-Font: @Gadget-SecondaryMenu-StyleNone-Font;
+@Gadget-SecondaryMenu-StyleNone-Link-Color: #000;
+@Gadget-SecondaryMenu-StyleNone-Link-Hover-Color: @Blue-Primary;
+@Gadget-SecondaryMenu-StyleNone-Separator-Color: #000;
+
+// Secondary menu ( gadgetStyle 1)
+@Gadget-SecondaryMenu-Style001-Font: ~'normal 16px/normal Raleway';
+@Gadget-SecondaryMenu-Style001-Link-Font: @Gadget-SecondaryMenu-Style001-Font;
+@Gadget-SecondaryMenu-Style001-Link-Color: #626262;
+@Gadget-SecondaryMenu-Style001-Link-Hover-Color: @Blue-Primary;
+@Gadget-SecondaryMenu-Style001-Separator-Color: @Gadget-SecondaryMenu-Style001-Link-Color;
+@Gadget-SecondaryMenu-Style001-Separator-Content: "|";
+@Gadget-SecondaryMenu-Style001-Separator-Display: none;
+@Gadget-SecondaryMenu-Style001-Hover-TextDecoration: none;
+
+
+// Secondary menu ( gadgetStyle 2)
+@Gadget-SecondaryMenu-Style002-Font: ~'italic 16px/normal Raleway';
+@Gadget-SecondaryMenu-Style002-Bg-Color: rgba(0, 0, 0, 0.7);
+@Gadget-SecondaryMenu-Style002-Link-Font: @Gadget-SecondaryMenu-Style002-Font;
+@Gadget-SecondaryMenu-Style002-Link-Color: #fff;
+@Gadget-SecondaryMenu-Style002-Link-Hover-Color: #1e7890;
+@Gadget-SecondaryMenu-Style002-Separator-Color: @Gadget-SecondaryMenu-Style002-Link-Color;
+@Gadget-SecondaryMenu-Style002-Bullet-Color: #c9c9c9;
+
+/* ----- Gadget Navigation links ----- */
+
+@Gadget-NavigationLinks-StyleNone-Font: ~'italic 16px/normal Raleway';
+@Gadget-NavigationLinks-StyleNone-Link-Font: @Gadget-NavigationLinks-StyleNone-Font;
+@Gadget-NavigationLinks-StyleNone-Link-Color: #000;
+@Gadget-NavigationLinks-StyleNone-Link-Hover-Color: @Blue-Primary;
+@Gadget-NavigationLinks-StyleNone-Separator-Color: #000;
+
+// Navigation links ( gadgetStyle 1)
+@Gadget-NavigationLinks-Style001-Font: ~'normal 16px/normal Raleway';
+@Gadget-NavigationLinks-Style001-Link-Font: @Gadget-NavigationLinks-Style001-Font;
+@Gadget-NavigationLinks-Style001-Link-Color: @Blue-2;
+@Gadget-NavigationLinks-Style001-Link-Hover-Color: @Blue-Primary;
+@Gadget-NavigationLinks-Style001-Separator-Color: @Gadget-NavigationLinks-Style001-Link-Color;
+
+
+/* ----- Gadget Site map ----- */
+
+@Gadget-SiteMap-StyleNone-Font: ~'italic 16px/normal Raleway';
+@Gadget-SiteMap-StyleNone-Link-Font: @Gadget-SiteMap-StyleNone-Font;
+@Gadget-SiteMap-StyleNone-Link-Color: #000;
+@Gadget-SiteMap-StyleNone-Link-Hover-Color: @Blue-Primary;
+
+// Site map ( gadgetStyle 1)
+@Gadget-SiteMap-Style001-Font: ~'normal 16px/normal Raleway';
+@Gadget-SiteMap-Style001-Link-Font: @Gadget-SiteMap-Style001-Font;
+@Gadget-SiteMap-Style001-Link-Color: @Blue-2;
+@Gadget-SiteMap-Style001-Link-Hover-Color: @Blue-Primary;
+
+
+/* ----- Shared info container ( used in forms ) ----- */
+
+@Shared-InfoContainer-Bg: transparent;
+@Shared-InfoContainer-Border-Color: #d7d5d5;
+@Shared-InfoContainer-InfoTitle-Font: ~'100 14px/normal Raleway';
+@Shared-InfoContainer-InfoText-Font: ~'100 14px/normal Raleway';
+
+/* ----- Shared forms ( used in different gadgets ) ----- */
+
+@Shared-Form-Label-Color: #333333;
+@Shared-Form-Label-Font: ~'italic 14px/Roboto Condensed';
+@Shared-Form-Field-Bg: transparent;
+@Shared-Form-Field-Border: @Blue-2;
+@Shared-Form-Field-Font: ~'normal 14px/normal Raleway';
+@Shared-Form-Field-Color: #373737;
+@Shared-Form-Field-Disabled-Bg: #dedede;
+@Shared-Form-Section-Bg: transparent;
+@Shared-Form-Section-Color: inherit;
+@Shared-Form-Title-Color: @Blue-Primary;
+@Shared-Form-Title-Font: ~'normal 14px/normal Roboto Condensed';
+@Shared-Form-One-More-Font: ~'bold 15px/normal Raleway';
+@Shared-Form-One-More-Color: @Blue-2;
+@Shared-Form-One-More-Hover-Color: @Blue-Primary;
+@Shared-Form-MandatorySymbol-Color: @Accent;
+@Shared-Form-MandatorySymbol-Font: inherit;
+@Shared-Form-Title-Border-Color: @Accent;
+
+/* ---- Shared paging ( used in different gadgets )---- */
+
+@Shared-Paging-Link-Font: ~'normal 15px/normal Raleway';
+@Shared-Paging-Link-Color: #333;
+@Shared-Paging-Link-Hover-Color: @Blue-Primary;
+@Shared-Paging-Link-Hover-Bg: @Blue-2;
+@Sharing-Paging-Link-Current-Bg: #949494;
+@Shared-Paging-Link-Current-Color: @Blue-Primary;
+@Shared-Paging-Arrows-Font: ~'normal 20px/normal FontAwesome';
+@Shared-Paging-Arrows-Color: #949494;
+@Shared-Paging-Arrows-Hover-Color: @Accent;
+
+/* ---- Shared icons ---- */
+
+//Rss icon
+@Shared-Icon-Rss-Color: #626262;
+@Shared-Icon-Rss-Font: ~'normal 26px/normal FontAwesome';
+//Calendar icon
+@Shared-Icon-Calendar-Color: #a39d9d;
+@Shared-Icon-Calendar-Font: ~'normal 16px/normal FontAwesome';
+//Clock item
+@Shared-Icon-Clock-Color: #a39d9d;
+@Shared-Icon-Clock-Font: ~'normal 18px/normal FontAwesome';
+//Attention
+@Shared-Icon-Attention-Color: #a39d9d;
+@Shared-Icon-Attention-Font: ~'normal 16px/normal WA-theme-icons';
+
+/* ----- Styled wrappers( used in different gadgets ) ----- */
+
+// Gadget style default "normal"
+@StyleWrapper-StyleNone-Title-Font: ~'24px/normal Raleway';
+@StyleWrapper-StyleNone-Title-Color: @Blue-Primary;
+
+// Gadget style default adaptive state 3
+@StyleWrapper-StyleNone-Adaptive-State3-Title-Font: ~'bold 20px/normal Raleway';
+
+// Gadget style 001 "bigger"
+@StyleWrapper-Style001-Title-Font: @StyleWrapper-StyleNone-Title-Font;
+@StyleWrapper-Style001-Title-Color: @StyleWrapper-StyleNone-Title-Color;
+@StyleWrapper-Style001-Font: ~'normal 24px/normal Raleway';
+@StyleWrapper-Style001-Link-Font: inherit;
+
+// Gadget style 001 State 3 Adaptive Behaviour
+@StyleWrapper-Style001-Adaptive-State3-Font: ~'normal 20px/normal Raleway';
+
+// Gadget style 002 "transparent"
+@StyleWrapper-Style002-Title-Font: @StyleWrapper-StyleNone-Title-Font;
+@StyleWrapper-Style002-Title-Color: @StyleWrapper-StyleNone-Title-Color;
+
+
+
+
+/* ----- Gadget Upcoming events ----- */
+
+@Gadget-UpcomingEvents-StyleNone-EventDate-Font: inherit;
+@Gadget-UpcomingEvents-StyleNone-Location-Font: inherit;
+// Gadget style 001
+@Gadget-UpcomingEvents-Style001-EventDate-Font: inherit;
+@Gadget-UpcomingEvents-Style001-Location-Font: inherit;
+// Gadget style 002
+@Gadget-UpcomingEvents-Style002-EventDate-Font: @Gadget-UpcomingEvents-Style001-EventDate-Font;
+@Gadget-UpcomingEvents-Style002-Location-Font: @Gadget-UpcomingEvents-Style001-Location-Font;
+
+
+/* ----- Gadget Social profile ----- */
+
+//Gadget style 001
+@Gadget-SocialProfile-Style001-Font: ~'normal 22px/normal FontAwesome';
+@Gadget-SocialProfile-Style001-Color: @Blue-Primary;
+@Gadget-SocialProfile-Style001-Border-Color: #6d7173;
+@Gadget-SocialProfile-Style001-Bg: rgba(0,0,0,0.7);
+@Gadget-SocialProfile-Style001-Hover-Color: #fff;
+
+//Gadget style 002
+@Gadget-SocialProfile-Style002-Font: ~'normal 22px/normal FontAwesome';
+@Gadget-SocialProfile-Style002-Color: #626262;
+@Gadget-SocialProfile-Style002-Border-Color: #dadfe1;
+@Gadget-SocialProfile-Style002-Bg: #fff;
+@Gadget-SocialProfile-Style002-Hover-Color: #626262;
+
+/* ---- Gadget Featured member ---- */
+
+@Gadget-FeaturedMember-StyleNone-MemberLabel1-Font: ~'bold 20px/normal Raleway';
+@Gadget-FeaturedMember-StyleNone-MemberLabel1-Color: #626262;
+@Gadget-FeaturedMember-StyleNone-MemberLabel2-Font: ~'bold 16px/normal Raleway';
+@Gadget-FeaturedMember-StyleNone-MemberLabel3-Font: ~'normal 14px/normal Raleway';
+@Gadget-FeaturedMember-StyleNone-MemberDirectory-Link-Font: ~'bold 16px/normal Raleway';
+
+
+
+/* ---- Gadget Member Public Profile ---- */
+@Gadget-Member-Public-Profile-Secondary-Link-Font: ~'italic 16px/normal Raleway';
+@Gadget-Member-Public-Profile-Secondary-Link-Color: #a39d9d;
+@Gadget-Member-Public-Profile-Title-Font: @Typography-Header3-Font;
+@Gadget-Member-Public-Profile-Title-Color: @Typography-Header2-Color;
+
+/* ---- Gadget Contact Profile ---- */
+@Gadget-Contact-Profile-Secondary-Link-Font: ~'italic 16px/normal Raleway';
+@Gadget-Contact-Profile-Secondary-Link-Color: #a39d9d;
+
+/* ---- Gadget Photo album ---- */
+
+@Gadget-PhotoAlbum-StyleNone-Photo-Bg: #f8f8f8;
+@Gadget-PhotoAlbum-StyleNone-Photo-Hover-Bg: #e6e6e6;
+@Gadget-PhotoAlbum-StyleNone-Photo-Cover-Bg: darken(@Gadget-PhotoAlbum-StyleNone-Photo-Hover-Bg, 10%);
+@Gadget-PhotoAlbum-StyleNone-SetCover-Link-Color: @Blue-2;
+@Gadget-PhotoAlbum-StyleNone-AlbumName-Font: ~'bold 16px/normal Raleway';
+@Gadget-PhotoAlbum-StyleNone-Aux-Link-Font: ~'italic 16px/normal Raleway';
+@Gadget-PhotoAlbum-StyleNone-Aux-Link-Color: @Blue-2;
+@Gadget-PhotoAlbum-StyleNone-Aux-Link-Hover-Color: @Accent;
+
+// Gadget style 001
+@Gadget-PhotoAlbum-Style001-Photo-Bg: @Gadget-PhotoAlbum-StyleNone-Photo-Bg;
+@Gadget-PhotoAlbum-Style001-Photo-Hover-Bg: #ffa8a8;
+// Gadget style 002
+@Gadget-PhotoAlbum-Style002-Photo-Bg: @Gadget-PhotoAlbum-StyleNone-Photo-Bg;
+@Gadget-PhotoAlbum-Style002-Photo-Hover-Bg: @Gadget-PhotoAlbum-Style002-Photo-Bg;
+@Gadget-PhotoAlbum-Style002-Border-Color: #ff6e6e;
+
+/* ---- Gadget Slide show ---- */
+
+@Gadget-SlideShow-Arrow-Color: #fff;
+@Gadget-SlideShow-Arrow-Hover-Color: @Accent;
+@Gadget-SlideShow-Arrow-Font: ~'normal 55px/normal FontAwesome';
+@Gadget-SlidesShow-Navigation-Bg: none;
+@Gadget-SlideShow-Radio-Border-Color: #989898;
+@Gadget-SlideShow-Radio-Hover-Color: #b7b7b7;
+@Gadget-SlideShow-Radio-Selected-Color: @Blue-Primary;
+// Gadget style 001
+@Gadget-SlideShow-Style001-Arrow-Font: ~'normal 35px/normal FontAwesome';
+@Gadget-SlideShow-Style001-Navigation-Bg: rgba(0,0,0,0.3);
+
+/* ---- Gadget Site search ---- */
+
+@Gadget-SiteSearch-SearchBox-Bg: #fff;
+@Gadget-SiteSearch-SearchBox-Border: #c6c6c6;
+@Gadget-SiteSearch-SearchBox-Color: #a39d9d;
+@Gadget-SiteSearch-SearchBox-Lens-Color: #a39d9d;
+@Gadget-SiteSearch-SuggestionBox-Bg: #fff;
+@Gadget-SiteSearch-SuggestionBox-Border: #c6c6c6;
+@Gadget-SiteSearch-SuggestionBox-Color: #373737;
+@Gadget-SiteSearch-SuggestionBox-Divider-Color: #eee;
+
+/* ---- Gadgets Login button & Login form ---- */
+
+// Login button
+@Gadget-Login-Icon-Font: ~'normal 10px/normal WA-theme-icons';
+@Gadget-Login-Button-Color: @Light-Primary;
+@Gadget-Login-Button-Font: ~'normal 13px/normal Raleway';
+@Gadget-Login-Button-Opacity: 100;
+@Gadget-Login-Icon-Background-Color: transparent;
+@Gadget-Login-Icon-Color: @Light-Primary;
+
+@Gadget-Login-Button-Style001-Color: #fff;
+
+@Gadget-Login-Button-OnClick-Bg: transparent;
+@Gadget-Login-Button-OnClick-Color: @Light-Primary;
+@Gadget-Login-Button-OnClick-Opacity: 100;
+
+// Login form
+//non authenticated mode
+@Gadget-Login-Form-Wrapper-Bg: #fff;
+@Gadget-Login-Form-ShadowBox-Display: none;
+@Gadget-Login-Form-Shadow-Display: 2px 0 3px 0 rgba(163,163,163,.75);
+@Gadget-Login-Form-Font: ~'normal 13px/normal Raleway';
+
+
+
+// authenticated mode
+@Gadget-Login-Form-Link-Font: ~'normal 13px/normal Raleway';
+@Gadget-Login-Form-Link-Color: @Blue-2;
+@Gadget-Login-Form-Link-Hover-Color: @Typography-Link-Hover-Color;
+@Gadget-Login-Form-LinkPopup-Color: @Gadget-Login-Form-Link-Color;
+
+
+/* ---- Gadget Donation goal ---- */
+
+// Gadget style none
+@Donation-Goal-StyleNone-Header-Color: #1e7990;
+@Donation-Goal-StyleNone-Description-Font: ~'normal 22px/normal Raleway';
+@Donation-Goal-StyleNone-Progress-Bar-Color: #626262;
+@Donation-Goal-StyleNone-Progress-Bar-Border-Color: @Donation-Goal-StyleNone-Progress-Bar-Color;
+@Donation-Goal-StyleNone-Percentage-Font: ~'normal 20px/normal Raleway';
+@Donation-Goal-StyleNone-Percentage-Color: @Blue-Primary;
+@Donation-Goal-StyleNone-Button-Bg: @Blue-2;
+@Donation-Goal-StyleNone-Button-Hover-Bg: @Blue-3;
+@Donation-Goal-StyleNone-Button-Color: #fff;
+@Donation-Goal-StyleNone-Labels-Font: ~'normal 14px/normal Raleway';
+
+// Gadget style 001
+@Donation-Goal-Style001-Header-Color: @Blue-Primary;
+@Donation-Goal-Style001-Description-Font: @Typography-Link-Font;
+@Donation-Goal-Style001-Labels-Font: @Typography-Link-Font;
+
+// Gadget style 002
+@Donation-Goal-Style002-Description-Font: ~'italic 22px/normal Raleway';
+@Donation-Goal-Style002-Progress-Bar-Color: @Blue-Primary;
+@Donation-Goal-Style002-Progress-Bar-Border-Color: #333;
+@Donation-Goal-Style002-Percentage-Color: #000;
+@Donation-Goal-Style002-Button-Bg: @Blue-2;
+@Donation-Goal-Style002-Button-Hover-Bg: @Blue-3;
+
+
+/* ---- Gadgets adaptive constants ---- */
+
+/* ----  Layout adaptive constants ---- */
+@Body-Adaptive-State2-Bg: #8c979d url(<$StaticModel.ThemeUrl$>/images/layout/terra_misty_mountain.jpg) ~"center top/100% auto no-repeat";
+@Body-Adaptive-State3-Bg: #8c979d url(<$StaticModel.ThemeUrl$>/images/layout/terra_misty_mountain.jpg) ~"center top/100% auto no-repeat";
+
+/* ----  Typography adaptive constants ---- */
+@Typography-Adaptive-State3-Title-Font: ~'normal 32px/normal Roboto Thin';
+@Typography-Adaptive-State3-Promo-Font: ~'bold 30px/normal Raleway';
+@Typography-Adaptive-State3-Header1: ~'bold 22px/normal Roboto Condensed';
+@Typography-Adaptive-State3-Header2: ~'bold 22px/normal Roboto Condensed';
+@Typography-Adaptive-State3-Header3: ~'normal 20px/normal Roboto Condensed';
+@Typography-Adaptive-State3-Header4: ~'normal 20px/normal Roboto Condensed';
+@Typography-Adaptive-State3-Link-Font: ~'italic 13px/normal Raleway';
+
+/* ----  Shared icons adaptive constants ---- */
+@Shared-Icons-Adaptive-Color: #a39d9d;
+@Shared-Icons-Adaptive-Font: ~'normal 24px/normal WA-theme-icons';
+
+/* ----  Gadget Forum adaptive constants ---- */
+
+@Gadget-Forum-Icons-Adaptive-State3-Font: ~'normal 16px/normal WA-theme-icons';
+@Gadget-Forum-Adaptive-State3-Font:  ~'italic 13px/normal Raleway';
+@Gadget-Forum-Adaptive-State3-MessageNumber-Link-Font:  ~'normal 13px/normal Raleway';
+
+/* ----  Gadget Forum summary adaptive constants ---- */
+//state 2
+@Gadget-ForumSummary-Adaptive-State2-Font:  ~'normal 12px/normal Raleway';
+//state 3
+@Gadget-ForumSummary-Icons-Adaptive-State3-Font: ~'normal 16px/normal WA-theme-icons';
+@Gadget-ForumSummary-Adaptive-State3-ForumTitle-Font: ~'bold 16px/normal Raleway';
+@Gadget-ForumSummary-Adaptive-Icon-Font: ~'normal 13px/normal WA-theme-icons';
+
+/* ---- Gadget Blog adaptive constants ---- */
+@Gadget-Blog-Adaptive-State3-Font:  ~'italic 13px/normal Raleway';
+
+/* ---- Gadget Events adaptive constants ---- */
+
+//Events calendar
+//state 2
+@Gadget-Events-Calendar-Adaptive-State2-VewTypeMonth-Header-Font: ~'normal 16px/normal Raleway';
+@Gadget-Events-Calendar-Adaptive-State2-ViewTypeYear-Header-Font: ~'normal 20px/normal Raleway';
+@Gadget-Events-Calendar-Adaptive-State2-ViewTypeWeek-Header-Font: ~'normal 20px/normal Raleway';
+//state 3
+@Gadget-Events-Calendar-Adaptive-State3-ViewTypeMonth-Header-Font: ~'100 12px/normal Roboto Condensed';
+@Gadget-Events-Calendar-Adaptive-State3-ViewTypeMonth-Date-Font: ~'100 14px/normal Roboto Condensed';
+@Gadget-Events-Calendar-Adaptive-State3-ViewTypeMonth-Event-Font: ~'100 13px/normal Roboto Condensed';
+
+@Gadget-Events-Calendar-Adaptive-State3-ViewTypeYear-Header-Font: ~'100 16px/normal Roboto Condensed';
+@Gadget-Events-Calendar-Adaptive-State3-ViewTypeYear-Event-Font: ~'normal 14px/normal Roboto Condensed';
+
+@Gadget-Events-Calendar-Adaptive-State3-ViewTypeWeek-Header-Font: ~'100 16px/normal Roboto Condensed';

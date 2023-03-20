@@ -1,0 +1,102 @@
+/* ----- Gadget Site search ----- */
+
+.WaGadgetSiteSearch
+{
+
+	.searchBoxFieldContainer
+	{
+		&:before // icon lens
+		{
+			color: @Gadget-SiteSearch-SearchBox-Lens-Color;
+            top: 45%;
+		}
+	}
+
+	.searchBoxField // search box
+	{
+		background: @Gadget-SiteSearch-SearchBox-Bg;
+		border: 1px solid @Gadget-SiteSearch-SearchBox-Border;
+		color: @Gadget-SiteSearch-SearchBox-Color;
+	}
+
+	.autoSuggestionBox // dropdown with  results
+	{
+		border: 1px solid @Gadget-SiteSearch-SuggestionBox-Border;
+		background: @Gadget-SiteSearch-SuggestionBox-Bg;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+		color: @Gadget-SiteSearch-SuggestionBox-Color;
+
+		.item
+		{
+            a
+            {
+              color: @Gadget-SiteSearch-SearchBox-Color;
+            }
+
+			a:before
+			{
+				font-style: normal;
+			}
+
+			+ .item.last
+			{
+				&:before
+				{
+					background: @Gadget-SiteSearch-SuggestionBox-Divider-Color;
+				}
+			}
+		}
+
+		.item.selectedSuggestions
+		{
+			background: #dbe3eb;
+			background: rgba(219,227,235,0.5);
+		}
+	}
+}
+
+// Search results page
+
+.WaGadgetSiteSearchResults
+{
+
+	.siteSearchResults
+	{
+
+		.searchControls
+		{
+
+			.searchBoxField
+			{
+				background: @Gadget-SiteSearch-SearchBox-Bg;
+				border: 1px solid @Gadget-SiteSearch-SearchBox-Border;
+				color: @Gadget-SiteSearch-SearchBox-Color;
+			}
+		}
+
+		.resultDiv
+		{
+
+			.row
+			{
+				.title
+				{
+
+					a:before
+					{
+						font-style: normal;
+					}
+				}
+
+				.text
+				{
+
+					b
+					{
+						font-weight: normal;
+					}
+				}
+			}
+		}
+	}
+}

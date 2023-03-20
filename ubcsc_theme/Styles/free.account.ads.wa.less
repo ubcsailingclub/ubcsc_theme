@@ -1,0 +1,206 @@
+/* ----- New WA banner for free accounts and popup notification message ----- */
+.WABannerStickyBottomSpacer
+{
+  height: 56px;
+}
+
+.WABannerStickyBottom
+{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 56px;
+  background: #94c943;
+  color: #fff;
+  font: normal 16px/18px Arial;
+  z-index: 40001;
+
+  .WABannerTable
+  {
+	display: table;
+	width: 100%;
+
+	.WABannerTh
+	{
+	  display: table-cell;
+	  width: auto;
+	  padding: 0px 20px 0px 0px;
+	  vertical-align: middle;
+
+	  .WABannerLink
+	  {
+		font-weight: bold;
+		color: #fff;
+		text-decoration: underline;
+
+		&:hover
+		{
+		  color: #fff;
+		  text-decoration: none;
+		}
+	  }
+	}
+
+	.WABannerTd
+	{
+	  display: table-cell;
+	  width: 10%;
+	  padding: 8px 0px 8px 0px;
+	  vertical-align: top;
+
+	  .WABannerButton
+	  {
+		display: inline-block;
+		vertical-align: top;
+		width: 119px;
+		height: 40px;
+		background: #ffc300;
+		color: #584100;
+		font: bold 14px/40px Arial;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		&:hover
+		{
+		  color: #584100;
+		  text-decoration: none;
+		}
+	  }
+	}
+  }
+}
+
+// message popup
+#WA_messagePopup
+{
+  display: block;
+  width: 240px;
+  position: fixed;
+  z-index: 65535;
+  bottom: 0;
+  right: 0;
+  outline: none;
+
+  &.hasStickyBottomBanner
+  {
+	bottom: 56px;
+  }
+
+  #contentBalancePanelId
+  {
+	max-height: 808px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.05);
+
+	ul
+	{
+	  padding: 5px 0;
+	  background: #fff;
+	  float: none;
+	  border-top: 1px solid #e8e8e8;
+	  border-left: 1px solid #e8e8e8;
+	  border-right: 1px solid #e8e8e8;
+	  border-radius: 5px 5px 0 0;
+
+	  li
+	  {
+		position: relative;
+		width: auto;
+		float: none;
+		margin: 0;
+		padding: 10px 20px;
+		background: none;
+
+		a,
+		a:visited
+		{
+		  font-size: 12px;
+		  color: #21acee;
+		}
+	  }
+	  li + li
+	  {
+		&:before
+		{
+		  content: '';
+		  position: absolute;
+		  left: 20px;
+		  top: 0;
+		  right: 20px;
+		  height: 1px;
+		  background: #dfdfdf;
+		}
+	  }
+	}
+
+	#messagePopupButton
+	{
+	  position: relative;
+	  display: block;
+	  width: 238px;
+	  height: 40px;
+	  background: #dde3e7;
+	  text-decoration: none;
+	  border-left: 1px solid #e8e8e8;
+	  border-right: 1px solid #e8e8e8;
+
+	  &:before
+	  {
+		position: absolute;
+		left: 0;
+		top: 0;
+		content: 'Messages';
+		padding: 10px 20px 10px 37px;
+		text-transform: uppercase;
+		color: #676869;
+		line-height: 20px;
+	  }
+
+	  &:after
+	  {
+		content: '!';
+		position: absolute;
+		left: 12px;
+		top: 12px;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: #147cae; //#a9a9a9;
+		color: #dde3e7;
+		text-align: center;
+		line-height: 16px;
+		font-weight: bold;
+	  }
+
+	}
+  }
+
+  #contentBalancePanelId.opened #messagePopupButton:after{
+	background: #a9a9a9;
+  }
+}
+
+/* ----- Adaptive behavior for new WA banner for free accounts ----- */
+
+@media only screen and ( max-width: @state3-maxwidth )
+{
+  .WABannerStickyBottom
+  {
+	font-size: 14px;
+	line-height: 15px;
+  }
+
+  .WABannerTh
+  {
+	padding-right: 10px;
+  }
+
+  .WABannerButton
+  {
+	width: 90px;
+	font-size: 12px;
+  }
+}

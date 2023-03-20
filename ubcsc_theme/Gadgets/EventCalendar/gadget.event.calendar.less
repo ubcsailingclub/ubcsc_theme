@@ -1,0 +1,1119 @@
+/* ----- Gadget Events list ----- */
+
+.WaGadgetEvents
+{
+  #idSectionGuestListContainer input[id*="guestList_AddGuest"]
+  {
+	margin: 10px 0 10px 0;
+  }
+	.pageTitleOuterContainer
+	{
+		margin: 0;
+		padding: 0;
+
+		.pageViewSwitcherOuterContainer
+		{
+
+			.pageViewSwitcherContainer // Switch to Calendar View
+			{
+				padding: 5px 0 0 0;
+
+				img
+				{
+					display: none;
+				}
+
+                a
+                {
+                  font: @Gadget-Events-Aux-Link-Font;
+                  color: @Gadget-Events-Aux-Link-Color;
+                  &:hover
+                  {
+                    color: @Typography-Link-Alternative-Hover-Color;
+                  }
+                }
+			}
+		}
+
+		.pageBackContainer
+		{
+			padding: 5px 0 0 0;
+
+            a
+            {
+              font: @Gadget-Events-Aux-Link-Font;
+              color: @Gadget-Events-Aux-Link-Color;
+              &:hover
+              {
+                color: @Typography-Link-Alternative-Hover-Color;
+              }
+            }
+		}
+	}
+
+	h1.pageTitle // rss icon container
+	{
+		font-size: inherit;
+		margin: 0;
+		padding: 0 0 0 10px;
+
+		a.rssFeedLabel,
+		a.rssFeedLabel:hover
+		{
+			color: @Shared-Icon-Rss-Color;
+			display: inline-block;
+            background: none;
+			float: left;
+			font: @Shared-Icon-Rss-Font;
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+
+			&:before
+			{
+				content: '\f09e';
+				display: inline-block;
+				margin-top: 12px;
+			}
+
+			img
+			{
+				display: none;
+			}
+		}
+	}
+
+	.boxOuterContainer
+	{
+		clear: both;
+
+		.boxHeaderOuterContainer
+		{
+			margin: 0;
+
+			.boxHeaderContainer
+			{
+				float: none;
+				padding: 0;
+
+				h4.boxHeaderTitle
+				{
+					overflow: hidden;
+
+					a  // name of event
+					{
+						color: @Typography-Header-Alternative-Color;
+						font: @Typography-Header3-Font;
+						text-decoration: none;
+					}
+
+				}
+			}
+		}
+
+		.boxBodyOuterContainer
+		{
+			border: none;
+			margin: 0;
+			padding: 15px 0;
+
+			.boxBodyContainer
+			{
+
+				.boxBodyInfoOuterContainer
+				{
+
+					padding: 0;
+					width: 27%;
+
+                    &.boxBodyInfoViewFill
+                    {
+                      margin-top: -49px;
+                    }
+
+					.boxBodyInfoContainer
+					{
+						padding: 0 30px 0 0;
+
+						.boxInfoContainer  // info about event
+						{
+							margin: 0;
+							padding: 0;
+
+							ul.boxInfo
+							{
+
+								li
+								{
+									padding: 0;
+									margin-bottom: 10px;
+									line-height: normal;
+
+
+									&[class$="Date"]
+									{
+										margin-bottom: 0;
+									}
+
+									label  // header option
+									{
+										color: @Gadget-Events-Label-Color;
+										font: @Gadget-Events-Label-Font;
+										padding: 2px 15px 0 0;
+										text-align: right;
+									}
+
+									div // value option
+									{
+										color: @Gadget-Events-Value-Color;
+										display: table-cell;
+										font: @Gadget-Events-Value-Font;
+
+										strong
+										{
+											font-weight: bold;
+										}
+
+										span {}
+
+										a {
+                                          font: @Gadget-Events-Secondary-Links-Font;
+                                          color: @Gadget-Events-Secondary-Links-Color;
+                                          &:hover
+                                          {
+                                            color: @Typography-Link-Alternative-Hover-Color;
+                                          }
+                                        }
+									}
+
+									&.eventInfoStartDate,
+									&.eventInfoEndDate
+									{
+										label
+                                        {
+                                          font: @Gadget-Events-Label-Font;
+                                          color: @Gadget-Events-Label-Color;
+                                        }
+
+										div
+										{
+											font-weight: bold;
+										}
+									}
+
+									&.eventInfoStartTime,
+									&.eventInfoEndTime
+									{
+
+										label
+                                        {
+                                          font: @Gadget-Events-Label-Font;
+                                          color: @Gadget-Events-Label-Color;
+                                        }
+
+										div
+										{
+											span
+											{
+												color: inherit;
+											}
+										}
+									}
+
+									&.eventInfoLocation,
+									&.eventInfoSpacesLeft
+									{
+										label {}
+
+										div	{}
+									}
+
+								}
+							}
+						}
+
+						.boxActionContainer
+						{
+							padding-top: 15px;
+							text-align: left;
+
+
+							input.typeButton  // a register button
+							{
+								.functionalButton;
+							}
+
+							.infoAlreadyRegistered,
+							.infoRegistrationIsNotAvailable,
+							.infoRegistrationIsClosed
+							{
+								margin: 0;
+								padding-top: 15px;
+
+								a
+                                {
+                                  font: @Gadget-Events-Secondary-Links-Font;
+                                  color: @Gadget-Events-Secondary-Links-Color;
+
+                                  &:hover
+                                  {
+                                    color: @Typography-Link-Alternative-Hover-Color;
+                                  }
+                                }
+							}
+						}
+					}
+				}
+
+				.boxBodyContentOuterContainer
+				{
+					padding: 0;
+					width: 73%;
+
+					.boxBodyContentContainer
+					{
+						padding: 0;
+						
+                        div.inner
+                        {
+                          line-height: 2em;
+                        }
+					}
+
+					.boxBodyContentContainer.fixedHeight
+					{
+					}
+				}
+			}
+		}
+
+		.boxFooterOuterContainer
+		{
+			border: none;
+
+			.boxFooterContainer
+			{
+				font-size: inherit;
+				padding: 0 0 0 27%;
+				text-align: left;
+
+				a // link "Show details"
+ 				{
+				  font-size: inherit;
+                  font: @Gadget-Events-Secondary-Links-Font;
+                  color: @Gadget-Events-Secondary-Links-Color;
+
+                  &:hover
+                  {
+                    color: @Typography-Link-Alternative-Hover-Color;
+                  }
+				}
+			}
+		}
+	}
+
+	&.WaGadgetEventsStateList // List of events
+	{
+
+		h3.sectionTitle  // "Upcoming events" text
+ 		{
+			color: @Gadget-Events-Main-Title-Color;
+			font: @Gadget-Events-Main-Title-Font;
+			margin: 0;
+			padding: 0;
+			text-transform: uppercase;
+		}
+
+		ul.boxesList
+		{
+
+			li.boxesListItem
+			{
+				margin: 0;
+				padding-top: 25px;
+
+                &:first-child
+                {
+                  padding-top: 5px;
+                }
+			}
+		}
+
+		.pastEventsOuterContainer
+		{
+			margin-top: 40px;
+			padding-top: 20px;
+
+			h3.sectionTitle  // text "Past events"
+			{
+				color: @Gadget-Events-PastEvent-Title-Color;
+				font: @Gadget-Events-PastEvent-Title-Font;
+				margin: 0 0 15px 0;
+                text-transform: none;
+			}
+
+			table.pastEventsList
+			{
+				width: auto;
+
+				td
+				{
+					vertical-align: baseline;
+
+					div.hiddenEventIcon {}
+
+					a  // name of event
+					{
+                      font: @Gadget-Events-Secondary-Links-Font;
+                      color: @Typography-Link-Alternative-Color;
+
+                      &:hover
+                      {
+                        color: @Typography-Link-Alternative-Hover-Color;
+                      }
+
+                    }
+				}
+
+				td.left  // date of past event
+				{
+					font: @Gadget-Events-PastEvent-Label-Font;
+					padding-right: 25px;
+					width: auto;
+                    min-width: 0;
+				}
+			}
+		}
+	}
+
+	&.WaGadgetEventsStateDetails // Details of event
+	{
+
+		.pageTitleContainer
+		{
+			background: none;
+			margin: 0;
+			padding: 0 0 0 27%;
+
+			h1.pageTitle  // title - name of event
+			{
+				color: @Typography-Header1-Color;
+				font: @Gadget-Events-Main-Title-Font;
+				margin: 0;
+				padding: 0;
+				text-transform: uppercase;
+			}
+		}
+
+		.boxOuterContainer
+		{
+
+			.boxBodyContainer
+			{
+
+				.boxBodyInfoOuterContainer
+				{
+
+					.boxBodyInfoContainer
+					{
+
+						.registrationInfoContainer
+						{
+							margin: 0;
+							padding: 0 0 0 77px;
+
+							h4.infoTitle  // text "Registration"
+							{
+								color: @Gadget-Events-RegistrationInfo-Color;
+								font: @Gadget-Events-RegistrationInfo-Font;
+								margin: 0;
+							}
+
+							.infoText  // description for registration like "(depends on selected options)"
+							{
+								color: @Gadget-Events-RegistrationInfo-Color;
+								font: @Gadget-Events-RegistrationInfo-Font;
+								margin: 0;
+
+								strong
+								{
+									font: @Gadget-Events-RegistrationInfo-Font;
+								}
+							}
+
+							ul.registrationInfo
+							{
+								list-style: none;
+								margin: 15px 0 0 0;
+								padding: 0;
+
+								li
+								{
+									padding: 0 0 10px 0;
+
+									label
+									{
+										strong
+										{
+											font: @Gadget-Events-RegistrationInfo-Font;
+											font-weight: bold;
+										}
+									}
+
+									div
+									{
+										span
+										{
+											font: @Gadget-Events-RegistrationInfo-Font;
+										}
+									}
+									img
+									{
+										vertical-align: text-bottom;
+									}
+								}
+							}
+						}
+
+                        .paymentSystemsIconsBox
+                        {
+                          padding: 10px 0 0 77px;
+                        }
+
+
+
+						.regTypeHr
+						{
+							padding: 0;
+
+							hr
+							{
+								display: none;
+							}
+						}
+
+						div
+						{
+							.boxMessageContainer
+							{
+								padding: 0;
+
+								span {  } // Registration message
+							}
+						}
+
+						.boxActionContainer
+						{
+							padding-left: 77px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.WaGadgetEventsStateCalendar
+	{
+		margin: 0;
+
+		h3
+		{
+            color: @Gadget-Events-Main-Title-Color;
+            font: @Gadget-Events-Main-Title-Font;
+			margin: 0;
+		}
+
+		h1.pageTitle
+		{
+
+			a.rssFeedLabel
+			{
+				&:before{}
+			}
+		}
+
+		.pageTitleOuterContainer
+		{
+
+			#idEventViewSwitcher
+			{
+
+				.pageViewSwitcherContainer
+				{
+
+					padding: 5px 0 0 0;
+
+					img
+					{
+						display: none;
+					}
+				}
+			}
+		}
+
+		#idViewSwitchersTable
+		{
+			margin: 0;
+			padding: 25px 0;
+
+			#group1, // week / month / year
+			#group2 // previous month / today / next month
+			{
+				div
+				{
+					color: @Gadget-Events-Calendar-Switchers-Color;
+					display: inline-block;
+					margin: 0;
+					float: none;
+
+					a
+					{
+						text-decoration: underline;
+                        font: @Gadget-Events-Aux-Link-Font;
+                        color: @Gadget-Events-Aux-Link-Color;
+
+                        &:hover
+                        {
+                          color: @Typography-Link-Alternative-Hover-Color;
+                        }
+
+					}
+
+					&:before
+					{
+						content: '|';
+						display: inline-block;
+						margin: 0 .4em;
+					}
+
+					&:first-child
+					{
+
+						&:before
+						{
+							content: '';
+							display: none;
+							margin: 0;
+						}
+					}
+				}
+			}
+
+			#group1
+			{
+				float: left;
+				width: auto;
+			}
+
+			#group2
+			{
+				float: right;
+				text-align: right;
+				width: auto;
+			}
+		}
+
+		.EventListCalendar {
+			border: 1px solid #ebebeb;
+
+			.recurringEvent {
+				&:before {
+					content: "\f073";
+					font-family: "FontAwesome";
+					margin: 0 5px 0 0;
+				}
+
+				.eventTime {
+					display: inline;
+				}
+			}
+
+			td {
+				border-color: #ebebeb;
+				border-right: 1px solid #ebebeb;
+				height: auto;
+				padding: 5px;
+
+				&.EventListCalendarHeader {
+					padding: 15px 10px 15px 10px;
+					background-color: @Gadget-Events-Calendar-ViewTypeMonth-Header-Bg;
+					border: none !important;
+					color: @Gadget-Events-Calendar-ViewTypeMonth-Header-Color;
+					font: @Gadget-Events-Calendar-ViewTypeMonth-Header-Font;
+				}
+
+				a.calendarDate,
+				a.calendarDate:hover {
+					color: @Gadget-Events-Calendar-Date-Color;
+					font: @Gadget-Events-Calendar-Date-Font;
+					text-decoration: none;
+				}
+
+				&.EventListCalendarItemSelected // current date
+				{
+
+					a.calendarDate,
+					a.calendarDate:hover {
+						color: @Gadget-Events-Calendar-Current-Date-Color;
+						font-weight: bold;
+					}
+				}
+
+				> div {
+					.border-radius(12px);
+					background: @Gadget-Events-Calendar-ViewTypeMonth-Event-Bg;
+					padding: 4px 10px;
+
+					&:hover {
+						background: @Gadget-Events-Calendar-ViewTypeMonth-Event-Hover-Bg;
+					}
+
+					a {
+						color: @Gadget-Events-Calendar-ViewTypeMonth-Event-Color;
+						font: @Gadget-Events-Calendar-ViewTypeMonth-Event-Font;
+						text-decoration: none;
+					}
+				}
+
+				> table {
+
+					td {
+						background: none !important;
+						border: none !important;
+					}
+
+				}
+			}
+		}
+
+		.yearViewType // Year vew type of calendar
+		{
+			.EventListCalendar {
+
+				a.yearViewHeader {
+					background-color: @Gadget-Events-Calendar-ViewTypeYear-Header-Bg;
+					color: @Gadget-Events-Calendar-ViewTypeYear-Header-Color;
+					font: @Gadget-Events-Calendar-ViewTypeYear-Header-Font;
+					display: block;
+					margin: 0;
+					padding: 0;
+					text-decoration: none;
+
+					&:hover {
+						color: @Gadget-Events-Calendar-ViewTypeYear-Header-Hover-Color;
+					}
+				}
+
+				td {
+					font: @Gadget-Events-Calendar-ViewTypeYear-Event-Font;
+					padding: 15px;
+
+					a {
+						margin-left: 4px;
+
+						&:after {
+							content: '';
+							display: block;
+							height: 2px;
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+
+		.weekViewType {
+			.EventListCalendar {
+
+				td {
+					font: @Gadget-Events-Calendar-ViewTypeYear-Event-Font;
+
+					td {
+						padding: 0;
+					}
+
+					&.EventListCalendarHeader {
+						border-left: 1px solid #ebebeb !important;
+						padding: 15px;
+
+						a {
+
+							&.calendarDate {
+								color: @Gadget-Events-Calendar-ViewTypeWeek-Header-Color;
+								font: @Gadget-Events-Calendar-ViewTypeWeek-Header-Font;
+								text-decoration: none;
+							}
+						}
+					}
+
+					div {
+						background: none;
+					}
+
+					a {
+						color: @Gadget-Events-Calendar-ViewTypeWeek-Event-Color;
+						font: @Gadget-Events-Calendar-ViewTypeWeek-Event-Font;
+						text-decoration: underline;
+
+						&:hover {
+							color: @Gadget-Events-Calendar-ViewTypeWeek-Event-Hover-Color;
+						}
+
+						&.eventHover {
+							color: @Typography-Link-Alternative-Hover-Color;
+						}
+					}
+				}
+			}
+		}
+
+		.mobthViewType  {
+			.EventListCalendar {
+				td a.eventHover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	&.WaGadgetEventsStateRegistrationsList,
+	&.WaGadgetEventsStateRegistration,
+	&.WaGadgetEventsStateSelfRegistrationsList
+	{
+
+		.pageTitleOuterContainer  // Event name
+		{
+
+			.pageTitleContainer
+			{
+				margin: 0;
+				padding: 0;
+
+				h1.pageTitle
+				{
+					color: @Typography-Header2-Color;
+					font: @Typography-Header3-Font;
+					margin: 0;
+					padding: 0;
+					text-transform: uppercase;
+				}
+			}
+		}
+
+		.titleContainer
+		{
+
+			h1.pageTitle  // title - name of event
+			{
+                color: @Typography-Header2-Color;
+                font: @Typography-Header3-Font;
+				margin: 0;
+				padding: 0;
+				text-transform: uppercase;
+
+				a
+				{
+					color: inherit;
+					font: inherit;
+					text-decoration: none;
+				}
+			}
+
+			#idTitleRight
+			{
+
+				.pageViewSwitcherContainer
+				{
+					padding-top: 5px;
+
+					a  //  link "Add to my calendar"
+					{
+                        font: @Gadget-Events-Aux-Link-Font;
+                        color: @Gadget-Events-Aux-Link-Color;
+
+                        &:hover
+                        {
+                          color: @Typography-Link-Alternative-Hover-Color;
+                        }
+
+						img
+						{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		.infoOuterContainer
+		{
+            margin-top: 5px;
+
+			.infoContainer
+			{
+
+				.infoSection
+				{
+
+					&.eventRegistrationInfoEvent
+					{
+
+						.infoText
+						{
+							font-weight: bold;
+						}
+					}
+
+					&.eventRegistrationInfoEndDate {}
+					&.eventRegistrationInfoLocation {}
+				}
+			}
+		}
+
+		.generalFormOuterContainer
+		{
+
+			.titleOuterContainer
+			{
+				.generalFormContainer
+				{
+					.titleLeftContainer
+					{
+						h2.stepTitle
+						{
+							margin: 0;
+                            font: @Typography-Header3-Font;
+                            color: @Gadget-Events-Registrants-Color;
+                            text-transform: uppercase;
+							overflow: inherit;
+							text-overflow: clip;
+
+							&:after
+							{
+								display: none;
+							}
+						}
+					}
+
+					.titleRightContainer
+					{
+
+						input.typeButton
+						{
+							.functionalButton();
+						}
+					}
+				}
+			}
+
+			.boxOuterContainer
+			{
+
+				.boxContainer
+				{
+
+					.boxBodyOuterContainer
+					{
+						padding: 0;
+					}
+				}
+			}
+
+			.pagerOuterContainer
+			{
+				float: right;
+				margin: 0;
+				padding: 0;
+				text-align: right;
+				width: 100%;
+
+				.eventRegistrationsViewPagerContainer
+				{
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+            .navigationOuterContainer
+            {
+              .navigationContainer .left a.additionalLink
+              {
+                font: @Gadget-Events-Aux-Link-Font;
+                color: @Gadget-Events-Aux-Link-Color;
+
+                &:hover
+                {
+                  color: @Typography-Link-Alternative-Hover-Color;
+                }
+              }
+            }
+		}
+
+		.membersTable
+		{
+            th
+            {
+              font: @Typography-Header3-Font;
+              color: inherit;
+            }
+
+			td
+			{
+				.memberValue h5 a
+				{
+					font: @Gadget-Events-Registrants-Guest-Link-Font;
+                    text-decoration: underline;
+                    color: @Typography-Link-Alternative-Color;
+                    &:hover
+                    {
+                        color: @Typography-Link-Alternative-Hover-Color;
+                    }
+				}
+
+			}
+		}
+	}
+
+    &.WaGadgetEventsStateRegistrationsList
+    {
+      .infoOuterContainer
+      {
+        margin-top: 25px;
+      }
+    }
+
+	&.WaGadgetEventsStateSelfRegistrationsList
+	{
+
+		#membersTable // weird shared members table for gadget
+		{
+
+			thead
+			{
+
+				th
+				{
+					&.fistColumnWidth
+					{
+						width: 25%;
+					}
+
+					&.secondColumnWidth
+					{
+						width: 45%;
+					}
+
+					&.thirdColumnWidth
+					{
+						width: 30%;
+					}
+				}
+			}
+
+			tbody
+			{
+				tr
+				{
+					td
+					{
+						border-top: 1px solid @Shared-Table-Row-Border-Color;
+
+						&.memberDirectoryColumn1 {}
+						&.memberDirectoryColumn2 {}
+						&.memberDirectoryColumn3
+						{
+							padding-right: 10px;
+
+							> div
+							{
+								padding-left: 0 !important;
+							}
+
+							input[type='submit']
+							{
+								.functionalButton();
+								margin-top: 5px;
+							}
+						}
+					}
+				}
+
+				tr:hover
+				{
+
+					td
+					{
+
+						border-top-width: 3px;
+						border-bottom: 2px solid @Shared-Table-Row-Border-Color;
+						padding-bottom: 14px;
+						padding-top: 13px;
+					}
+				}
+			}
+
+			thead + tbody
+			{
+				tr
+				{
+					td
+					{
+						border-top: 1px solid transparent;
+					}
+				}
+
+				tr:hover
+				{
+
+					td
+					{
+						border-top: 3px solid @Shared-Table-Row-Border-Color;
+						padding-top: 13px;
+					}
+				}
+			}
+		}
+	}
+
+	&.WaGadgetEventsStateRegistrationDetails
+	{
+		.titleContainer #idTitleRight .pageViewSwitcherContainer img
+		{
+			display: none;
+		}
+	}
+
+	&.WaGadgetEventsStateUndefined
+	{
+	  .membersTable{
+		tr{
+		  cursor: pointer;
+		}
+		.memberDirectoryColumn4{
+		  text-align: right;
+		  h5{
+			display: inline-block;
+			margin-left: 10px;
+		  }
+		}
+	  }
+		.titleContainer #idTitleRight .pageViewSwitcherContainer img
+		{
+			display: none;
+		}
+	}
+
+}
+
+@import 'gadget.event.calendar.state2.less';
+@media only screen and (min-width:@state2-minwidth) and (max-width:@state2-maxwidth)
+{
+	.gadget-eventCalendar-state2();
+}
+
+@import 'gadget.event.calendar.state3.less';
+@media only screen and (max-width:@state3-maxwidth)
+{
+	.gadget-eventCalendar-state3();
+}
+

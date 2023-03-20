@@ -1,0 +1,614 @@
+.gadget-eventCalendar-state3()
+{
+	.WaGadgetEvents
+	{
+
+		.boxOuterContainer
+		{
+
+			.boxHeaderOuterContainer
+			{
+
+				.boxHeaderContainer
+				{
+
+					h4.boxHeaderTitle
+					{
+						overflow: inherit;
+						text-overflow: clip;
+						white-space: normal;
+
+						a
+						{
+							font: @Typography-Adaptive-State3-Header2;
+						}
+
+						&:after
+						{
+							display: none;
+						}
+					}
+				}
+			}
+
+			.boxBodyOuterContainer {}
+
+			.boxFooterOuterContainer
+			{
+
+				.boxFooterContainer
+				{
+					padding: 0;
+				}
+			}
+		}
+
+        .navigationContainer
+        {
+          .left
+          {
+            margin-bottom: 10px;
+          }
+
+          .right
+          {
+
+          }
+        }
+
+        .titleContainer
+        {
+          h1.pageTitle, #idTitleRight
+          {
+            float: none;
+          }
+        }
+
+		&.WaGadgetEventsStateList, // List of events
+		&.WaGadgetEventsStateDetails // Event details
+		{
+
+            .pageTitleOuterContainer  // switch to calendar view
+            {
+              clear: both;
+              float:none;
+
+              .pageViewSwitcherOuterContainer .pageViewSwitcherContainer a
+              {
+                margin-left: 0;
+              }
+            }
+
+			.boxOuterContainer
+			{
+
+				.boxBodyOuterContainer
+				{
+
+					.boxBodyContainer
+					{
+
+						.boxBodyInfoOuterContainer
+						{
+							float: none;
+							width: auto;
+
+                            &.boxBodyInfoViewFill
+                            {
+                              margin-top: 0 !important;
+                            }
+
+							.boxBodyInfoContainer
+							{
+								padding: 0;
+
+                                .boxInfoContainer
+                                {
+                                  ul.boxInfo
+                                  {
+                                    li
+                                    {
+                                      label
+                                      {
+                                        padding: 2px 10px 0 0;
+                                        text-align: left;
+                                      }
+                                    }
+                                  }
+                                }
+
+								.boxActionContainer
+								{
+									padding: 10px 0;
+								}
+
+                                .registrationInfoContainer
+                                {
+                                  padding: 0 0 0 72px;
+                                }
+
+                                .paymentSystemsIconsBox
+                                {
+                                  padding: 0 0 0 72px;
+                                }
+							}
+						}
+
+						.boxBodyContentOuterContainer
+						{
+							float: none;
+							width: auto;
+						}
+					}
+				}
+			}
+		}
+
+		&.WaGadgetEventsStateDetails // Event details
+		{
+
+			.pageTitleContainer
+			{
+				padding: 0;
+
+				h1.pageTitle
+				{
+					color: @Typography-Header2-Color;
+					font: @Typography-Adaptive-State3-Header2;
+					text-transform: capitalize;
+				}
+			}
+		}
+
+		&.WaGadgetEventsStateCalendar // Events calendar
+		{
+
+            .pageTitleOuterContainer  // switch to
+            {
+            clear: both;
+            float:none;
+
+            #idEventViewSwitcher .pageViewSwitcherContainer a
+            {
+              margin-left: 0;
+            }
+            }
+
+			h3.sectionTitle
+			{
+                display: inline;
+                float: none;
+				padding-right: 10px;
+                vertical-align: top;
+			}
+
+			h1.pageTitle
+			{
+				padding: 0;
+                float: none;
+                display: inline-block;
+			}
+
+			#idViewSwitchersTable
+			{
+				margin: 0;
+				padding: 15px 0;
+
+				#group1, // week / month / year
+				#group2 // previous month / today / next month
+				{
+					div:before // divider "|"
+					{
+						margin: 0;
+					}
+				}
+
+				#group1
+				{
+					margin: 0 15px 15px 0;
+				}
+
+				#group2
+				{
+					float: left;
+					text-align: left;
+					width: auto;
+				}
+			}
+
+			.EventListCalendar
+			{
+
+                &.viewTypeMonth
+                {
+                  td.EventListCalendarHeader
+                  {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    letter-spacing: 1000px;
+
+                    &:first-letter
+                    {
+                      margin-right: -1000px;
+                    }
+                  }
+
+                }
+				table-layout: fixed;
+
+				td
+				{
+					padding: 3px;
+
+					&.EventListCalendarHeader
+					{
+						font: @Gadget-Events-Calendar-Adaptive-State3-ViewTypeMonth-Header-Font;
+						padding: 12px 4px;
+						vertical-align: top;
+						word-break: break-all;
+                    }
+
+					a.calendarDate,
+					a.calendarDate:hover
+					{
+						font: @Gadget-Events-Calendar-Adaptive-State3-ViewTypeMonth-Date-Font;
+					}
+
+					> table
+					{
+						table-layout: fixed;
+					}
+
+					> div
+					{
+						.border-radius(8px);
+						padding: 4px;
+
+						a
+						{
+							display: block;
+							font: @Gadget-Events-Calendar-Adaptive-State3-ViewTypeMonth-Event-Font;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+						}
+					}
+
+					div.eventTime
+					{
+						font: @Gadget-Events-Calendar-Adaptive-State3-ViewTypeMonth-Event-Font;
+						overflow: hidden;
+					}
+
+					div.recurringEvent:before
+					{
+						font-size: 13px;
+					}
+
+				}
+
+				&.viewTypeYear // Year view type of calendar
+				{
+
+					a.yearViewHeader
+					{
+						font: @Gadget-Events-Calendar-Adaptive-State3-ViewTypeYear-Header-Font;
+					}
+
+					td
+					{
+						font: @Gadget-Events-Calendar-Adaptive-State3-ViewTypeYear-Event-Font;
+						padding: 10px;
+
+						a
+						{
+							display: block;
+							margin: 2px 0 0 0;
+							overflow: hidden;
+							text-overflow: ellipsis;
+						}
+					}
+				}
+
+				&.viewTypeWeek // Week view type of calendar
+				{
+
+					td
+					{
+
+						&.EventListCalendarHeader
+						{
+							padding: 10px;
+
+							a.calendarDate
+							{
+								font: @Gadget-Events-Calendar-Adaptive-State3-ViewTypeWeek-Header-Font;
+							}
+						}
+
+						a
+						{
+							display: inline;
+							overflow: inherit;
+							text-overflow: clip;
+							white-space: normal;
+						}
+					}
+				}
+			}
+		}
+
+		&.WaGadgetEventsStateRegistrationsList,
+		&.WaGadgetEventsStateRegistration,
+		&.WaGadgetEventsStateSelfRegistrationsList
+		{
+
+			.pageTitleOuterContainer  // Event name
+ 			{
+
+				.pageTitleContainer
+				{
+					margin: 0;
+					padding: 0;
+
+					h1.pageTitle
+					{
+						color: @Typography-Header2-Color;
+						font: @Typography-Adaptive-State3-Header2;
+						text-transform: capitalize;
+					}
+				}
+			}
+
+			.titleContainer
+			{
+
+				h1.pageTitle
+				{
+					color: @Typography-Header2-Color;
+					font: @Typography-Adaptive-State3-Header2;
+					text-transform: capitalize;
+				}
+			}
+
+			.infoOuterContainer
+			{
+
+				.infoContainer
+				{
+
+					.infoSection
+					{
+
+						&.eventRegistrationInfoEvent
+						{
+
+							.infoText
+							{
+								font-weight: bold;
+							}
+						}
+
+						&.eventRegistrationInfoEndDate {}
+						&.eventRegistrationInfoLocation {}
+					}
+				}
+			}
+
+			.generalFormOuterContainer
+			{
+
+				.titleOuterContainer
+				{
+
+					.generalFormContainer
+					{
+
+						.titleLeftContainer
+						{
+							margin-bottom: 10px;
+							padding: 2px 0;
+                            float: none;
+
+							h2.stepTitle
+							{
+								font: @Typography-Adaptive-State3-Header2;
+							}
+						}
+
+                        .titleRightContainer
+                        {
+                          float: none;
+                        }
+					}
+				}
+
+                .mandatorySymbol[style*='hidden']
+                {
+                  display: none;
+                }
+			}
+		}
+
+		&.WaGadgetEventsStateRegistration
+		{
+
+			.navigationOuterContainer
+			{
+
+				.navigationContainer
+				{
+					.inner
+					{
+						padding-top: 30px;
+						position: relative;
+					}
+
+					.left
+					{
+						a.additionalLink
+						{
+							left: 0;
+							position: absolute;
+							top: 0;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+
+			.membersTable
+			{
+
+				td
+				{
+					padding: 0 0 0 30%;
+					position: relative;
+					text-align: left;
+					width: auto;
+					min-height: 20px;
+
+					&:before
+					{
+						display: inline-block;
+						left: 0;
+						top: 0;
+						position: absolute;
+						width: 30%;
+					}
+
+					&:nth-of-type(1):before
+					{
+						content: 'Name';
+					}
+
+					&:nth-of-type(2):before
+					{
+						content: 'Email';
+					}
+
+					&:nth-of-type(3):before
+					{
+						content: 'Price';
+					}
+
+					&:nth-of-type(4):before
+					{
+						content: '';
+					}
+				}
+			}
+		}
+
+		&.WaGadgetEventsStateRegistrationsList
+		{
+
+			.membersTable
+			{
+
+				td
+				{
+					padding: 0 0 0 30%;
+					position: relative;
+					text-align: left;
+					width: auto;
+
+					&:before
+					{
+						display: inline-block;
+						left: 0;
+						top: 0;
+						position: absolute;
+						width: 30%;
+					}
+
+					&:nth-of-type(1):before
+					{
+						content: 'Date';
+					}
+
+					&:nth-of-type(2):before
+					{
+						content: 'Name';
+					}
+				}
+			}
+		}
+
+		&.WaGadgetEventsStateSelfRegistrationsList
+		{
+
+			#membersTable // weird shared members table for gadget
+			{
+
+				tbody,
+				tbody tr,
+				tbody tr:first-child td,
+				tbody tr td:first-child,
+				tbody tr td:last-child
+				{
+					border: none;
+					display: block;
+					padding-bottom: 0;
+					padding-top: 0;
+				}
+
+				thead + tbody tr:hover td
+				{
+					border: none;
+					padding-bottom: 0;
+					padding-top: 0;
+				}
+
+				tbody
+				{
+					border-top: 1px solid @Shared-Table-Row-Border-Color;
+					padding: 7px 0;
+
+					tr
+					{
+
+						td
+						{
+
+							padding: 0 0 0 45%;
+							position: relative;
+							text-align: left;
+
+							> div
+							{
+								padding-left: 0 !important;
+							}
+
+							&:before
+							{
+								display: inline-block;
+								left: 0;
+								top: 0;
+								position: absolute;
+								width: 45%;
+							}
+
+							&:nth-of-type(1):before
+							{
+								content: 'Date';
+							}
+
+							&:nth-of-type(2):before
+							{
+								content: 'Registration';
+							}
+
+							&:nth-of-type(3):before
+							{
+								content: 'Status';
+							}
+						}
+					}
+				}
+			}
+		}
+
+
+	}
+}

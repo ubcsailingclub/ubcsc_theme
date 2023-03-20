@@ -1,0 +1,199 @@
+.WaGadgetDonationGoal
+{
+  .gadgetStyleTitle h4
+  {
+    color: @Donation-Goal-StyleNone-Header-Color;
+  }
+
+  .donationGoalNotesContainer // gadget description
+  {
+    font: @Donation-Goal-StyleNone-Description-Font;
+  }
+
+  .progressBar, .buttonAndLabels, .donationGoalButton, .donationGoalProgressLabels
+  {
+    display: inline-block;
+  }
+
+  .progressBarOuterContainer
+  {
+    margin: 0 0 18px 0;
+
+    .progressBar
+    {
+      position: relative;
+      max-width: 288px;
+      margin-right: 10px;
+      margin-top: 18px;
+      overflow: visible;
+      zoom: 1;
+
+      table
+      {
+          table-layout: fixed;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          border: 1px solid @Donation-Goal-StyleNone-Progress-Bar-Border-Color;
+          background: transparent;
+
+		  td.donationGoalProgressBarLeftPart
+          {
+            padding: 0;
+            background: none; // progress bar in % left part
+
+            span
+            {
+              display: block;
+              height: 28px;
+              background: @Donation-Goal-StyleNone-Progress-Bar-Color;
+              overflow: hidden;
+              min-width: 4px;
+            }
+		  }
+
+		  td.donationGoalProgressBarRightPart
+          {
+            padding: 0;
+            overflow: hidden;
+             // progress bar in % right part
+			span
+            {
+              display: block;
+              width: 0px;
+              height: 28px;
+              overflow: hidden;
+            }
+		  }
+		}
+
+      .collectedPercents
+      {
+        position: absolute;
+        top: 2px;
+        right: 10px;
+        font: @Donation-Goal-StyleNone-Percentage-Font;
+        color: @Donation-Goal-StyleNone-Percentage-Color;
+      }
+  }
+
+    .buttonAndLabels
+    {
+
+      margin-top: 18px;
+
+      .donationGoalButton
+      {
+        margin-right: 10px;
+        vertical-align: text-bottom;
+
+        input.typeButton
+        {
+          .functionalButton;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          text-transform: uppercase;
+          background: @Donation-Goal-StyleNone-Button-Bg;
+          color: @Donation-Goal-StyleNone-Button-Color;
+
+          &:hover
+          {
+            background: @Donation-Goal-StyleNone-Button-Hover-Bg;
+          }
+      }
+      }
+
+      .donationGoalProgressLabels
+      {
+        font: @Donation-Goal-StyleNone-Labels-Font;
+
+        .title
+        {
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+
+  &.gadgetStyle001
+  {
+    .gadgetStyleTitle h4
+    {
+      color: @Donation-Goal-Style001-Header-Color;
+    }
+
+    .donationGoalNotesContainer // gadget description
+    {
+      font: @Donation-Goal-Style001-Description-Font;
+    }
+
+    .progressBarOuterContainer .buttonAndLabels .donationGoalProgressLabels
+    {
+      font: @Donation-Goal-Style001-Labels-Font;
+
+      .title
+      {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.gadgetStyle002
+  {
+    .gadgetStyleBody
+    {
+      font: inherit;
+    }
+
+    .donationGoalNotesContainer // gadget description
+    {
+      font: @Donation-Goal-Style002-Description-Font;
+    }
+
+    .progressBarOuterContainer
+    {
+      .progressBar
+      {
+        table
+        {
+        border: 1px solid @Donation-Goal-Style002-Progress-Bar-Border-Color;
+
+        td.donationGoalProgressBarLeftPart
+        {
+          span
+          {
+            background: @Donation-Goal-Style002-Progress-Bar-Color;
+          }
+        }
+      }
+
+        .collectedPercents
+        {
+          color: @Donation-Goal-Style002-Percentage-Color;
+        }
+      }
+
+      .buttonAndLabels .donationGoalButton input.typeButton
+      {
+        background: @Donation-Goal-Style002-Button-Bg;
+
+        &:hover
+        {
+          background: @Donation-Goal-Style002-Button-Hover-Bg;
+        }
+
+      }
+    }
+  }
+}
+
+/* ----- Layout adaptive behavior ( basic.responsive.grid.less ) ----- */
+
+// state2
+@import "gadget.donation.goal.state2.less";
+@media only screen and ( max-width: @state2-maxwidth )
+{
+  .gadget-donationGoal-state2();
+}
+

@@ -1,0 +1,410 @@
+/* ---- Gadget discussion forum adaptive behavior. State 3 ---- */
+
+.gadget-discussion-forum-state3()
+{
+
+	.WaGadgetForum
+	{
+
+		.forumPanelOuterContainer
+		{
+
+			.forumPanelContainer
+			{
+
+				[id*='subscribeDiv'],
+				[id*='unsubscribeDiv']
+				{
+
+					#idSubscribe,
+					#idUnsubscribe
+					{
+						padding: 5px 0 6px 10px;
+						a
+						{
+							font: @Typography-Adaptive-State3-Link-Font;
+						}
+					}
+
+				}
+
+				.forumPanelSubscribeLink  // message like a "Subscribing..."
+				{
+					font: @Typography-Adaptive-State3-Link-Font;
+				}
+
+				.forumSelectAction
+				{
+					display: inline-block;
+					padding: 7px 0 0 10px;
+					float: right;
+				}
+			}
+		}
+
+		.forumEditEntryBoxContainer
+		{
+			.boxBodyOuterContainer
+			{
+				margin: 0;
+			}
+
+			.boxFooterOuterContainer
+			{
+				padding: 0;
+
+				#idForumSubscribeOptionsContainer
+				{
+					margin-top: 15px;
+				}
+			}
+		}
+
+		&.WaGadgetForumStateTopicList // List of topics
+		{
+
+			#idTopicListContainer
+			{
+
+				.topicListContainer
+				{
+
+					.boxHeaderOuterContainer
+					{
+
+						table
+						{
+							td
+							{
+								&.threadTD
+								{
+									div.thread
+									{
+										h4.boxHeaderTitle
+										{
+											font: @Typography-Adaptive-State3-Header3;
+											color: @Typography-Header4-Color;
+										}
+									}
+								}
+
+								&.lastReplyTD
+								{
+									display: none;
+								}
+
+								&.repliesCountTD
+								{
+									div.repliesCount
+									{
+										h4.boxHeaderTitle
+										{
+											font: @Typography-Adaptive-State3-Header3;
+											color: @Typography-Header4-Color;
+										}
+									}
+
+									text-align: right;
+									width: 50%;
+								}
+							}
+						}
+					}
+
+					.boxBodyOuterContainer
+					{
+
+						table
+						{
+							border: none;
+							border-collapse: separate;
+
+							tr
+							{
+								td
+								{
+									border-bottom: 1px solid @Divider-Style001-Color;
+								}
+
+								&:last-child td
+								{
+									border-bottom: none;
+								}
+
+
+								&.topicListRow
+								{
+
+									td
+									{
+
+										&.threadImageTD
+										{
+											div.threadImage // topic image
+											{
+												font: @Gadget-Forum-Icons-Adaptive-State3-Font;
+
+												&:before
+												{
+													display: none;
+													content: "";
+												}
+											}
+										}
+
+										&.threadTD
+										{}
+
+										&.lastReplyTD
+										{
+											display: none;
+										}
+
+										&.repliesCountTD
+										{
+											text-align: right;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.WaGadgetForumStateMessageList // Topic page & list of messages
+		{
+
+			.topicTitleOuterContainer
+			{
+
+				.topicTitleContainer
+				{
+
+					h4
+					{
+						font: @Typography-Adaptive-State3-Header3;
+					}
+				}
+			}
+
+			.forumPanelOuterContainer
+			{
+				margin: 0;
+
+				#idSortedOrderDiv
+				{
+					float: right;
+
+					a
+					{
+						font: @Typography-Adaptive-State3-Link-Font;
+					}
+				}
+
+
+				[id*='subscribeDiv'],
+				[id*='unsubscribeDiv']
+				{
+					float: right;
+
+					a
+					{
+						font: @Typography-Adaptive-State3-Link-Font;
+					}
+				}
+
+				.forumPanelSubscribeLink
+				{
+					float: right;
+				}
+
+				+ .pagerOuterContainer
+				{
+					padding-top: 15px;
+					text-align: center;
+					width: 100%;
+				}
+			}
+
+			.messageListOuterContainer
+			{
+
+				.messageListContainer
+				{
+
+					ul.boxesList
+					{
+
+						li.boxesListItem
+						{
+
+							.boxHeaderOuterContainer
+							{
+
+								table.forumMessageHeaderTable
+								{
+
+									td
+									{
+
+										&.forumMessageHeaderInfoContainer
+										{
+											display: block;
+											float: left;
+											padding: 0;
+											width: auto;
+
+											.forumMessageHeaderInfo
+											{
+
+												span // date of post/reply
+												{
+													font: @Gadget-Forum-Adaptive-State3-Font;
+												}
+											}
+										}
+
+										&.forumMessageHeaderBodyContainer
+										{
+
+											display: block;
+											width: auto;
+
+											> span
+											{
+												float: none;
+												font: @Gadget-Forum-Adaptive-State3-Font;
+
+												a  {
+													font: @Gadget-Forum-Adaptive-State3-MessageNumber-Link-Font;
+												}
+											}
+
+											.messageActionsContainer
+											{
+												display: block;
+												float: none;
+												text-align: right;
+
+												a
+												{
+													font-size: 0;
+													padding-left: 10px;
+
+													&:before
+													{
+														color: @Shared-Icons-Adaptive-Color;
+														font: @Shared-Icons-Adaptive-Font;
+														visibility: visible;
+													}
+
+													&[title^='Edit']:before, &[title^='Merge']:before, &[title^='Move']:before, &[title^='Delete']:before, &[title^='Quote']:before
+													{
+														text-decoration: underline;
+													}
+
+													&[title^='Edit']:before
+													{
+														content: '\e60c';
+														text-decoration: none;
+													}
+
+													&[title^='Merge']:before
+													{
+														content: '\e601';
+														text-decoration: none;
+													}
+
+													&[title^='Move']:before
+													{
+														content: '\e600';
+														text-decoration: none;
+													}
+
+													&[title^='Delete']:before
+													{
+														content: '\e60e';
+														text-decoration: none;
+													}
+
+													&[title^='Quote']:before
+													{
+														content: '\e630';
+														text-decoration: none;
+													}
+												}
+
+												+ span
+												{
+													margin: -5px 0 0 5px;
+												}
+											}
+										}
+									}
+								}
+							}
+
+							.boxBodyOuterContainer
+							{
+								padding-top: 5px;
+
+								table.forumMessageTable
+								{
+
+									td.left
+									{
+										display: block;
+										height: auto;
+										padding: 0;
+										width: auto;
+										position: static;
+
+										.boxBodyInfoOuterContainer
+										{
+											margin-bottom: 7px;
+
+											.boxBodyInfoContainer
+											{
+
+												a  // user
+												{
+													font: @Typography-Adaptive-State3-Link-Font;
+												}
+
+												span.postedByComment // type of user
+												{
+													font: @Typography-Adaptive-State3-Link-Font;
+												}
+											}
+										}
+									}
+
+									td.right
+									{
+										display: block;
+										height: auto;
+										width: 100%;
+
+										.boxBodyContentOuterContainer
+										{
+											padding-top: 10px;
+										}
+
+										.forumMessage {} // user's message
+
+										.forumMessageLastModified  // if message modified
+										{
+											a {}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

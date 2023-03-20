@@ -1,0 +1,1 @@
+<div id="{{Id}}" class="{{FullClassName}}" data-componentId="{{ComponentId}}" style="{{DisplayNoneForAdmin}}"><div style="{{Padding}}">{{Content}}</div></div>

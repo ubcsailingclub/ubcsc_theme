@@ -1,0 +1,230 @@
+/* ----- Gadget Forum summary ----- */
+
+.WaGadgetForumStateList
+{
+
+	.forumCategoryListOuterContainer
+	{
+		padding: 0;
+
+		.forumCategoryOuterContainer
+		{
+			margin: 0;
+
+			.forumCategoryContainer
+			{
+
+				h5 // text "Uncategorized"
+				{
+					font: @Typography-Header3-Font;
+					margin: 17px 0;
+				}
+
+				.forumListContainer
+				{
+
+					.boxHeaderOuterContainer
+					{
+
+						table
+						{
+
+							td
+							{
+								padding: 0 0 10px 0;
+
+								&:first-child
+								{
+									display: none;
+
+								}
+
+								&.threadTD
+								{
+									width: 50%;
+                                    padding-left: 29px;
+								}
+
+								&.topicsCountTD
+								{
+									text-align: center;
+								}
+
+								&.repliesCountTD
+								{
+									text-align: right;
+								}
+
+								h4
+								{
+									font: @Typography-Header4-Font;
+								}
+							}
+						}
+					}
+
+					.boxBodyOuterContainer
+					{
+
+						table.forumListTable
+						{
+							border: none;
+							border-collapse: separate;
+
+							tr.forumListRow
+							{
+
+								td
+								{
+									height: auto;
+									padding: 25px 0;
+                                    border-top: none;
+                                    vertical-align: middle;
+
+									&.pageStateIconTD
+									{
+                                        vertical-align: middle;
+
+										.pageStateIcon
+										{
+											font-size: 0;
+
+											.anybodyIconDiv,
+											.memberIconDiv,
+											.adminIconDiv
+											{
+												background: none;
+												color: @Gadget-ForumSummary-Icon-Color;
+												font: @Gadget-ForumSummary-Icon-Font;
+												height: auto;
+												width: auto;
+											}
+											.anybodyIconDiv:before
+											{
+												content: '\e606';
+											}
+
+											.memberIconDiv:before
+											{
+												content: '\e607';
+											}
+
+											.adminIconDiv:before
+											{
+												content: '\e608';
+											}
+										}
+									}
+
+
+									&.threadTD
+									{
+										padding-left: 10px;
+										padding-right: 25px;
+										width: 48%;
+
+										.thread
+										{
+
+											a.forumTitle
+											{
+												font: @Gadget-ForumSummary-Thread-Link-Font;
+                                                color: @Gadget-ForumSummary-Thread-Link-Color;
+												text-decoration: underline;
+
+                                                &:hover
+                                                {
+                                                  color: @Gadget-ForumSummary-Thread-Link-Hover-Color;
+                                                }
+
+											}
+
+
+											span.forumDescription
+											{
+												color: @Gadget-ForumSummary-Description-Color;
+												font: @Gadget-ForumSummary-Description-Font;
+											}
+										}
+									}
+
+
+									&.lastReplyTD
+									{
+										padding-right: 25px;
+
+										.lastReply
+										{
+											a
+											{
+												font: @Gadget-ForumSummary-LastMessage-Date-Link-Font;
+												color: @Gadget-ForumSummary-LastMessage-Date-Link-Color;
+												text-decoration: underline;
+                                                &:hover
+                                                {
+                                                  color: @Gadget-ForumSummary-LastMessage-Date-Link-Hover-Color;
+                                                }
+											}
+
+											span
+											{
+												font: @Gadget-ForumSummary-LastMessage-Name-Font;
+											}
+										}
+									}
+
+
+									&.topicsCountTD
+									{
+
+										.topicsCount
+                                        {
+                                          font: @Gadget-ForumSummary-LastMessage-Topics-Replies-Font;
+                                          color: @Gadget-ForumSummary-LastMessage-Topics-Replies-Color;
+                                        }
+									}
+
+
+									&.repliesCountTD
+									{
+
+										.repliesCount
+                                        {
+                                          font: @Gadget-ForumSummary-LastMessage-Topics-Replies-Font;
+                                          color: @Gadget-ForumSummary-LastMessage-Topics-Replies-Color;
+                                        }
+									}
+								}
+
+								&.normal {} // normal state of row ( not highlighted )
+
+								&.highlight // highlighted state of row ( not highlighted )
+								{
+                                  td
+                                  {
+                                    background: none;
+                                  }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ----- Gadget forum summary adaptive behavior ----- */
+// state2
+@import 'gadget.forum.summary.state2.less';
+@media only screen and (min-width:@state2-minwidth) and (max-width:@state2-maxwidth)
+{
+	.gadget-forum-summary-state2();
+}
+
+// state 3
+@import 'gadget.forum.summary.state3.less';
+@media only screen and (max-width:@state3-maxwidth)
+{
+	.gadget-forum-summary-state3();
+}

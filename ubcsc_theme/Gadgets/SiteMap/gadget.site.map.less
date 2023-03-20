@@ -1,0 +1,89 @@
+/* ----- Gadget Site map ----- */
+
+.WaGadgetSiteMap
+{
+    overflow: visible;
+
+    .gadgetStyleBody
+    {
+        font: inherit;
+        padding: 0;
+
+        > ul
+        {
+            padding: 20px;
+        }
+
+        ul
+        {
+            list-style-position: inside;
+
+            li
+            {
+                margin: 3px 0;
+                padding: 0;
+
+                a
+                {
+                    text-decoration: underline;
+                    background-color: transparent;
+
+                    &:hover
+                    {
+                        text-decoration: underline;
+                    }
+                }
+
+                ul {  }
+            }
+        }
+    }
+
+    &.gadgetStyleNone // default style
+    {
+
+        ul
+        {
+            color: @Gadget-SiteMap-StyleNone-Link-Color;
+
+            li
+            {
+
+                a
+                {
+                    color: @Gadget-SiteMap-StyleNone-Link-Color;
+                    font: @Gadget-SiteMap-StyleNone-Link-Font;
+
+                    &:hover
+                    {
+                        color: @Gadget-SiteMap-StyleNone-Link-Hover-Color;
+                    }
+                }
+            }
+        }
+    }
+
+    &.gadgetStyle001 // gadget style 001
+    {
+
+        ul
+        {
+            color: @Gadget-SiteMap-Style001-Link-Color;
+
+            li
+            {
+                a
+                {
+                    color: @Gadget-SiteMap-Style001-Link-Color;
+                    font: @Gadget-SiteMap-Style001-Link-Font;
+
+                    &:hover
+                    {
+                        color: @Gadget-SiteMap-Style001-Link-Hover-Color;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,1 @@
+<td id="{{Id}}" data-componentId="{{ComponentId}}" class="{{FullClassName}}" style="{{CssStyle.ContainerStyle}}{{Width}}">{{PlaceHolder}}</td>

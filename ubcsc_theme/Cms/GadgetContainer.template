@@ -1,0 +1,1 @@
+<div id="{{Id}}" class="{{FullClassName}}" style="{{InlineStyle}}{{CssStyle.ContainerStyle}}" data-componentId="{{ComponentId}}" {{Attributes}}>{{Content}}</div>

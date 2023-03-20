@@ -1,0 +1,47 @@
+/* ----- Functional buttons ----- */
+
+.functionalButton
+{
+    padding: 10px 15px;
+    background-color: @FunctionButton-Bg;
+    border: none;
+    .border-radius(3px);
+    color: @FunctionButton-Color;
+    font: normal 20px/normal 'Roboto Condensed';
+    height: auto;
+    margin: 0;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    white-space: nowrap;
+    min-width: 85px;
+    width: auto;
+
+	&:hover
+    {
+        background-color: @FunctionButton-Hover-Bg;
+        color: @FunctionButton-Hover-Color;
+    }
+
+    &:active
+    {
+        background-color: @FunctionButton-Active-Bg;
+        color: @FunctionButton-Active-Color;
+
+    }
+
+	.disabled, &[disabled="disabled"], &[disabled=""], &[disabled], &.aspNetDisabled
+    {
+        cursor: default;
+        color: @FunctionButton-Color;
+        .opacity(80);
+
+		&:hover
+        {
+            background-color: @FunctionButton-Bg;
+            color: @FunctionButton-Color;
+        }
+	}
+}

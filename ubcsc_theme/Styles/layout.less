@@ -1,0 +1,230 @@
+/* ----- Layout ----- */
+
+html
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+}
+
+body
+{
+    background-color: @Body-Bg-Color;
+    background-image: @Body-Bg-Image;
+    background-repeat: @Body-Bg-Repeat;
+    background-position: @Body-Bg-Position;
+    background-size: @Body-Bg-Size;
+    background-attachment: @Body-Bg-Attachment;
+    font-family: Raleway;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.mLayout
+{
+    margin: 0 auto;
+    min-height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+* html .mLayout
+{
+    height: 100%;
+}
+[class^="WaLayoutItem"]
+{
+  position: static;
+}
+
+.zoneHeaderInner, .zoneHeader1Inner, .zoneHeader2Inner, .zoneContentInner, .zoneFooterInner, .zoneFooter1Inner
+{
+  position: relative;
+}
+
+// Header
+.zoneHeaderOuter
+{
+    background: @ZoneHeader-Outer-Bg;
+    position: relative;
+    .zoneHeaderInner
+    {
+        background: @ZoneHeader-Inner-Bg;
+    }
+}
+
+.zoneHeader1Outer
+{
+    background: @ZoneHeader1-Outer-Bg;
+
+    .zoneHeader1Inner
+    {
+        background: @ZoneHeader1-Inner-Bg;
+        position: relative;
+
+
+        &:before,
+        &:after
+        {
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            bottom: 0;
+            content: "";
+            display: none;
+            position: absolute;
+            top: 0;
+            width: 10%;
+            z-index: -1;
+
+        }
+    }
+}
+
+// Content
+.zoneContentOuter
+{
+    background: none;
+
+    .zoneContentInner
+    {
+        background: @ZoneContent-Inner-Bg;
+        box-sizing: border-box;
+    }
+}
+
+// Footer
+.zoneFooterOuter
+{
+    background: @ZoneFooter-Outer-Bg;
+
+    .zoneFooterInner
+    {
+        background: @ZoneFooter-Inner-Bg;
+        position: relative;
+        z-index: 0;
+
+    }
+}
+
+.zoneFooter1Outer
+{
+  background: @ZoneFooter1-Outer-Bg;
+
+  .zoneFooter1Inner
+  {
+    background: @ZoneFooter1-Inner-Bg;
+    position: relative;
+    z-index: 0;
+  }
+}
+
+
+// WA branding
+.zoneBrandingOuter
+{
+    background: @ZoneBranding-Outer-Bg;
+
+    .zoneBrandingInner
+    {
+        background: @ZoneBranding-Inner-Bg;
+        .zonebrandingLinkColor();
+    }
+}
+
+// Default padding for placeholders
+.WaPlaceHolderHeader > div
+{
+    padding: 0;
+}
+
+.WaPlaceHolderHeader1 > div
+{
+  padding: 0;
+}
+
+.WaPlaceHolderHeader2 > div
+{
+    padding: 0;
+}
+
+.WaPlaceHolderContent > div
+{
+    padding: 20px 20px 40px 20px;
+}
+
+div[class*="WaPlaceHolderLeftSidebar"] > div
+{
+    padding: 0;
+}
+
+div[class*="WaPlaceHolderRightSidebar"] > div
+{
+    padding: 0;
+}
+
+.WaPlaceHolderFooter > div
+{
+    padding: 40px 20px 0 20px;
+}
+
+.WaPlaceHolderFooter1 > div
+{
+    padding: 0px 20px 30px 20px;
+}
+
+// GoogleAdSense
+
+.googleAdCoRight,
+.googleAdCoLeft
+{
+    width: 180px;
+    margin: 0 auto 0 auto;
+}
+
+.googleAdCoBottom
+{
+    
+    margin: 0 auto 0 auto;
+}
+
+.googleAdLeft,
+.googleAdRight,
+.googleAdBottom
+{
+    z-index: 37777;
+    clear: both;
+}
+
+.googleAdLeft,
+.googleAdRight
+{
+    position: absolute;
+    left: -180px;
+    top: 0;
+    display: none;
+    visibility: hidden;
+}
+
+.googleAdBottom
+{
+    padding: 15px;
+}
+
+/* ----- Layout adaptive behavior ( basic.responsive.grid.less ) ----- */
+
+// state2
+@import 'layout.state2.less';
+@media only screen and (min-width:@state2-minwidth) and (max-width:@state2-maxwidth)
+{
+    .layout-state2();
+}
+
+// state3
+@import "layout.state3.less";
+@media only screen and ( max-width: @state3-maxwidth )
+{
+    .layout-state3();
+}
+

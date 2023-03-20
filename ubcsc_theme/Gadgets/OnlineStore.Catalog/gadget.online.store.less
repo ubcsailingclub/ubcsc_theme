@@ -1,0 +1,83 @@
+.WaGadgetOnlineStoreCatalog  {
+	.OnlineStoreCatalog_list {
+		position: relative;
+		margin: 0 0 0 -20px;
+		padding: 0;
+
+		.OnlineStoreCatalog_list_item, .OnlineStoreCatalog_list_item_outOfStock {
+			position: relative;
+			display: inline-block;
+			width: 210px;
+			margin: 0 0 20px 20px;
+			padding: 0;
+			list-style: none outside;
+			vertical-align: top;
+
+			.OnlineStoreCatalog_list_item_img {
+				display: table-cell;
+				width: 210px;
+				height: 210px;
+				text-align: center;
+				vertical-align: middle;
+				text-decoration: none;
+
+				img {
+					max-width: 210px;
+					max-height: 210px;
+					border: none;
+				}
+			}
+
+			.OnlineStoreCatalog_list_item_noImage {
+				color: #dcddde;
+				font-family: "FontAwesome";
+				font-size: 40px;
+			}
+
+			.OnlineStoreCatalog_list_price {}
+
+			.OnlineStoreCatalog_list_price_alt {
+				font-size: 13px;
+				font-style: italic;
+			}
+
+			.OnlineStoreCatalog_list_price_strike {
+				text-decoration: line-through;
+			}
+		}
+
+    .OnlineStoreCatalog_list_item_outOfStock {
+      .OnlineStoreCatalog_list_item_noImage {
+        opacity: 0.3;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+            filter: alpha(opacity=30);
+      }
+
+      img {
+        opacity: 0.3;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+            filter: alpha(opacity=30);
+      }
+
+      .OnlineStoreCatalog_list_item_outOfStock_label {
+        font-size: 14px;
+        line-height: 1.25;
+        font-style: italic;
+        color:#aeaeae;
+      }
+    }
+	}
+}
+
+@media screen and (max-width: @state3-maxwidth) {
+	.WaGadgetOnlineStoreCatalog  {
+		.OnlineStoreCatalog_list {
+			margin: 0;
+
+			.OnlineStoreCatalog_list_item, .OnlineStoreCatalog_list_item_outOfStock {
+				display: block;
+				margin: 0 auto 20px;
+			}
+		}
+	}
+}

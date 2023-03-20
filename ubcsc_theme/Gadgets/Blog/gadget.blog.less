@@ -1,0 +1,749 @@
+/* ----- Gadget Blog ----- */
+
+.WaGadgetBlog
+{
+	.pageTitleOuterContainer // title of gadget blog
+	{
+
+		.pageBackContainer
+		{
+			a
+			{
+				font: @Gadget-Blog-Back-Font;
+				color: @Gadget-Blog-Back-Color;
+				&:hover
+				{
+					color: @Typography-Link-Alternative-Hover-Color
+				}
+			}
+		}
+	}
+
+
+	.blogEntryOuterContainer // text of post
+	{
+		margin: 0;
+
+		.boxHeaderOuterContainer // title
+		{
+			background: none;
+			padding: 0 0 15px 0;
+
+			.boxHeaderContainer
+			{
+				h4.boxHeaderTitle
+				{
+					color: @Gadget-Blog-Post-Title-Color;
+					font: @Gadget-Blog-Post-Title-Font;
+				}
+			}
+		}
+
+		.boxBodyOuterContainer
+		{
+			.boxBodyInfoOuterContainer // name and data inside blog post
+			{
+				h5
+				{
+					visibility: hidden;
+
+					.postedOn  // date of post
+					{
+						font: @Gadget-Blog-PostedBy-Font;
+						color: @Gadget-Blog-PostedBy-Color;
+						padding-left: 5px;
+					}
+
+					.postedByLink
+					{
+						&:before
+						{
+							font: @Gadget-Blog-PostedBy-Font;
+							color: @Gadget-Blog-PostedBy-Color;
+							content: "By\00a0";
+							display: inline-block;
+						}
+						&:after
+						{
+							font: @Gadget-Blog-PostedBy-Font;
+							color: @Gadget-Blog-PostedBy-Color;
+							content: "";
+							display: inline-block;
+							margin-left: -4px;
+						}
+					}
+
+				}
+			}
+
+			.boxBodyContentOuterContainer
+			{
+				padding: 0 0 15px 0;
+				p {}
+			}
+		}
+
+		.boxFooterOuterContainer
+		{
+			.boxFooterContainer .boxFooterPrimaryOuterContainer .boxFooterPrimaryContainer a:first-child:before
+			{
+				content: '\e60f';
+				text-decoration: underline;
+			}
+
+			.boxFooterContainer .boxFooterPrimaryOuterContainer .boxFooterPrimaryContainer a:first-child:before
+			{
+				text-decoration: none;
+			}
+		}
+	}
+
+	.boxBodyInfoOuterContainer // info data, author
+	{
+		background: none;
+		margin: 0 0 10px 0;
+		padding: 0;
+
+		h5
+		{
+			visibility: hidden;
+
+			.postedOn  // date of post
+			{
+				visibility: visible;
+				font: @Gadget-Blog-PostedOn-Font;
+				color: @Gadget-Blog-PostedOn-Color;
+				overflow: hidden;
+				padding-left: 10px;
+
+			}
+
+			.postedByLabel, // author of post
+			.postedByLink
+			{
+				visibility: visible;
+				float: left;
+				padding-left: 5px;
+				font: @Gadget-Blog-PostedBy-Font;
+				color: @Gadget-Blog-PostedBy-Color;
+
+				a
+				{
+					font: @Gadget-Blog-PostedBy-Font;
+					color: @Gadget-Blog-PostedBy-Color;
+
+					&:hover
+					{
+						color: @Typography-Link-Alternative-Hover-Color;
+					}
+				}
+
+				&:after
+				{
+					font: @Gadget-Blog-PostedOn-Font;
+					color: @Gadget-Blog-PostedOn-Color;
+					content: "|";
+					display: inline-block;
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+
+	.boxFooterOuterContainer // post bottom - links for control
+	{
+		padding: 0;
+
+		.postBottom
+		{
+			overflow: hidden;
+
+			.boxFooterPrimaryOuterContainer
+			{
+				float: left;
+
+				.boxFooterPrimaryContainer
+				{
+					position: relative;
+					visibility: hidden;
+
+					a // link "read more"
+					{
+						visibility: visible;
+						font: @Gadget-Blog-Buttons-Font;
+						color: @Gadget-Blog-Buttons-Color;
+
+						&:hover
+						{
+							color: @Typography-Link-Alternative-Hover-Color;
+						}
+
+						&:before
+						{
+							font: @Gadget-Blog-Icons-Font;
+							color: @Gadget-Blog-Icons-Color;
+							display: inline-block;
+							margin-right: 10px;
+							vertical-align: bottom;
+						}
+
+						&:first-child:before
+						{
+							content: '\e616';
+							text-decoration: underline;
+						}
+
+						&:first-child:before
+						{
+							text-decoration: none;
+						}
+
+						+ a:before
+						{
+							content: '\e60f';
+							text-decoration: underline;
+						}
+
+						+ a:before
+						{
+							content: '\e60f';
+							text-decoration: none;
+						}
+					}
+
+					a[href*="comments"]:before
+					{
+						content: '\e60f';
+						text-decoration: underline;
+					}
+
+					a[href*="comments"]:before
+					{
+
+						text-decoration: none;
+					}
+
+					a[href*="addComment"]:before
+					{
+						content: '\e60f';
+						text-decoration: underline;
+					}
+
+					a[href*="addComment"]:before
+					{
+						text-decoration: none;
+					}
+
+					a + a  // "comment (21)" & "Add comment"
+					{}
+
+					input.submit {} // button "post"
+				}
+			}
+
+			.boxFooterSecondaryOuterContainer
+			{
+				float: right;
+
+				.boxFooterSecondaryContainer
+				{
+					visibility: hidden;
+					position: relative;
+
+					a // links "edit" &" delete"
+					{
+
+						&.editPost,
+						&.deletePost
+						{
+							visibility: visible;
+							font: @Gadget-Blog-Buttons-Font;
+							color: @Gadget-Blog-Buttons-Color;
+
+							&:before
+							{
+								font: @Gadget-Blog-Icons-Font;
+								color: @Gadget-Blog-Icons-Color;
+								display: inline-block;
+								margin-right: 10px;
+								vertical-align: bottom;
+							}
+
+							&.editPost:before
+							{
+								content: '\e60c';
+								text-decoration: underline;
+							}
+							&.deletePost:before
+							{
+								content: '\e60e';
+								text-decoration: underline;
+							}
+
+							&.editPost:before, &.deletePost:before
+							{
+								text-decoration: none;
+							}
+
+
+							&:hover
+							{
+								color: @Typography-Link-Alternative-Hover-Color;
+							}
+						}
+
+					}
+					input.submit {  } // button "cancel"
+				}
+			}
+		}
+	}
+
+	&.WaGadgetBlogStateList // List of blog posts
+	{
+
+		.pageTitleOuterContainer {} // title of gadget blog
+		.introOuterContainer {} // description of blog
+
+		#idAddNewPostButtonContainer
+		{
+			float: left;
+			margin: 0 20px 0 0; // button add post
+
+			input[type=submit]
+			{
+				.functionalButton;
+			}
+		}
+
+		a.rssFeedLabel,
+		a.rssFeedLabel:hover
+		{
+			color: @Shared-Icon-Rss-Color;
+			display: inline-block;
+			float: left;
+			font: @Shared-Icon-Rss-Font;
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+
+			&:before
+			{
+				content: '\f09e';
+				display: inline-block;
+				margin-top: 10px;
+			}
+
+			img
+			{
+				display: none;
+				vertical-align: top;
+			}
+		}
+
+		.pagerOuterContainer  // page navigation top
+		{
+			clear: none;
+			float: right;
+			margin: 9px 0 11px 0;
+		}
+
+		.blogPostListOuterContainer  // inner container lists of posts
+		{
+			padding-top: 25px;
+		}
+
+		.pagerOuterContainer {} // page navigation bottom
+
+
+		ul.boxesList // inner container lists of posts
+		{
+
+			li.boxesListItem
+			{
+				margin: 0 0 45px 0;
+
+				.boxHeaderOuterContainer
+				{
+					background: none;
+					padding: 0 0 10px 0;
+
+					h4.boxHeaderTitle
+					{
+						a
+						{
+							color: @Typography-Header-Alternative-Color;
+							font: @Typography-Header4-Font;
+							text-decoration: underline;
+
+							&:hover
+							{
+								color: @Typography-Link-Alternative-Hover-Color;
+							}
+						}
+					}
+				}
+
+				.boxBodyOuterContainer
+				{
+					padding-bottom: 15px;
+
+					.boxBodyInfoOuterContainer {}
+
+					.boxBodyContentOuterContainer
+					{
+						margin: 0 0 15px 0;
+						padding: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&.WaGadgetBlogStateDetails,
+	&.WaGadgetBlogStateReply// Post details ( page with list of comments )
+	{
+
+		.blogCommentsOuterContainer // comments
+		{
+			margin: 35px 0 0 0;
+
+			> .cornersContainer:first-child
+			{
+				height: 3px;
+				border-top: 1px solid @Divider-Style001-Color;
+				border-bottom: 1px solid @Divider-Style001-Color;
+			}
+
+			h3.sectionTitle  // just text "Comments"
+			{
+				color: @Gadget-Blog-Comments-Title-Color;
+				font: @Gadget-Blog-Comments-Title-Font;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+
+			.blogCommentsContainer
+			{
+				padding-top: 25px;
+			}
+
+			.blogCommentsListOuterContainer // ul list of comments
+			{
+
+				ul.blogCommentsList
+				{
+
+					li.blogCommentItem
+					{
+						padding: 0;
+
+						.blogComment
+						{
+
+							.commentViewContainer
+							{
+
+								margin: 0 0 25px 0;
+
+								.boxHeaderOuterContainer // blog comment date and author
+								{
+									border-bottom: none;
+									margin: 0 0 10px 0;
+									padding: 0;
+
+									h5
+									{
+										font: @Gadget-Blog-PostedBy-Font;
+										color: @Gadget-Blog-PostedBy-Color;
+
+										span:first-child  // date
+										{
+											font: @Gadget-Blog-PostedBy-Font;
+											color: #000000;
+											overflow: hidden;
+										}
+
+										a.blogEntryPostedBy  // user
+										{
+											visibility: visible;
+											// float: left;
+											//padding-left: 10px;
+											font: @Gadget-Blog-PostedBy-Font;
+											color: @Gadget-Blog-PostedBy-Color;
+
+											&:hover
+											{
+												color: @Typography-Link-Alternative-Hover-Color;
+											}
+
+										}
+
+										span.postedByComment
+										{
+											font: @Gadget-Blog-PostedBy-Font;
+										}
+									}
+								}
+
+								.boxBodyOuterContainer
+								{
+									margin: 0 0 15px 0;
+
+									.commentBodyContainer
+									{
+										span.postBody {  } // message of user - comment
+									}
+								}
+
+								.boxFooterOuterContainer
+								{
+
+									.boxFooterContainer
+									{
+
+										.boxFooterPrimaryOuterContainer
+										{
+
+											.commentBottomLeft
+											{
+												visibility: hidden;
+
+												a
+												{
+													&.blogCommentAnchor,
+													&.reply
+													{
+														visibility: visible;
+														font: @Gadget-Blog-Buttons-Font;
+														color: @Gadget-Blog-Buttons-Color;
+
+														&:hover
+														{
+															color: @Typography-Link-Alternative-Hover-Color;
+														}
+
+														&:before {
+															font: @Gadget-Blog-Icons-Font;
+															color: @Gadget-Blog-Icons-Color;
+															display: inline-block;
+															margin-right: 10px;
+															vertical-align: bottom;
+														}
+													}
+													&.blogCommentAnchor:before
+													{
+														content: '\e628';
+														text-decoration: underline;
+													}
+
+													&.reply:before
+													{
+														content: '\e619';
+														text-decoration: underline;
+													}
+
+													&.blogCommentAnchor:before, &.reply:before
+													{
+														text-decoration: none;
+													}
+
+												}
+											}
+										}
+
+										.boxFooterSecondaryOuterContainer
+										{
+
+											.commentBottomRight
+											{
+												a.delete
+												{
+													visibility: visible;
+													font: @Gadget-Blog-Buttons-Font;
+													color: @Gadget-Blog-Buttons-Color;
+
+													&:hover
+													{
+														color: @Typography-Link-Alternative-Hover-Color;
+													}
+
+													&:before
+													{
+														font: @Gadget-Blog-Icons-Font;
+														content: '\e60e';
+														text-decoration: underline;
+														color: @Gadget-Blog-Icons-Color;
+														display: inline-block;
+														margin-right: 10px;
+														vertical-align: bottom;
+													}
+													&:before
+													{
+														text-decoration: none;
+													}
+
+												}
+
+												input[type="submit"]
+												{
+													.functionalButton;
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.WaGadgetBlogStateEditPost, // Page of Edit/Add posts
+	&.WaGadgetBlogStateAddPost
+	{
+		.pageTitleOuterContainer {}
+
+		.boxHeaderOuterContainer
+		{
+			padding: 0 0 10px 0;
+			border-bottom: 1px solid @Shared-Form-Title-Border-Color;
+
+			.boxHeaderContainer
+			{
+
+				h4.boxHeaderTitle // text "Creating new entry"
+				{
+					color: @Shared-Form-Title-Color;
+					font: @Shared-Form-Title-Font;
+				}
+			}
+		}
+
+		.boxBodyOuterContainer
+		{
+			margin: 0;
+
+			.generalFieldsContainer
+			{
+
+				.mandatoryFieldsTitle
+				{
+					font: @Shared-Form-Title-Font;
+					color: @Shared-Form-Title-Color;
+					margin: -30px 0 30px 0;
+
+					em  // "*"
+					{
+						color: @Shared-Form-MandatorySymbol-Color;
+						font: inherit;
+					}
+
+					strong  // text "Mandatory"
+					{
+						font: inherit;
+					}
+				}
+
+				.fieldContainer
+				{
+
+					&#idAuthorLabelContainer
+					{
+
+						.fieldLabel
+						{
+							.mandatorySymbol[style="visibility: hidden"]
+							{
+								display: none;
+							}
+							font: @Shared-Form-Label-Font;
+						}
+					}
+					.fieldBody span{
+						font-style: normal;
+					}
+
+					.fieldSubContainer {}
+				}
+
+				#idBlogPostEditorFieldContainer td.right .fieldBody span:first-child {}
+
+				#idBlogPostEditorFieldContainer .mandatorySymbol[style*="hidden"]
+				{
+					display: none;
+				}
+			}
+		}
+
+		.boxFooterOuterContainer
+		{
+			font-size: 0;
+			padding: 0 0 0 25%;
+
+			.boxFooterPrimaryOuterContainer
+			{
+				display: inline-block;
+				float: none;
+
+				input
+				{
+					.functionalButton;
+				}
+			}
+			.boxFooterSecondaryOuterContainer
+			{
+				display: inline-block;
+				float: none;
+
+				input
+				{
+					.functionalButton;
+				}
+			}
+		}
+	}
+
+	.addNewCommentOuterContainer // Add new comment
+	{
+		margin: 20px 0 20px 0;
+
+		.boxActionContainer
+		{
+
+			input[type=submit]
+			{
+				.functionalButton;
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+/* ----- Gadget blog adaptive behavior ----- */
+
+// state3
+@import 'gadget.blog.state3';
+@media only screen and (max-width:@state3-maxwidth)
+{
+	.gadget-blog-state3();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

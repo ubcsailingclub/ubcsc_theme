@@ -1,0 +1,1 @@
+<div data-link="#" data-src="<$it.ThumbnailUrl$>" data-target="<$it.Url$>" data-thumb="<$it.ThumbnailUrl$>" data-title="<$it.Title$>" data-count="<$it.NumberOfImages$>"></div>

@@ -1,0 +1,115 @@
+/*
+*	Example:
+*	<div class="noticeBox boxTypeError">
+*		<div class="header">Hello</div>
+*		<div class="text">
+*			Cannot complete operation. Please try again later or contact administrator
+*		</div>
+*	</div>
+*
+*	.header - is optional
+*
+*	Have 4 types: boxTypeError || boxTypeInfo || boxTypeWarning || boxTypeSuccess
+*/
+.noticeBox {
+	box-sizing: border-box;
+	position: relative;
+	margin-bottom: 1em;
+	border-radius: 5px;
+	background-color: #D8E4F2;
+	border: 2px solid #2B588C;
+	padding: 10px 10px 10px 50px;
+	min-height: 25px;
+	color: #000;
+	font-style: normal;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-align: left;
+	text-indent: 0;
+	text-decoration: none;
+	word-break: normal;
+	word-spacing: normal;
+	letter-spacing: normal;
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 25px;
+		height:25px;
+		left: 10px;
+		top: 10px;
+		background-repeat: no-repeat;
+	}
+
+	.waPaymentSystemsIconsBox {
+
+	}
+
+	.header {
+		font-size: 1.2em;
+		font-weight: bold;
+		margin-bottom: 0.5em;
+	}
+
+	.text {
+		min-height: 25px;
+	}
+
+	p {
+		font-size: 1em;
+	}
+
+	a, a:link, a:active, a:visited {
+		color: #008FD1;
+		font-style: inherit;
+		font-weight: inherit;
+		font-family: inherit;
+		text-align: inherit;
+		text-indent: inherit;
+		text-decoration: inherit;
+		word-break: inherit;
+		word-spacing: inherit;
+		letter-spacing: inherit;
+	}
+
+	a:hover {
+		color: #15B6FF;
+	}
+
+	&.boxTypeInfo {
+		border: 2px solid #2B588C;
+		background: #D8E4F2;
+
+		&:before {
+			background-image: url(<$StaticModel.ThemeUrl$>/images/confirmWindows/confirm-info-icon.gif);
+		}
+	}
+
+	&.boxTypeWarning {
+		border: 2px solid #FFC017;
+		background: #FDFFCE;
+
+		&:before {
+			background-image: url(<$StaticModel.ThemeUrl$>/images/confirmWindows/confirm-warning-icon.gif);
+		}
+	}
+
+	&.boxTypeSuccess {
+		border: 2px solid #1DAC13;
+		background: #DFFEDE;
+
+		&:before {
+			background-image: url(<$StaticModel.ThemeUrl$>/images/confirmWindows/confirm-succ-icon.gif);
+		}
+	}
+
+	&.boxTypeError {
+		border: 2px solid #FF0000;
+		background: #FFE5E5;
+
+		&:before {
+			background-image: url(<$StaticModel.ThemeUrl$>/images/confirmWindows/confirm-error-icon.gif);
+		}
+	}
+}

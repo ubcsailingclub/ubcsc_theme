@@ -1,0 +1,1 @@
+<div id="{{Id}}" class="{{FullClassName}}" data-componentId="{{ComponentId}}" style="{{InlineStyle}}{{CssStyle}}{{DisplayNoneForAdmin}}"><div style="{{CssStyle.Padding}}">{{Content}}</div></div>

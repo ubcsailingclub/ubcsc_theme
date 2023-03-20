@@ -1,0 +1,140 @@
+/* ----- Gadget Slide show ----- */
+
+.WaGadgetSlideshow
+{
+    .gadgetStyleTitle
+    {
+
+      h4
+      {
+      }
+    }
+
+    .gadgetStyleBody
+    {
+      padding: 0;
+    }
+
+    .camera_wrap
+    {
+        .camera_pag
+        {
+
+            .camera_pag_ul
+            {
+                text-align: center;
+
+                li
+                {
+                    background: #fff;
+                    border: 1px solid @Gadget-SlideShow-Radio-Border-Color;
+
+                    span
+                    {
+                        overflow: visible;
+
+                        span
+                        {
+                            font-size: 0;
+                        }
+                    }
+                    
+                    &:hover
+                    {
+                        > span
+                        {
+                            background: @Gadget-SlideShow-Radio-Hover-Color;
+                        }
+                    }
+
+                    &.cameracurrent
+                    {
+                        > span
+                        {
+                            background: @Gadget-SlideShow-Radio-Selected-Color;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.camera_charcoal_skin
+        {
+
+            .camera_prev,
+            .camera_next
+            {
+                background: @Gadget-SlidesShow-Navigation-Bg;
+                bottom: 0;
+                height: auto;
+                margin: 0;
+                top: 0;
+                width: 6%;
+
+                > span
+                {
+                    background: none;
+                    color: @Gadget-SlideShow-Arrow-Color;
+                    font: @Gadget-SlideShow-Arrow-Font;
+                    margin-top: -20px;
+                    position: absolute;
+                    text-align: center;
+                    top: 50%;
+                    width: 100%;
+                }
+
+                &:hover
+                {
+                    > span
+                    {
+                        color: @Gadget-SlideShow-Arrow-Hover-Color;
+                    }
+                }
+            }
+
+            .camera_prev
+            {
+                left: 0;
+
+                > span:before
+                {
+                    content: '\f104'; // left arrow
+                }
+            }
+
+            .camera_next
+            {
+                right: 0;
+
+                > span:after
+                {
+                    content: '\f105' // right arrow
+                }
+            }
+        }
+    }
+
+    &.gadgetStyleNone {}
+
+    &.gadgetStyle001
+    {
+      .gadgetStyleTitle h4
+      {
+      }
+
+      .camera_wrap.camera_charcoal_skin
+      {
+        .camera_prev, .camera_next
+        {
+          background: @Gadget-SlideShow-Style001-Navigation-Bg;
+
+          > span
+          {
+            font: @Gadget-SlideShow-Style001-Arrow-Font;
+          }
+        }
+      }
+    }
+
+
+}

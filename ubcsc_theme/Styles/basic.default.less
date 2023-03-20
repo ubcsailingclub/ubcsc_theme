@@ -1,0 +1,53 @@
+input::-moz-focus-inner { border: 0; padding: 0; } /*Remove button padding in FF*/
+
+.show { display: block; }
+.hide { display: none; }
+.hidden { display: none; }
+
+.clearAfter { zoom: 1;
+	&:after { content: ""; clear: both; height: 0; font-size: 0; line-height: 0; display: block; visibility: hidden; overflow: hidden; }
+}
+.clearEndContainer { clear: both; height: 0px; font-size: 0; line-height: 0; overflow: hidden; zoom: 1; *margin-bottom: -1px; visibility: hidden; }
+
+div.BulletedContainerWarninngSigned { min-height: 16px; padding-left: 20px; background: url(<$StaticModel.ThemeUrl$>/images/confirmWindows/icon-warning.png) left 0px no-repeat; }
+div.BulletedContainerWarninngSignedDisabled { padding-left: 20px; background: url(<$StaticModel.ThemeUrl$>/images/confirmWindows/icon-warning-disabled.gif) left 0px no-repeat; min-height: 16px; }
+
+/*------------------------------------------------------------------*/
+/*                            Rotate                                */
+/*------------------------------------------------------------------*/
+
+.transformRotate90deg
+{
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  transform: rotate(90deg);
+}
+
+.transformRotate180deg
+{
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  transform: rotate(180deg);
+}
+
+.transformRotate270deg
+{
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  transform: rotate(270deg);
+}
+
+
+

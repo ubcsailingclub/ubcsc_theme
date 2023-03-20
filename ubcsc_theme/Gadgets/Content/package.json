@@ -1,0 +1,15 @@
+{
+  "name": "featured-member-gadget",
+  "version": "4.40.1",
+  "description": "Wild Apricot admin UI",
+  "main": "index.js",
+  "keywords": [
+    "wildapricot",
+    "admin-ui"
+  ],
+  "author": "Wild Apricot",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "react": "^16.3.0"
+  }
+}

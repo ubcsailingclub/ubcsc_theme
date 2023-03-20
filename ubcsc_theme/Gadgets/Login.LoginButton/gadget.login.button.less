@@ -1,0 +1,138 @@
+/* ----- Gadget Login button  ----- */
+
+.WaGadgetLoginButton
+{
+	text-align: right;
+	font-size: 13px;
+    overflow: visible;
+
+    .loginButtonBackground
+    {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0px;
+      margin-left: 0;
+      display: none;
+      background: rgba(0,0,0,0.60);
+    }
+
+
+
+	// Authenticated
+	.loginBoxLapsedMembership,
+	.loginBoxProfileLink,
+	a.loginBoxChangePassword,
+    .loginBoxProfileLink a,
+	a.loginBoxLogout
+	{
+		display: inline-block;
+		margin: 4px 5px;
+        font: @Gadget-Login-Button-Font;
+        color: @Gadget-Login-Button-Color;
+        background: none;
+	}
+
+    .loginBoxProfileLink > a
+    {
+      margin: 0;
+    }
+
+	.alignLeft
+	{
+		text-align: left;
+	}
+
+	.alignCenter
+	{
+		text-align: center;
+	}
+
+	.alignRight
+	{
+		text-align: right;
+	}
+
+	// Not authenticated
+	.loginBoxLinkContainer
+	{
+
+		.loginBoxLinkButton
+		{
+			color: @Gadget-Login-Button-Color;
+			display: inline-block;
+			font: @Gadget-Login-Button-Font;
+			.opacity(@Gadget-Login-Button-Opacity);
+			text-decoration: none;
+			vertical-align: top;
+            background: none;
+
+			&:before
+			{
+				background-color: @Gadget-Login-Icon-Background-Color;
+				color: @Gadget-Login-Icon-Color;
+				content:'\e613';
+				display: inline-block;
+				font: @Gadget-Login-Icon-Font;
+				height: 11px;
+				margin-right: 5px;
+				padding: 3px;
+				text-align: center;
+				vertical-align: top;
+				width: 11px;
+			}
+		}
+	}
+
+    &.gadgetStyle001
+    {
+      .loginButtonBackground
+      {
+        display: block;
+      }
+
+      .loginButtonWrapper
+      {
+        padding: 5px 0;
+        position: relative;
+        z-index: 2;
+
+        .loginBoxLinkContainer
+        {
+          .loginBoxLinkButton
+            {
+              color: @Gadget-Login-Button-Style001-Color;
+
+              &:before
+              {
+                color: @Gadget-Login-Button-Style001-Color;
+              }
+            }
+        }
+
+        .loginBoxLapsedMembership,
+        .loginBoxProfileLink,
+        a.loginBoxChangePassword,
+        .loginBoxProfileLink a,
+        a.loginBoxLogout
+        {
+          color: @Gadget-Login-Button-Style001-Color;
+        }
+
+      }
+
+    }
+}
+
+/* ---- Gadget login button adaptive behavior ---- */
+
+@media only screen and (max-width:@state3-maxwidth)
+{
+  body.LayoutMain
+  {
+    .WaGadgetLoginButton
+    {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+<$control.MessageBox(InnerPId="invoiceListTopMessageInnerPId", HeaderSpanId="invoiceListTopMessageHeaderId", HeaderText=HeaderText, ShowHeader="True", Text=Text, Warning="True")$>

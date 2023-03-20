@@ -1,0 +1,299 @@
+/* ---- Gadget blog adaptive behavior. State 3 ---- */
+
+.gadget-blog-state3() {
+	.WaGadgetBlog {
+
+		.boxBodyInfoOuterContainer {
+
+            margin: 0 0 15px 0;
+
+			h5 {
+				.postedOn,
+				.postedByLabel,
+				.postedByLink,
+				.postedByLink a {
+					font: @Gadget-Blog-Adaptive-State3-Font;
+				}
+                .postedByLink:after
+                {
+                  content: "";
+                }
+			}
+		}
+
+		ul.blogCommentsList {
+			li.blogCommentItem {
+				.blogComment {
+					.commentViewContainer {
+						.boxHeaderOuterContainer {
+							h5 {
+								span:first-child {
+								}
+								// date
+								span:first-child:before {
+								}
+								a.blogEntryPostedBy {
+								}
+								// user
+							}
+						}
+
+						.boxFooterOuterContainer {
+
+							.boxFooterContainer {
+
+								.boxFooterPrimaryOuterContainer {
+
+									.commentBottomLeft {
+										a.blogCommentAnchor,
+										a.reply {
+											visibility: hidden;
+											font-size: 0;
+											text-decoration: none;
+
+											&:before {
+												visibility: visible;
+											}
+										}
+									}
+								}
+								.boxFooterSecondaryOuterContainer {
+									.commentBottomRight {
+										a.delete {
+											visibility: hidden;
+											font-size: 0;
+											text-decoration: none;
+
+											&:before {
+												visibility: visible;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.boxFooterOuterContainer {
+
+			.postBottom {
+
+				.boxFooterPrimaryOuterContainer {
+
+					.boxFooterPrimaryContainer {
+						a  // links 'read more', 'add comment'
+						  {
+							font-size: 0;
+							text-decoration: none;
+
+							&:before {
+								color: @Shared-Icons-Adaptive-Color;
+								font: @Shared-Icons-Adaptive-Font;
+							}
+
+							&:first-child:before {
+								content: '\e616';
+							}
+
+							+ a:before {
+								content: '\e629';
+							}
+						}
+					}
+				}
+
+				.boxFooterSecondaryOuterContainer {
+
+					.boxFooterSecondaryContainer {
+
+						a.editPost, a.deletePost
+						{
+							font-size: 0;
+							text-decoration: none;
+
+							&:before {
+								color: @Shared-Icons-Adaptive-Color;
+								font: @Shared-Icons-Adaptive-Font;
+							}
+
+							&.editPost:before {
+								content: '\e60c';
+							}
+
+							&.deletePost:before {
+								content: '\e60e';
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.WaGadgetBlogStateList {
+
+			.blogPostListOuterContainer {
+				padding-top: 20px;
+			}
+
+			ul.boxesList {
+
+				li.boxesListItem {
+					margin: 0 0 35px 0;
+
+					.boxHeaderOuterContainer {
+
+						h4.boxHeaderTitle {
+							overflow: inherit;
+							white-space: normal;
+
+							a {
+								font: @Typography-Adaptive-State3-Header2;
+							}
+
+							&:after {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.WaGadgetBlogStateDetails,
+		&.WaGadgetBlogStateReply {
+
+			.blogEntryOuterContainer // text of post
+		 	 {
+
+				.boxHeaderOuterContainer // title
+			 	 {
+                    padding-bottom: 5px;
+
+					.boxHeaderContainer {
+
+						h4.boxHeaderTitle {
+							font: @Typography-Adaptive-State3-Header2;
+						}
+					}
+				}
+			}
+
+			.boxFooterOuterContainer {
+
+				.postBottom {
+
+					.boxFooterPrimaryOuterContainer {
+
+						.boxFooterPrimaryContainer {
+							a  // links 'read more', 'add comment'
+							  {
+								&:first-child:before {
+									content: '\e60f';
+								}
+							}
+						}
+					}
+
+					.boxFooterSecondaryOuterContainer {
+					}
+				}
+			}
+
+			.blogCommentsOuterContainer // comments
+		 	 {
+				margin: 20px 0 0 0;
+
+				h3.sectionTitle  // just text "Comments"
+			 	 {
+					font: @Typography-Adaptive-State3-Header2;
+
+				}
+
+				.blogCommentsListOuterContainer // ul list of comments
+			  {
+
+					ul.blogCommentsList {
+
+						li.blogCommentItem {
+
+							.blogComment {
+
+								.commentViewContainer {
+
+									.boxHeaderOuterContainer {
+
+										h5 {
+											font: @Gadget-Blog-Adaptive-State3-Font;
+
+											span:first-child,
+											a.blogEntryPostedBy,
+											span.postedByComment {
+												font: @Gadget-Blog-Adaptive-State3-Font;
+											}
+										}
+									}
+
+									.boxFooterOuterContainer {
+
+										.commentBodyContainer {
+											span.postBody {
+											}
+											// message of user - comment
+										}
+									}
+
+									.boxFooterOuterContainer {
+
+										.boxFooterContainer {
+
+											.boxFooterPrimaryOuterContainer {
+
+												.commentBottomLeft {
+
+													a {
+														&.blogCommentAnchor:before {
+															content: '\e628';
+														}
+
+														&.reply:before {
+															content: '\e619';
+														}
+													}
+
+												}
+											}
+
+											.boxFooterSecondaryOuterContainer {
+
+												.commentBottomRight {
+													a.delete {
+														visibility: visible
+													}
+												}
+											}
+										}
+									}
+								}
+
+								ul.blogCommentsList {
+									padding: 0 0 0 20px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.WaGadgetBlogStateEditPost,
+		&.WaGadgetBlogStateAddPost {
+
+			.boxFooterOuterContainer {
+				padding: 0;
+			}
+		}
+	}
+}

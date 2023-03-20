@@ -1,0 +1,1119 @@
+/***********************************************************************************************/
+/*                          payments from profile ticker gadget                                */
+/***********************************************************************************************/
+
+#WA_messagePopup
+{
+	display: block;
+	width: 222px;
+	font-family: tahoma, sans-serif;
+	font-size: 9pt;
+	position: fixed;
+	z-index: 65535;
+	bottom: 0;
+	right: 0;
+	outline: none;
+}
+
+#WA_messagePopup ul
+{
+	background: url(<$StaticModel.ThemeUrl$>/images/overlayboxes/messagestop.png) no-repeat top left;
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+}
+
+#WA_messagePopup  .opened ul
+{
+	display: block;
+}
+
+#WA_messagePopup  .closed ul
+{
+	display: none;
+}
+
+#WA_messagePopup ul li
+{
+	background: url(<$StaticModel.ThemeUrl$>/images/overlayboxes/messageseparator.png) no-repeat bottom left;
+	width: 182px;
+	float: left;
+	padding: 10px 20px;
+	margin: 0;
+}
+
+#WA_messagePopup ul li a, #WA_messagePopup ul li a:visited
+{
+	color: #0035cc;
+	outline: none;
+	font-size: 12px !important;
+	font-style: normal;
+	font-weight: normal;
+	background: transparent;
+}
+
+#WA_messagePopup ul li a:hover
+{
+	color: #2055ed;
+}
+
+#WA_messagePopup ul li:last-child, #WA_messagePopup ul li.last
+{
+	background: url(<$StaticModel.ThemeUrl$>/images/overlayboxes/messagebg.png) repeat-y top left;
+}
+
+
+#WA_messagePopup ul li:first-child, #WA_messagePopup ul li.first
+{
+	margin-top: 6px;
+}
+
+#WA_messagePopup  a#messagePopupButton
+{
+	display: block;
+	width: 222px;
+
+	text-decoration: none;
+	float: left;
+}
+
+#WA_messagePopup  .opened #messagePopupButton
+{
+	background: url(<$StaticModel.ThemeUrl$>/images/overlayboxes/messagesopen.png) no-repeat top left;
+	height: 27px;
+}
+
+#WA_messagePopup  .closed #messagePopupButton
+{
+	background: url(<$StaticModel.ThemeUrl$>/images/overlayboxes/messagesclose.png) no-repeat top left;
+	height: 31px;
+}
+
+
+/* <Confirm windows> */
+.commonMessageBox input.button
+{
+	padding: 1px 6px;
+	margin-right: 7px;
+    width: 0;
+    overflow: visible;
+}
+
+.commonMessageBox input.button[class]
+{
+	width: auto;
+}
+
+.commonMessageBox
+{
+  position: relative;
+  width: 100%;
+  border: none;
+  clear: both;
+  margin-bottom: 20px;
+}
+
+.commonMessageBox .clearEnd
+{
+	clear: both;
+	height: 1px;
+}
+
+.commonMessageBox DIV
+{
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.commonMessageBox .cww
+{
+  height: 4px;
+  overflow: hidden;
+  font-size: 0.00em;
+}
+
+.commonMessageBox .cww1,
+.commonMessageBox .cww2,
+.commonMessageBox .cww3,
+.commonMessageBox .cww4
+{
+  height: 1px;
+  overflow: hidden;
+}
+
+.commonMessageBox .cww1
+{
+  margin: 0px 4px;
+}
+
+.commonMessageBox .cww2
+{
+  margin: 0px 2px;
+}
+
+.commonMessageBox .cww3,
+.commonMessageBox .cww4
+{
+  margin: 0px 1px;
+  border-left-style: solid;
+  border-right-style: solid;
+}
+
+.commonMessageBox .cww3
+{
+  border-left-width: 3px;
+  border-right-width: 3px;
+}
+
+.commonMessageBox .cww4
+{
+  border-left-width: 2px;
+  border-right-width: 2px;
+}
+
+.commonMessageBox .cww-inner
+{
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-right-style: solid;
+  border-right-width: 2px;
+}
+
+.commonMessageBox .cww-co
+{
+  padding-left: 50px;
+  height: 36px;
+  *height: auto;
+  *min-height: 16px;
+  *padding-top: 10px;
+  *padding-bottom: 10px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.commonMessageBox .cww-co>div
+{
+  padding-bottom: 7px;
+}
+
+.commonMessageBox .cww-co>div .waPaymentSystemsIconsBox
+{
+  padding-bottom: 7px;
+}
+
+.commonMessageBox .cww-co div,
+.commonMessageBox .kvTable td
+{
+  color: #000000 !important;
+}
+
+.commonMessageBox .cww-co>div:first-child
+{
+	padding-top: 7px;
+}
+
+
+.commonMessageBox .cww-co .alert
+{
+    color: #FF0000 !important;
+}
+
+.commonMessageBox .cww-co .header
+{
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.commonMessageBox .kvTable td.labelInfoColumn
+{
+    width: 96px;
+    text-align:right;
+    padding-right:10px;
+    vertical-align: top;
+    padding-top: 5px;
+}
+
+.commonMessageBox .kvTable td.infoColumn
+{
+    vertical-align: top;
+    padding-top: 5px;
+}
+
+div.confirmWindowInfo .cww-co h1
+{
+    font-size: 1.3em !important;
+}
+
+.commonMessageBox .cww-co A,
+.commonMessageBox .cww-co A:link,
+.commonMessageBox A:active,
+.commonMessageBox .cww-co A:visited,
+.commonMessageBox .cww-co A:hover,
+div.generalFieldsContainer div.fieldBody div.confirmWindowOuterContainer a,
+div.generalFieldsContainer div.fieldBody div.confirmWindowOuterContainer a:link,
+div.generalFieldsContainer div.fieldBody div.confirmWindowOuterContainer a:active,
+div.generalFieldsContainer div.fieldBody div.confirmWindowOuterContainer a:visited
+{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #008FD1 !important;
+}
+
+.commonMessageBox .cww-co A:hover,
+div.generalFieldsContainer div.fieldBody div.confirmWindowOuterContainer a:hover
+{
+  color: #15B6FF !important;
+}
+
+.commonMessageBox .cww-co H1
+{
+  padding-bottom: 10px;
+  font-size: 1.00em !important;
+}
+
+DIV.confirmWindowWarning .cww-co
+{
+  font-size: 1.00em !important;
+}
+
+.commonMessageBox .cww-co P,
+.commonMessageBox .cww-co
+{
+  font-size: 1.00em !important;
+}
+
+/* <Warning> */
+
+.confirmWindowWarning .cww1,
+.confirmWindowWarning .cww2
+{
+  background-color: #FFC017;
+}
+
+.confirmWindowWarning .cww3,
+.confirmWindowWarning .cww4,
+.confirmWindowWarning .cww-inner
+{
+  border-left-color: #FFC017;
+  border-right-color: #FFC017;
+  background-color: #FDFFCE;
+}
+
+.confirmWindowWarning .cww-inner
+{
+  background: #FDFFCE url(<$StaticModel.ThemeUrl$>/images/confirmWindows/confirm-warning-icon.gif) 10px 6px no-repeat;
+}
+
+/* </Warning> */
+
+/* <Info> */
+
+.confirmWindowInfo .cww1,
+.confirmWindowInfo .cww2
+{
+  background-color: #2B588C;
+}
+
+.confirmWindowInfo .cww3,
+.confirmWindowInfo .cww4,
+.confirmWindowInfo .cww-inner
+{
+  border-left-color: #2B588C;
+  border-right-color: #2B588C;
+  background-color: #D8E4F2;
+}
+
+.confirmWindowInfo .cww-inner
+{
+  background: #D8E4F2 url(<$StaticModel.ThemeUrl$>/images/confirmWindows/confirm-info-icon.gif) 10px 6px no-repeat;
+}
+
+/* </Info> */
+
+/* <Success> */
+
+.confirmWindowSuccess .cww1,
+.confirmWindowSuccess .cww2
+{
+  background-color: #1DAC13;
+}
+
+.confirmWindowSuccess .cww3,
+.confirmWindowSuccess .cww4,
+.confirmWindowSuccess .cww-inner
+{
+  border-left-color: #1DAC13;
+  border-right-color: #1DAC13;
+  background-color: #DFFEDE;
+}
+
+.confirmWindowSuccess .cww-inner
+{
+  background: #DFFEDE url(<$StaticModel.ThemeUrl$>/images/confirmWindows/confirm-succ-icon.gif) 10px 6px no-repeat;
+}
+
+
+/* </Success> */
+
+/* <Error> */
+
+.confirmWindowError .cww1,
+.confirmWindowError .cww2
+{
+  background-color: #FF0000;
+}
+
+.confirmWindowError .cww3,
+.confirmWindowError .cww4,
+.confirmWindowError .cww-inner
+{
+  border-left-color: #FF0000;
+  border-right-color: #FF0000;
+  background-color: #FFE5E5;
+}
+
+.confirmWindowError .cww-inner
+{
+  background: #FFE5E5 url(<$StaticModel.ThemeUrl$>/images/confirmWindows/confirm-error-icon.gif) 10px 6px no-repeat;
+}
+
+/* </Error> */
+
+/* </Confirm windows> */
+
+/* <Warning Icon> */
+.BulletedContainerWarninngSigned
+{
+  padding-left: 20px;
+  background: url(<$StaticModel.ThemeUrl$>/images/confirmWindows/icon-warning.png) left 0px no-repeat;
+  min-height: 16px;
+}
+
+.BulletedContainerWarninngSignedDisabled
+{
+  padding-left: 20px;
+  background: url(<$StaticModel.ThemeUrl$>/images/confirmWindows/icon-warning-disabled.gif) left 0px no-repeat;
+  min-height: 16px;
+}
+/* </Warning Icon> */
+
+/* Round corner box */
+
+.RoundedCornerBox
+{
+  width: auto;
+}
+
+.RoundedCornerBox .cww1,
+.RoundedCornerBox .cww2
+{
+  background-color: #FFC017;
+}
+
+.RoundedCornerBox .cww3,
+.RoundedCornerBox .cww4,
+.RoundedCornerBox .cww-inner
+{
+  border-left-color: #FFC017;
+  border-right-color: #FFC017;
+  background-color: #FDFFCE;
+}
+
+.RoundedCornerBox .cww-co
+{
+  padding: 8px;
+}
+
+
+/**
+ * <WA Dialog common styles>
+ */
+
+DIV.dialogMainContainer,
+DIV.dialogMainContainer TABLE TD
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    border: none;
+}
+
+DIV.dialogMainContainer TABLE
+{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+DIV.dialogMainContainer TABLE TD
+{
+    vertical-align: top;
+}
+
+DIV.dialogMainContainer
+{
+    position: fixed;
+    left: -37000px;
+    top: -37000px;
+    visibility: visible;
+}
+
+
+/* <uilibrary override> */
+DIV.dialogMainContainer DIV.dialogContentContainer .SplittedContainer DIV.columnTypeLabel { width: 100px; }
+DIV.dialogMainContainer DIV.dialogContentContainer .SplittedContainer DIV.columnTypeField { width: 355px; }
+
+DIV.dialogMainContainer DIV.dialogContentContainer INPUT.typeTextBox { width: 350px; }
+DIV.dialogMainContainer DIV.dialogContentContainer TEXTAREA.typeTextArea { width: 350px; }
+DIV.dialogMainContainer DIV.dialogContentContainer #idTabsContent
+{
+    width: 461px;
+    padding: 0 10px 0 10px;
+}
+/* </uilibrary override> */
+
+
+/* Styles for old dialogs. .bonaDialogWrapper */
+.dialogMainContainer.bonaDialogWrapper .dialogBodyContainer
+{
+    -moz-border-radius: 0 0 7px 7px;
+    -webkit-border-radius: 0 0 7px 7px;
+    border-radius: 0 0 7px 7px;
+}
+
+.dialogMainContainer.bonaDialogWrapper .dialogContentContainer
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+DIV.dialogMainContainer DIV.dialogRoundedBoxContainer
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    background-color: transparent;
+}
+
+DIV.dialogMainContainer DIV.dialogRoundedBox
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+    opacity: 1;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+
+DIV.dialogMainContainer DIV.dialogRoundedBoxShadow
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    visibility: hidden;
+}
+
+DIV.dialogMainContainer DIV.dialogRoundedBoxLeft1,DIV.dialogRoundedBoxLeft2,DIV.dialogRoundedBoxRight2,DIV.dialogRoundedBoxRight1,DIV.dialogRoundedBoxTop1,DIV.dialogRoundedBoxTop2,DIV.dialogRoundedBoxBottom2,DIV.dialogRoundedBoxBottom1
+{
+    position: absolute;
+    z-index: 3;
+    visibility: hidden;
+}
+
+DIV.dialogMainContainer DIV.dialogRoundedBoxLeft1
+{
+    left: 0px;
+    top: 4px;
+    width: 1px;
+}
+
+DIV.dialogMainContainer DIV.dialogRoundedBoxLeft2
+{
+    left: 1px;
+    top: 2px;
+    width: 3px;
+}
+
+DIV.dialogMainContainer DIV.dialogRoundedBoxRight2
+{
+    right: 1px;
+    top: 2px;
+    width: 3px;
+}
+
+DIV.dialogMainContainer DIV.dialogRoundedBoxRight1
+{
+    right: 0px;
+    top: 4px;
+    width: 1px;
+}
+
+DIV.dialogMainContainer DIV.dialogRoundedBoxTop1
+{
+    left: 4px;
+    top: 0px;
+    height: 1px;
+}
+
+DIV.dialogMainContainer DIV.dialogRoundedBoxTop2
+{
+    left: 2px;
+    top: 1px;
+    height: 3px;
+}
+
+DIV.dialogMainContainer DIV.dialogRoundedBoxBottom2
+{
+    left: 2px;
+    bottom: 1px;
+    height: 3px;
+}
+
+DIV.dialogMainContainer DIV.dialogRoundedBoxBottom1
+{
+    left: 4px;
+    bottom: 0px;
+    height: 1px;
+}
+
+DIV.dialogMainContainer DIV.dialogControlsContainer
+{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 6;
+}
+
+DIV.dialogMainContainer DIV.dialogBorderEdge,DIV.dialogBorderCorner
+{
+    position: absolute;
+    z-index: 5;
+}
+
+DIV.dialogMainContainer DIV.dialogBorderLeft,DIV.dialogBorderRight
+{
+    top: 3px;
+    width: 3px;
+    cursor: e-resize;
+}
+
+DIV.dialogMainContainer DIV.dialogBorderLeft { left: 0px; }
+DIV.dialogMainContainer DIV.dialogBorderRight { right: 0px; }
+DIV.dialogMainContainer DIV.dialogBorderTop { top: 0px; }
+DIV.dialogMainContainer DIV.dialogBorderBottom { bottom: 0px; }
+
+DIV.dialogMainContainer DIV.dialogBorderTop,DIV.dialogBorderBottom
+{
+    left: 3px;
+    height: 3px;
+    cursor: n-resize;
+}
+
+DIV.dialogMainContainer DIV.dialogBorderCorner
+{
+    width: 5px;
+    height: 5px;
+}
+
+DIV.dialogMainContainer DIV.dialogBorderTopLeft
+{
+    left: 0px;
+    top: 0px;
+    cursor: nw-resize;
+}
+
+DIV.dialogMainContainer DIV.dialogBorderTopRight
+{
+    right: 0px;
+    top: 0px;
+    cursor: ne-resize;
+}
+
+DIV.dialogMainContainer DIV.dialogBorderBottomLeft
+{
+    left: 0px;
+    bottom: 0px;
+    cursor: ne-resize;
+}
+
+DIV.dialogMainContainer DIV.dialogBorderBottomRight
+{
+    right: 0px;
+    bottom: 0px;
+    cursor: nw-resize;
+}
+
+DIV.dialogMainContainer DIV.dialogContainer
+{
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    z-index: 7;
+    background-color: #FFFFFF;
+
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -moz-box-shadow: 0 7px 15px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 7px 15px rgba(0,0,0,.3);
+    box-shadow: 0 7px 15px rgba(0,0,0,.3);
+}
+
+DIV.dialogMainContainer DIV.dialogOuterHeadContainer
+{
+    position: relative;
+    height: 48px;
+    z-index: 7;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+DIV.dialogMainContainer DIV.dialogOuterHeadContainerShadow
+{
+    position: absolute;
+    left: -2px;
+    top: 0;
+    height: 45px;
+    z-index: 3;
+    visibility: hidden;
+}
+
+DIV.dialogMainContainer DIV.dialogInnerHeadContainer,DIV.dialogTitleContainer,DIV.dialogTabContainer { height: 48px; }
+
+DIV.dialogMainContainer DIV.dialogInnerHeadContainer
+{
+    background-color: #EFEFEF;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    cursor: move;
+}
+
+DIV.dialogMainContainer DIV.dialogInnerHeadContainer DIV.dialogInnerHeadContent { height: 100%; }
+
+DIV.dialogMainContainer DIV.dialogTitleContainer
+{
+    position: relative;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    cursor: move;
+}
+
+DIV.dialogMainContainer DIV.dialogTitleText,DIV.dialogTitleTextShadow
+{
+    position: absolute;
+    font-family: Verdana;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    cursor: move;
+}
+
+DIV.dialogMainContainer DIV.dialogTitleText
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    z-index: 7;
+    overflow: hidden;
+
+    margin-top: 15px;
+    margin-left: 20px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    color: #303030;
+    text-shadow: 0 1px 1px #fff;
+}
+
+DIV.dialogMainContainer DIV.dialogTitleTextShadow
+{
+    left: 18px;
+    top: 10px;
+    z-index: 3;
+    visibility: hidden;
+    color: #FFFFFF;
+}
+
+DIV.dialogMainContainer DIV.dialogTitleInfo
+{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    z-index: 7;
+    overflow: hidden;
+    margin: 17px 15px 0 15px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #C0C0C0;
+    text-shadow: 0 1px 1px #fff;
+}
+
+DIV.dialogMainContainer div.dialogControlClose
+{
+    width: 15px;
+    height: 15px;
+    z-index: 5;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURQAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGd27GMAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAChJREFUGFdjYKAGYAQaAsJQwMjIyADCyALIXKBiDC6acjT9qOZT4GQADogAHnFgHAMAAAAASUVORK5CYII=');
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+DIV.dialogMainContainer DIV.dialogContentContainer
+{
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: 0;
+	color: black;
+}
+
+DIV.dialogMainContainer DIV.dialogScrollableContentContainer { border: none; }
+DIV.dialogMainContainer DIV.dialogContentContainer { padding: 20px 30px 20px 30px; }
+DIV.dialogMainContainer DIV.dialogInnerContainer { position: relative; }
+DIV.dialogMainContainer DIV.dialogBodyContainer { overflow: hidden; }
+
+DIV.dialogMainContainer DIV.dialogOuterFooterContainer
+{
+    background-color: #EFEFEF;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+DIV.dialogMainContainer DIV.dialogMessageContainer
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 37779;
+    visibility: hidden;
+}
+
+DIV.dialogMainContainer DIV.dialogMessage
+{
+    position: absolute;
+    visibility: hidden;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+DIV.dialogMainContainer DIV.dialogWaitMessage
+{
+    padding-top: 37px;
+    background-color: transparent;
+    background-image: url("data:image/gif;base64,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");
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+DIV.dialogMainContainer DIV.dialogErrorMessage
+{
+    color: #FF0000;
+}
+
+DIV.dialogMainContainer DIV.dialogFooterInfoMessageContainer { display: table; }
+DIV.dialogMainContainer DIV.dialogFooterInfoMessageContainerDIV.dialogInfoMessageLabel
+{
+    padding: 15px 0px 0px 30px;
+    display: table-cell;
+    font-weight: bold;
+}
+DIV.dialogMainContainer DIV.dialogFooterInfoMessageContainerDIV.dialogInfoMessageText
+{
+    padding: 15px 30px 0px 7px;
+    display: table-cell;
+}
+
+
+DIV.dialogMainContainer DIV.SplittedContainer.dialogInfoMessageContainer { display: inline-block; }
+DIV.dialogMainContainer DIV.dialogFooterContainer { height: 100%; }
+DIV.dialogMainContainer DIV.dialogTabContainer { display: inline; }
+
+DIV.dialogMainContainer DIV.dialogOuterFooterContainer DIV.actionButtons
+{
+    text-align: center;
+    margin: 15px 0;
+}
+
+DIV.dialogMainContainer DIV.dialogOuterFooterContainer DIV.actionButtons .waButtonContainer
+{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+DIV.dialogMainContainer DIV.dialogOuterFooterContainer DIV.actionButtons INPUT
+{
+    height: 25px;
+    margin: 0 5px;
+    font-size: 12px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    padding: 0 10px;
+    width: auto;
+}
+
+/* fix dialogTitleText hack TODO: remeve it after fix dialog*/
+DIV.dialogMainContainer DIV.dialogInnerHeadContainer + DIV.dialogTitleText { margin: 0; }
+
+/**
+ * </WA Dialog common styles>
+ */
+
+/* Scrollable panel styles */
+DIV.scrollablePanelContainer { position: relative; }
+
+DIV.scrollablePanelContainer DIV.scrollablePanelWrapper { overflow: hidden; }
+DIV.scrollablePanelContainer DIV.scrollablePanelWrapper ::-webkit-scrollbar { width: 0; }
+DIV.scrollablePanelContainer DIV.scrollablePanelWrapper ::-webkit-scrollbar-button { width: 0; }
+DIV.scrollablePanelContainer DIV.scrollablePanelWrapper ::-webkit-scrollbar-track { width: 0; }
+DIV.scrollablePanelContainer DIV.scrollablePanelWrapper ::-webkit-scrollbar-track-piece { width: 0; }
+DIV.scrollablePanelContainer DIV.scrollablePanelWrapper ::-webkit-scrollbar-thumb { width: 0; }
+DIV.scrollablePanelContainer DIV.scrollablePanelWrapper ::-webkit-scrollbar-corner { width: 0; }
+DIV.scrollablePanelContainer DIV.scrollablePanelWrapper ::-webkit-resizer { width: 0; }
+
+DIV.scrollablePanelContainer DIV.scrollBarContainer,DIV.scrollBarSlider
+{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAABCAMAAAC1xj0zAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAFFQTFRFysrK39/fxMTEtbW12tra9vb26+vroqKi5ubmlpaW0NDQwcHB4ODg29vb1NTU4+Pj/f397u7ut7e38fHx4eHh3d3d8vLy+vr65+fnz8/P7e3tunUk0AAAADhJREFUeNpi4OZiYQQDFnZmJgYwYEKwhFgFxFnFBNlYJTk5hKUkeFj4OJg52Vh4RRlF+NmYAQIMACUMAa+nFZs1AAAAAElFTkSuQmCC);
+    background-repeat: repeat-y;
+}
+
+DIV.scrollablePanelContainer DIV.scrollBarContainer
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    width: 10px;
+    overflow: hidden;
+    background-color: #DFDFDF;
+    cursor: default;
+}
+
+DIV.scrollablePanelContainer DIV.scrollBarContainer DIV.scrollBarTop,DIV.scrollBarBottom,DIV.scrollBarSliderTop,DIV.scrollBarSliderMiddle,DIV.scrollBarSliderBottom
+{
+    position: absolute;
+    left: 0;
+    width: 10px;
+    overflow: hidden;
+    background-color: transparent;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAATCAMAAACwcE1OAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQhQTFRF////ysrK39/fxMTEtbW12tra9vb26+vroqKi5ubmlpaW0NDQwcHB4ODg29vb1NTU4+Pj/f397u7ut7e38fHx4eHh3d3d8vLy+vr65+fnz8/P7e3txcXFzMzMp6enwMDAw8PDxsbGpaWlj4+Pvb295eXlurq6oaGh+/v7uLi40tLStLS0u7u7vr6+0dHRnZ2doKCgmJiY1tbWl5eXjIyMjY2Nzc3N2NjYi4uLwsLCubm5lJSUkJCQ8PDwv7+/3Nzc+fn59/f37Ozs1dXVm5ubqKio7+/vpqamlZWVtra2o6Oj4uLinp6empqazs7On5+fsbGxvLy819fXqqqq2dnZrKysyMjI////b2CjvQAAAFh0Uk5T////////////////////////////////////////////////////////////////////////////////////////////////////////////////////AHibwggAAAEqSURBVHjaxJDrVoJAFEaPw2UckYsomqnhDRQwFLuYllJappWW3Xj/NwkGjdUTtP/MXmev+fPBLsvsue80TyjNxCArcIjCpVkmRWESA92e8yGV0XYwGWqEaO9jZ2ByBsaGVHdgV+ge8SV1WbI3ojovixKnrTcGKhbRMyFrmPC5KGNe8EihUhY5meQ9zElFpCk4D9ZvXh2yszpkB4IgiHJAiXJsUQ6fKF+mGvX4eHbduort/KJ1s8+57u1dfISQP/avv60lXU2dChkUryayGQX54WqGwcLkexptPnVd72OLCEFu3vK+bAVjRbYsaGdnpyH14+HLU3rQ778+srPEQK+5C1leDKXPzpvZ7vXaenWcGFRtX6T4D2ajRmkkBowwkiijJqtXKXpiPwIMAEGFW/e/LsLPAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    cursor: default;
+}
+
+DIV.scrollablePanelContainer DIV.scrollBarContainer DIV.scrollBarTop,DIV.scrollBarBottom
+{
+    height: 2px;
+    z-index: 4;
+}
+
+DIV.scrollablePanelContainer DIV.scrollBarContainer DIV.scrollBarTop { top: 0; }
+DIV.scrollablePanelContainer DIV.scrollBarContainer DIV.scrollBarBottom { bottom: 0; }
+
+DIV.scrollablePanelContainer DIV.scrollBarContainer DIV.scrollBarSlider
+{
+    position: absolute;
+    left: 0;
+    top: 1px;
+    z-index: 5;
+    width: 10px;
+    overflow: hidden;
+    background-color: #F7F7F7;
+    cursor: default;
+}
+
+DIV.scrollablePanelContainer DIV.scrollBarContainer DIV.scrollBarSliderTop,DIV.scrollBarSliderMiddle,DIV.scrollBarSliderBottom { z-index: 7; }
+DIV.scrollablePanelContainer DIV.scrollBarContainer DIV.scrollBarSliderTop,DIV.scrollBarSliderBottom { height: 4px; }
+DIV.scrollablePanelContainer DIV.scrollBarContainer DIV.scrollBarSliderTop { top: 0; }
+DIV.scrollablePanelContainer DIV.scrollBarContainer DIV.scrollBarSliderMiddle { height: 7px; }
+DIV.scrollablePanelContainer DIV.scrollBarContainer DIV.scrollBarSliderBottom { bottom: 0; }
+
+DIV.scrollablePanelContainer DIV.scrollBarContainerNormal { background-position: 0 0; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerNormal DIV.scrollBarTop { background-position: 0 0; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerNormal DIV.scrollBarBottom { background-position: 0 -17px; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerNormal DIV.scrollBarSlider { background-position: -30px 0; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerNormal DIV.scrollBarSliderTop { background-position: 0 -2px; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerNormal DIV.scrollBarSliderMiddle { background-position: 0 -6px; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerNormal DIV.scrollBarSliderBottom { background-position: 0 -13px; }
+
+DIV.scrollablePanelContainer DIV.scrollBarContainerOver { background-position: -10px 0; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerOver DIV.scrollBarTop { background-position: -10px 0; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerOver DIV.scrollBarBottom { background-position: -10px -17px; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerOver DIV.scrollBarSlider { background-position: -40px 0; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerOver DIV.scrollBarSliderTop { background-position: -10px -2px; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerOver DIV.scrollBarSliderMiddle { background-position: -10px -6px; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerOver DIV.scrollBarSliderBottom { background-position: -10px -13px; }
+
+DIV.scrollablePanelContainer DIV.scrollBarContainerActive { background-position: -20px 0; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerActive DIV.scrollBarTop { background-position: -20px 0; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerActive DIV.scrollBarBottom { background-position: -20px 0; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerActive DIV.scrollBarSlider { background-position: -50px 0; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerActive DIV.scrollBarSliderTop { background-position: -20px -2px; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerActive DIV.scrollBarSliderMiddle { background-position: -20px -6px; }
+DIV.scrollablePanelContainer DIV.scrollBarContainerActive DIV.scrollBarSliderBottom { background-position: -20px -13px; }
+
+DIV.scrollablePanelContainer DIV.scrollablePanelContentContainer
+{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    visibility: hidden;
+}
+
+DIV.scrollablePanelContainerBorder
+{
+    border: 1px solid #C4C4C4;
+    border-right-color: #DBDBDB;
+    border-bottom-color: #DBDBDB;
+    border-radius: 2px;
+}
+
+/* Container mask styles */
+.waContainerMask
+{
+    display: none;
+    pointer-events: all;
+    background: #ffffff;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+
+.waContainerMask.dialogShading
+{
+    position: fixed;
+    background-color: #000000;
+
+    -webkit-transition: opacity 700ms;
+    -moz-transition: opacity 700ms;
+    -ms-transition: opacity 700ms;
+    -o-transition: opacity 700ms;
+    transition: opacity 700ms;
+}
+
+.waContainerMask.dialogShadingActive
+{
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+    -moz-opacity: .4;
+    -khtml-opacity: .4;
+    opacity: .4;
+}
+
+/* Correction for Peter Blum's controls */
+.fieldBody,
+.generalFormContainer .inner:first-child
+{
+  position: relative;
+}
+
+.fieldBody > span[id*="Date"] input:first-child,
+.fieldBody > span[id*="Time"] input:first-child,
+.generalFormContainer .inner:first-child > span[id*="dateTextBox"] input:first-child,
+.generalFormContainer .inner:first-child > span[id*="timeTextBox"] input:first-child
+{
+    margin: 0;
+    vertical-align: bottom;
+}
+
+.DES_TPPopup
+{
+    vertical-align: middle;
+}
+
+/* Payment systems icons */
+.waPaymentSystemIcon,
+.commonMessageBox .waPaymentSystemIcon
+{
+  display: none;
+  width: 48px;
+  height: 30px;
+  background: transparent left top no-repeat;
+  margin-right: 5px;
+  margin-top: 5px;
+  vertical-align: top;
+}
+
+.waPaymentSystemIcon:first-child:before
+{
+  display: block;
+  content: "";
+  height: 0;
+  font-size: 0;
+  margin-bottom: -5px;
+}
+
+.waPaymentSystemIcon:last-child
+{
+  margin-right: 0;
+}
+
+.waPaymentSystemIcon.Visa
+{
+  display: inline-block;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAeCAYAAABqpJ3BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzgzMjczNkY2QzJDMTFFNUIwNDZDQkU3OTE1NkZENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzgzMjczNzA2QzJDMTFFNUIwNDZDQkU3OTE1NkZENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3ODMyNzM2RDZDMkMxMUU1QjA0NkNCRTc5MTU2RkQ1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3ODMyNzM2RTZDMkMxMUU1QjA0NkNCRTc5MTU2RkQ1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgHu5IgAAAUFSURBVHja7FhpTFRXFP7ezGNYh1VAZTUFBKUK2hCqtpJgRQotoUnTNNXY2DWhIf6odm9ik5rUptZQU22KTUT/tDStWEjQYk0XFbAtlX3fhm1Yh0Fghtl6753OfW+ACtj+mYSTXN69513u+75zz/nueyPUtA6oAHxM2n7SAuEaNkHaBdKOiOTPCV8v9/yIUH+4iQqXQG8yWwM0Wl2+fsY4SxEfcCXw1ChWipnYSxR1oCuBl5Og2F0P+TxbJbBKwBUJWKw2mC3W/2UtUT6wzelg6SiEua8Uglkn3VAFQZVyBoI6jrsMJgvS3i2BwWgHcvSpJOxMCEXOh1f4nKvHshDi58n6v7eP4NQPdfjpjgaDkwbmW+fngZzUDTjz6qNOoM5eacS5ikaYTPbxJ4ceRvqWsKUJCCp/iAmvQ4zLg7mrCIa6D6CcHWD3zK2fw237KT7325udqGodYX0PNwEZyeG40TSEOz1jzKf2VCLY1w7+s7J6HP7yJqyCzenhlEj7kN7J1zMyhdfO/gILBO67Vtu/PALclJ4QY17Bmz9G4WDAF0i0XoJl7DbcZFMKrzbx/nO7NyJI7YH63gnuS4wIhEAwNPVNOIHfszUMaYnrSQrZUNM5ivhwf6dHF5TWOYGnVtmqXV4Kzbcdm2OQ8uk+FGcHI3PsIskxM9kmEW2Dk/i5cZDPy89KZNcGzbhEIGoNu5b/qeHgfb1UKH8/C0qFBNAm25SpWRMKK1pYP0TtibGpGUamuk3L6kb+f8sq4r1J4VDYBDxduh0NikxYdQ3M/1VFM59Do7klOoj1nXYgyv5e6OUuxUg/M4ec4+Vo6ZfqS5BhOkfWpXOoHUyP40GYNlhQ1zO+chVa4+uBbbF2IHuLd6NvoJ2px/lrzQuiT/3NvWMSgcgAdn32kRg8EOLD/WV/9GJT3jd4vuA6dNNz3G8lW1FQVsvHL+yJR2p8KB/fatHen4xmJEWx66TFHacr/RgAh4pEh6jxZEo069NinJMpY2JkIE+b3z7K5fMYWJJS56+3Iu2dyzASNaN2qaobXdq7rL+LAN8Y5o/UuJD/TmDftghJFut0pHil6OdlbuZ5WS/b4mBS0A75pLbW3wslb2Wg6kQudsiiShWrpLqb9U+WSNF//KEodA9PISzIWyrkfyEgLkWARsHPQ8SkwUxAjrJGMhfeHkq8+FgCn1ffKyvg6MW/i1JiQ1BxLBvqZwq50kzcNeI2OSNuNA/xeW9frGZNblQ4RvUGltYrIiAqFUgnxfxdZbeTvO0n0unvreLjBs3Egvw/ebmWRS6bRHRDqBomUidf/9rhtM7OhLU4XlyzrFOXyilda0UEWB0kRzICcnMUL98BtjMOAnZVqukYRTE58GhbzA4/8SAJgjuKb0n3T7+8C2GBUup8X9WFIlIvjjq4TwLhTmN6GG2KCOBjWoht/ZMsteQF7OamgBK2BQdTfJgvjuQm41B6PN4oquLvRXRNWldyozLsIFDZMrwAm0A+6m1JseuWJDE8OUs0W2BQ6KJyfaeHzIh+VpJfUsQ09ajNGM0sf2muq0QlUS4frJdFeJz458x2JfJSiUy15r/4OdYWFQqnGvirbXB5O8BORpmqLHjzIEpElWYxo0S3/nPQLWaBPu73fO691l79HlglsErATmDcZLa6HHCTXXrHKYELmmGdw+EiPy1aoNGyV/JCKqNH9dNGoaFTe4D0A1zsx933/hZgAEjj4y54ySmpAAAAAElFTkSuQmCC');
+}
+
+.waPaymentSystemIcon.MasterCard
+{
+  display: inline-block;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAeCAYAAABqpJ3BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDMkUxM0Y2QzJDMTFFNTkzQ0NFQzNFQTE5MzZDN0MiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDMkUxNDA2QzJDMTFFNTkzQ0NFQzNFQTE5MzZDN0MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0MyRTEzRDZDMkMxMUU1OTNDQ0VDM0VBMTkzNkM3QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0MyRTEzRTZDMkMxMUU1OTNDQ0VDM0VBMTkzNkM3QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvAdi+QAAAd/SURBVHja1Jh7cNTV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');
+}
+
+.waPaymentSystemIcon.Amex
+{
+  display: inline-block;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAeCAYAAABqpJ3BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QjUzQUVDOTE2QzJDMTFFNUJBODI5MzhGMzVENUI2MTIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QjUzQUVDOTI2QzJDMTFFNUJBODI5MzhGMzVENUI2MTIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCNTNBRUM4RjZDMkMxMUU1QkE4MjkzOEYzNUQ1QjYxMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCNTNBRUM5MDZDMkMxMUU1QkE4MjkzOEYzNUQ1QjYxMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpX0/DQAAAXwSURBVHja7FhtTFNX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');
+}
+
+.waPaymentSystemIcon.Discover
+{
+  display: inline-block;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAeCAYAAABqpJ3BAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUVGNTk3Mzk2QzJDMTFFNUE5QTNDNkI1N0RBMDcxOUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUVGNTk3M0E2QzJDMTFFNUE5QTNDNkI1N0RBMDcxOUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5RUY1OTczNzZDMkMxMUU1QTlBM0M2QjU3REEwNzE5QSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5RUY1OTczODZDMkMxMUU1QTlBM0M2QjU3REEwNzE5QSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvnAyxUAAAY5SURBVHja7FgJTJRH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');
+}
+
+.waPaymentSystemIcon.Offline
+{
+  display: block;
+  background-image: url('data:image/png;base64,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');
+}
+
+/* user agent stylesheet */
+strong
+{
+  font-weight: bold;
+}

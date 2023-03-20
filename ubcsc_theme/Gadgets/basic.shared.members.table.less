@@ -1,0 +1,53 @@
+// -> members table
+.genericListTable,
+.membersTable { width: 100%; border: 1px solid #c5c5c5; border-collapse: collapse; border-spacing: 0; margin: 0 0 20px 0; padding: 0;
+	thead {
+		th { padding: 12px 25px 12px 0px; font-weight: normal; font-size: 18px; line-height: 22px; color: #000; vertical-align: top; text-align: left; }
+		th:first-child { padding-left: 25px; }
+	}
+	tbody {
+		td { padding: 15px 25px 15px 0px; height: 36px; border-top: 1px solid #c5c5c5;
+			&:first-child { padding-left: 25px; }
+			.memberValue { padding: 0 0 5px 0; vertical-align: top; zoom: 1; .clearfix;
+				h5 { padding: 0; margin: 0; font-size: 14px; color: #000; font-weight: normal;
+					a {  } // link to View details
+				}
+			}
+		}
+		td.memberDirectoryColumn1 {
+			.memberValue {  }
+		}
+		td.memberDirectoryColumn2 {
+			.memberValue {  }
+		}
+		td.memberDirectoryColumn3 {
+			.memberValue {  }
+		}
+		td.memberDirectoryColumn4 {
+			.memberValue {  }
+		}
+		td.memberDirectoryBottomRow { padding: 0px 5px 5px 10px; border-top: none;
+			.mainDiv {
+				.memberValue {  } // some comment
+			}
+		}
+		td.noSeparator { border-top: none; }
+	}
+	tr.normal {
+		td {  }
+	}
+	tr.hover {
+		td { background: #eaeaea; cursor: pointer; }
+	}
+	tr.hiddenRow { display: none; }
+
+	&.trWarning
+	{
+
+	  td.warningText
+	  {
+		color: #666;
+		padding: 0 7px;
+	  }
+	}
+}

@@ -1,0 +1,791 @@
+/* ----- Gadget Discussion forum ----- */
+
+.WaGadgetForum
+{
+
+    .pageTitleOuterContainer // title of gadget forum
+	{
+        .pageBackContainer
+        {
+
+            a
+            {
+              font: @Gadget-Forum-Back-Show-Subscribe-Font;
+              color: @Gadget-Forum-Back-Show-Subscribe-Color;
+              &:hover
+              {
+                color: @Gadget-Forum-Back-Show-Subscribe-Hover-Color;
+              }
+            }
+        }
+    }
+
+    .forumPanelOuterContainer
+    {
+        float: left;
+        margin: 0;
+
+        .forumPanelContainer
+        {
+
+            input.typeButton  // button "Create topic", "Reply"
+            {
+                .functionalButton;
+                float: none;
+            }
+
+            .forumPanelButton {}
+
+            .forumSortedOrderLink // Show latest reply on...
+            {
+                display: inline-block;
+                float: none;
+                padding: 6px 0 6px 20px;
+                vertical-align: middle;
+
+                a {
+                  color: @Gadget-Forum-Back-Show-Subscribe-Color;
+                  font: @Gadget-Forum-Back-Show-Subscribe-Font;
+                  &:hover
+                  {
+                    color: @Gadget-Forum-Back-Show-Subscribe-Hover-Color;
+                  }
+                }
+            }
+
+            div
+            {
+
+                #idSubscribe,
+                #idUnsubscribe
+                {
+                    display: inline-block;
+                    float: none;
+                    padding: 6px 0 6px 10px;
+
+                    a
+                    {
+                        display: inline-block;
+                        vertical-align: middle;
+                        color: @Gadget-Forum-Back-Show-Subscribe-Color;
+                        font: @Gadget-Forum-Back-Show-Subscribe-Font;
+                        &:hover
+                        {
+                          color: @Gadget-Forum-Back-Show-Subscribe-Hover-Color;
+                        }
+                    } // link "Subscribe/Unsubscribe"
+                }
+
+
+                #idUnsubscribe
+                {
+
+                    &:before
+                    {
+                        content: '\f00c';
+                        color: @Gadget-Forum-IconCheck-Color;
+                        display: inline-block;
+                        font: @Gadget-Forum-IconCheck-Font;
+                        vertical-align: middle;
+                    }
+
+                    img
+                    {
+                        display: none;
+                    }
+                }
+            }
+
+            .forumSelectAction
+            {
+                display: inline-block;
+                padding-left: 10px;
+            }
+
+            .forumPanelSubscribeLink  // message like a "Subscribing..."
+            {
+                display: inline-block;
+                font: @Typography-Link-Font;
+                float: none;
+                vertical-align: middle;
+            }
+
+            .clearEndContainer
+            {
+                display: none;
+            }
+        }
+    }
+
+    .pagerOuterContainer // paging 1, 2, 3
+    {
+        clear: none;
+        float: right;
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .forumBottomPanelOuterContainer
+    {
+        float: left;
+
+        .forumBottomPanelContainer
+        {
+
+            input.typeButton  // button "Create topic", "Reply"
+            {
+                .functionalButton;
+                float: none;
+            }
+
+            a[href$="#top"]  // links like a "Back to top"
+            {
+              font: @Gadget-Forum-Back-Show-Subscribe-Font;
+              color: @Gadget-Forum-Back-Show-Subscribe-Color;
+              display: inline-block;
+              float: none;
+              margin: 0 0 0 10px;
+              &:hover
+              {
+                color: @Gadget-Forum-Back-Show-Subscribe-Hover-Color;
+              }
+            }
+        }
+    }
+
+
+    .forumEditEntryBoxContainer
+    {
+
+        .boxHeaderOuterContainer
+        {
+            padding: 0 0 10px 0;
+
+            h4.boxHeaderTitle
+            {
+                color: @Shared-Form-Title-Color;
+                font: @Shared-Form-Title-Font;
+                margin-right: 150px;
+            }
+        }
+
+        .boxBodyOuterContainer
+        {
+
+            .mandatoryFieldsTitle
+            {
+                font: @Shared-Form-Title-Font;
+                margin: -30px 0 30px 0;
+
+                em  // "*"
+                {
+                    color: @Shared-Form-MandatorySymbol-Color;
+                    font: inherit;
+                }
+
+                strong  // text "Mandatory"
+                {
+                    font: inherit;
+                }
+            }
+
+            #idMakeSticky .fieldItem
+            {
+                margin: 0;
+            }
+
+            .fieldContainer
+            {
+
+                &#idAuthorLabelContainer
+                {
+
+                    .fieldLabel
+                    {
+                        font: @Shared-Form-Label-Font;
+                    }
+                }
+
+                .stickinessForumLabelDate + span input
+                {
+                    border: 1px solid #c6c6c6;
+                }
+
+                .DES_CalPopup
+                {
+                    margin-top: 0;
+                    cursor: pointer;
+
+                    span
+                    {
+                        &:before
+                        {
+                            color: @Shared-Icon-Calendar-Color;
+                            content: '\f073';
+                            display: inline-block;
+                            font: @Shared-Icon-Calendar-Font;
+                        }
+
+                        img
+                        {
+                            cursor: pointer;
+                            .opacity(0);
+                            margin-left: -18px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .boxFooterOuterContainer
+        {
+            font-size: 0;
+
+            .boxFooterPrimaryOuterContainer,
+            .boxFooterSecondaryOuterContainer
+            {
+                display: inline-block;
+                float: none;
+
+                input
+                {
+                    .functionalButton;
+                }
+            }
+
+
+            #idForumSubscribeOptionsContainer
+            {
+                display: inline-block;
+                float: none;
+                margin-bottom: 10px;
+                vertical-align: bottom;
+
+                #idForumSubscribeOptionSelect
+                {
+                    select
+                    {
+                        border: 1px solid #c6c6c6;
+                    }
+                }
+
+                #idForumSubscribeOptionCheckbox
+                {
+                    input[type=checkbox]
+                    {
+                        margin: 0 5px 0 0;
+                        vertical-align: baseline;
+                    }
+
+                    label
+                    {
+                        font-size: 14px;
+                        font-style: italic;
+                        vertical-align: baseline;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .noTopicsOuterContainer
+    {
+        clear: both;
+        padding: 20px 0 0 0;
+
+        .noTopicsContainer { }
+    }
+
+    &.WaGadgetForumStateTopicList // List of topics
+    {
+
+        #idTopicListContainer
+        {
+            clear: both;
+            margin: 0;
+            padding: 40px 0;
+
+            .topicListContainer
+            {
+
+                .boxHeaderOuterContainer
+                {
+
+                    table
+                    {
+                        td
+                        {
+                            padding: 0;
+                            border: none;
+
+                            &.threadImageTD
+                            {
+                                display: none;
+
+                                div.threadImage
+                                {
+                                    display: none;
+                                }
+                            }
+
+
+                            &.threadTD
+                            {
+                                width: 50%;
+                                padding-left: 35px;
+
+                                div.thread
+                                {
+
+                                    h4.boxHeaderTitle
+                                    {
+                                        font: @Typography-Header4-Font;
+                                        color: @Typography-Header4-Color;
+                                    }
+                                }
+                            }
+
+                            &.lastReplyTD
+                            {
+                                width: 40%;
+
+                                .lastReply
+                                {
+                                    h4.boxHeaderTitle
+                                    {
+                                        font: @Typography-Header4-Font;
+                                        color: @Typography-Header4-Color;
+                                    }
+                                }
+                            }
+
+
+                            &.repliesCountTD
+                            {
+                                text-align: right;
+
+                                .repliesCount
+                                {
+
+                                    h4.boxHeaderTitle
+                                    {
+                                        font: @Typography-Header4-Font;
+                                        color: @Typography-Header4-Color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .boxBodyOuterContainer
+                {
+
+                    table
+                    {
+                        border: none;
+                        border-collapse: separate;
+
+                        tr
+                        {
+
+                            td
+                            {
+                                height: auto;
+                                padding: 0;
+                                border: none;
+
+                                &:first-child
+                                {
+                                    padding: 0;
+                                }
+                            }
+
+                            &.topicListRow
+                            {
+
+                                td
+                                {
+                                    padding-bottom: 20px;
+                                    padding-top: 20px;
+
+                                    &.threadImageTD
+                                    {
+                                        width: 1%;
+
+                                        div.threadImage // topic image
+                                        {
+                                            color: @Gadget-Forum-Icon-Color;
+                                            font: @Gadget-Forum-Icon-Font;
+
+                                            &:before
+                                            {
+                                                content:'\e620';
+                                            }
+
+                                            img
+                                            {
+                                                display: none;
+                                            }
+
+                                            &.stickyForumTopic
+                                            {
+
+                                                &:before
+                                                {
+                                                    content:'\e60a';
+                                                }
+                                            }
+                                        }
+                                    }
+
+
+                                    &.threadTD
+                                    {
+                                        padding-left: 15px;
+                                        padding-right: 25px;
+                                        width: 47%;
+
+                                        div.thread // topic name
+                                        {
+                                            a
+                                            {
+                                                color: #a39d9d;
+                                                font: @Gadget-Forum-Thread-Link-Font;
+                                                text-decoration: underline;
+
+                                                &:hover
+                                                {
+                                                  color: @Gadget-Forum-Thread-Link-Hover-Color;
+                                                }
+                                            }
+
+                                        }
+                                    }
+
+                                    &.lastReplyTD
+                                    {
+                                        padding-right: 25px;
+                                        width: 40%;
+
+                                        .lastReply
+                                        {
+
+                                            a  // date
+                                            {
+                                                font: @Gadget-Forum-LastReply-Date-Link-Font;
+                                                color: @Gadget-Forum-LastReply-Date-Link-Color;
+                                                text-decoration: underline;
+                                                &:hover
+                                                {
+                                                  color: @Gadget-Forum-LastReply-Date-Link-Hover-Color;
+                                                }
+                                            }
+
+                                            span  // user name
+                                            {
+                                                font: @Gadget-Forum-LastReply-Name-Font;
+                                                color: @Gadget-Forum-LastReply-Name-Color;
+                                            }
+                                        }
+                                    }
+
+                                    &.repliesCountTD
+                                    {
+                                        text-align: center;
+
+                                        .repliesCount
+                                        {
+                                            span {
+                                              color: @Gadget-Forum-RepliesCount-Color;
+                                              font: @Gadget-Forum-RepliesCount-Font;
+                                            } // count of replies
+                                        }
+                                    }
+                                }
+
+                                &.normal {} // normal state of row ( not highlighted )
+
+                                &.highlight{} // hover state of row ( highlighted )
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.WaGadgetForumStateMessageList // Topic page & list of messages
+    {
+        .topicTitleOuterContainer
+        {
+            margin: 0;
+            padding: 0 0 15px 0;
+
+            .topicTitleContainer
+            {
+                h4
+                {
+                    color: @Gadget-Forum-Title-Color;
+                    font: @Gadget-Forum-Title-Font;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .messageListOuterContainer
+        {
+            clear: both;
+            margin: 0;
+            padding: 20px 0;
+
+            .messageListContainer
+            {
+
+                ul.boxesList
+                {
+
+                    li.boxesListItem
+                    {
+                        margin: 0;
+                        padding: 15px 0;
+
+                        &:first-child
+                        {
+                            padding-top: 0;
+                        }
+
+                        .boxHeaderOuterContainer
+                        {
+
+                            table.forumMessageHeaderTable
+                            {
+                                background: none;
+                                border: none;
+
+                                td
+                                {
+                                    color: inherit;
+                                    font-size: inherit;
+                                    font-weight: normal;
+                                    padding: 0;
+                                    vertical-align: bottom;
+                                    line-height: normal;
+
+
+                                    &.forumMessageHeaderInfoContainer
+                                    {
+                                        padding-right: 30px;
+
+                                        .forumMessageHeaderInfo
+                                        {
+
+                                            img
+                                            {
+                                                display: none;
+                                            }
+
+                                            span // date of post/reply
+                                            {
+                                                color: @Gadget-Forum-PostedOn-Color;
+                                                font: @Gadget-Forum-PostedOn-Font;
+                                                vertical-align: baseline;
+                                            }
+                                        }
+                                    }
+
+                                    &.forumMessageHeaderBodyContainer
+                                    {
+
+                                        > span
+                                        {
+                                            color: @Gadget-Forum-MessageNumber-Color;
+                                            display: inline-block;
+                                            float: none;
+                                            padding-top: 4px;
+                                            font: @Gadget-Forum-MessageNumber-Font;
+                                            vertical-align: baseline;
+
+                                            a
+                                            {
+                                              color: @Gadget-Forum-MessageNumber-Link-Color;
+                                              font: @Gadget-Forum-MessageNumber-Link-Font;
+
+                                              &:hover
+                                              {
+                                                color: @Gadget-Forum-Back-Show-Subscribe-Hover-Color;
+                                              }
+                                            }
+                                        }
+
+                                        .messageActionsContainer
+                                        {
+
+                                            a
+                                            {
+                                                display: inline-block;
+                                                padding-left: 35px;
+                                                vertical-align: baseline;
+                                                font: @Gadget-Forum-Actions-Font;
+                                                color: @Gadget-Forum-Actions-Color;
+
+
+                                                &:first-child
+                                                {
+                                                    padding-left: 0;
+                                                }
+
+                                                &:hover
+                                                {
+                                                  color: @Gadget-Forum-Back-Show-Subscribe-Hover-Color;
+                                                }
+
+                                                &:before
+                                                {
+                                                  display: inline-block;
+                                                  visibility: visible;
+                                                  margin-right: 18px;
+                                                  color: @Shared-Icons-Adaptive-Color;
+                                                  font: @Shared-Icons-Adaptive-Font;
+                                                  vertical-align: bottom;
+                                                  text-decoration: underline;
+                                                }
+
+                                                &[title^='Edit']:before
+                                                {
+                                                  content: '\e60c';
+                                                  text-decoration: none;
+                                                }
+
+                                                &[title^='Delete']:before
+                                                {
+                                                  content: '\e60e';
+                                                  text-decoration: none;
+                                                }
+
+                                                &[title^='Quote']:before
+                                                {
+                                                  content: '\e62f';
+                                                  text-decoration: none;
+                                                }
+
+                                                &[title^='Merge']:before
+                                                {
+                                                  content: '\e601';
+                                                  text-decoration: none;
+                                                }
+
+                                                &[title^='Move']:before
+                                                {
+                                                  content: '\e624';
+                                                  text-decoration: none;
+                                                }
+
+                                            }
+
+                                            span.actionDivider // symbol "|"
+                                            {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                        .boxBodyOuterContainer
+                        {
+                            padding-top: 5px;
+
+                            table.forumMessageTable
+                            {
+                                position: relative;
+
+                                border: none;
+
+                                & > tbody > tr > td
+                                {
+                                    padding: 0;
+                                }
+
+                                td.left
+                                {
+                                    min-width: 120px;
+                                    padding-right: 30px;
+                                    width: 22%;
+
+                                    .boxBodyInfoOuterContainer
+                                    {
+
+                                        .boxBodyInfoContainer
+                                        {
+
+                                            .pictureContainer
+                                            {
+                                                img {}
+                                            }
+
+                                            a  // user
+                                            {
+                                              font: @Gadget-Forum-Username-Font;
+                                              color: @Gadget-Forum-Username-Color;
+                                              &:hover{
+                                                color: @Gadget-Forum-Back-Show-Subscribe-Hover-Color;
+                                              }
+                                            }
+
+                                            span.postedByComment // type of user
+                                            {
+                                                color: @Gadget-Forum-Back-Show-Subscribe-Color;
+                                                font: @Gadget-Forum-Back-Show-Subscribe-Font;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                td.right
+                                {
+                                    border-left: none;
+                                    padding-top: 25px;
+
+                                    .forumMessage {} // user's message
+
+                                    .forumMessageLastModified  // if message modified
+                                    {
+                                        color: @Gadget-Forum-ModifyMessage-Color;
+                                        font: @Gadget-Forum-ModifyMessage-Font;
+                                        padding: 0;
+                                        text-align: right;
+
+                                        a
+                                        {
+                                            font: @Gadget-Forum-ModifyMessage-Font;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.controlTooltipExtender  // popup tooltip for topic
+{
+    background-color: @Gadget-Forum-PopupTooltip-Bg;
+    border: 1px solid #ccc;
+}
+
+
+/* ----- Gadget forum adaptive behavior ----- */
+
+// state3
+@import 'gadget.discussion.forum.state3';
+@media only screen and (max-width:@state2-maxwidth)
+{
+    .gadget-discussion-forum-state3();
+}

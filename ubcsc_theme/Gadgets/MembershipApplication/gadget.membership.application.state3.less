@@ -1,0 +1,104 @@
+/* ---- Gadget Member application adaptive behavior ---- */
+
+.gadget-membershipApplication-state3()
+{
+
+    .WaGadgetMembershipApplication
+    {
+
+        &.WaGadgetMembershipApplicationStateReview
+        {
+
+            .navigationOuterContainer
+            {
+
+                .navigationContainer
+                {
+
+                    .left
+                    {
+
+                        input[value='Cancel']
+                        {
+                            margin-right: 10px;
+                        }
+                    }
+
+                    .right
+                    {
+                        float: none;
+
+                        input[value='Back']
+                        {
+                            margin: 0 10px 10px 0;
+                            vertical-align: top;
+                        }
+
+                        input[type='submit']
+                        {
+                            vertical-align: top;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &.WaGadgetMembershipApplicationStateIdentify
+        {
+
+            #idSectionIdentifyUserContainer
+            {
+
+                .fieldContainer
+                {
+
+                    + .fieldContainer // remove margins and '&nbsp' label from message 'This e-mail already in use'
+                    {
+
+                        .fieldSubContainer
+                        {
+                            margin: 0;
+
+                            .fieldLabel
+                            {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .navigationContainer
+            {
+              .left
+              {
+                margin-right: 5px;
+                margin-bottom: 10px;
+              }
+
+              .right
+              {
+                float: left;
+              }
+            }
+        }
+
+        &.WaGadgetMembershipApplicationStateFillData
+        {
+          .navigationContainer
+          {
+            .left
+            {
+              margin-right: 5px;
+              margin-bottom: 10px;
+            }
+
+            .right
+            {
+              float: left;
+            }
+          }
+        }
+    }
+}

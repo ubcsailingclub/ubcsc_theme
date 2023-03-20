@@ -1,0 +1,256 @@
+//Basic styles for gadget Login form v5.0
+
+.WaGadgetLoginForm
+{
+
+    font-size: 12px;
+    font: inherit;
+
+    .loginContainerForm
+    {
+
+        .mandatorySymbol
+        {
+            line-height: 25px;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 0 0 0 3px;
+        }
+
+        [class$="Label"]
+        {
+            display: inline-block;
+            padding: 0;
+
+            label
+            {
+                cursor: text;
+            }
+        }
+
+        [class$="TextBox"]
+        {
+
+            input[class$="TextBoxControl"]
+            {
+                border: 1px solid #e3e3e3;
+                background: #fff;
+                color: #000;
+                height: 20px;
+                line-height: 20px;
+                margin: 0;
+                padding: 2px 4px;
+                width: 140px;
+            }
+        }
+
+        .loginAction
+        {
+            display: inline-block;
+            vertical-align: middle;
+
+            input.loginButton
+            {
+                background: #303030;
+                border: none;
+                display: inline-block;
+                font-family: inherit;
+                height: 26px;
+                margin: 0;
+                padding: 0 22px;
+                color: #fff;
+
+                &:hover {}
+            }
+        }
+
+        .loginActionRememberMe
+        {
+            white-space: nowrap;
+
+            input.rememberMeCheckboxControl
+            {
+                display: inline-block;
+                height: 13px;
+                margin: 0px 6px 0 0;
+                padding: 0;
+                vertical-align: middle;
+                width: 13px;
+            }
+
+            label
+            {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        .loginPasswordForgot
+        {
+            a
+            {
+            }
+        }
+
+        &.orientationHorizontal // for horizontal orientation
+        {
+
+            form
+            {
+                > div
+                {
+                }
+
+                .loginUserName,
+                .loginPassword
+                {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 3px 0 3px 10px;
+                }
+
+                .loginAction
+                {
+                    margin: 3px 0 3px 10px;
+                    vertical-align: bottom;
+                }
+
+                .loginActionRememberMe,
+                .loginPasswordForgot
+                {
+                    display: inline-block;
+                    margin: 3px 0 3px 10px;
+                    vertical-align: middle;
+                    width: 150px;
+                }
+            }
+
+            &.oAuthIstrue
+            {
+
+                .oAuthForm
+                {
+
+                    .oAuthButtonsContainer
+                    {
+                        margin-left: 10px;
+                        font-size: 0;
+
+                        .wa-authenticateLoginLink
+                        {
+                            margin-right: 10px;
+                            max-width: 150px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.orientationVertical // for vertical orientation
+        {
+
+            form
+            {
+
+                .loginUserName,
+                .loginPassword,
+                .loginActionRememberMe,
+                .loginPasswordForgot
+
+                {
+                    margin: 0 0 10px 0;
+                }
+            }
+
+            &.oAuthIstrue
+            {
+
+                .oAuthForm
+                {
+
+                    .oAuthButtonsContainer
+                    {
+
+                        .wa-authenticateLoginLink
+                        {
+                            display: block;
+                            max-width: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .loginContainerAuthenticated
+    {
+        text-align: right;
+
+        .loggedAction
+        {
+            .loginBoxLogout
+            {
+                background: none;
+                border: none;
+                cursor: pointer;
+                display: inline;
+                font: inherit;
+                margin: 0;
+                outline: none;
+                outline-offset: 0;
+                padding: 0;
+            }
+        }
+
+        &.orientationHorizontal // for horizontal orientation
+        {
+
+            .loggedName,
+            .profileBox
+            {
+                display: inline-block;
+                margin: 4px 5px 4px 5px;
+            }
+
+            .viewProfileBox
+            {
+
+                a {}
+            }
+
+            .changePasswordBox
+            {
+
+                a {}
+            }
+
+            .loggedAction
+            {
+
+                a {}
+            }
+        }
+
+        &.orientationVertical // for vertical orientation
+        {
+            .loggedName
+            {
+                margin: 0 0 10px 0;
+            }
+
+            a {}
+
+            .profileBox {}
+
+            .viewProfileBox
+            {
+                margin: 0 0 3px 0;
+            }
+
+            .changePasswordBox
+            {
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+}

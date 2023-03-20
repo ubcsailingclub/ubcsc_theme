@@ -1,0 +1,2 @@
+<div id="{{Id}}" data-componentId="{{ComponentId}}" class="{{FullClassName}} WaPlaceHolder{{ComponentId}}" style="{{CssStyle.ContainerStyle}}{{Width}}{{DisplayNoneForAdmin}}"><div style="{{InlineStyle}}{{CssStyle.Padding}}">{{Content}}</div>
+</div>

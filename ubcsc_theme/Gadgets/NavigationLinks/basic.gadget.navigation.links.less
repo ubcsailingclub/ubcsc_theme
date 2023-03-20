@@ -1,0 +1,23 @@
+.WaGadgetNavigationLinks {
+
+	ul.orientationHorizontal { margin: 0; padding: 20px 25px 10px; list-style: none; border-top: 5px solid #eaeaea; min-height: 16px;
+		// level 1
+		li { display: inline-block; vertical-align: top; padding: 0 0 10px 0; .ie7-inline-block();
+			& + li:before { content: "|"; display: inline-block; margin: 0 0.54em 0 0.8em; }
+		}
+		// level 2
+		ul { list-style: none; margin: 0 0 0 3.5em; padding: 4px 0 0 0;
+			li { display: block; padding: 0 0 4px 0;
+				& + li:before { display: none; margin: 0; }
+			}
+		}
+		// level 3
+		ul ul { margin: 0 0 -4px 1em; }
+	}
+
+	ul.orientationVertical { margin: 0; padding: 0; list-style: 0; min-height: 16px;
+		li { display: block; padding: 0 0 4px 0;
+		}
+		ul { margin: 0 0 -4px 20px; padding: 5px 0 0 0; }
+	}
+}

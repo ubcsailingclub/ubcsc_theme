@@ -1,0 +1,155 @@
+/* ---- Gadget member directory adaptive behavior. State 3 ---- */
+.gadget-memberDirectory-state3()
+{
+	::-webkit-scrollbar {
+		-webkit-appearance: none;
+	}
+
+	::-webkit-scrollbar:vertical {
+		width: 12px;
+	}
+
+	::-webkit-scrollbar:horizontal {
+		height: 12px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0, .5);
+		border-radius: 10px;
+		border: 2px solid #ffffff;
+	}
+
+	::-webkit-scrollbar-track {
+		border-radius: 10px;
+		background-color: #ffffff;
+	}
+
+	.WaGadgetMemberDirectoryStateList {
+		// Selected search criteria
+		.selectedCriteriaListInnerContainer {
+			padding: 15px 10px 15px 10px;
+			.fieldContainer {
+				.fieldSubContainer {
+					.fieldLabel {
+						width: 35%;
+						span.criteriaTitle {
+							padding-right: 10px;
+						}
+					}
+					.criteriaTitleColumn {
+					}
+					.firstColumn {
+					}
+					.fieldBody {
+						width: 65%;
+						span.conditionTitle {
+						}
+						span.conditionValue {
+						}
+					}
+					.criteriaValueColumn {
+					}
+					.lastColumn {
+					}
+				}
+			}
+		}
+		.memberDirectorySearchAreaOuterContainer {
+			.memberDirectorySearchArea {
+				input[type=text] {
+					width: 100px;
+				}
+				span.searchResult {
+					span#idPagingData {
+						display: block !important;
+						margin: 10px 0 0 0;
+						float: none;
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		.browsingColumnsMainContainer table.browsingColumns {
+			table-layout: auto;
+
+			tr.filterHead th {
+				display: none;
+			}
+
+			tr.filterRow td	{
+				width: 100%;
+				display: block;
+				padding-bottom: 15px;
+				word-break: break-all;
+
+				a, nobr {
+					white-space: normal;
+					word-break: break-all;
+				}
+			}
+
+			tr.filterHead th {
+				font: @Typography-Adaptive-State3-Header3;
+			}
+		}
+	}
+
+	.WaGadgetMemberDirectoryStateAdvancedSearch {
+
+        .clearValuesOuterContainer
+        {
+          .clearValuesContainer
+          {
+            text-align: left;
+          }
+        }
+
+		// Choice of search criteria
+		.searchCriteriaOuterContainer {
+			.criteriaListItem {
+				.fieldContainer { float: none; width: auto;
+					.fieldSubContainer {
+						table {
+							td.left { width: auto; }
+							td.right { width: auto;
+								.fieldBody {
+									select
+									{
+										padding: 5px 1% 6px 1%;
+										width: 98%;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.valueContainer
+				{
+					float: none;
+					margin-top: 5px;
+					width: auto;
+
+					.fieldContainer
+					{
+
+						.fieldSubContainer
+						{
+
+							span
+							{
+
+								input[type='text']
+								{
+									padding: 5px 1% 6px 1%;
+									width: 98%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+/* Google AdSense block */
+
+.googleAdTop
+{
+    clear: both;
+    margin: 0 auto;
+    max-width: 758px;
+    padding: 15px;
+    z-index: 37777;
+    overflow: hidden;
+	text-align: center;
+}
+
+// Google AdSense block adaptive behavior (state 2)
+@media only screen and (min-width:@state2-minwidth) and (max-width:@state2-maxwidth)
+{
+
+    .googleAdTop
+    {
+        max-width: 498px;
+    }
+}
+
+// Google AdSense block adaptive behavior (state 3)
+@media only screen and ( max-width: @state3-maxwidth )
+{
+
+    .googleAdTop
+    {
+        max-width: 320px;
+    }
+}

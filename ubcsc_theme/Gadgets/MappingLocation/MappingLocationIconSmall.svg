@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>icon20_MembersLocationMapping</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="3.04960505 -6.12980769e-05 6.09903006 -6.12980769e-05 6.09903006 9.10821995 3.04960505 9.10821995 0.00018003631 9.10821995 0.00018003631 -6.12980769e-05"></polygon>
+        <polygon id="path-3" points="2.43968404 -4.90384615e-05 4.87922405 -4.90384615e-05 4.87922405 7.28657596 2.43968404 7.28657596 0.000144029048 7.28657596 0.000144029048 -4.90384615e-05"></polygon>
+        <path d="M2.38958593,3.4635375 C1.85187749,3.4635375 1.41594957,3.01826827 1.41594957,2.4690375 C1.41594957,1.91980673 1.85187749,1.4745375 2.38958593,1.4745375 C2.92729438,1.4745375 3.3632223,1.91980673 3.3632223,2.4690375 C3.3632223,3.01826827 2.92729438,3.4635375 2.38958593,3.4635375 M2.45007813,-4.90384615e-05 C1.09812547,-4.90384615e-05 0.000144029048,1.1111625 0.000144029048,2.47884519 C0.000144029048,3.7822875 1.71072902,6.15427788 2.45007813,7.28657596 C3.16830299,6.15427788 4.87936807,3.7822875 4.87936807,2.47884519 C4.87936807,1.1111625 3.78090654,-4.90384615e-05 2.45007813,-4.90384615e-05" id="path-5"></path>
+        <filter x="-30.7%" y="-20.6%" width="161.5%" height="141.2%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <polygon id="path-7" points="2.50005788 -3.94154493e-05 5.00011577 -3.94154493e-05 5.00011577 5.99996058 2.50005788 5.99996058 0 5.99996058 0 -3.94154493e-05"></polygon>
+        <path d="M2.92055222,2.78391319 C2.48836044,2.78391319 2.13797639,2.42602091 2.13797639,1.98456787 C2.13797639,1.54311484 2.48836044,1.18522256 2.92055222,1.18522256 C3.352744,1.18522256 3.70312805,1.54311484 3.70312805,1.98456787 C3.70312805,2.42602091 3.352744,2.78391319 2.92055222,2.78391319 M2.9691738,0 C1.88252018,0 1,0.893154082 1,1.99245096 C1,3.04011361 2.3749101,4.94663889 2.9691738,5.85674162 C3.54645853,4.94663889 4.92175452,3.04011361 4.92175452,1.99245096 C4.92175452,0.893154082 4.03884845,0 2.9691738,0" id="path-9"></path>
+        <filter x="-38.2%" y="-25.6%" width="176.5%" height="151.2%" filterUnits="objectBoundingBox" id="filter-10">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Epic-1-version-4.0" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-16-Copy" transform="translate(-12.000000, -12.000000)">
+            <g id="icon20_MembersLocationMapping" transform="translate(12.000000, 12.000000)">
+                <g>
+                    <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="20" height="20" rx="4"></rect>
+                    <g id="Group" transform="translate(2.000000, 2.000000)">
+                        <g id="Icon/MembersLocation/Normal">
+                            <g id="Page-1" transform="translate(4.903846, 6.742788)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Clip-2"></g>
+                                <path d="M2.98698242,4.32942188 C2.31484686,4.32942188 1.76993696,3.77283534 1.76993696,3.08629688 C1.76993696,2.39975841 2.31484686,1.84317187 2.98698242,1.84317187 C3.65911797,1.84317187 4.20402787,2.39975841 4.20402787,3.08629688 C4.20402787,3.77283534 3.65911797,4.32942188 2.98698242,4.32942188 M3.06259767,-6.12980769e-05 C1.37265684,-6.12980769e-05 0.00018003631,1.38895312 0.00018003631,3.09855649 C0.00018003631,4.72785937 2.13841128,7.69284736 3.06259767,9.10821995 C3.96037873,7.69284736 6.09921009,4.72785937 6.09921009,3.09855649 C6.09921009,1.38895312 4.72613317,-6.12980769e-05 3.06259767,-6.12980769e-05" id="Fill-1" fill="#000000" mask="url(#mask-2)"></path>
+                            </g>
+                            <g id="Page-1-Copy-3" transform="translate(0.000000, 0.612981)">
+                                <mask id="mask-4" fill="white">
+                                    <use xlink:href="#path-3"></use>
+                                </mask>
+                                <g id="Clip-2"></g>
+                                <g id="Fill-1" mask="url(#mask-4)">
+                                    <use fill="#000000" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                                </g>
+                            </g>
+                            <g id="Page-1-Copy-4" transform="translate(10.000000, 1.000000)">
+                                <mask id="mask-8" fill="white">
+                                    <use xlink:href="#path-7"></use>
+                                </mask>
+                                <g id="Clip-2"></g>
+                                <g id="Fill-1" mask="url(#mask-8)">
+                                    <use fill="#000000" fill-rule="evenodd" xlink:href="#path-9"></use>
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

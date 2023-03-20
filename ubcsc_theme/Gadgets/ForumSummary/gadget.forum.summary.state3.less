@@ -1,0 +1,175 @@
+/* ---- Gadget forum summary adaptive behavior. State 3 ---- */
+.gadget-forum-summary-state3()
+{
+
+	.WaGadgetForumStateList
+	{
+
+		.forumCategoryListOuterContainer
+		{
+
+			.forumCategoryOuterContainer
+			{
+
+				.forumCategoryContainer
+				{
+                    h5 // text "Uncategorized"
+                    {
+                      font: @Typography-Adaptive-State3-Header3;
+                      margin: 17px 0;
+                    }
+
+					.forumListContainer
+					{
+
+						.boxHeaderOuterContainer
+						{
+
+							table
+							{
+
+								td
+								{
+
+									&.threadTD
+									{
+										width: 100%;
+                                        display: none;
+									}
+
+									&.lastReplyTD
+									{
+										display: none;
+									}
+
+									&.topicsCountTD
+									{
+										display: none;
+									}
+
+									&.repliesCountTD
+									{
+										display: none;
+									}
+								}
+							}
+						}
+
+						.boxBodyOuterContainer
+						{
+
+							table.forumListTable
+							{
+                                > tbody > tr.forumListRow:first-child td.threadTD
+                                {
+                                    border-top: none;
+                                }
+
+								tr.forumListRow
+								{
+
+									td
+									{
+                                        display: inline-block;
+
+										&.pageStateIconTD
+										{
+                                          display: none;
+										}
+
+										&.threadTD
+										{
+                                            display: block;
+                                            clear: both;
+                                            border-top: 1px solid @Divider-Style001-Color;
+										    padding: 15px 0 0 0;
+											width: 100%;
+
+                                            .thread
+                                            {
+                                              a.forumTitle
+                                              {
+                                                font: @Gadget-ForumSummary-Adaptive-State3-ForumTitle-Font;
+                                              }
+
+                                              span.forumDescription
+                                              {
+                                                font: @Typography-Caption-Font;
+                                                padding: 0;
+                                              }
+                                            }
+										}
+
+										&.lastReplyTD
+										{
+                                            padding: 15px 0;
+                                            width: auto;
+
+                                            .lastReply a
+                                            {
+                                                font: @Gadget-ForumSummary-LastMessage-Name-Font;
+                                                &:before
+                                                {
+                                                  content: "Last message ";
+                                                }
+                                            }
+
+                                            span
+                                            {
+                                              display: none;
+                                            }
+
+                                            .nomessages
+                                            {
+                                              font: @Gadget-ForumSummary-LastMessage-Name-Font;
+                                              color: @Gadget-ForumSummary-LastMessage-Name-Color;
+                                              margin: 0;
+                                            }
+										}
+
+                                        &.topicsCountTD, &.repliesCountTD
+                                        {
+
+                                            width: auto;
+                                            float: right;
+                                            padding: 15px 10px;
+
+                                            div:before
+                                            {
+                                                color: @Gadget-ForumSummary-Icon-Color;
+                                                font: @Gadget-ForumSummary-Adaptive-Icon-Font;
+                                            }
+
+                                            .topicsCount, .repliesCount{
+                                              color: @Typography-Link-Alternative-Color;
+                                            }
+                                        }
+
+ 										&.topicsCountTD
+										{
+                                          padding-right: 0;
+
+                                          .topicsCount:before
+                                          {
+                                            content: "\e620";
+                                          }
+
+										}
+
+										&.repliesCountTD
+										{
+                                          .repliesCount:before
+                                          {
+                                            content: "\e629";
+                                          }
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

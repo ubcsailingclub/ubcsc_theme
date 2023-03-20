@@ -1,0 +1,164 @@
+/* ---- Shared form adaptive behavior. State 3 ---- */
+.shared-forms-state3()
+{
+
+	// Section divider and name
+	.captionOuterContainer
+	{
+		padding: 0;
+
+		.captionContainer {
+			.fieldLabel { width: 0; float: left; }
+			.fieldBody
+			{
+				width: 100%;
+				float: left;
+
+				h4
+				{
+					font-size: 20px;
+					overflow: inherit;
+					white-space: normal;
+
+					&:after
+					{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.fieldSubContainer {
+		.fieldLabel { width: auto; float: none; padding-right: 0; text-align: left;
+			& > div { float: none !important; }
+		}
+		.fieldBody { width: auto; float: none; text-align: left;
+
+		}
+		table { display: block;
+			tbody { width: auto; display: block; }
+			tr { width: auto; display: block; }
+			td.left { width: auto; display: block; padding-right: 0; text-align: left;
+				.fieldLabel {  }
+			}
+			td.right { width: auto; display: block; text-align: left; }
+		}
+	}
+
+
+	// Field - date picker
+	.fieldContainer.textFieldContainer {
+		.fieldSubContainer.singleStringContainer {
+			table {
+				td.right {
+					.fieldBody {
+						span {
+							input[type=text] { width: 110px; } // for input date
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	// Field - text
+	.fieldContainer.textFieldContainer {
+		.fieldSubContainer.singleStringContainer {
+			table {
+				td.right {
+					.fieldBody {
+						input.subjectTextBox,
+						input.typeText,
+						input[type=text] { width: 100%; }
+					}
+				}
+			}
+		}
+	}
+
+
+
+	// Field - textarea
+	.fieldContainer.textFieldContainer {
+		.fieldSubContainer {
+			.fieldLabel {
+				span {  } // text of field label
+			}
+			.fieldBody {
+				textarea { width: 100%; } // for input text
+				span.mandatory {  } // limit for input
+			}
+		}
+	}
+
+	// Field - WYSIWYG
+	.fieldContainer.textFieldContainer {
+		.fieldSubContainer.singleStringContainer {
+			.fieldLabel {
+				span {  } // text of field label
+				/*.mandatorySymbol[style*='visibility:hidden;'] { display: none; }*/
+			}
+			.fieldBody {
+				#idEditorContainer { width: auto;
+					img {  }
+					#idEditorToolbarContainer {  }
+					TEXTAREA {  }
+				}
+			}
+		}
+	}
+
+
+	.WaGadgetChangePassword {
+		.introContainer { margin: 0 0 20px 0; }
+	}
+
+
+	.commonMessageBox
+    {
+		.cww-co
+        {
+          .buttons
+          {
+            input
+            {
+              margin-bottom: 10px;
+            }
+
+            input:first-of-type
+            {
+              margin-right: 15px;
+            }
+          }
+        }
+		.kvTable
+        {
+          margin: 0 0 0 -40px;
+
+          > .kvTable
+          {
+            margin-left: 0
+          }
+        }
+		.kvTable td.labelInfoColumn { width: 86px; }
+	}
+
+
+	// Control links and bottoms under form
+	.navigationOuterContainer {
+		.navigationContainer {
+			.left { width: auto; float: none; display: inline;
+				input.nextButton,
+				input.typeButton,
+				input[type=submit] { float: left; margin: 0 10px 10px 0; }
+			}
+			.right { width: auto; float: none; text-align: left; display: inline;
+				input.nextButton,
+				input.typeButton,
+				input[type=submit] { float: left; margin: 0 10px 10px 0; }
+			}
+		}
+	}
+}

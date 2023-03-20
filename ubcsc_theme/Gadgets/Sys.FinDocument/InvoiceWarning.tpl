@@ -1,0 +1,1 @@
+<$control.MessageBox(HeaderSpanId=HeaderSpanId, HeaderText=HeaderText, ShowHeader="True", Text=Text, Warning="True")$>

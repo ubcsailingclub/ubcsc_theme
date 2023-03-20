@@ -1,0 +1,50 @@
+/* ----- Layout adaptive behavior. State 3 ----- */
+.layout-state3()
+{
+
+    body
+    {
+        background: @Body-Adaptive-State3-Bg ~"center top/cover repeat-y";
+    }
+
+    .zoneContentOuter
+    {
+        .zoneContentInner
+        {
+        }
+    }
+
+    .WaLayoutTable
+    {
+        display: block;
+        width: 100%;
+
+        > tbody
+        {
+            display: block;
+            width: 100%;
+        }
+
+        .WaLayoutRow
+        {
+            display: block;
+            width: 100%;
+
+            .WaLayoutItem
+            {
+                display: block;
+                width: 100% !important;
+
+                ~ .WaLayoutItem
+                {
+                    //margin-top: 20px;
+                }
+            }
+
+            .WaLayoutSeparator
+            {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+
+/****************************************************************************************************/
+/*	WaGadgetPhotoAlbum                                                                              */
+/*		WaGadgetPhotoAlbumStateList                                                                      */
+/*		WaGadgetPhotoAlbumStatePhoto                                                                     */
+/****************************************************************************************************/
+
+.WaGadgetPhotoAlbum { overflow: visible; }
+
+/* photoalbum - album - photo list */
+/*****************************************************************************************************/
+.WaGadgetPhotoAlbumStateList {
+	.sitePhotoAlbumPanelOuterContainer {
+		.noPhotosPanel { margin: 0 0 20px 0; }
+		.photoAlbumUploadButtonContainer { clear: both; float: left; margin-bottom: 20px;
+			span {  } // number of photos
+			input.typeButton.jsRequired {  } // button "upload photos"
+		}
+		.photoAlbumViewModeContainer { float: left; margin-bottom: 20px;
+			span.viewModeSelector { display: block;
+				input[type=radio] { width: 13px; height: 13px; margin: 0px 5px 0 0; padding: 0; display: inline-block; vertical-align: middle; }
+				label { display: inline-block; vertical-align: middle; margin: 0 30px 0 0; }
+			}
+		}
+		.pageTitleOuterContainer,
+		.idPhotoTitleMainContainer { float: right; text-align: right; margin-bottom: 20px;
+			.idPhotoAlbumCreatedOnContainer {
+				span {  } // date of created or updated
+			}
+		}
+		.pagerOuterContainer {  } //  pager nav ->
+		.photosContainer { clear: both;
+			ul.photosContainerUL { } // list of photos ->
+		}
+		.pagerOuterContainer {  } //  pager nav ->
+	}
+}
+
+
+// -> list of photos
+.WaGadgetPhotoAlbum {
+	ul.photosContainerUL { margin: 0 auto; padding: 0; list-style: none; text-align: center;
+		li.photoAlbumItemContainerLi { width: 142px; margin: 0 8px 25px 8px; text-align: center; vertical-align: top; display: -moz-inline-stack; display: inline-block; *display: inline; zoom: 1;
+			.photoMainContainer { 
+				.photoContainer {  } // photo item ->
+			}
+		}
+		li.photoAlbumItemContainerLi.coverPhoto {
+			.photoMainContainer.coverPhoto {
+				.photoContainer {  } // photo item ->
+			}
+		}
+	}
+}
+
+
+// -> photo item
+.WaGadgetPhotoAlbum {
+	.photoContainer {
+		[class^="photoInnerContainer"] { border: 1px solid #888; padding: 6px; background: #fff; text-align: center;
+			[class^="photoAlbumItemThumbnailPhoto"] {
+				a { display: inline-block; margin: 0 0 5px 0;
+					img.photoAlbumItemThumbnailPhoto { display: inline-block; max-width: 128px; max-height: 128px; border: none; padding: 0; vertical-align: top; }
+				}
+				.smallDescriptionContainer { display: block; overflow: hidden; white-space: nowrap;
+					.smallDescriptionInnerContainer {
+						span { }
+					}
+				}
+			}
+			.fullDescriptionContainer { text-align: left; word-break: break-all;
+				span {  }
+			}
+			.processingTextContainer {
+				img {  } // asyncloadprogress.gif
+				span {  } // with text "Please wait..."
+			}
+		}
+		.photoInnerContainerOver { background: #ddd; border: 1px solid #888; position: relative;
+			.photoAlbumItemThumbnailPhotoHover {  }
+		}
+	}
+}
+
+
+/* photoalbum - photo detail */
+/*****************************************************************************************************/
+.WaGadgetPhotoAlbumStatePhoto {
+	#idPhotoHeaderContainer { margin: 0 0 20px 0; .clearfix;
+		.pageBackContainer { float: left;
+			a {  } // link "All album photos"
+		}
+		.buttonsInTitleContainer { float: right;
+			#idPhotoHeaderRightContainer {
+				input.typeButton {  } // button "Delete photo"
+			}
+		}
+	}
+	#idPhotoMainContainer {
+		.pageTitleOuterContainer {
+			.pageTitleContainer {
+				h1.pageTitle {  }
+			}
+		}
+		#idMenuHeaderContainer { margin: 0 0 20px 0; .clearfix;
+			.menuHeaderLeftContainer { float: left;
+				.linkContainer { display: -moz-inline-stack; display: inline-block; *display: inline; zoom: 1; margin-right: 5px;
+					a {  } // link "Previous", "Next"
+				}
+			}
+			.infoContainer { float: right;
+				span.photoInfo {  } //  photo info, date
+				span.photoInfoGray {
+					a {  } // link to user
+					span.postedByComment {  }// user group
+				}
+			}
+		}
+		#idPhotoMainSectionContainer {
+			#idImageContainer { text-align: center; padding: 0 0 10px 0;
+				a { display: inline-block; max-width: 600px;
+					img { display: inline-block; vertical-align: top; max-width: 100%; max-height: 850px; }
+				}
+			}
+			#idCaptionContainer { margin: 0 0 1em 0; text-align: center;
+				span.photoLabel {  } // photo desc
+			}
+		}
+	}
+	.footerContainer { text-align: center;
+		a.jsRequired {  } // link "Add caption" or "Edit"
+		.buttonsContainer { position: relative;
+			textarea.editCaptionTextBox { width: 60%; height: 100px; margin: 0 0 10px 0; }
+			.buttonsContainer {
+				input.typeButton { margin: 0 5px; }
+			}
+		}
+	}
+}

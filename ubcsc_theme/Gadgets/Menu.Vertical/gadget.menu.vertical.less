@@ -1,0 +1,291 @@
+/* ----- Gadget Menu vertical ----- */
+
+.verticalMenuFirstLevel() //li for lvl1
+{
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    & > .item
+    {
+        padding: 0 20px;
+        position: relative;
+    }
+
+	& > .item > a
+    {
+        color: @Gadget-MenuVertical-FirstLevel-Color;
+        font: @Gadget-MenuVertical-FirstLevel-Font;
+        display: block;
+        position: relative;
+        text-align: left;
+        text-decoration: none;
+        text-shadow: @Gadget-MenuVertical-FirstLevel-TextShadow;
+        text-transform: uppercase;
+        background: none;
+
+        > span
+        {
+            display: inline-block;
+            padding: 15px 0;
+            position: relative;
+        }
+    }
+
+	&:hover
+    {
+
+        > .item
+        {
+            background: @Gadget-MenuVertical-FirstLevel-Hover-Bg;
+
+            > a
+            {
+                color: @Gadget-MenuVertical-FirstLevel-Hover-Color;
+
+                > span {}
+            }
+        }
+    }
+
+	&.sel > .item  // selected
+    {
+        background: transparent;
+
+        > a > span:before
+        {
+          background: @Gadget-MenuVertical-FirstLevel-Selected-Line-Color;
+          content: '';
+          display: block;
+          position: absolute;
+          left: 50%;
+          bottom: 8px;
+          height: 4px;
+          width: 4px;
+          border-radius: 50%;
+        }
+    }
+
+	&.dir
+    {
+        > .item > a > span:after 	// mark if has sublevel
+        {
+            position: absolute;
+            margin: -3px 0 0 0;
+            display: block;
+            border-color: transparent transparent @Gadget-MenuVertical-FirstLevel-Color;
+            border-style: solid;
+            border-width: 0 0 5px 5px;
+            content: "";
+            height: 0;
+            right: -12px;
+            top: 28px;
+            width: 0;
+            z-index: 3;
+        }
+    }
+}
+
+.verticalMenuSubLevel()
+{
+    display: block;
+    height: auto;
+    margin: 0;
+    background-color: @Gadget-MenuVertical-SubLevel-Bg;
+
+	& > .item
+    {
+        padding: 0 20px;
+        position: relative;
+
+        > a
+        {
+            color: @Gadget-MenuVertical-SubLevel-Color;
+            font: @Gadget-MenuVertical-SubLevel-Font;
+            display: block;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            text-shadow: @Gadget-MenuVertical-SubLevel-TextShadow;
+            text-transform: uppercase;
+
+            > span
+            {
+                display: inline-block;
+                padding: 10px;
+                position: relative;
+            }
+        }
+    }
+
+
+	&:hover
+    {
+
+        > .item
+        {
+            background: @Gadget-MenuVertical-SubLevel-Hover-Bg;
+
+            > a
+            {
+                color: @Gadget-MenuVertical-SubLevel-Hover-Color;
+            }
+        }
+    }
+
+    &.sel // selected
+    {
+        > .item
+        {
+            background: transparent;
+
+            > a
+            {
+
+                &:after
+                {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    bottom: 5px;
+                    height: 1px;
+                    width: 100%;
+                    background: @Gadget-MenuVertical-SubLevel-Selected-Line-Color;
+                }
+            }
+        }
+    }
+
+    &.dir// mark if has sublevel
+    {
+        > .item > a > span:after
+        {
+            position: absolute;
+            display: block;
+            border-color: transparent transparent white;
+            border-style: solid;
+            border-width: 0 0 5px 5px;
+            content: "";
+            height: 0;
+            right: -6px;
+            bottom: 13px;
+            width: 0;
+            z-index: 3;
+        }
+    }
+}
+
+.WaGadgetMenuVertical
+{
+    overflow: visible;
+
+	.menuInner
+    {
+        background: @Gadget-MenuVertical-FirstLevel-Bg;
+        position: relative;
+        min-width: 135px;
+        border-left: @Gadget-MenuVertical-Left-Border;
+        border-right: @Gadget-MenuVertical-Right-Border;
+
+		ul.firstLevel // level 1
+        {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+		ul.firstLevel > li
+        {
+            .verticalMenuFirstLevel();
+        }
+
+		// level 2
+		ul ul
+        {
+            display: none;
+            left: 100%;
+            list-style: none;
+            margin: 0;
+            min-width: 170px;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            z-index: 40000;
+
+            li
+            {
+              .verticalMenuSubLevel();
+            }
+
+        }
+
+
+		// level 3
+		ul ul ul
+        {
+            margin: 0;
+            left: 100%;
+            position: absolute;
+            top: 0;
+
+            li
+            {
+              margin-left: 2px;
+            }
+
+        }
+
+		// hover
+        li:hover > .item > ul { display: block; }
+	}
+
+    &.menuStyle001 // menu style 1
+    {
+        .menuInner
+        {
+            background: @Gadget-MenuVertical-GadgetStyle001-FirstLevel-Bg;
+            border-left: @Gadget-MenuVertical-GadgetStyle001-Left-Border;
+            border-right: @Gadget-MenuVertical-GadgetStyle001-Right-Border;
+
+            ul.firstLevel // level 1
+            {
+
+                > li
+                {
+
+                    > .item > a
+                    {
+                        color: @Gadget-MenuVertical-GadgetStyle001-FirstLevel-Color;
+                        text-shadow: @Gadget-MenuVertical-GadgetStyle001-FirstLevel-TextShadow;
+                    }
+
+                    &:hover
+                    {
+                        > .item > a
+                        {
+                            color: @Gadget-MenuVertical-GadgetStyle001-FirstLevel-Hover-Color;
+                        }
+                    }
+
+                    &.dir
+                    {
+                        > .item > a > span:after // mark if has sublevel
+                        {
+                          border-color: transparent transparent @Gadget-MenuVertical-GadgetStyle001-FirstLevel-Color;
+                        }
+                    }
+
+                    &.sel // selected
+                    {
+                      > .item > a > span:before // mark if has sublevel
+                      {
+                        background: @Gadget-MenuVertical-GadgetStyle001-FirstLevel-Selected-Line-Color;
+                      }
+                    }
+                }
+            }
+        }
+    }
+}

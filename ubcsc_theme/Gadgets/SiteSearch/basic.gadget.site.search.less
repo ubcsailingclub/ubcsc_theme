@@ -1,0 +1,86 @@
+/*****************************************************************************************************/
+/*	WaGadgetSiteSearch                                                                              
+/*****************************************************************************************************/
+
+
+/* for old themes */
+.WaGadgetSiteSearch {
+	.artBoxHolder { overflow: visible; }
+}
+
+
+.WaGadgetSiteSearch { overflow: visible;
+	.searchBoxOuter {  }
+	.searchBoxOuter.alignLeft { text-align: left; }
+	.searchBoxOuter.alignCenter { text-align: center; }
+	.searchBoxOuter.alignRight { text-align: right; }
+	.searchBox { position: relative; display: inline-block; max-width: 100%; }
+	.searchBoxFieldContainer { display: inline-block; max-width: 100%; position: relative;
+		&:before { content: "\f002"; font-family: 'FontAwesome'; display: inline-block; position: absolute; left: 0.5em; top: 50%; margin: -0.5em 0 0 0; }
+	}
+	.searchBoxField { margin: 0; padding: 3px 4px 3px 1.75em; border: 1px solid #a9a9a9; background: #fff; font-family: inherit; font-size: inherit; color: #000; width: 220px; max-width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+	.autoSuggestionBox { position: absolute; left: 0; top: 100%; margin-top: 5px; min-width: 218px; border: 1px solid #ccc; border-style: solid; padding: 0px; display: none;
+		text-align: left; z-index: 7777; background: #fff; box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+		.item { padding: 10px;
+			a {
+				&:before { display: inline-block; width: 1.2em; padding-right: 0.4em; text-decoration: none; }
+				span {  }
+			}
+			.fa-align-left:before { position: relative; top: 0.1em; }
+		}
+		.item.last {
+			a {  }
+		}
+		.item + .item.last { margin-top: 10px; position: relative;
+			&:before { content: ""; display: block; position: absolute; left: 0; top: -5px; width: 100%; height: 1px; overflow: hidden; background: #eee; }
+		}
+		.item.selectedSuggestions { background: #dbe3eb; background: rgba(219,227,235,0.5);
+		}
+	}
+	.searchBoxOuter.alignRight .autoSuggestionBox { left: auto; right: 0; }
+}
+
+
+.WaGadgetSiteSearchResults {
+	&:after { content: ""; clear: both; display: block; height: 0; overflow: hidden; }
+	.siteSearchResults { padding: 0 0 0 0;
+		.searchControls { margin: 0 0 0.7em 0;
+			.label { margin-right: 0.4em; display: inline-block; padding: 4px 0; margin-bottom: 6px; }
+			.searchBoxField { padding: 3px 4px 3px 4px; margin: 0 0.4em 6px 0; border: 1px solid #a9a9a9; background: #fff; font-family: inherit; font-size: inherit; color: #000; width: 220px; max-width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+			.foundLabel { display: none; display: inline-block; padding: 4px 0; margin-bottom: 6px; }
+			.foundRecords { display: inline-block; padding: 4px 0; margin-bottom: 6px; }
+		}
+		.categories { padding: 0; margin: 0 0 1.43em 0;
+			.togglePanelLink { cursor: pointer;
+				&:before { display: inline-block; width: 0.8em; text-align: center; margin-right: 5px; }
+				b { font-weight: normal; }
+			}
+			.contentTypesPanel { padding-top: 4px; display: none;
+				.row {
+					input[type=checkbox] { display: inline-block; margin: 0px 0.3em 0px 0px; position: relative; top: 0.15em; }
+					label {  }
+				}
+				.row + .row { margin-top: 0.25em; }
+			}
+		}
+	}
+	.resultDiv { padding-left: 0px;
+		.row {
+			.title {
+				a {
+					&:before { display: inline-block; width: 1.3em; padding-right: 0.3em; text-decoration: none; }
+					span {  }
+				}
+			}
+			.text { margin: 0.2em 0 0 1.6em; }
+			.additionalInfo { margin: 0.2em 0 0 1.6em; }
+		}
+		.row + .row { margin-top: 1.43em; }
+	}
+	.bottomLine { margin: 1.43em 0 0 0;
+		&:after { content: ""; display: block; height: 0; overflow: hidden; clear: both; }
+	}
+	.recordsFoundMessage { float: left; }
+	.searchPager { float: right; }
+}
+

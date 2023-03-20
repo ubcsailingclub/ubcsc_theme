@@ -1,0 +1,120 @@
+/* ----- Gadget Breadcrumbs ----- */
+
+.WaGadgetBreadcrumbs
+{
+	margin: 0;
+	padding: 0;
+
+	ul
+	{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li
+		{
+			margin: 3px 0 3px 0;
+			padding: 0;
+			display: inline-block;
+			*display: inline;
+			vertical-align: top;
+
+			& + li:before
+			{
+				content: "»";
+				display: inline-block;
+				padding: 0 9px 0 5px;
+
+			}
+
+			a
+			{
+                background-color: transparent;
+				text-decoration: underline;
+
+				&:hover
+				{
+					text-decoration: underline;
+				}
+			}
+		}
+
+		li.last
+		{
+			&:before
+			{
+				font-size: inherit;
+			}
+		}
+	}
+
+    &.gadgetStyleNone
+    {
+      ul
+      {
+        font: @Gadget-BreadCrumbs-StyleNone-Font;
+
+        li
+        {
+
+          & + li:before
+          {
+            color: @Gadget-BreadCrumbs-StyleNone-Separator-Color;
+          }
+
+          a
+          {
+            color: @Gadget-BreadCrumbs-StyleNone-Link-Color;
+            font: @Gadget-BreadCrumbs-StyleNone-Font;
+
+            &:hover
+            {
+              color: @Gadget-BreadCrumbs-StyleNone-Link-Hover-Color;
+            }
+          }
+
+        }
+
+        li.last
+        {
+          color: @Gadget-BreadCrumbs-StyleNone-Text-Color;
+        }
+      }
+
+    }
+
+  &.gadgetStyle001
+  {
+    ul
+    {
+      font: @Gadget-BreadCrumbs-Style001-Font;
+
+      li
+      {
+
+        & + li:before
+        {
+          color: @Gadget-BreadCrumbs-Style001-Separator-Color;
+        }
+
+        a
+        {
+          color: @Gadget-BreadCrumbs-Style001-Link-Color;
+          font: @Gadget-BreadCrumbs-Style001-Font;
+
+          &:hover
+          {
+            color: @Gadget-BreadCrumbs-Style001-Link-Hover-Color;
+          }
+        }
+
+      }
+
+      li.last
+      {
+        color: @Gadget-BreadCrumbs-Style001-Text-Color;
+      }
+    }
+  }
+
+}

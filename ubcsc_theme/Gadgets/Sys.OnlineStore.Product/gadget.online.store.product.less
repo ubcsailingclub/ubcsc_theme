@@ -1,0 +1,257 @@
+.WaGadgetOnlineStoreProduct {
+
+  .OnlineStoreProduct_title_container h1 {
+	margin-top: 0;
+  }
+
+  .OnlineStoreProduct_description {
+	margin-bottom: 40px;
+  }
+
+  .OnlineStoreProduct_gallery {
+	display: inline-block;
+	width: 65%;
+	max-width: 590px;
+	margin-right: 30px;
+  }
+
+  .OnlineStoreProduct_gallery_cover_container {
+	display: block;
+	position: relative;
+  }
+
+  .OnlineStoreProduct_gallery_cover_zoom_icon {
+	position: absolute;
+	right: 15px;
+	bottom: 10px;
+	color: #6d6d6d;
+	font-family: "FontAwesome";
+  }
+
+  .OnlineStoreProduct_gallery_cover {
+	display: table;
+	table-layout: fixed;
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 15px;
+  }
+
+  .OnlineStoreProduct_gallery_cover_img_container {
+	display: table-cell;
+	height: 338px;
+	text-align: center;
+	vertical-align: middle;
+  }
+
+  #OnlineStoreProduct_gallery_cover_img {
+	display: block;
+	margin: 0 auto;
+	border: none;
+	max-height: 338px;
+	max-width: 100%;
+  }
+
+  #OnlineStoreProduct_gallery_thumbs {
+	margin: 0 0 0 -16px;
+	padding: 0;
+	list-style-type: none;
+	font-size: 0;
+  }
+
+  #OnlineStoreProduct_gallery_thumbs li {
+	display: inline-block;
+	width: 85px;
+	height: 85px;
+	margin: 0 0 16px 16px;
+	text-align: center;
+	list-style: none;
+  }
+
+  #OnlineStoreProduct_gallery_thumbs a {
+	display: table-cell;
+	width: 83px;
+	height: 83px;
+	border: solid 1px #dcddde;
+	vertical-align: middle;
+  }
+
+  #OnlineStoreProduct_gallery_thumbs a:hover {
+	border: solid 1px @Typography-Link-Hover-Color;
+  }
+
+  #OnlineStoreProduct_gallery_thumbs img {
+	display: inline-block;
+	border: none;
+	max-height: 83px;
+	max-width: 83px;
+  }
+
+  .OnlineStoreProduct_noPhoto {
+	margin-bottom: 15px;
+	height: 350px;
+
+	.OnlineStoreProduct_noPhotoContainer {
+	  display: table;
+	  box-sizing: border-box;
+	  width: 100%;
+	  height: 100%;
+	  text-align: center;
+	}
+
+	.OnlineStoreProduct_noPhotoIconText {
+	  display: table-cell;
+	  vertical-align: middle;
+	  color: #dcddde;
+	}
+
+	.OnlineStoreProduct_noPhotoIcon {
+	  font-family: "FontAwesome";
+	  font-size: 55px;
+	}
+  }
+
+  .OnlineStoreProduct_aside {
+	display: inline-block;
+	width: ~'calc(35% - 35px)';
+	vertical-align: top;
+
+	  .OnlineStoreCatalog_OutOfStock_container {
+		  margin-bottom: 15px;
+		  color:#d0021b;
+		  font-weight:bold;
+		  font-size:0.8em;
+	  }
+	  
+	  .OnlineStoreCatalog_AlreadyInCart_container {
+		  margin-bottom: 15px;
+		  color:#28a745;
+		  font-weight:bold;
+		  font-size:0.8em;
+	  }
+
+	.OnlineStoreCatalog_price_container {
+	  margin-bottom: 15px;
+	}
+
+	.OnlineStoreCatalog_list_price {
+	  font-size: 1.5em;
+	  line-height: 2em;
+	}
+
+	.OnlineStoreCatalog_list_price_alt {
+	  font-style: italic;
+	}
+
+	.OnlineStoreCatalog_list_price_strike {
+	  text-decoration: line-through;
+	}
+
+  .OnlineStoreProduct__details {
+	  display: table;
+	  margin-bottom: 25px;
+	  border-collapse: separate;
+	  border-spacing: 0 .5em;
+	  width: 100%;
+  }
+
+  .OnlineStoreProduct__variantsError {
+	  font-weight: bold;
+	  color: #DB2828;
+	  font-size: 0.8em;
+	  margin: .3em 0 0 0;
+	  display: none;
+  }
+
+  .OnlineStoreProduct__detail {
+	  display: table-row;
+  }
+
+  .OnlineStoreProduct__detailTitle {
+	  width: 3em;
+  }
+
+  .OnlineStoreProduct__detailTitle, .OnlineStoreProduct__detailField {
+	  display: table-cell;
+	  vertical-align: top;
+  }
+
+  .OnlineStoreProduct__variants {
+	  padding-left: 20px;
+  }
+
+	  .OnlineStoreProduct_optionsSelect {
+	  max-width: 100%;
+  }
+
+    .OnlineStoreProductQty {
+	  & > span { vertical-align: middle; margin-right: 0.2em; }
+
+	  input.typeNumber {  }
+
+	  .quantityContainer {
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+	  }
+
+	  .quantityLimit {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		text-align: left;
+		  padding-left:20px;
+		display: none;
+		color: #8d8d8d;
+		font-size: 0.8em;
+	  }
+    }
+
+	.OnlineStoreButton {
+	  margin-bottom: 8px;
+
+	  input.typeButton {
+		.functionalButton;
+	  }
+	}
+	.OnlineStorePaymentMethods {
+	  .waPaymentSystemIcon.Offline {
+		display: inline-block;
+	  }
+	}
+  }
+
+  .OnlineStoreProduct_information {
+	width: 65%;
+	max-width: 590px;
+  }
+
+  .addToCartContainer {
+	input { margin-right: 1em; }
+
+	.addToCart {
+	  display: inline-block;
+	  margin: 0.5em 0;
+	  vertical-align: middle;
+	}
+  }
+}
+
+/******************************************************************************/
+/* Responsive                                                                 */
+/******************************************************************************/
+
+// Device S
+@media screen and (max-width: @state3-maxwidth) {
+  .WaGadgetOnlineStoreProduct {
+	.OnlineStoreProduct_gallery, .OnlineStoreProduct_information {
+	  width: 100%;
+	  max-width: none;
+	  margin-right: 0;
+	}
+
+	.OnlineStoreProduct_aside {
+	  width: 100%;
+	}
+
+  }
+}

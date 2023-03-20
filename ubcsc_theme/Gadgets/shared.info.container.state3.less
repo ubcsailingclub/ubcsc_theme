@@ -1,0 +1,41 @@
+.shared-infoContainer-state3()
+{
+	.infoOuterContainer
+	{
+		margin: 20px 0;
+		padding: 10px;
+
+		.infoContainer
+		{
+
+			.infoSection
+			{
+				margin: 5px 0;
+
+				.infoTitle,
+				.infoText
+				{
+					display: table-cell;
+					float: none;
+					text-align: left;
+					width: auto;
+				}
+
+				.infoTitle
+				{
+					padding: 0 15px 0 0;
+				}
+
+
+				&.eventRegistrationInfoLocation,
+				&.eventRegistrationInfoEndDate
+				{
+					.infoTitle
+					{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

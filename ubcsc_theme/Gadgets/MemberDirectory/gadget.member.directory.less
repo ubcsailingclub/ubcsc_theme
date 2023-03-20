@@ -1,0 +1,436 @@
+/****************************************************************************************************/
+/*	WaGadgetMemberDirectory                                                                         */
+/*		WaGadgetMemberDirectoryStateList                                                            */
+/*		WaGadgetMemberDirectoryStateAdvancedSearch                                                  */
+/****************************************************************************************************/
+
+/* mode: WaGadgetMemberDirectoryStateList */
+/*****************************************************************************************************/
+.WaGadgetMemberDirectoryStateList
+{
+    // Selected search criteria
+    .selectedCriteriaListInnerContainer
+    {
+        background: @Shared-InfoContainer-Bg;
+        padding: 15px 20px 15px 20px;
+
+        .fieldContainer
+        {
+            margin: 5px 0;
+
+            .fieldSubContainer
+            {
+                margin: 0;
+
+                .fieldLabel
+                {
+                    font-size: inherit;
+
+                    span.criteriaTitle {}
+                }
+                .criteriaTitleColumn {}
+
+                .firstColumn {}
+
+                .fieldBody
+                {
+                    font-size: inherit;
+
+                    span.conditionTitle {}
+
+                    span.conditionValue {}
+                }
+
+                .criteriaValueColumn {}
+
+                .lastColumn  {}
+            }
+        }
+    }
+    .selectedCriteriaListActionsOuterContainer
+    {
+        font-size: inherit;
+    }
+
+    // Search types selector
+    .browsingColumnsMainContainer
+    {
+        margin-bottom: 35px;
+
+        table.browsingColumns
+        {
+
+            tr.filterHead
+            {
+
+                th
+                {
+                    padding-bottom: 10px;
+                    font: @Typography-Header3-Font;
+                    color: inherit;
+                }
+            }
+
+            tr.filterRow
+            {
+                td
+                {
+                    font-size: inherit;
+
+                    .filterOptions
+                    {
+
+                        ul.filterList
+                        {
+                            li
+                            {
+                                a
+                                {
+                                  font: @Gadget-Member-Directory-Primary-Link-Font;
+                                  color: @Gadget-Member-Directory-Primary-Link-Color;
+                                  &:hover
+                                  {
+                                    color: @Gadget-Member-Directory-Primary-Link-Hover-Color;
+                                  }
+
+                                }
+
+                                a.optionLink  {}
+
+                                // link in filter
+                                a.emptyName {}
+
+                                // option filter with with 0 found
+                                a.selectedName  {}
+                            }
+                        }
+                    }
+
+                    .selectedFilter
+                    {
+                        .selectedName {}
+
+                        a.changeValue {
+                          font: @Gadget-Member-Directory-Secondary-Link-Font;
+                          color: @Gadget-Member-Directory-Secondary-Link-Color;
+                          &:hover
+                          {
+                            color: @Typography-Link-Hover-Color;
+                          }
+                        } // link "Change"
+                    }
+                }
+            }
+        }
+
+        &:after
+        {
+          display: block;
+          content: "";
+          height: 2px;
+          margin-top: 35px;
+          border-top: 1px solid #edebeb;
+          border-bottom: 1px solid #edebeb;
+        }
+    }
+
+    // Advanced search link
+    .advSearchContainerLink
+    {
+        margin: 0 0 20px 0;
+
+        a
+        {
+          font: @Gadget-Member-Directory-Secondary-Link-Font;
+          color: @Gadget-Member-Directory-Secondary-Link-Color;
+          &:hover
+          {
+            color: @Typography-Link-Hover-Color;
+          }
+        }
+    }
+    // Search area
+    .memberDirectorySearchAreaOuterContainer
+    {
+        margin: 0 0 20px 0;
+        font-size: inherit;
+
+        .memberDirectorySearchArea
+        {
+            label {} // text label "Search:"
+
+            input[type=text]
+            {
+                border: 1px solid @Shared-Form-Field-Border;
+                font: @Shared-Form-Field-Font;
+                padding: 2px 4px 3px 4px;
+                background: @Shared-Form-Field-Bg;
+                color: @Shared-Form-Field-Color;
+            }
+            // for search
+            span.searchResult
+            {
+                em#membersFound
+                {
+                    font-weight: normal;
+                }
+                // count of founded items
+                span#idWaitMessages
+                {
+                }
+                //
+                a#idReloadData
+                {
+                    // link Refresh cached search
+                    img
+                    {
+                    }
+                }
+                span#idPagingData
+                {
+                    // text "Show" and container
+                    select
+                    {
+                        font: @Shared-Form-Field-Font;
+                        border: 1px solid @Shared-Form-Field-Border;
+                        background: @Shared-Form-Field-Bg;
+                        color: @Shared-Form-Field-Color;
+                        -webkit-appearance: menulist;
+                    }
+                }
+            }
+        }
+    }
+    // Search results table
+    .memberDirectoryOuterContainer
+    {
+        .memberDirectoryContainer
+        {
+            .memberirectory
+            {
+                font-size: inherit;
+
+                table.membersTable {} // members table ->
+
+            }
+        }
+    }
+    span#idPagingData2
+    {
+        select
+        {
+            font: @Shared-Form-Field-Font;
+            border: 1px solid @Shared-Form-Field-Border;
+            background: @Shared-Form-Field-Bg;
+            color: @Shared-Form-Field-Color;
+            -webkit-appearance: menulist;
+        }
+    }
+}
+
+/* mode: WaGadgetMemberDirectoryStateAdvancedSearch */
+/*****************************************************************************************************/
+.WaGadgetMemberDirectoryStateAdvancedSearch
+{
+
+    .clearValuesOuterContainer a
+    {
+      font: @Gadget-Member-Directory-Secondary-Link-Font;
+      color: @Gadget-Member-Directory-Secondary-Link-Color;
+
+      &:hover
+      {
+        color: @Typography-Link-Hover-Color;
+      }
+
+    }
+
+    // Choice of search criteria
+    .searchCriteriaOuterContainer
+    {
+        margin: 0 0 20px 0;
+
+        .criteriaListItem
+        {
+
+            .fieldContainer
+            {
+
+                .fieldSubContainer
+                {
+                    margin: 0;
+
+                    table
+                    {
+
+                        td.left
+                        {
+                            font-size: inherit;
+
+                            .fieldLabel
+                            {
+                                span
+                                {
+                                }
+                                // sumbol "*"
+                                span
+                                {
+                                }
+                                // name of filed
+                            }
+                            .labelColumn
+                            {
+                            }
+                            .firstColumn
+                            {
+                            }
+                        }
+                        td.right
+                        {
+
+                            .fieldBody
+                            {
+
+                                select
+                                {
+                                    padding: 1px 1px 2px 1px;
+                                    font: @Shared-Form-Field-Font;
+                                    border: 1px solid @Shared-Form-Field-Border;
+                                    background: @Shared-Form-Field-Bg;
+                                    color: @Shared-Form-Field-Color;
+                                    -webkit-appearance: menulist;
+                                }
+                            }
+                            .conditionsColumn
+                            {
+                            }
+                            .lastColumn
+                            {
+                            }
+                        }
+                    }
+                    span
+                    {
+                        input[type=text]
+                        {
+                            border: 1px solid #cececf;
+                        }
+                    }
+                }
+            }
+            .valueContainer
+            {
+                padding: 1px 0 0 0;
+            }
+            .valueContainer
+            {
+                .fieldContainer
+                {
+                    .fieldSubContainer
+                    {
+                        span
+                        {
+                            input[type=text]
+                            {
+                                border: 1px solid @Shared-Form-Field-Border;
+                                font: @Shared-Form-Field-Font;
+                                padding: 2px 4px 3px 4px;
+                                background: @Shared-Form-Field-Bg;
+                                color: @Shared-Form-Field-Color;
+                            }
+                            .groupBodyVertical
+                            {
+                                .fieldItem
+                                {
+                                    span.typeCheckboxContainer,
+                                    span.typeRadioContainer
+                                    {
+                                        input.typeCheckbox,
+                                        input.typeRadio
+                                        {
+                                        }
+                                    }
+                                    span.label
+                                    {
+                                        font-size: 14px;
+
+                                        label
+                                        {
+                                            span.textLine
+                                            {
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            select
+                            {
+                                margin: 0;
+                                padding: 1px 1px 2px 1px;
+                                font: @Shared-Form-Field-Font;
+                                border: 1px solid @Shared-Form-Field-Border;
+                                background: @Shared-Form-Field-Bg;
+                                color: @Shared-Form-Field-Color;
+                                -webkit-appearance: menulist;
+                            }
+                            .DES_CalPopup
+                            {
+                                span
+                                {
+                                    top: -3px;
+
+                                    &:before
+                                    {
+                                        color: @Shared-Icon-Calendar-Color;
+                                        content: '\f073';
+                                        display: inline-block;
+                                        font: @Shared-Icon-Calendar-Font;
+                                    }
+
+                                    img
+                                    {
+                                        .opacity(0);
+                                        cursor: pointer;
+                                        margin-left: -18px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .DES_CalPopup
+            {
+                margin: 0;
+            }
+        }
+    }
+    .ActionPanelOuterContainer
+    {
+        .searchButtonContainer
+        {
+            input.searchButton
+            {
+                .functionalButton();
+            }
+            // button "Search"
+        }
+        .exitAdvSearchContainer a
+        {
+          font: @Gadget-Member-Directory-Secondary-Link-Font;
+          color: @Gadget-Member-Directory-Secondary-Link-Color;
+          &:hover
+          {
+            color: @Typography-Link-Hover-Color;
+          }
+        }
+    }
+}
+
+/* ----- Gadget member directory adaptive behavior ----- */
+// state3
+@import 'gadget.member.directory.state3';
+@media only screen and (max-width: @state3-maxwidth)
+{
+    .gadget-memberDirectory-state3();
+}

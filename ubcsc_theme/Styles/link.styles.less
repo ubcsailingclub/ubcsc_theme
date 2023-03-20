@@ -1,0 +1,96 @@
+/* ----- Link Styles and Stylized buttons ----- */
+
+a.stylizedButton
+{
+    &.buttonStyle001,
+    &.buttonStyle002,
+    &.buttonStyle003,
+    &.buttonStyle004
+    {
+        .border-radius(3px);
+        display: inline-block;
+        font-family: 'Roboto Condensed';
+        font-size: inherit;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        margin: 0;
+        padding: 10px 23px 10px 23px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+	&.buttonStyle001
+    {
+        background: @Link-Style001-Bg;
+        color: @Link-Style001-Color;
+
+		&:hover
+        {
+            background: @Link-Style001-Hover-Bg;
+            color: @Link-Style001-Hover-Color;
+        }
+
+        &:active
+        {
+            background: @Link-Style001-Active-Bg;
+            color: @Link-Style001-Active-Color;
+        }
+	}
+
+	&.buttonStyle002
+    {
+        background: @Link-Style002-Bg;
+        color: @Link-Style002-Color;
+
+        &:hover
+        {
+            background: @Link-Style002-Hover-Bg;
+            color: @Link-Style002-Hover-Color;
+        }
+
+        &:active
+        {
+            background: @Link-Style002-Active-Bg;
+            color: @Link-Style002-Active-Color;
+        }
+	}
+
+	&.buttonStyle003
+    {
+        background: @Link-Style003-Bg;
+        color: @Link-Style003-Color;
+
+        &:hover
+        {
+            background: @Link-Style003-Hover-Bg;
+            color: @Link-Style003-Hover-Color;
+        }
+
+        &:active
+        {
+            background: @Link-Style003-Active-Bg;
+            color: @Link-Style003-Active-Color;
+        }
+	}
+
+    &.buttonStyle004
+    {
+      background: @Link-Style004-Bg;
+      color: @Link-Style004-Color;
+
+      &:hover
+      {
+        background: @Link-Style004-Hover-Bg;
+        color: @Link-Style004-Hover-Color;
+      }
+
+      &:active
+      {
+        background: @Link-Style004-Active-Bg;
+        color: @Link-Style004-Active-Color;
+      }
+    }
+}

@@ -1,0 +1,1 @@
+<div id="{{Id}}" data-componentId="{{ComponentId}}" class="{{FullClassName}}" style="{{InlineStyle}}{{CssStyle.Margin}}{{CssStyle.Background}}">{{Layout}}</div>

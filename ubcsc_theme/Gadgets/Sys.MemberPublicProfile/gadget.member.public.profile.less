@@ -1,0 +1,241 @@
+
+/****************************************************************************************************/
+/*	WaGadgetMemberPublicProfile                                                                       */
+/*		WaGadgetMemberPublicProfileStateMain                                                               */
+/*		WaGadgetMemberPublicProfileStatePhotoAlbums                                                        */
+/*		WaGadgetMemberPublicProfileStatePhoto                                                              */
+/****************************************************************************************************/
+
+
+/* mode: WaGadgetMemberPublicProfileStateMain ( public profile ) */
+/*****************************************************************************************************/
+.WaGadgetMemberPublicProfileStateMain
+{
+
+	.pageTitleOuterContainer
+	{
+
+		.pageBackContainer
+		{
+
+			a  // link "back"
+			{
+              font: @Gadget-Member-Public-Profile-Secondary-Link-Font;
+              color: @Gadget-Member-Public-Profile-Secondary-Link-Color;
+            }
+		}
+	}
+
+	.memberDirectoryDetailsOuterContainer
+	{
+
+		.profileHeaderContainer
+		{
+			h2
+			{
+                font: @Gadget-Member-Public-Profile-Title-Font;
+                color: @Gadget-Member-Public-Profile-Title-Color;
+				text-transform: uppercase;
+
+				&:after
+				{
+					display: none
+				}
+
+				.sendMailButtonContainer
+				{
+					margin-left: 15px;
+
+					input.typeButton
+					{
+						.functionalButton();
+					}
+				}
+			}
+
+            h3
+            {
+                font: @Typography-Header4-Font;
+				color: @Typography-Header-Alternative-Color;
+            }
+		}
+
+		.formOuterContainer  // form
+		{
+			.bundlContact
+			{
+				margin: 0;
+				vertical-align: middle;
+
+				img { display: none }
+				span
+				{
+					&:before
+					{
+						color: @Shared-Icon-Attention-Color;
+						content: '\e646';
+						font: @Shared-Icon-Attention-Font;
+						margin-right: 5px;
+					}
+				}
+				a
+                {
+                  font: @Gadget-Member-Public-Profile-Secondary-Link-Font;
+                  color: @Gadget-Member-Public-Profile-Secondary-Link-Color;
+                  vertical-align: middle;
+                }
+			}
+
+            #idMembershipLevelSection
+            {
+                .fieldSubContainer
+                {
+                    margin-bottom: 0;
+                }
+            }
+
+			.memberDirectoryContainer
+			{
+
+				.bundlLinksTitle
+				{
+                    color: @Typography-Header-Alternative-Color;
+                    font: @Typography-Header4-Font;
+
+					a
+					{
+						font-size: 0;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+// -> albums list
+.WaGadgetMemberPublicProfile {
+	ul.albumsContainerUL
+    {
+      text-align: left;
+
+      li.photoGalleryItemContainerLi
+      {
+        width: 160px; margin: 0 10px 20px 0;
+
+        div[class^="photoGalleryItemThumbnailImage"]
+        {
+          position: relative;
+          background: @Gadget-PhotoAlbum-StyleNone-Photo-Bg;
+          padding: 15px;
+          border: 1px solid #ccc;
+          box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.3);
+
+          a
+          {
+            vertical-align: top;
+            margin: 0;
+            width: 128px;
+            height: 128px;
+            outline: none;
+
+			&:before
+            {
+              content: "";
+              display: inline-block;
+              vertical-align: middle;
+              width: 0;
+              height: 100%;
+              overflow: hidden;
+            }
+
+            img { vertical-align: middle; max-width: 128px; max-height: 128px;}
+		  }
+		}
+
+        div.photoGalleryItemDescription a
+        {
+          font: @Gadget-PhotoAlbum-StyleNone-AlbumName-Font;
+        }
+
+		div.photoGalleryItemThumbnailImageHover
+        {
+          background: @Gadget-PhotoAlbum-StyleNone-Photo-Hover-Bg;
+        }
+	  }
+	}
+}
+
+
+/* mode: WaGadgetMemberPublicProfileStatePhotoAlbums ( list photos in album profile ) */
+/*****************************************************************************************************/
+.WaGadgetMemberPublicProfileStatePhotoAlbums {
+	#idMemberPhotoAlbumContainer {
+		#idPhotoAlbumHeaderContainer {  }
+		#idPhotoAlbumTitleMainContainer { .clearfix; margin: 0 0 20px 0;
+			.titleLeftContainer {
+				h1.pageTitle { font: @Typography-Header2-Font; } // album name
+			}
+		}
+		#idPhotoAlbumMainContainer {
+			.descriptionContainer {
+				span.photoLabel {  } // album name
+			}
+			.photosContainer {
+				ul.photosContainerUL { text-align: left; height: auto !important;
+					li.photoAlbumItemContainerLi { width: 160px; height: 160px; margin: 0 10px 15px 0; // photo cover
+						.photoInnerContainer {  } // photo item ->
+					}
+					li.photoAlbumItemContainerLi.coverPhoto {  // photo cover
+						.photoInnerContainer { background: @Gadget-PhotoAlbum-StyleNone-Photo-Cover-Bg; } // photo item ->
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// -> photo item
+.WaGadgetMemberPublicProfileStatePhotoAlbums {
+	.photosContainerUL {
+		[class^="photoInnerContainer"] { position: relative;  background: @Gadget-PhotoAlbum-StyleNone-Photo-Bg; padding: 15px; border: 1px solid #ccc; box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.3);
+			[class^="photoAlbumItemThumbnailPhoto"] {
+				a { vertical-align: top; margin: 0; width: 128px; height: 128px; outline: none;
+					&:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; overflow: hidden; }
+					img.photoAlbumItemThumbnailPhoto { vertical-align: middle; max-width: 128px; max-height: 128px;}
+				}
+				.smallDescriptionContainer { display: none;
+					.smallDescriptionInnerContainer { display: none;
+						span {  } //  photo description
+					}
+				}
+			}
+		}
+		.photoInnerContainerOver { background: @Gadget-PhotoAlbum-StyleNone-Photo-Hover-Bg;
+			.photoAlbumItemThumbnailPhotoHover {  }
+		}
+	}
+}
+
+
+/* mode: WaGadgetMemberPublicProfileStatePhoto ( current photo ) */
+/*****************************************************************************************************/
+.WaGadgetMemberPublicProfileStatePhoto {
+	#idPhotoMainContainer {
+		.pageTitleOuterContainer {
+			.pageTitleContainer {
+				h1 { margin: 0; font: @Typography-Header2-Font; }
+			}
+		}
+	}
+}
+/* ---- Gadget member public profile adaptive behavior ---- */
+// state 3
+@import 'gadget.member.public.profile.state3.less';
+@media only screen and (max-width:@state3-maxwidth)
+{
+	.gadget-memberPublicProfile-state3();
+}

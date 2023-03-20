@@ -1,0 +1,528 @@
+.mobilePanelContainer { position: relative; }
+.mobilePanelContainer:hover { z-index: 40000; }
+
+.WaPlaceHolderMobilePanel > div { padding: 0; }
+
+.pageModeEdit .WaGadgetMobilePanel
+{
+  display: block;
+}
+
+.WaGadgetMobilePanel
+{
+	overflow: visible;
+    display: none;
+
+	.mobilePanel
+	{
+		height: 50px;
+		background: #000;
+		position: relative;
+		color: #fff;
+
+		.mobilePanelButton
+		{
+			position: absolute;
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			text-indent: 1000px;
+			overflow: hidden;
+			color: #b3b3b3;
+			cursor: pointer;
+			white-space: nowrap;
+			text-decoration: none;
+
+			&:before
+			{
+				text-indent: 0px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 50px;
+				height: 50px;
+				text-align: center;
+				font: normal 21px/50px WA-theme-icons;
+			}
+
+			&:hover
+			{
+				color: #fff;
+				background: #1f1f1f;
+			}
+
+			&:active
+			{
+				color: #fff;
+				background: #1f1f1f;
+			}
+		}
+
+		.buttonMenu
+		{
+			left: 0;
+			top: 0;
+
+			&:before { content: '\e604'; }
+		}
+
+		.buttonAdmin
+		{
+			right: 50px;
+			top: 0;
+
+			&:before
+            {
+              content: '\f085'; font-family: 'FontAwesome';
+            }
+		}
+
+		.buttonLogin
+		{
+			right: 0;
+			top: 0;
+
+			&:before { content: '\e64A'; }
+			&.logged:before { content: '\e613'; }
+		}
+
+
+
+		// menu
+		.horizontalMenuFirstLevel()
+		{
+			margin: 0;
+			padding: 0;
+			position: relative;
+			vertical-align: top;
+
+			& > .item { position: relative; }
+
+			& > .item > a
+			{
+				display: block;
+				position: relative;
+				padding: 10px 25px 10px 30px;
+				text-decoration: none;
+				vertical-align: top;
+				font-size: 16px;
+				line-height: 18px;
+				color: #fff;
+				text-transform: uppercase;
+			}
+
+			// selected
+			&.sel > .item > a:after
+			{
+				content: "";
+				display: block;
+				position: absolute;
+				left: 15px;
+				top: 50%;
+				margin: -3px 0 0 0;
+				width: 5px;
+				height: 5px;
+				background: none;
+				background: #fff;
+				border-radius: 50%;
+			}
+		}
+
+		.horizontalMenuSubLevel()
+		{
+			margin: 0;
+
+			& > .item
+			{
+				position: relative;
+			}
+
+			& > .item > a
+			{
+				display: block;
+				position: relative;
+				margin: 0;
+				padding: 6px 25px 6px 47px;
+				text-decoration: none;
+				font-size: 16px;
+				line-height: 18px;
+				color: #b9b9b9;
+			}
+
+			// selected
+			&.sel > .item > a:after
+			{
+				content: "";
+				display: block;
+				position: absolute;
+				left: 32px;
+				top: 50%;
+				margin: -3px 0 0 0;
+				width: 5px;
+				height: 5px;
+				background: #b9b9b9;
+				border-radius: 50%;
+			}
+		}
+
+		.menuInner {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			z-index: 40000;
+
+			// level 1
+			ul.firstLevel
+			{
+				margin: 0;
+				padding: 10px 0 10px 0;
+				list-style: none;
+				text-align: left;
+				background: #1f1f1f;
+			}
+
+			ul.firstLevel > li { .horizontalMenuFirstLevel(); }
+
+			// level 2
+			ul ul
+			{
+				margin: 0 0 10px 0;
+				padding: 0 0 0 0;
+				list-style: none;
+			}
+
+			ul ul li { .horizontalMenuSubLevel(); }
+
+			// level 3
+			ul ul ul
+			{
+				margin: 0 0 10px 0;
+			}
+
+			ul ul ul .item a
+			{
+				padding: 6px 25px 6px 75px;
+				color: #777;
+			}
+
+			// selected
+			ul ul ul li.sel > .item > a:after
+			{
+				left: 60px;
+				background: #777;
+			}
+
+			// level 4+
+			ul ul ul ul
+			{
+				display: none;
+			}
+		}
+
+
+		// login
+		.loginInner
+		{
+			display: none;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			padding: 30px 20px;
+			background: #1f1f1f;
+			z-index: 40000;
+			text-align: left;
+			font-size: 16px;
+			color: #d7d7d7;
+
+			a { color: #d7d7d7; }
+
+			.loginContainerForm
+			{
+				.mandatorySymbol
+				{
+					margin: 0 0 0 3px;
+					padding: 0;
+					visibility: hidden;
+				}
+
+				[class$="Label"]
+				{
+					margin: 0 0 5px 0;
+					padding: 0;
+					color: #858585;
+
+					label
+					{
+						cursor: text;
+					}
+				}
+
+				[class$="TextBox"]
+				{
+					input[class$="TextBoxControl"]
+					{
+						width: 260px;
+						height: 20px;
+						margin: 0;
+						padding: 9px 9px 7px 9px;
+						border: 1px solid #858585;
+						background: none;
+						color: #fff;
+						font-size: 16px;
+						line-height: 20px;
+						border-radius: 2px;
+
+						&::-webkit-input-placeholder { color: #858585; }
+						&:-moz-placeholder { color: #858585; opacity: 1; }
+						&::-moz-placeholder { color: #858585; opacity: 1; }
+						&:-ms-input-placeholder { color: #858585; }
+					}
+				}
+
+				.loginAction
+				{
+					clear: both;
+
+					input.loginButton
+					{
+						display: inline-block;
+						padding: 6px 20px 4px;
+						width: 100%;
+						max-width: 280px;
+						height: 40px;
+						background: #ebebeb;
+						border: none;
+						font-family: inherit;
+						margin: 0;
+						color: #606060;
+						border-radius: 2px;
+						font-size: 16px;
+						font-weight: bold;
+						text-transform: uppercase;
+
+						&:hover { background: #dadada; color: #000000; }
+						&:active { background: #dadada; color: #000000; }
+					}
+				}
+
+				.loginActionRememberMe
+				{
+					white-space: nowrap;
+					float: left;
+					position: relative;
+
+					input.rememberMeCheckboxControl
+					{
+						display: inline-block;
+						position: absolute;
+						left: 0;
+						top: 0;
+						padding: 0;
+						margin: 0;
+						width: 18px;
+						height: 18px;
+						vertical-align: middle;
+						visibility: hidden;
+						z-index: 2;
+					}
+
+					label
+					{
+						display: inline-block;
+						vertical-align: top;
+						cursor: pointer;
+
+						&:before {
+							content: "";
+							display: inline-block;
+							margin: 1px 6px 0 0;
+							vertical-align: top;
+							width: 16px;
+							height: 16px;
+							border: 1px solid #858585;
+							border-radius: 2px;
+							cursor: pointer;
+							font-family: 'WA-theme-icons';
+							font-size: 14px;
+							line-height: 16px;
+							text-align: center;
+						}
+					}
+
+					.rememberMeCheckboxControl:checked + label:before { content: '\e631'; }
+
+				}
+
+				.loginPasswordForgot
+				{
+					float: right;
+				}
+
+				form
+				{
+					.loginUserName
+					{
+						margin: 0 0 18px 0;
+					}
+
+					.loginPassword
+					{
+						margin: 0 0 16px 0;
+					}
+
+					.loginActionRememberMe
+					{
+						margin: 0 0 18px 0;
+					}
+
+					.loginPasswordForgot
+					{
+						margin: 0 0 18px 0;
+					}
+				}
+
+				&.oAuthIstrue
+				{
+					.oAuthForm
+					{
+						.oAuthButtonsContainer
+						{
+							.wa-authenticateLoginLink
+							{
+								display: block;
+								margin: 0 0 20px 0;
+								height: 40px;
+								border: none;
+								border-radius: 2px;
+
+								.authenticateLoginIcon
+								{
+									width: 40px;
+									height: 40px;
+
+									&:after { left: 38px;  }
+								}
+
+								.authenticateLoginText
+								{
+									padding-left: 10px;
+									font-size: 16px;
+									color: #fff;
+									text-shadow: none;
+								}
+
+								&.facebook .authenticateLoginIcon
+								{
+									background: none;
+									position: relative;
+
+									&:before
+									{
+										content: '\e641';
+										position: absolute;
+										left: 0;
+										top: 0;
+										width: 100%;
+										height: 100%;
+										font: normal 20px/40px WA-theme-icons;
+										color: #fff;
+										text-align: center;
+										text-decoration: none;
+										text-shadow: none;
+									}
+								}
+
+								&.googlePlus .authenticateLoginIcon
+								{
+									background: none;
+									position: relative;
+
+									&:before
+									{
+										content: '\e63d';
+										position: absolute;
+										left: 0;
+										top: 0;
+										width: 100%;
+										height: 100%;
+										font: normal 20px/40px WA-theme-icons;
+										color: #fff;
+										text-align: center;
+										text-decoration: none;
+										text-shadow: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.loginContainerAuthenticated
+			{
+				text-align: left;
+				width: 280px;
+
+				&:after
+				{
+					content: "";
+					display: block;
+					clear: both;
+					height: 0;
+					overflow: hidden;
+					font-size: 0;
+					visibility: hidden;
+				}
+
+				.labelBox {  }
+
+				.loggedName
+				{
+					margin: 0 0 20px 0;
+					color: #fff;
+				}
+
+				.viewProfile
+				{
+					display: inline-block;
+					vertical-align: top;
+					margin: 0 13px 0 0;
+					font-size: 14px;
+				}
+
+				.changePassword
+				{
+					display: inline-block;
+					vertical-align: top;
+					margin: 0 13px 0 0;
+					font-size: 14px;
+				}
+
+				.loggedAction
+				{
+					display: inline-block;
+					vertical-align: top;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+
+@media only screen and (max-width:@state3-maxwidth)
+{
+  .switchToAdminShadowContainer, .switchToAdminContainer
+  {
+    display: none;
+  }
+
+  .WaGadgetMobilePanel
+  {
+    display: block;
+  }
+}
+

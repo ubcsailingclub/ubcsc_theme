@@ -1,0 +1,52 @@
+/* ---- Shared forms adaptive behavior. State 2 ---- */
+.shared-forms-state2()
+{
+  // EditorFieldContainer
+  .fieldContainer[id*='EditorFieldContainer'] {
+    .fieldLabel {
+      width: 23%;
+      float: none;
+      padding-right: 2%;
+      padding-bottom: 5px;
+      text-align: right;
+      & > div {
+        float: none !important;
+      }
+    }
+    .fieldBody {
+      width: auto;
+      float: none;
+      text-align: center;
+      #idEditorContainer {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+    table {
+      display: block;
+      tbody {
+        width: auto;
+        display: block;
+      }
+      tr {
+        width: auto;
+        display: block;
+      }
+      td.left {
+        width: 23%;
+        display: block;
+        padding-right: 2%;
+        text-align: right;
+        .fieldLabel {
+          width: auto;
+          float: none;
+        }
+      }
+      td.right {
+        width: auto;
+        display: block;
+        text-align: left;
+      }
+    }
+  }
+}

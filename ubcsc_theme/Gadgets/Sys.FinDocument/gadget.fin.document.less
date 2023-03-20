@@ -1,0 +1,51 @@
+// gadget Sys.FinDocument
+
+.WaGadgetFinDocument
+{
+
+    .paymentDetailsForm
+    {
+
+        .membersTable
+        {
+            tr,
+            tr:hover
+            {
+                td
+                {
+                    border-top: none;
+                    border-bottom: 1px solid @Shared-Table-Row-Border-Color;
+                    padding-bottom: 15px;
+                    padding-top: 15px;
+                }
+
+                &.taxRow,
+                &.totalRow,
+                &.subtotalRow
+                {
+                    td
+                    {
+                        border: none;
+                    }
+
+                    &:hover
+                    {
+                        td
+                        {
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// state 3
+@import 'gadget.fin.document.state3.less';
+@media only screen and (max-width:@state3-maxwidth)
+{
+    .gadget-finDocument-state3();
+}

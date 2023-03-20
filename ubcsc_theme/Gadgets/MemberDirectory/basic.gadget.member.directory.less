@@ -1,0 +1,199 @@
+
+/****************************************************************************************************/
+/*	WaGadgetMemberDirectory                                                                           */
+/*		WaGadgetMemberDirectoryStateList                                                                   */
+/*		WaGadgetMemberDirectoryStateAdvancedSearch                                                         */
+/****************************************************************************************************/
+
+
+[class*="WaGadgetMemberDirectory"] { overflow: visible; }
+
+
+/* mode: WaGadgetMemberDirectoryStateList */
+/*****************************************************************************************************/
+.WaGadgetMemberDirectoryStateList {
+	form { .clearAfter; }
+	// Selected search criteria
+	.selectedCriteriaListInnerContainer { margin: 0 0 20px 0;
+		.fieldContainer { margin: 0 0 2px 0;
+			.fieldSubContainer { .clearfix;
+				.fieldLabel { float: left; width: 50%; padding: 0; text-align: right; font-size: 14px;
+					span.criteriaTitle { display: block; padding: 4px 20px 0 0; }
+				}
+				.criteriaTitleColumn {  }
+				.firstColumn {   }
+				.fieldBody { float: left; width: 50%; text-align: left; font-size: 14px;
+					span.conditionTitle {  }
+					span.conditionValue {  }
+				}
+				.criteriaValueColumn {  }
+				.lastColumn {  }
+			}
+		}
+	}
+	.selectedCriteriaListActionsOuterContainer { .clearfix; margin: 0 0 20px 0; font-size: 14px;
+		.editAdvSearchContainer { float: left; margin: 0 30px 0 0;
+			a {  } // link "Edit search"
+		}
+		.clearAdvSearchContainer { float: left; margin: 0 30px 0 0;
+			a {  } // link "Clear search"
+		}
+	}
+	// Search types selector
+	.browsingColumnsMainContainer { margin: 0 0 20px 0;
+		table.browsingColumns { width: 100%; table-layout: fixed;
+			tr.filterHead {
+				th { text-align: left; vertical-align: top; font-weight: bold; padding-bottom: 7px; width: 23%; padding-right: 2%; }
+				th.f1Head {  }
+				th.f2Head {  }
+				th.f3Head {  }
+				th.f4Head {  }
+			}
+			tr.filterRow {
+				td { width: 23%; padding-right: 2%; vertical-align: top; font-size: 13px;
+					.filterOptions { max-height: 160px; height: auto; *height: 160; overflow-x: hidden; overflow-y: auto;
+						ul.filterList { padding: 0; margin: 0; list-style: none;
+							li { padding: 3px 0px;
+								a {  }
+								a.optionLink {  } // link in filter
+								a.emptyName { .opacity(50); } // option filter with with 0 found
+								a.selectedName { margin-bottom: 5px; }
+							}
+						}
+					}
+					.selectedFilter { display: none; padding-top: 3px;
+						.selectedName {  }
+						a.changeValue { font-weight: bold; } // link "Change"
+					}
+				}
+				td#idF1Row {  }
+				td#idF2Row {  }
+				td#idF3Row {  }
+				td#idF4Row {  }
+			}
+		}
+	}
+	// Advanced search link
+	.advSearchContainerLink { margin: 0 0 20px 0; font-size: 14px;
+		.generalFormOuterContainer {
+			.generalFormContainer {
+				a {  } // link "Advanced search..."
+			}
+		}
+	}
+	// Search area
+	.memberDirectorySearchAreaOuterContainer { margin: 0 0 20px 0; font-size: 14px;
+		.memberDirectorySearchArea {
+			label {  } // text label "Search:"
+			input[type=text] {  } // for search
+			span.searchResult {
+				em#membersFound { font-weight: bold; font-style: normal; margin-right: 20px; } // count of founded items
+				span#idWaitMessages {  } //
+				a#idReloadData {  // link Refresh cached search
+					img {  }
+				}
+				span#idPagingData { float: right; // text "Show" and container
+					select { margin-left: 5px; }
+				}
+			}
+		}
+	}
+	// Search results table
+	.memberDirectoryOuterContainer { margin: 0 0 20px 0;
+		.memberDirectoryContainer {
+			.memberDirectory { font-size: 14px;
+				table.membersTable {  } // members table ->
+			}
+		}
+	}
+	span#idPagingData2 { float: right;
+		select { margin-left: 7px; }
+	}
+}
+
+
+/* mode: WaGadgetMemberDirectoryStateAdvancedSearch */
+/*****************************************************************************************************/
+.WaGadgetMemberDirectoryStateAdvancedSearch {
+	// clear selection
+	.clearValuesOuterContainer { margin: 0 0 20px 0; text-align: right;
+		a {  } // link "Clear values"
+	}
+	// Choice of search criteria
+	.searchCriteriaOuterContainer {
+		.criteriaListItem { margin: 0 0 10px 0; .clearfix;
+			.fieldContainer { float: left; width: 50%;
+				.fieldSubContainer {
+					table { width: 100%; margin: 0; padding: 0; border: 0; border-collapse: collapse; border-spacing: 0;
+						td.left { width: 50%; font-size: 14px; text-align: right;
+							.fieldLabel { padding-right: 10px;
+								span {  } // sumbol "*"
+								span {  } // name of filed
+							}
+							.labelColumn {  }
+							.firstColumn {  }
+						}
+						td.right { width: 50%; font-size: 14px;
+							.fieldBody {
+								select { width: 90%; min-width: 120px; margin-top: -4px; padding: 2px 2px 2px 0;  }
+							}
+							.conditionsColumn {  }
+							.lastColumn {  }
+						}
+					}
+				}
+			}
+			.valueContainer { float: left; width: 50%;
+				.fieldContainer { width: 100%; float: none;
+					.fieldSubContainer {
+						span { display: block;
+							input[type=text] { width: 70%; border: 1px solid #c5c5c5; padding: 3px 4px 3px 4px; background: #fff; margin: 0; font-family: Tahoma; font-size: 13px; line-height: 16px; color: #000; .box-sizing(border-box); z-index: e("expression( runtimeStyle.zIndex = 1, runtimeStyle.width = parentNode.offsetWidth*0.7 - 10 + 'px');"); }
+							input.desDateTextBox { width: 100px; }
+							.groupBodyVertical { padding: 4px 0 0 0;
+								.fieldItem { margin: 0 0 6px 0; .clearfix;
+									span.typeCheckboxContainer,
+									span.typeRadioContainer { display: block; vertical-align: top; margin: 1px 9px 0 0; width: 13px; float: left;
+										input.typeCheckbox,
+										input.typeRadio { display: inline-block; width: 13px; height: 13px; margin: 0px 0 0 0; padding: 0; vertical-align: top; }
+									}
+									span.label { display: block; float: left; font-size: 13px; line-height: 16px; overflow: hidden; zoom: 1;
+										label {
+											span.textLine { display: block; margin: 0 0 0px 0;  }
+										}
+									}
+								}
+							}
+							select { width: 70%; margin: 0; padding: 2px 2px 2px 0px; }
+							.DES_CalPopup { margin: 0 0 0 3px;
+								span { display: inline-block; vertical-align: middle; position: relative; top: -1px; }
+							}
+
+							.DES_CalControl
+							{
+
+								.DES_CalHeader
+								{
+
+									span[id*='dateTextBox']
+									{
+										display: inline;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.ActionPanelOuterContainer { margin: 0 0 20px 0;
+		.searchButtonContainer { display: inline-block; vertical-align: middle; margin: 0 10px 0 0; .ie7-inline-block; font-size: 14px;
+			input.searchButton {  } // button "Search"
+		}
+		.separatorTextContainer { display: inline-block; vertical-align: middle; margin: 0 10px 0 0; .ie7-inline-block; font-size: 14px; } // text "or"
+		.exitAdvSearchContainer { display: inline-block; vertical-align: middle; margin: 0 10px 0 0; .ie7-inline-block; font-size: 14px;
+			a {  } // link "Go to simple search"
+		}
+	}
+}
+

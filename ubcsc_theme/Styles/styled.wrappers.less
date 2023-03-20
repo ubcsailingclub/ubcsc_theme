@@ -1,0 +1,114 @@
+/* ----- Gadget Styles ( Styled wrappers ) ----- */
+
+.gadgetStyleNone,
+.gadgetStyle001,
+.gadgetStyle002,
+.gadgetStyle003,
+.gadgetStyle004
+{
+    padding: 0;
+
+    .gadgetStyleTitle
+    {
+        padding: 0 0 10px;
+
+        h4
+        {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .gadgetStyleBody {}
+
+    a, a:link, a:visited, a:active
+    {
+    }
+
+    a:hover {}
+}
+
+.gadgetStyleNone // "normal" style
+{
+    padding: 0;
+
+    .gadgetStyleTitle
+    {
+        h4
+        {
+            font: @StyleWrapper-StyleNone-Title-Font;
+            color: @StyleWrapper-StyleNone-Title-Color;
+            text-transform: uppercase;
+        }
+    }
+
+    .gadgetStyleBody {}
+
+    a, a:link, a:visited, a:active
+    {
+    }
+
+    a:hover
+    {
+    }
+}
+
+.gadgetStyle001 // "bigger"
+{
+  .gadgetStyleTitle
+  {
+    h4
+    {
+      font: @StyleWrapper-Style001-Title-Font;
+      color: @StyleWrapper-Style001-Title-Color;
+      text-transform: uppercase;
+      overflow-x: hidden;
+    }
+  }
+
+  .gadgetStyleBody
+  {
+    font: @StyleWrapper-Style001-Font;
+  }
+
+  a, a:link, a:visited, a:active
+  {
+  }
+
+  a:hover
+  {
+  }
+
+}
+
+.gadgetStyle002 // "transparent"
+{
+
+	.gadgetStyleTitle
+    {
+        h4
+        {
+            color: @StyleWrapper-Style002-Title-Color;
+            font: @StyleWrapper-Style002-Title-Font;
+            text-transform: uppercase;
+        }
+    }
+
+	.gadgetStyleBody {}
+
+	a, a:link, a:visited, a:active
+    {
+    }
+
+	a:hover
+    {
+    }
+}
+
+
+
+@import 'styled.wrappers.state3.less';
+@media only screen and (max-width:@state3-maxwidth)
+{
+    .styled-wrappers-state3();
+}

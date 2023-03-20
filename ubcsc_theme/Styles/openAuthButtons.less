@@ -1,0 +1,121 @@
+/* Buttons color palette */
+@facebookBg: #3c5193;
+@facebookBgActive: #577fbc;
+@googleBg: #4285f4;
+@googleBgActive: #3367d6;
+
+/* WaGadgetLoginForm,  Open Authorization form (Facebook, GooglePlus) */
+/* WaGadgetContactProfile, Open Authorization buttons (Facebook, GooglePlus) */
+a.wa-authenticateLoginLink,
+a.wa-authenticateLoginLink:hover,
+a.wa-authenticateLoginLink:active,
+a.wa-authenticateLoginLink.activeState,
+a.wa-authenticateLoginLink:visited {
+  color: #fff;
+  cursor: pointer;
+  font: ~'normal 12px/normal Verdana';
+  opacity: 1;
+  text-decoration: none;
+}
+
+.wa-authenticateLoginLink {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 2px;
+  padding-right: 9px;
+  outline: none;
+  overflow: hidden;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  text-align: left;
+  white-space: nowrap;
+  user-select: none;
+
+  span {
+    vertical-align: middle;
+  }
+
+  .authenticateLoginIcon {
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+  }
+
+  .authenticateLoginText {
+    padding-left: 5px;
+  }
+
+  &.facebook, // openAuth Facebook button
+  &.Facebook //for server class in WaGadgetContactProfile
+  {
+    border: 1px solid @facebookBg;
+    background-color: @facebookBg; /* layer fill content */
+
+    .authenticateLoginIcon {
+      background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgdmlld0JveD0iMCAwIDI4IDI4Ij4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxyZWN0IHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgZmlsbD0iI0ZGRiIgcng9IjEiLz4gICAgICAgIDxwYXRoIGZpbGw9IiMzQzUxOTMiIGQ9Ik0xMC4yMTggMTEuNTc5djIuNjJoMS42MnY3LjY5NmgzLjExNHYtNy43MjloMi4xNzNsLjIzMi0yLjU4N2gtMi40MDV2LTEuNDc0YzAtLjYxLjEyNC0uODUxLjcyLS44NTFoMS42ODVWNi41NjhIMTUuMmMtMi4zMTggMC0zLjM2MyAxLjAxMi0zLjM2MyAyLjk0OHYyLjA2M2gtMS42MnoiLz4gICAgPC9nPjwvc3ZnPg==) no-repeat center;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active,
+    &.activeState {
+      background-color: @facebookBgActive;
+      border-color: @facebookBgActive;
+      opacity: 1;
+    }
+  }
+
+  &.googlePlus, // openAuth Google+ button
+  &.GooglePlus //for server class in WaGadgetContactProfile
+  {
+    border: 1px solid @googleBg;
+    background-color: @googleBg;
+
+    .authenticateLoginIcon {
+      background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgdmlld0JveD0iMCAwIDI4IDI4Ij4gICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxyZWN0IHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgZmlsbD0iI0ZGRiIgcng9IjEiLz4gICAgICAgIDxwYXRoIGZpbGw9IiM0Mjg1RjQiIGQ9Ik0yMi42NCAxNC4yMDVjMC0uNjM5LS4wNTctMS4yNTItLjE2NC0xLjg0MUgxNHYzLjQ4MWg0Ljg0NGE0LjE0IDQuMTQgMCAwIDEtMS43OTYgMi43MTZ2Mi4yNTloMi45MDhjMS43MDItMS41NjcgMi42ODQtMy44NzUgMi42ODQtNi42MTV6Ii8+ICAgICAgICA8cGF0aCBmaWxsPSIjMzRBODUzIiBkPSJNMTQgMjNjMi40MyAwIDQuNDY3LS44MDYgNS45NTYtMi4xOGwtMi45MDgtMi4yNTljLS44MDYuNTQtMS44MzcuODYtMy4wNDguODYtMi4zNDQgMC00LjMyOC0xLjU4NC01LjAzNi0zLjcxMUg1Ljk1N3YyLjMzMkE4Ljk5NyA4Ljk5NyAwIDAgMCAxNCAyM3oiLz4gICAgICAgIDxwYXRoIGZpbGw9IiNGQkJDMDUiIGQ9Ik04Ljk2NCAxNS43MUE1LjQxIDUuNDEgMCAwIDEgOC42ODIgMTRjMC0uNTkzLjEwMi0xLjE3LjI4Mi0xLjcxVjkuOTU4SDUuOTU3QTguOTk2IDguOTk2IDAgMCAwIDUgMTRjMCAxLjQ1Mi4zNDggMi44MjcuOTU3IDQuMDQybDMuMDA3LTIuMzMyeiIvPiAgICAgICAgPHBhdGggZmlsbD0iI0VBNDMzNSIgZD0iTTE0IDguNThjMS4zMjEgMCAyLjUwOC40NTQgMy40NCAxLjM0NWwyLjU4Mi0yLjU4QzE4LjQ2MyA1Ljg5MSAxNi40MjYgNSAxNCA1YTguOTk3IDguOTk3IDAgMCAwLTguMDQzIDQuOTU4bDMuMDA3IDIuMzMyYy43MDgtMi4xMjcgMi42OTItMy43MSA1LjAzNi0zLjcxeiIvPiAgICAgICAgPHBhdGggZD0iTTUgNWgxOHYxOEg1eiIvPiAgICA8L2c+PC9zdmc+) no-repeat center;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active,
+    &.activeState {
+      background-color: @googleBgActive;
+      border-color: @googleBgActive;
+      opacity: 1;
+    }
+  }
+}
+
+.WaGadgetLoginForm .oAuthForm .oAuthButtonsContainer .wa-authenticateLoginLink,
+.WaGadgetLoginForm .oAuthForm .oAuthButtonsContainer .wa-authenticateLoginLink:hover {
+  color: #fff;
+  font-size: 12px;
+}
+
+.WaGadgetLoginForm {
+
+  .oAuthForm {
+
+    .oAuthButtonsContainer {
+      text-align: left;
+
+      .wa-authenticateLoginLink {
+        margin-bottom: 5px;
+        max-width: 178px;
+      }
+
+    }
+  }
+}
+
+.WaGadgetContactProfile {
+  .wa-authenticateLoginLink {
+    max-width: 105px;
+  }
+}

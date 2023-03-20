@@ -1,0 +1,295 @@
+/* ----- Gadget Secondary menu ----- */
+
+.WaGadgetCustomMenu
+{
+
+    .gadgetStyleBody
+    {
+        font: inherit;
+        padding: 0;
+
+        .customMenuWrapper
+        {
+
+            &.alignLeft
+            {
+                text-align: left;
+            }
+
+            &.alignCenter
+            {
+                text-align: center;
+            }
+
+            &.alignRight
+            {
+                text-align: right;
+            }
+        }
+
+        ul
+        {
+
+            li
+            {
+
+                a
+                {
+                    display: inline-block;
+                    text-decoration: none;
+
+                    &:hover
+                    {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &.orientationHorizontal
+            {
+                display: inline-block;
+
+                li
+                {
+                    display: inline-block;
+                    margin: 0;
+
+                    a
+                    {
+                        margin-right: 4px;
+                        padding: 2px 0;
+                    }
+
+                    &:before
+                    {
+                        display: none;
+                    }
+
+                    &:after
+                    {
+                        margin-right: 4px;
+                        padding: 0;
+                        display: inline;
+                    }
+
+                    &:last-child
+                    {
+
+                        &:after
+                        {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &.orientationVertical
+            {
+                list-style-type: none;
+
+                li
+                {
+                    display: block;
+                    padding: 5px 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &.gadgetStyleNone // default style
+    {
+
+        ul
+        {
+
+            li
+            {
+
+                a
+                {
+                    color: @Gadget-SecondaryMenu-StyleNone-Link-Color;
+                    font: @Gadget-SecondaryMenu-StyleNone-Link-Font;
+                    text-decoration: none;
+
+                    &:hover
+                    {
+                        color: @Gadget-SecondaryMenu-StyleNone-Link-Hover-Color;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            &.orientationHorizontal
+            {
+
+                li:after
+                {
+                    color: @Gadget-SecondaryMenu-StyleNone-Separator-Color;
+                    content: "|";
+                }
+            }
+
+            &.orientationVertical
+            {
+
+                li
+                {
+
+                    &:before
+                    {
+                        color: @Gadget-SecondaryMenu-StyleNone-Link-Color;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+
+
+        .alignLeft {}
+        .alignCenter {}
+        .alignRight
+        {
+           ul
+           {
+
+               &.orientationVertical
+               {
+                   display: inline-block;
+
+                   li
+                   {
+                       display: block;
+                       text-align: left;
+                   }
+               }
+           }
+        }
+    }
+
+    &.gadgetStyle001 // gadget style 001
+    {
+
+        ul
+        {
+
+            li
+            {
+
+                a
+                {
+                    color: @Gadget-SecondaryMenu-Style001-Link-Color;
+                    font: @Gadget-SecondaryMenu-Style001-Link-Font;
+                    text-decoration: underline;
+
+                    &:hover
+                    {
+                        color: @Gadget-SecondaryMenu-Style001-Link-Hover-Color;
+                        text-decoration: @Gadget-SecondaryMenu-Style001-Hover-TextDecoration;
+                    }
+                }
+            }
+
+            &.orientationHorizontal
+            {
+
+                li:after
+                {
+                    color: @Gadget-SecondaryMenu-Style001-Separator-Color;
+                    content: @Gadget-SecondaryMenu-Style001-Separator-Content;
+                }
+            }
+
+            &.orientationVertical
+            {
+
+                li
+                {
+                    &:before
+                    {
+                        content: '';
+                        display: none;
+                    }
+
+                    &:after
+                    {
+                        color: @Gadget-SecondaryMenu-Style001-Separator-Color;
+                        content: '»';
+                        display: @Gadget-SecondaryMenu-Style001-Separator-Display;
+                        margin: 1px 0 1px 5px;
+                    }
+
+                    &:last-child
+                    {
+
+                        &:after
+                        {
+                            content:'\2002';
+                            display: @Gadget-SecondaryMenu-Style001-Separator-Display;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.gadgetStyle002 // gadget style 002
+    {
+
+        ul
+        {
+            padding: 30px;
+            background-color: @Gadget-SecondaryMenu-Style002-Bg-Color;
+
+            li
+            {
+
+                a
+                {
+                    color: @Gadget-SecondaryMenu-Style002-Link-Color;
+                    font: @Gadget-SecondaryMenu-Style002-Link-Font;
+                    text-decoration: underline;
+
+                    &:hover
+                    {
+                        color: @Gadget-SecondaryMenu-Style002-Link-Hover-Color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &.orientationHorizontal
+            {
+
+                li:after
+                {
+                    color: @Gadget-SecondaryMenu-Style002-Separator-Color;
+                    content: '|';
+                }
+            }
+
+            &.orientationVertical
+            {
+
+                li
+                {
+
+                    &:before
+                    {
+                      color: @Gadget-SecondaryMenu-Style002-Bullet-Color;
+                      content: "•";
+                    }
+
+                    &:last-child
+                    {
+                        &:after
+                        {
+                            content:'\2002';
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

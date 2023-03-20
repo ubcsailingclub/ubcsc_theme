@@ -1,0 +1,436 @@
+
+/****************************************************************************************************/
+/*	WaGadgetContactProfile                                                                             */
+/*		WaGadgetContactProfileStateMain                                                                     */
+/*		WaGadgetContactProfileStateAccess                                                                   */
+/*		WaGadgetContactProfileStateSubscriptions                                                            */
+/*		WaGadgetContactProfileStateFinances                                                                 */
+/*		WaGadgetContactProfileStateDonations                                                                 */
+/*		WaGadgetContactProfileStatePhotoGallery                                                             */
+/****************************************************************************************************/
+
+
+/* mode: WaGadgetContactProfileStateMain | WaGadgetContactProfileStateAccess | WaGadgetContactProfileStateSubscriptions */
+/*****************************************************************************************************/
+.WaGadgetContactProfile {
+	.topButtonsOuterContainer {  } // tab buttons profile ->
+	.memberDetailsTabsOuterContainer {  } // tabs in profile ->
+	.formOuterContainer {
+		.profileMainOuterContainer {  } // tab profile ->
+		.profileDetailsOuterContainer {  } // tab profile(privacy) ->
+		.memberSubscriptionsOuterContainer {  } // tab subscription ->
+		#idMemberPhotoGalleryContainer {  } // profile photo gallery ->
+		#idBottomButtonsContainer.navigationOuterContainer {  }
+	}
+}
+
+
+// -> top buttons profile
+.WaGadgetContactProfile
+{
+
+	.topButtonsOuterContainer
+	{
+		margin: 0 0 15px 0;
+
+		.topButtonsContainer
+		{
+
+			.inner
+			{
+
+				span.totalBalance
+				{
+					font-weight: normal;
+					padding: 4px 0 0 0;
+				}
+
+				input.typeButton
+				{
+					.functionalButton();
+
+					margin-right: 10px;
+				}
+
+                a
+                {
+                  font: @Gadget-Contact-Profile-Secondary-Link-Font;
+                  color: @Gadget-Contact-Profile-Secondary-Link-Color;
+                  &:hover
+                  {
+                    color: @Typography-Link-Alternative-Hover-Color;
+                  }
+                }
+			}
+		}
+	}
+
+	.memberDetailsTabsOuterContainer
+	{
+
+		ul.memberDetailsTabMenu
+		{
+
+			li
+			{
+				margin: 5px 20px 0 0;
+
+                a
+                {
+                  font: @Gadget-Contact-Profile-Secondary-Link-Font;
+                  color: @Gadget-Contact-Profile-Secondary-Link-Color;
+                  &:hover
+                  {
+                    color: @Typography-Link-Alternative-Hover-Color;
+                  }
+                }
+			}
+		}
+	}
+
+	.formOuterContainer
+	{
+
+		.profileDetailsOuterContainer
+		{
+
+			.profileDetailsContainer
+			{
+
+				.fieldBody
+				{
+					h4 + h4
+					{
+						&:after
+						{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		#idBottomButtonsContainer.navigationOuterContainer
+		{
+			text-align: center;
+
+			.left
+			{
+				float: none;
+				display: inline-block;
+				font-size: 0;
+			}
+		}
+	}
+}
+
+
+/* mode: WaGadgetContactProfileStatePhotoGallery ( list albums in profile ) */
+/*****************************************************************************************************/
+.WaGadgetContactProfileStatePhotoGallery {
+	input.typeButton { .functionalButton; margin-right: 10px; } // button "add album"
+}
+
+// -> albums list
+.WaGadgetContactProfile {
+	ul.albumsContainerUL { text-align: left;
+		li.photoGalleryItemContainerLi { width: 160px; height: auto; margin: 0 10px 20px 0;
+			div[class^="photoGalleryItemThumbnailImage"] { position: relative; background: @Gadget-PhotoAlbum-StyleNone-Photo-Bg; padding: 15px; border: 1px solid #ccc; box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.3);
+				a { vertical-align: top; margin: 0; width: 128px; height: 128px; outline: none;
+					&:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; overflow: hidden; }
+					img { max-width: 128px; max-height: 128px; vertical-align: middle; }
+				}
+			}
+            .photoGalleryItemDescription a
+            {
+              font: @Gadget-PhotoAlbum-StyleNone-AlbumName-Font;
+              color: @Typography-Link-Alternative-Color;
+              &:hover
+              {
+                color: @Typography-Link-Alternative-Hover-Color;
+              }
+
+            }
+			div.photoGalleryItemThumbnailImageHover { background: @Gadget-PhotoAlbum-StyleNone-Photo-Hover-Bg; }
+
+			[class^="photoGalleryEmptyItemThumbnailImage"] { position: relative; background: @Gadget-PhotoAlbum-StyleNone-Photo-Bg; padding: 15px; border: 1px solid #ccc; box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.3);
+				.albumEmptyLabelContainer { vertical-align: top; margin: 0; width: 128px; height: 128px; outline: none;
+					&:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; overflow: hidden; }
+					.albumEmptyLabel { display: inline-block; vertical-align: middle; }
+				}
+			}
+
+		}
+	}
+}
+
+
+/* mode: WaGadgetContactProfileStatePhotoGallery ( list photos in album profile ) */
+/*****************************************************************************************************/
+.WaGadgetContactProfileStatePhotoGallery {
+	#idMemberPhotoAlbumContainer {
+		#idPhotoAlbumHeaderContainer {
+			.buttonsInTitleContainer {
+				input.typeButton { .functionalButton; margin-left: 10px; } // control buttons
+			}
+            .pageBackContainer a
+            {
+              font: @Gadget-PhotoAlbum-StyleNone-Aux-Link-Font;
+              color: @Gadget-PhotoAlbum-StyleNone-Aux-Link-Color;
+
+              &:hover
+              {
+                color: @Gadget-PhotoAlbum-StyleNone-Aux-Link-Hover-Color;
+              }
+            }
+
+		}
+		#idPhotoAlbumTitleMainContainer { .clearfix; margin: 0 0 20px 0;
+			.titleLeftContainer {
+				h1.pageTitle { margin: 0; padding: 0; font: @Typography-Header2-Font; } // album name
+			}
+			.titleRightContainer {
+				span.photoLabel { line-height: 35px; } // text created/updated date
+			}
+		}
+		#idPhotoAlbumMainContainer {
+			.descriptionContainer {
+				span.photoLabel {  } // album name
+			}
+			.photosContainer {
+				ul.photosContainerUL { text-align: left; height: auto !important;
+					li.photoAlbumItemContainerLi { width: 160px; height: 160px; margin: 0 10px 15px 0;
+						.photoInnerContainer { 	 } // photo item ->
+					}
+					li.photoAlbumItemContainerLi.coverPhoto {
+						.photoInnerContainer { background: @Gadget-PhotoAlbum-StyleNone-Photo-Cover-Bg; } // photo item ->
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// -> photo item
+.WaGadgetContactProfile {
+	.photosContainerUL { text-align: left;
+		[class^="photoInnerContainer"] { position: relative; background: @Gadget-PhotoAlbum-StyleNone-Photo-Bg; padding: 15px; border: 1px solid #ccc; box-shadow: 1px 1px 5px 0 rgba(0,0,0,0.3);
+			[class^="photoAlbumItemThumbnailPhoto"] {
+				a { vertical-align: top; margin: 0; width: 128px; height: 128px; outline: none;
+					&:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; overflow: hidden; }
+					img.photoAlbumItemThumbnailPhoto { max-width: 128px; max-height: 128px; vertical-align: middle; }
+				}
+				.smallDescriptionContainer { display: none;
+					.smallDescriptionInnerContainer { display: none;
+						span {  } //  photo description
+					}
+				}
+			}
+			.innerButtonsContainer {
+				.buttonInnerDiv {
+					a[id*="DeleteLink"] { position: absolute; top: 0; right: 0; display: block; width: 20px; height: 20px; background: url(<$StaticModel.ThemeUrl$>/images/simple_colored_icon_set.png) 2px -498px no-repeat; overflow: hidden; text-indent: -1000px; }
+					a[id*="SetCoverLink"] { margin: 10px 0 0 0; display: inline-block; font-size: 14px; color: @Gadget-PhotoAlbum-StyleNone-SetCover-Link-Color;}
+
+				}
+			}
+			.fullDescriptionContainer { font-size: inherit;
+				span {  }
+			}
+		}
+		.photoInnerContainerOver { background: @Gadget-PhotoAlbum-StyleNone-Photo-Hover-Bg;
+			.photoAlbumItemThumbnailPhotoHover {  }
+		}
+	}
+}
+
+
+/* mode: WaGadgetContactProfileStatePhotoGallery ( current photo ) */
+/*****************************************************************************************************/
+.WaGadgetContactProfileStatePhotoGallery {
+	#idPhotoHeaderContainer {
+		.pageBackContainer {
+			a {  }
+		}
+		.buttonsInTitleContainer {
+			input.typeButton { .functionalButton(); margin-left: 10px; }
+		}
+	}
+	#idPhotoMainContainer {
+		.pageTitleOuterContainer {
+			.pageTitleContainer {
+				h1 { font: @Typography-Header2-Font; }
+			}
+		}
+	}
+	.footerContainer {
+         div[id*="EditCaptionButtonContainer"] a
+         {
+           .functionalButton;
+         }
+		.buttonsContainer {
+			input.typeButton { .functionalButton(); margin: 0 5px; }
+		}
+	}
+}
+
+
+/* mode: WaGadgetContactProfileStateFinances ( invoices and payments ), WaGadgetContactProfileStateDonations */
+/*****************************************************************************************************/
+.WaGadgetContactProfileStateFinances,
+.WaGadgetContactProfileStateDonations
+{
+	.genericList
+	{
+		margin: 30px 0 0 0;
+
+		// search form
+		.genericListHeaderContainer {}
+
+		.genericListTable
+		{
+			margin: 0;
+
+			input[type="checkbox"]
+			{
+				margin-top: 4px;
+			}
+
+			a{}
+
+			th.firstTh
+			{
+				padding-left: 0 !important;
+			}
+
+			tr
+			{
+
+				td
+				{
+					&.memberDirectoryColumn1, &.memberDirectoryColumn2, &.memberDirectoryColumn3{
+					  cursor: pointer;
+					}
+
+					div.alert
+					{
+						font-weight: normal;
+					}
+
+					&.firstTd
+					{
+						padding-left: 10px !important;
+					}
+
+					&.lastTd
+					{
+
+						.buttonContainer
+						{
+							margin: 0;
+
+							input[type='submit']
+							{
+								padding: 7px 22px 7px 22px;
+							}
+
+							input[type='submit']:first-child
+							{
+								margin-left: 0;
+							}
+						}
+					}
+
+					&.pending
+					{
+
+						span
+						{
+							background: none;
+							margin: 0;
+							padding: 0;
+
+							&:before
+							{
+								color: #ff0000;
+								content: '\f017';
+								display: inline-block;
+								font: @Shared-Icon-Clock-Font;
+								margin-right: 3px;
+							}
+						}
+					}
+				}
+
+				&.grayedOutBk,
+				&.grayedOutBk:hover
+				{
+
+					td
+					{
+						background-color: transparent;
+					}
+				}
+
+				&.noLine
+				{
+
+					&:hover
+					{
+						background: transparent;
+
+						+ .hiddenRow + tr
+						{
+
+							td
+							{
+								border-top-color: transparent;
+							}
+						}
+					}
+				}
+			}
+
+			.bottomRow
+			{
+
+				.memberDirectoryBottomRow
+				{
+					padding-bottom: 15px;
+				}
+			}
+
+			tr:hover + .bottomRow td {}
+		}
+	}
+
+	.listNavigationContainer
+	{
+		margin-top: 10px;
+	}
+}
+
+
+/* mode: WaGadgetContactProfileStateFinances ( invoices details ) */
+/*****************************************************************************************************/
+.paymentDetailsForm
+{
+	.warning { font-weight: normal; }
+}
+
+
+/* ----- Gadget contact profile adaptive behavior ----- */
+
+// state 2
+@import 'gadget.contact.profile.state2.less';
+@media only screen and (min-width:@state3-minwidth) and (max-width:@state2-maxwidth)
+{
+	.gadget-contactProfile-state2();
+}
+
+// state 3
+@import 'gadget.contact.profile.state3.less';
+@media only screen and (max-width:@state3-maxwidth)
+{
+	.gadget-contactProfile-state3();
+}

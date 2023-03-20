@@ -1,0 +1,55 @@
+@state2-minwidth: 600px;
+@state2-maxwidth: 959px;
+
+@state3-minwidth: 320px;
+@state3-maxwidth: 616px;
+
+@state4-minwidth: 1144px;
+
+/********************************************************************************************************************/
+/* Responsive grid for state 1                                                                                      */
+/********************************************************************************************************************/
+
+// Container
+.state1 { /*min-width: 960px;*/ }
+.container_12 { margin: 0 auto; width: 100%; }
+.s1_grid_12 { margin: 0px; width: auto; }
+
+// Clear Floated Elements
+.clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+
+.clearfix:before,
+.clearfix:after,
+.container_12:before,
+.container_12:after { content: '.'; display: block; overflow: hidden; visibility: hidden; font-size: 0; line-height: 0; width: 0; height: 0; }
+
+.clearfix:after,
+.container_12:after { clear: both; }
+
+.clearfix { zoom: 1; }
+
+
+
+/********************************************************************************************************************/
+/* Responsive grid for state 2                                                                                      */
+/********************************************************************************************************************/
+
+// Container
+@media only screen and (min-width:@state2-minwidth) and (max-width:100%)
+{
+	.container_12 { margin-left: 0; margin-right: 0; width: 100%; max-width: 960px; min-width: 600px; }
+	.s2_grid_12 { width: auto; }
+}
+
+
+
+/********************************************************************************************************************/
+/* Responsive grid for state 3                                                                                      */
+/********************************************************************************************************************/
+
+// Container
+@media only screen and (max-width:@state3-maxwidth)
+{
+	.container_12 { margin-left: 0; margin-right: 0; width: 100%; max-width: 600px; min-width: 320px; display: block; }
+	.s3_grid_12 { width: auto; margin-left: 0; margin-right: 0; }
+}

@@ -1,0 +1,329 @@
+
+/*****************************************************************************************************/
+/*	WaGadgetEvents                                                                                   */
+/*		WaGadgetEventsStateList                                                                      */
+/*		WaGadgetEventsStateDetails                                                                   */
+/*		WaGadgetEventsStateRegistrationsList                                                         */
+/*		WaGadgetEventsStateSelfRegistrationsList                                                     */
+/*		WaGadgetEventsStateRegistration                                                              */
+/*		WaGadgetEventsStateCalendar                                                                  */
+/*****************************************************************************************************/
+
+
+/* mode: WaGadgetEventsStateList (Events list) */
+/*****************************************************************************************************/
+.WaGadgetEventsStateList {
+	h3.sectionTitle { float: left; margin: 0 15px 10px 0; padding: 0; font-size: 16px; } // "Upcoming events" text
+	h1.pageTitle { float: left; margin: 0px 0 10px 0; padding: 0px 0 0 0; font-size: 14px;
+		a.rssFeedLabel { display: inline-block; padding: 3px 0;
+			img { display: inline-block; vertical-align: top; }
+		}
+	}
+	.pageTitleOuterContainer { float: right; margin: 0 0 10px 0;
+		.pageViewSwitcherOuterContainer {
+			.pageViewSwitcherContainer {
+				img { vertical-align: middle; } // Switch to Calendar View
+				a { margin-left: 7px; }   // Switch to Calendar View
+			}
+		}
+	}
+	.pageTitleOuterContainer + p { display: block; clear: both; padding-top: 20px; }
+	ul.boxesList { margin: 0; padding: 0; list-style: none; clear: both;
+		li.boxesListItem { padding: 0; margin: 0 0 30px 0;
+			.boxOuterContainer {  } // block event item ->
+			.boxOuterContainer.boxViewOutline {  }
+		}
+	}
+	.pastEventsOuterContainer {
+		h3.sectionTitle { float: none; margin: 0 0 15px 0; } // text "Past events"
+		table.pastEventsList { margin: 0; padding: 0; border: 0; border-collapse: collapse; width: 100%;
+			td { vertical-align: top; text-align: left; padding: 0 0 10px 0;
+				div.hiddenEventIcon { display: none; }
+				a {  } // name of event
+			}
+			td.left { min-width: 120px; padding-right: 20px; } // date of past event
+		}
+	}
+
+
+	// -> block event item
+	.boxOuterContainer {
+		.boxHeaderOuterContainer { padding: 0px 0px 0px 0px;
+			.boxHeaderContainer { float: none; padding: 12px 25px 12px 25px;
+				h4.boxHeaderTitle { margin: 0px; padding: 0px; font-size: 24px; font-weight: normal;
+					a { margin: 0 0 0 0px; } // name of event
+					a:hover {  }
+				}
+			}
+		}
+		.boxBodyOuterContainer { border-top: 1px solid #c5c5c5; border-left: 1px solid #c5c5c5; border-right: 1px solid #c5c5c5;
+			.boxBodyContainer { .clearfix; padding: 0;
+				.boxBodyInfoOuterContainer { float: left; width: 30%; padding: 20px 0 0 0; // left column
+					.boxBodyInfoContainer { padding: 0 40px 0 25px;
+						.boxInfoContainer { padding: 0 0 10px 0; } // info about event ->
+						.boxActionContainer { float: none; margin: 0; padding: 0 0 0 0;
+							input.typeButton {  } // a register button
+							.infoAlreadyRegistered,
+							.infoRegistrationIsNotAvailable,
+							.infoRegistrationIsClosed { padding: 15px 0 0 0; }
+						}
+					}
+				}
+				.boxBodyContentOuterContainer { float: left; width: 70%; padding: 20px 0 0 0; // right column
+					.boxBodyContentContainer { padding: 0 25px 0 0; }
+					.boxBodyContentContainer.fixedHeight { overflow: hidden; max-height: 210px; position: relative; } // content of event
+				}
+			}
+		}
+		.boxFooterOuterContainer { border-bottom: 1px solid #c5c5c5; border-left: 1px solid #c5c5c5; border-right: 1px solid #c5c5c5;
+			.boxFooterContainer { padding: 10px 25px; text-align: right;
+				a { font-size: 13px; } // link "Show details"
+			}
+		}
+	}
+
+}
+
+
+
+.WaGadgetEvents {
+
+	// -> info about event
+	.boxInfoContainer {
+		ul.boxInfo { margin: 0; padding: 0; list-style: none;
+			li { margin: 0; padding: 0 0 4px 0; .clearfix; line-height: 18px;
+				label { float: left; width: 62px; padding-right: 10px; text-align: right; font-size: 12px; color: #7c7c7c; } // header option
+				div { overflow: hidden; zoom: 1; font-weight: normal; // value option
+					strong { font-weight: normal; }
+					span {  }
+					a {  }
+				}
+			}
+			li.eventInfoStartDate {  }
+			li.eventInfoStartTime {
+				div {
+					span { color: #909090; }
+				}
+			}
+			li.eventInfoEndDate {  }
+			li.eventInfoEndTime {
+				div {
+					span { color: #909090; }
+				}
+			}
+			li.eventInfoLocation {  }
+			li.eventInfoSpacesLeft {  }
+		}
+	}
+
+}
+
+
+
+/* mode: WaGadgetEventsStateDetails (Events Details) */
+/*****************************************************************************************************/
+.WaGadgetEventsStateDetails {
+	.pageTitleOuterContainer { padding: 20px 0 0 0; float: none; clear: none; width: auto; margin-bottom: 0px; .clearfix;
+		.pageBackContainer { float: left; width: 50%; padding: 0 0 20px 0; margin: 0;
+			a {  } // link "back"
+		}
+		.pageViewSwitcherOuterContainer { float: right; width: 49%; text-align: right; padding: 0 0 20px 0;
+			a { cursor: pointer; // link "Add to my calendar"
+				img { vertical-align: middle; }
+			}
+		}
+		.pageTitleContainer { clear: both; margin: 0 0 20px 0; padding: 12px 25px 12px 3px; background: #eaeaea;
+			h1.pageTitle { margin: 0px; padding: 0px; font-size: 24px; font-weight: normal; } // title - name of event
+		}
+	}
+	.boxOuterContainer {
+		.boxBodyContainer { padding: 0 0 20px 0; .clearfix;
+			.boxBodyInfoOuterContainer { float: left; width: 40%;
+				&.boxBodyInfoViewFill {  }
+				.boxBodyInfoContainer { padding: 0 40px 0 0;
+					.boxInfoContainer { padding: 0 0 20px 20px; } // info about event ->
+					.registrationInfoContainer { padding: 0 0 0 92px;
+						h4.infoTitle { margin: 0 0 10px 0; padding: 0; font-size: 14px; font-weight: bold; } // text "Registration"
+						.infoText { margin: 0 0 1em 0; } // description for registration like "(depends on selected options)"
+						ul.registrationInfo { margin: 0 0 1em 0; padding: 0 0 0 20px;
+							li { padding: 0 0 6px 0;
+								label { font-size: 13px;
+									strong {  }
+								}
+								div {
+									span {  }
+								}
+								img { vertical-align: top; }
+							}
+							li.disabled { color: #888;
+								label { color: #888; }
+
+							}
+						}
+					}
+					.regTypeHr { padding: 0 0 0 92px;
+						hr {  }
+					}
+					div {
+						.boxMessageContainer { margin: 0 0 1em 0; padding: 0 0 0 92px;
+							span {  } // Registration message
+						}
+					}
+					.boxActionContainer { float: none; margin: 0 0 1em 0; padding: 0 0 0 92px;
+						input.typeButton {  }
+						.infoAlreadyRegistered,
+						.infoRegistrationIsNotAvailable,
+						.infoRegistrationIsClosed { margin: 1em 0 0 0; }
+					}
+				}
+			}
+
+			.boxBodyContentOuterContainer { float: right; width: 60%; position: relative;
+				.boxBodyContentContainer.fixedHeight {  } // content of event
+			}
+		}
+	}
+}
+
+
+/* mode: WaGadgetEventsStateRegistrationsList | WaGadgetEventsStateSelfRegistrationsList (attendees list and register) */
+/*****************************************************************************************************/
+.WaGadgetEventsStateRegistrationsList,
+.WaGadgetEventsStateSelfRegistrationsList {
+	.pageBackContainer { margin: 0 0 15px 0;
+		a {  } // link "back"
+	}
+	.pageTitleContainer,
+	.titleContainer {  } // title container ->
+	.infoOuterContainer {  }  // event info container ->
+	.generalFormOuterContainer {
+		.titleOuterContainer { margin: 0 0 20px 0;
+			.generalFormContainer { .clearfix;
+				.titleLeftContainer { float: left;
+					h2.stepTitle {  } // header "Event registration"
+				}
+				.titleRightContainer { float: right;
+					.generalFormOuterContainer {
+						.generalFormContainer {
+							input.typeButton {  } // button "New registration"
+						}
+					}
+				}
+			}
+		}
+		.boxOuterContainer {
+			.pagerOuterContainer {  } // event pager nav ->
+			.boxBodyOuterContainer {
+				.sectionOuterContainer {
+					table.membersTable {  } // common table for event ->
+				}
+				.titleOuterContainer {
+					.titleLeftContainer { float: left; }
+					.titleRightContainer { float: right;
+						input.typeButton {  } // button "New registration" */
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* mode: WaGadgetEventsStateRegistration (Event registration) */
+/*****************************************************************************************************/
+.WaGadgetEventsStateRegistration {
+	.publicWizardNameContainer {
+		.titleContainerr {  } // title container ->
+		.infoOuterContainer {  }  // event info container ->
+	}
+	#idSectionGuestListContainer { margin: 0 0 30px 0;
+		.navigationContainer { margin: 15px 0 0 0; }
+	}
+	.membersTable {
+		.memberDirectoryColumn4 { text-align: right;
+			.memberValue { white-space: nowrap;
+				h5 { display: inline-block; margin: 0;
+					a { display: inline-block; font-size: 1em;  }
+					a[id*="removeLink"] { padding: 0 0 0 20px; position: relative; outline: none;
+						img { position: absolute; top: 50%; left: 0; margin-top: -0.5em; border: none; }
+					}
+				}
+				h5 + h5 { margin-left: 15px; }
+			}
+		}
+	}
+}
+
+
+
+// -> title container
+.WaGadgetEvents {
+    .pageTitleContainer,
+	.titleContainer { padding: 20px 0 20px 0; .clearfix;
+		h1.pageTitle { margin: 0; float: left;
+			a {  }
+		}
+		#idTitleRight { float: right;
+			.pageViewSwitcherContainer {
+				a {  //  link "Add to my calendar"
+					img { display: inline-block; vertical-align: middle; } // with icon
+				}
+			}
+		}
+	}
+}
+
+
+// -> event pager nav
+.WaGadgetEvents .pagerOuterContainer { padding: 0 0 0 25px; }
+
+
+// icon for h4 title
+.eventPageContainer {
+	DIV.hiddenEventIcon { background: url(<$StaticModel.ThemeUrl$>/images/eyeLong.gif) top right no-repeat; float: left; width: 27px; height: 20px; -moz-opacity: 0.75; filter: progid:DXImageTransform.Microsoft.Alpha(opacity=75); margin-right: 6px; vertical-align: middle; }
+}
+
+
+/* Event - Calendar view
+/****************************************************************************************************/
+.WaGadgetEventsStateCalendar { margin: 0 0 20px 0;
+	h3 { float: left; margin-right: 15px; } // date of calendar
+	h1.pageTitle { float: left; margin: 0; padding: 0; // container for rss icon
+		a {
+			img { display: inline-block; vertical-align: top; margin: 2px 0 0 0; }
+		}
+	}
+	.pageTitleOuterContainer { float: right;
+		#idEventViewSwitcher {
+			.pageViewSwitcherContainer { padding: 1px 0 0 0;
+				img { display: inline-block; vertical-align: middle; }
+				a { margin-left: 7px; }
+			}
+		}
+	}
+	//top links week/month/year etc
+	#idViewSwitchersTable { margin: 20px 0 10px 0; clear: both; .clearfix;
+		#group1 { width: 50%; float: left; text-align: left;
+			div { float: left; margin-right: 20px; }
+		}
+		#group2 { width: 50%; float: left; text-align: right;
+			div { display: inline; margin-left: 20px; }
+		}
+	}
+	.EventListCalendar { width: 100%; border-width: 1px; border-style: solid; border-color: #c5c5c5;
+		td { padding: 5px; border-color: #c5c5c5; border-bottom-color: #c5c5c5; }
+		td.EventListCalendarHeader { padding: 8px 5px; border-width: 1px; border-style: solid; border-color: #c5c5c5; background-color: #eaeaea; }
+	}
+}
+
+
+#preferencesHolder {
+	table.tags {
+		tr td {
+			label { margin-left: 18px; float: none; display: block; }
+		}
+	}
+}
+
+

@@ -1,0 +1,264 @@
+/*****************************************************************************************************/
+/*	WaGadgetBlog                                                                                       */
+/*		WaGadgetBlogStateList                                                                               */
+/*		WaGadgetBlogStateDetails                                                                            */
+/*		WaGadgetBlogStateEditPost                                                                           */
+/*		WaGadgetBlogStateAddPost                                                                            */
+/*****************************************************************************************************/
+
+
+/* mode: WaGadgetBlogStateList (list of post) */
+/*****************************************************************************************************/
+.WaGadgetBlogStateList { position: relative;
+
+	.pageTitleOuterContainer {  } // title of gadget blog ->
+	.introOuterContainer {  } // description of blog ->
+
+	#idAddNewPostButtonContainer { display: inline-block; margin: 0 20px 15px 0; vertical-align: middle; // button add post
+		input[type=submit] {  }
+	}
+	a.rssFeedLabel { display: inline-block; margin: 0px 0 15px 0; padding: 0px 0 0 0; vertical-align: middle;
+		img { vertical-align: top; }
+	}
+	.pagerOuterContainer {  } // page navigation top ->
+	.blogPostListOuterContainer {  } // inner container lists of posts ->
+	.pagerOuterContainer {  } // page navigation bottom ->
+}
+
+
+.WaGadgetBlog {
+
+	// -> title of gadget blog
+	.pageTitleOuterContainer { float: none; width: auto; clear: none; margin: 0 0 20px 0;
+		.pageBackContainer { float: none; width: auto; margin: 0; padding: 0 0px 0 0;
+			a {  }
+		}
+	}
+
+	// -> description of blog
+	.introOuterContainer { margin: 0 0 15px 0;
+		.introContainer {
+			.inner {  }
+		}
+	}
+
+	// -> inner container lists of posts
+	.blogPostListOuterContainer { clear: both;
+		.blogPostListContainer { }
+	}
+	ul.boxesList { margin: 0; padding: 0; list-style: none;
+		li.boxesListItem { padding: 0; margin: 0 0 20px 0;
+			// title of post
+			.boxHeaderOuterContainer { padding: 10px 25px 10px 25px; background:#eaeaea;
+				h4.boxHeaderTitle { margin: 0; padding: 0; font-size: 18px; font-weight: bold;
+					a {  }
+				}
+			}
+			.boxBodyOuterContainer {
+				// info data, author ->
+				.boxBodyInfoOuterContainer {  }
+				.boxBodyContentOuterContainer { padding: 20px 25px 20px 25px;
+					.boxBodyContentContainer {  }
+					.boxBodyContentContainer.fixedHeight { overflow: hidden; max-height: 145px; position: relative; }
+				}
+			}
+			// post bottom - links for control ->
+			.boxFooterOuterContainer {  }
+		}
+	}
+
+
+	// -> info data, author
+	.boxBodyInfoOuterContainer { padding: 0 25px 10px 25px; background:#eaeaea;
+		h5 { margin: 0; padding: 0; font-size: 14px; font-weight: normal; color: #000;
+			span.postedOn {  } // date of post
+			span.postedByLabel {  }
+			span.postedByLink {
+				a {  }    // link to user of creator of post
+				span.postedByComment {  } // role of user
+			}
+		}
+	}
+
+
+	// -> post bottom - links for control
+	.boxFooterOuterContainer { padding: 0 25px 10px 25px;
+		.postBottom { .clearAfter;
+			.boxFooterPrimaryOuterContainer { float: left;
+				.boxFooterPrimaryContainer {
+					a {  }   // link "read more" & "comment (21)" & "Add comment"
+					input.submit {  } // button "post"
+				}
+			}
+			.boxFooterSecondaryOuterContainer { float: right;
+				.boxFooterSecondaryContainer {
+					a.editPost {  } // link "edit"
+					a.deletePost {  } // link "delete"
+					input.submit {  } // button "cancel"
+				}
+			}
+		}
+	}
+
+	#idBlogTopPagerContainer {  }
+	#idBlogBottomPagerContainer {  }
+}
+
+
+/* mode: WaGadgetBlogStateDetails (details of post, add comment) */
+/*****************************************************************************************************/
+.WaGadgetBlogStateDetails {
+	.pageTitleOuterContainer {  } // title of gadget blog ->
+	.blogEntryOuterContainer {  } // text of post ->
+	.blogCommentsOuterContainer {  } // comments ->
+}
+
+
+.WaGadgetBlog {
+
+	// -> title of gadget blog
+	.pageTitleOuterContainer {
+		.pageBackContainer {
+			a {  }
+		}
+	}
+
+	// -> text of post
+	.blogEntryOuterContainer { margin: 0 0 20px 0;
+		// title
+		.boxHeaderOuterContainer { padding: 10px 25px 10px 25px; background:#eaeaea;
+			.boxHeaderContainer { margin: 0; padding: 0;
+				h4.boxHeaderTitle { margin: 0; padding: 0; font-size: 18px; font-weight: bold; }
+			}
+		}
+		.boxBodyOuterContainer {
+			// info data, author ->
+			.boxBodyInfoOuterContainer {  }
+
+			.boxBodyContentOuterContainer { padding: 20px 25px 20px 25px;
+				.boxBodyContentContainer {
+					.blogPostBody {  }
+				}
+				.boxBodyContentContainer.fixedHeight {  }
+			}
+		}
+		// post bottom - links for control ->
+		.boxFooterOuterContainer {  }
+	}
+							
+				
+	// -> comments
+	.blogCommentsOuterContainer { margin: 0 25px;
+		h3.sectionTitle { margin: 0 0 20px 0; padding: 0 0 0 0; font-weight: bold; } // just text "Comments"
+		.blogCommentsListOuterContainer {
+			// ul list of comments ->
+			ul.blogCommentsList {  }
+		}
+	}
+						
+	// -> ul list of comments
+	ul.blogCommentsList { margin: 0; padding: 0; list-style: none;
+		li.blogCommentItem { padding: 0; margin: 0 0 0 0;
+			.blogComment {
+				.commentViewContainer { margin: 0 0 20px 0;
+					.boxHeaderOuterContainer { padding: 0 0 5px 0; margin: 0 0 5px; border-bottom: 1px solid #c5c5c5;
+						h5 { margin: 0; padding: 0; font-weight: normal; font-size: 14px; color: #000;
+							span {  } // date
+							a.blogEntryPostedBy {  } // user
+						}
+					}
+					.boxBodyOuterContainer { margin: 0 0 5px 0;
+						.commentBodyContainer {
+							span.postBody {  } // message of user - cooment
+						}
+					}
+					.boxFooterOuterContainer { padding: 0;
+						.boxFooterContainer { .clearAfter;
+							a {  }
+							.boxFooterPrimaryOuterContainer { float: left;
+								.commentBottomLeft {
+									a.blogCommentAnchor {  }
+									a.reply {  }
+								}
+							}
+							.boxFooterSecondaryOuterContainer { float: right;
+								.commentBottomRight {
+									a.delete {  }
+								}
+							}
+						}
+					}
+				}
+
+				.replyContainer {  }
+				// ul list of comments ->
+				ul.blogCommentsList { padding: 0 0 0 40px; }
+			}
+		}
+	}
+
+
+}
+
+
+/* edit or add post */
+/*****************************************************************************************************/
+.WaGadgetBlogStateEditPost,
+.WaGadgetBlogStateAddPost {
+	.pageTitleOuterContainer { }
+	.boxHeaderOuterContainer { padding: 0 0 3px 0; border-bottom: 1px solid #c5c5c5;
+		.boxHeaderContainer {
+			h4.boxHeaderTitle { padding: 0; margin: 0; font-family: Tahoma; font-size: 14px; color: #555; } // text "Creating new entry"
+		}
+	}
+	.boxBodyOuterContainer { margin: 0 0 20px 0;
+		.generalFieldsContainer {
+			.mandatoryFieldsTitle { margin: -20px 0 20px 0; height: 20px; text-align: right; font-size: 12px;  color: #7c7c7c;
+				em { color: #ff0000; } // "*"
+				strong {  } // text "Mandatory"
+			}
+			.fieldContainer {
+				.fieldSubContainer {
+					.fieldLabel { font-weight: bold; }
+				}
+			}
+		}
+	}
+	.boxFooterOuterContainer { padding: 0 0 0 25%;
+		.boxFooterPrimaryOuterContainer { float: left; margin: 0 15px 0 0;
+			input {  }
+		}
+		.boxFooterSecondaryOuterContainer { float: left; margin: 0 15px 0 0;
+			input {  }
+		}
+	}
+}
+
+
+// Add new comment
+.addNewCommentOuterContainer {
+	.fieldLabel { font-weight: bold; }
+	textarea { width: 80%; height: 200px; }
+	input.captchaCode { width: 270px; }
+	.boxActionContainer { padding: 10px 0 0 25%;
+		input[type=submit] { margin-right: 10px; }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+/* ---- Shared info container ( used in event registration, member application e.t.c. )---- */
+
+.infoOuterContainer
+{
+    background-color: @Shared-InfoContainer-Bg;
+    border: 1px solid @Shared-InfoContainer-Border-Color;
+    margin: 30px 0;
+    padding: 15px 0;
+
+    .infoContainer
+    {
+
+        .infoSection
+        {
+            .clearfix;
+            margin: 0;
+            padding: 0;
+
+            .infoTitle
+            {
+                font: @Shared-InfoContainer-InfoTitle-Font;
+                width: 37%;
+            }
+
+            .infoText
+            {
+                font: @Shared-InfoContainer-InfoText-Font;
+                width: 60%;
+            }
+
+            .textLine {}
+        }
+    }
+}
+
+/* ---- Shared info container adaptive behavior ---- */
+
+@import 'shared.info.container.state3.less';
+@media only screen and (max-width:@state3-maxwidth)
+{
+    .shared-infoContainer-state3();
+}

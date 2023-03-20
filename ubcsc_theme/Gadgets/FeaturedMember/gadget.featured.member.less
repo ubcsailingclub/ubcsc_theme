@@ -1,0 +1,199 @@
+/* ----- Gadget Featured member ----- */
+
+.WaGadgetFeaturedMember
+{
+
+	ul
+	{
+		&.layoutVertical,
+		&.layoutHorizontal,
+		&.layoutList
+		{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			zoom: 1;
+
+			&:before,
+			&:after
+			{
+				clear: both;
+				content: "";
+				display: block;
+				height: 0;
+				font-size: 0;
+				margin: 0;
+				overflow: hidden;
+				padding: 0;
+				visibility: hidden;
+			}
+
+			li
+			{
+				margin: 0;
+				vertical-align: top;
+				word-wrap: break-word;
+
+				.img // member avatar
+				{
+					display: none;
+					margin: 0;
+					vertical-align: top;
+
+					img
+					{
+						vertical-align: inherit;
+						min-width: inherit;
+						max-width: inherit;
+					}
+				}
+
+
+				.rightPart // member info
+				{
+					margin: 0;
+					padding: 0;
+
+					h4 // settings label 1
+					{
+						font: @Gadget-FeaturedMember-StyleNone-MemberLabel1-Font;
+                        color: @Gadget-FeaturedMember-StyleNone-MemberLabel1-Color;
+						margin: 0;
+						padding: 0;
+
+						a
+						{
+							font: @Gadget-FeaturedMember-StyleNone-MemberLabel1-Font;
+                            color: @Gadget-FeaturedMember-StyleNone-MemberLabel1-Color;
+							text-decoration: none;
+						}
+					}
+
+					.subtitle // settings label 2
+					{
+						font: @Gadget-FeaturedMember-StyleNone-MemberLabel2-Font;
+    					margin: 0;
+						padding: 0;
+
+						a
+						{
+							font: @Gadget-FeaturedMember-StyleNone-MemberLabel2-Font;
+							text-decoration: underline;
+						}
+
+						strong
+						{
+							font-weight: normal;
+						}
+					}
+
+					.description // settings label 3
+					{
+						font: @Gadget-FeaturedMember-StyleNone-MemberLabel3-Font;
+						margin: 0 0 15px 0;
+						padding: 0;
+
+						a
+						{
+							font: @Gadget-FeaturedMember-StyleNone-MemberLabel3-Font;
+							text-decoration: none;
+						}
+					}
+
+					.viewDetails {}
+				}
+			}
+
+			&.showPic // to show avatar
+			{
+				li
+				{
+					.img
+					{
+						display: inline-block;
+					}
+				}
+			}
+
+			&.layoutVertical
+			{
+
+				li
+				{
+					display: inline-block;
+					min-width: 200px;
+
+					.rightPart // member info
+					{
+						padding: 20px 20px 10px 0;
+					}
+
+					.subtitle
+					{
+						padding: 0 0 10px 0;
+					}
+				}
+			}
+
+			&.layoutHorizontal
+			{
+
+				li
+				{
+					.box-sizing(border-box);
+					display: inline-block;
+					padding-bottom: 20px;
+
+					.img
+					{
+						display: table-cell;
+						margin: 0 20px 0 0;
+					}
+
+					.rightPart
+					{
+						display: table-cell;
+					}
+				}
+			}
+
+			&.layoutList
+			{
+
+				li
+				{
+					padding-bottom: 15px;
+
+					.img
+					{
+						display: table-cell;
+						margin: 0 15px 0 0;
+
+						img
+						{
+							width: 50px;
+						}
+
+					}
+
+					.rightPart
+					{
+						display: table-cell;
+					}
+				}
+			}
+		}
+	}
+
+	.action // Member directory link
+	{
+		margin: 0;
+
+		a
+		{
+			font: @Gadget-FeaturedMember-StyleNone-MemberDirectory-Link-Font;
+			text-decoration: none;
+		}
+	}
+
+}

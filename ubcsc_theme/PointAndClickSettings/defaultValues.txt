@@ -1,0 +1,741 @@
+General_formatting-Backgrounds-Site-Background_color = ;
+General_formatting-Backgrounds-Site-Background_image = ;
+General_formatting-Backgrounds-Site-Background_position = ;
+General_formatting-Backgrounds-Site-Background_repeat = ;
+
+General_formatting-Backgrounds-Outer_header-Background_color = ;
+General_formatting-Backgrounds-Outer_header-Background_image = ;
+General_formatting-Backgrounds-Outer_header-Background_position = ;
+General_formatting-Backgrounds-Outer_header-Background_repeat = ;
+
+General_formatting-Backgrounds-Header-Background_color = ;
+General_formatting-Backgrounds-Header-Background_image = ;
+General_formatting-Backgrounds-Header-Background_position = ;
+General_formatting-Backgrounds-Header-Background_repeat = ;
+
+General_formatting-Backgrounds-Outer_header_1-Background_color = ;
+General_formatting-Backgrounds-Outer_header_1-Background_image = ;
+General_formatting-Backgrounds-Outer_header_1-Background_position = ;
+General_formatting-Backgrounds-Outer_header_1-Background_repeat = ;
+
+General_formatting-Backgrounds-Header_1-Background_color = ;
+General_formatting-Backgrounds-Header_1-Background_image = ;
+General_formatting-Backgrounds-Header_1-Background_position = ;
+General_formatting-Backgrounds-Header_1-Background_repeat = ;
+
+General_formatting-Backgrounds-Outer_header_2-Background_color = ;
+General_formatting-Backgrounds-Outer_header_2-Background_image = ;
+General_formatting-Backgrounds-Outer_header_2-Background_position = ;
+General_formatting-Backgrounds-Outer_header_2-Background_repeat = ;
+
+General_formatting-Backgrounds-Header_2-Background_color = ;
+General_formatting-Backgrounds-Header_2-Background_image = ;
+General_formatting-Backgrounds-Header_2-Background_position = ;
+General_formatting-Backgrounds-Header_2-Background_repeat = ;
+
+General_formatting-Backgrounds-Outer_content-Background_color = ;
+General_formatting-Backgrounds-Outer_content-Background_image = ;
+General_formatting-Backgrounds-Outer_content-Background_position = ;
+General_formatting-Backgrounds-Outer_content-Background_repeat = ;
+
+General_formatting-Backgrounds-Content-Background_color = ;
+General_formatting-Backgrounds-Content-Background_image = ;
+General_formatting-Backgrounds-Content-Background_position = ;
+General_formatting-Backgrounds-Content-Background_repeat = ;
+
+General_formatting-Backgrounds-Outer_footer-Background_color = ;
+General_formatting-Backgrounds-Outer_footer-Background_image = ;
+General_formatting-Backgrounds-Outer_footer-Background_position = ;
+General_formatting-Backgrounds-Outer_footer-Background_repeat = ;
+
+General_formatting-Backgrounds-Footer-Background_color = ;
+General_formatting-Backgrounds-Footer-Background_image = ;
+General_formatting-Backgrounds-Footer-Background_position = ;
+General_formatting-Backgrounds-Footer-Background_repeat = ;
+
+General_formatting-Backgrounds-Outer_footer_1-Background_color = ;
+General_formatting-Backgrounds-Outer_footer_1-Background_image = ;
+General_formatting-Backgrounds-Outer_footer_1-Background_position = ;
+General_formatting-Backgrounds-Outer_footer_1-Background_repeat = ;
+
+General_formatting-Backgrounds-Footer_1-Background_color = ;
+General_formatting-Backgrounds-Footer_1-Background_image = ;
+General_formatting-Backgrounds-Footer_1-Background_position = ;
+General_formatting-Backgrounds-Footer_1-Background_repeat = ;
+
+General_formatting-Typography-Text-Font_family = ;
+General_formatting-Typography-Text-Font_size = ;
+General_formatting-Typography-Text-Font_weight = ;
+General_formatting-Typography-Text-Font_style = ;
+General_formatting-Typography-Text-Font_color = ;
+
+General_formatting-Typography-Alternative_Text-Font_family = ;
+General_formatting-Typography-Alternative_Text-Font_size = ;
+General_formatting-Typography-Alternative_Text-Font_weight = ;
+General_formatting-Typography-Alternative_Text-Font_style = ;
+General_formatting-Typography-Alternative_Text-Font_color = ;
+
+
+General_formatting-Typography-Link-Background_color = ;
+General_formatting-Typography-Link-Font_family = ;
+General_formatting-Typography-Link-Font_size = ;
+General_formatting-Typography-Link-Font_weight = ;
+General_formatting-Typography-Link-Font_style = ;
+General_formatting-Typography-Link-Text_decoration = ;
+General_formatting-Typography-Link-Font_color = ;
+
+General_formatting-Typography-Link_on_hover-Background_color = ;
+General_formatting-Typography-Link_on_hover-Text_decoration = ;
+General_formatting-Typography-Link_on_hover-Font_color = ;
+
+General_formatting-Typography-Link_alternative-Background_color = ;
+General_formatting-Typography-Link_alternative-Font_family = ;
+General_formatting-Typography-Link_alternative-Font_size = ;
+General_formatting-Typography-Link_alternative-Font_weight = ;
+General_formatting-Typography-Link_alternative-Font_style = ;
+General_formatting-Typography-Link_alternative-Text_decoration = ;
+General_formatting-Typography-Link_alternative-Font_color = ;
+
+General_formatting-Typography-Link_alternative_on_hover-Background_color = ;
+General_formatting-Typography-Link_alternative_on_hover-Text_decoration = ;
+General_formatting-Typography-Link_alternative_on_hover-Font_color = ;
+
+General_formatting-Typography-Link_auxiliary-Background_color = ;
+General_formatting-Typography-Link_auxiliary-Font_family = ;
+General_formatting-Typography-Link_auxiliary-Font_size = ;
+General_formatting-Typography-Link_auxiliary-Font_weight = ;
+General_formatting-Typography-Link_auxiliary-Font_style = ;
+General_formatting-Typography-Link_auxiliary-Text_decoration = ;
+General_formatting-Typography-Link_auxiliary-Font_color = ;
+
+General_formatting-Typography-Link_auxiliary_on_hover-Background_color = ;
+General_formatting-Typography-Link_auxiliary_on_hover-Text_decoration = ;
+General_formatting-Typography-Link_auxiliary_on_hover-Font_color = ;
+
+
+General_formatting-Typography-Promo-Background_color = ;
+General_formatting-Typography-Promo-Font_family = ;
+General_formatting-Typography-Promo-Font_size = ;
+General_formatting-Typography-Promo-Font_weight = ;
+General_formatting-Typography-Promo-Font_style = ;
+General_formatting-Typography-Promo-Text_decoration = ;
+General_formatting-Typography-Promo-Font_color = ;
+
+General_formatting-Typography-Page_title-Background_color = ;
+General_formatting-Typography-Page_title-Font_family = ;
+General_formatting-Typography-Page_title-Font_size = ;
+General_formatting-Typography-Page_title-Font_weight = ;
+General_formatting-Typography-Page_title-Font_style = ;
+General_formatting-Typography-Page_title-Text_decoration = ;
+General_formatting-Typography-Page_title-Font_color = ;
+
+
+General_formatting-Typography-Heading_1-Background_color = ;
+General_formatting-Typography-Heading_1-Font_family = ;
+General_formatting-Typography-Heading_1-Font_size = ;
+General_formatting-Typography-Heading_1-Font_weight = ;
+General_formatting-Typography-Heading_1-Font_style = ;
+General_formatting-Typography-Heading_1-Text_decoration = ;
+General_formatting-Typography-Heading_1-Font_color = ;
+
+General_formatting-Typography-Heading_2-Background_color = ;
+General_formatting-Typography-Heading_2-Font_family = ;
+General_formatting-Typography-Heading_2-Font_size = ;
+General_formatting-Typography-Heading_2-Font_weight = ;
+General_formatting-Typography-Heading_2-Font_style = ;
+General_formatting-Typography-Heading_2-Text_decoration = ;
+General_formatting-Typography-Heading_2-Font_color = ;
+
+General_formatting-Typography-Heading_3-Background_color = ;
+General_formatting-Typography-Heading_3-Font_family = ;
+General_formatting-Typography-Heading_3-Font_size = ;
+General_formatting-Typography-Heading_3-Font_weight = ;
+General_formatting-Typography-Heading_3-Font_style = ;
+General_formatting-Typography-Heading_3-Text_decoration = ;
+General_formatting-Typography-Heading_3-Font_color = ;
+
+General_formatting-Typography-Heading_4-Background_color = ;
+General_formatting-Typography-Heading_4-Font_family = ;
+General_formatting-Typography-Heading_4-Font_size = ;
+General_formatting-Typography-Heading_4-Font_weight = ;
+General_formatting-Typography-Heading_4-Font_style = ;
+General_formatting-Typography-Heading_4-Text_decoration = ;
+General_formatting-Typography-Heading_4-Font_color = ;
+
+General_formatting-Typography-Caption-Background_color = ;
+General_formatting-Typography-Caption-Font_family = ;
+General_formatting-Typography-Caption-Font_size = ;
+General_formatting-Typography-Caption-Font_weight = ;
+General_formatting-Typography-Caption-Font_style = ;
+General_formatting-Typography-Caption-Text_decoration = ;
+General_formatting-Typography-Caption-Font_color = ;
+
+General_formatting-Typography-Quoted-Background_color = ;
+General_formatting-Typography-Quoted-Font_family = ;
+General_formatting-Typography-Quoted-Font_size = ;
+General_formatting-Typography-Quoted-Font_weight = ;
+General_formatting-Typography-Quoted-Font_style = ;
+General_formatting-Typography-Quoted-Text_decoration = ;
+General_formatting-Typography-Quoted-Font_color = ;
+
+General_formatting-Typography-Event_calendar_title-Background_color = ;
+General_formatting-Typography-Event_calendar_title-Font_family = ;
+General_formatting-Typography-Event_calendar_title-Font_size = ;
+General_formatting-Typography-Event_calendar_title-Font_weight = ;
+General_formatting-Typography-Event_calendar_title-Font_style = ;
+General_formatting-Typography-Event_calendar_title-Text_decoration = ;
+General_formatting-Typography-Event_calendar_title-Font_color = ;
+
+
+
+
+General_formatting-Form-Field_labels-Font_family = ;
+General_formatting-Form-Field_labels-Font_size = ;
+General_formatting-Form-Field_labels-Font_weight = ;
+General_formatting-Form-Field_labels-Font_style = ;
+General_formatting-Form-Field_labels-Text_decoration = ;
+General_formatting-Form-Field_labels-Font_color = ;
+
+General_formatting-Form-Option_labels-Font_family = ;
+General_formatting-Form-Option_labels-Font_size = ;
+General_formatting-Form-Option_labels-Font_weight = ;
+General_formatting-Form-Option_labels-Font_style = ;
+General_formatting-Form-Option_labels-Font_color = ;
+
+General_formatting-Form-Caption-Font_family = ;
+General_formatting-Form-Caption-Font_size = ;
+General_formatting-Form-Caption-Font_weight = ;
+General_formatting-Form-Caption-Font_style = ;
+General_formatting-Form-Caption-Text_decoration = ;
+General_formatting-Form-Caption-Font_color = ;
+General_formatting-Form-Caption-Background_color = ;
+
+General_formatting-Form-Field_instructions-Font_family = ;
+General_formatting-Form-Field_instructions-Font_size = ;
+General_formatting-Form-Field_instructions-Font_weight = ;
+General_formatting-Form-Field_instructions-Font_style = ;
+General_formatting-Form-Field_instructions-Text_decoration = ;
+General_formatting-Form-Field_instructions-Font_color = ;
+
+General_formatting-Form-Form_instructions-Font_family = ;
+General_formatting-Form-Form_instructions-Font_size = ;
+General_formatting-Form-Form_instructions-Font_weight = ;
+General_formatting-Form-Form_instructions-Font_style = ;
+General_formatting-Form-Form_instructions-Text_decoration = ;
+General_formatting-Form-Form_instructions-Font_color = ;
+
+General_formatting-Form-Divider-Border_color = ;
+
+
+Gadgets-Style_basic-Title-Background_color = ;
+Gadgets-Style_basic-Title-Font_family = ;
+Gadgets-Style_basic-Title-Font_color = ;
+Gadgets-Style_basic-Title-Font_size = ;
+Gadgets-Style_basic-Title-Font_weight = ;
+Gadgets-Style_basic-Title-Font_style = ;
+Gadgets-Style_basic-Title-Text_decoration = ;
+Gadgets-Style_basic-Link-Font_family = ;
+Gadgets-Style_basic-Link-Font_size = ;
+Gadgets-Style_basic-Link-Font_weight = ;
+Gadgets-Style_basic-Link-Font_style = ;
+Gadgets-Style_basic-Link-Text_decoration = ;
+Gadgets-Style_basic-Link-Font_color = ;
+Gadgets-Style_basic-Date_and_time-Font_family = ;
+Gadgets-Style_basic-Date_and_time-Font_size = ;
+Gadgets-Style_basic-Date_and_time-Font_weight = ;
+Gadgets-Style_basic-Date_and_time-Font_style = ;
+Gadgets-Style_basic-Date_and_time-Text_decoration = ;
+Gadgets-Style_basic-Date_and_time-Font_color = ;
+Gadgets-Style_basic-Author-Font_family = ;
+Gadgets-Style_basic-Author-Font_size = ;
+Gadgets-Style_basic-Author-Font_weight = ;
+Gadgets-Style_basic-Author-Font_style = ;
+Gadgets-Style_basic-Author-Text_decoration = ;
+Gadgets-Style_basic-Author-Font_color = ;
+Gadgets-Style_basic-Location-Font_family = ;
+Gadgets-Style_basic-Location-Font_size = ;
+Gadgets-Style_basic-Location-Font_weight = ;
+Gadgets-Style_basic-Location-Font_style = ;
+Gadgets-Style_basic-Location-Text_decoration = ;
+Gadgets-Style_basic-Location-Font_color = ;
+
+Gadgets-Style_large-Title-Background_color = ;
+Gadgets-Style_large-Title-Font_family = ;
+Gadgets-Style_large-Title-Font_color = ;
+Gadgets-Style_large-Title-Font_size = ;
+Gadgets-Style_large-Title-Font_weight = ;
+Gadgets-Style_large-Title-Font_style = ;
+Gadgets-Style_large-Title-Text_decoration = ;
+Gadgets-Style_large-Link-Font_family = ;
+Gadgets-Style_large-Link-Font_size = ;
+Gadgets-Style_large-Link-Font_weight = ;
+Gadgets-Style_large-Link-Font_style = ;
+Gadgets-Style_large-Link-Text_decoration = ;
+Gadgets-Style_large-Link-Font_color = ;
+Gadgets-Style_large-Date_and_time-Font_family = ;
+Gadgets-Style_large-Date_and_time-Font_size = ;
+Gadgets-Style_large-Date_and_time-Font_weight = ;
+Gadgets-Style_large-Date_and_time-Font_style = ;
+Gadgets-Style_large-Date_and_time-Text_decoration = ;
+Gadgets-Style_large-Date_and_time-Font_color = ;
+Gadgets-Style_large-Author-Font_family = ;
+Gadgets-Style_large-Author-Font_size = ;
+Gadgets-Style_large-Author-Font_weight = ;
+Gadgets-Style_large-Author-Font_style = ;
+Gadgets-Style_large-Author-Text_decoration = ;
+Gadgets-Style_large-Author-Font_color = ;
+Gadgets-Style_large-Location-Font_family = ;
+Gadgets-Style_large-Location-Font_size = ;
+Gadgets-Style_large-Location-Font_weight = ;
+Gadgets-Style_large-Location-Font_style = ;
+Gadgets-Style_large-Location-Text_decoration = ;
+Gadgets-Style_large-Location-Font_color = ;
+
+Gadgets-Style_opacity-Title-Background_color = ;
+Gadgets-Style_opacity-Title-Font_family = ;
+Gadgets-Style_opacity-Title-Font_color = ;
+Gadgets-Style_opacity-Title-Font_size = ;
+Gadgets-Style_opacity-Title-Font_weight = ;
+Gadgets-Style_opacity-Title-Font_style = ;
+Gadgets-Style_opacity-Title-Text_decoration = ;
+Gadgets-Style_opacity-Link-Font_family = ;
+Gadgets-Style_opacity-Link-Font_size = ;
+Gadgets-Style_opacity-Link-Font_weight = ;
+Gadgets-Style_opacity-Link-Font_style = ;
+Gadgets-Style_opacity-Link-Text_decoration = ;
+Gadgets-Style_opacity-Link-Font_color = ;
+Gadgets-Style_opacity-Date_and_time-Font_family = ;
+Gadgets-Style_opacity-Date_and_time-Font_size = ;
+Gadgets-Style_opacity-Date_and_time-Font_weight = ;
+Gadgets-Style_opacity-Date_and_time-Font_style = ;
+Gadgets-Style_opacity-Date_and_time-Text_decoration = ;
+Gadgets-Style_opacity-Date_and_time-Font_color = ;
+Gadgets-Style_opacity-Author-Font_family = ;
+Gadgets-Style_opacity-Author-Font_size = ;
+Gadgets-Style_opacity-Author-Font_weight = ;
+Gadgets-Style_opacity-Author-Font_style = ;
+Gadgets-Style_opacity-Author-Text_decoration = ;
+Gadgets-Style_opacity-Author-Font_color = ;
+Gadgets-Style_opacity-Location-Font_family = ;
+Gadgets-Style_opacity-Location-Font_size = ;
+Gadgets-Style_opacity-Location-Font_weight = ;
+Gadgets-Style_opacity-Location-Font_style = ;
+Gadgets-Style_opacity-Location-Text_decoration = ;
+Gadgets-Style_opacity-Location-Font_color = ;
+
+
+Donation_goal-Style_basic-Title-Font_family = ;
+Donation_goal-Style_basic-Title-Font_color = ;
+Donation_goal-Style_basic-Donation_description-Font_family = ;
+Donation_goal-Style_basic-Donation_description-Font_size = ;
+Donation_goal-Style_basic-Donation_description-Font_weight = ;
+Donation_goal-Style_basic-Donation_description-Font_style = ;
+Donation_goal-Style_basic-Donation_description-Text_decoration = ;
+Donation_goal-Style_basic-Donation_description-Font_color = ;
+Donation_goal-Style_basic-Donation_bar-Background_color = ;
+Donation_goal-Style_basic-Donation_bar_background-Background_color = ;
+Donation_goal-Style_basic-Donation_bar_border_color-Border_color = ;
+Donation_goal-Style_basic-Donation_bar_percentage-Font_color = ;
+Donation_goal-Style_basic-Donation_labels-Font_family = ;
+Donation_goal-Style_basic-Donation_labels-Font_size = ;
+Donation_goal-Style_basic-Donation_labels-Font_weight = ;
+Donation_goal-Style_basic-Donation_labels-Font_style = ;
+Donation_goal-Style_basic-Donation_labels-Text_decoration = ;
+Donation_goal-Style_basic-Donation_labels-Font_color = ;
+Donation_goal-Style_basic-Donation_button-Background_color = ;
+Donation_goal-Style_basic-Donation_button-Font_color = ;
+Donation_goal-Style_basic-Donation_button_hover-Background_color = ;
+Donation_goal-Style_basic-Donation_button_hover-Font_color = ;
+Donation_goal-Style_1-Title-Font_family = ;
+Donation_goal-Style_1-Title-Font_color = ;
+Donation_goal-Style_1-Donation_description-Font_family = ;
+Donation_goal-Style_1-Donation_description-Font_size = ;
+Donation_goal-Style_1-Donation_description-Font_weight = ;
+Donation_goal-Style_1-Donation_description-Font_style = ;
+Donation_goal-Style_1-Donation_description-Text_decoration = ;
+Donation_goal-Style_1-Donation_description-Font_color = ;
+Donation_goal-Style_1-Donation_bar-Background_color = ;
+Donation_goal-Style_1-Donation_bar_background-Background_color = ;
+Donation_goal-Style_1-Donation_bar_border_color-Border_color = ;
+Donation_goal-Style_1-Donation_bar_percentage-Font_color = ;
+Donation_goal-Style_1-Donation_labels-Font_family = ;
+Donation_goal-Style_1-Donation_labels-Font_size = ;
+Donation_goal-Style_1-Donation_labels-Font_weight = ;
+Donation_goal-Style_1-Donation_labels-Font_style = ;
+Donation_goal-Style_1-Donation_labels-Text_decoration = ;
+Donation_goal-Style_1-Donation_labels-Font_color = ;
+Donation_goal-Style_1-Donation_button-Background_color = ;
+Donation_goal-Style_1-Donation_button-Font_color = ;
+Donation_goal-Style_1-Donation_button_hover-Background_color = ;
+Donation_goal-Style_1-Donation_button_hover-Font_color = ;
+Donation_goal-Style_2-Title-Font_family = ;
+Donation_goal-Style_2-Title-Font_color = ;
+Donation_goal-Style_2-Donation_description-Font_family = ;
+Donation_goal-Style_2-Donation_description-Font_size = ;
+Donation_goal-Style_2-Donation_description-Font_weight = ;
+Donation_goal-Style_2-Donation_description-Font_style = ;
+Donation_goal-Style_2-Donation_description-Text_decoration = ;
+Donation_goal-Style_2-Donation_description-Font_color = ;
+Donation_goal-Style_2-Donation_bar-Background_color = ;
+Donation_goal-Style_2-Donation_bar_background-Background_color = ;
+Donation_goal-Style_2-Donation_bar_border_color-Border_color = ;
+Donation_goal-Style_2-Donation_bar_percentage-Font_color = ;
+Donation_goal-Style_2-Donation_labels-Font_family = ;
+Donation_goal-Style_2-Donation_labels-Font_size = ;
+Donation_goal-Style_2-Donation_labels-Font_weight = ;
+Donation_goal-Style_2-Donation_labels-Font_style = ;
+Donation_goal-Style_2-Donation_labels-Text_decoration = ;
+Donation_goal-Style_2-Donation_labels-Font_color = ;
+Donation_goal-Style_2-Donation_button-Background_color = ;
+Donation_goal-Style_2-Donation_button-Font_color = ;
+Donation_goal-Style_2-Donation_button_hover-Background_color = ;
+Donation_goal-Style_2-Donation_button_hover-Font_color = ;
+
+
+
+Featured_member-Title-Background_color = ;
+Featured_member-Title-Font_family = ;
+Featured_member-Title-Font_color = ;
+Featured_member-Title-Font_size = ;
+Featured_member-Title-Font_weight = ;
+Featured_member-Title-Font_style = ;
+Featured_member-Title-Text_decoration = ;
+
+Featured_member-Member_label-Background_color = ;
+Featured_member-Member_label-Font_family = ;
+Featured_member-Member_label-Font_size = ;
+Featured_member-Member_label-Font_weight = ;
+Featured_member-Member_label-Font_style = ;
+Featured_member-Member_label-Text_decoration = ;
+Featured_member-Member_label-Font_color = ;
+
+Featured_member-Member_label_on_hover-Background_color = ;
+Featured_member-Member_label_on_hover-Text_decoration = ;
+Featured_member-Member_label_on_hover-Font_color = ;
+
+Featured_member-Label_2-Background_color = ;
+Featured_member-Label_2-Font_family = ;
+Featured_member-Label_2-Font_color = ;
+Featured_member-Label_2-Font_size = ;
+Featured_member-Label_2-Font_weight = ;
+Featured_member-Label_2-Font_style = ;
+Featured_member-Label_2-Text_decoration = ;
+
+Featured_member-Label_3-Background_color = ;
+Featured_member-Label_3-Font_family = ;
+Featured_member-Label_3-Font_color = ;
+Featured_member-Label_3-Font_size = ;
+Featured_member-Label_3-Font_weight = ;
+Featured_member-Label_3-Font_style = ;
+Featured_member-Label_3-Text_decoration = ;
+
+
+Featured_member-Link_to_member_directory-Background_color = ;
+Featured_member-Link_to_member_directory-Font_family = ;
+Featured_member-Link_to_member_directory-Font_size = ;
+Featured_member-Link_to_member_directory-Font_weight = ;
+Featured_member-Link_to_member_directory-Font_style = ;
+Featured_member-Link_to_member_directory-Text_decoration = ;
+Featured_member-Link_to_member_directory-Font_color = ;
+
+Featured_member-Link_to_member_directory_on_hover-Background_color = ;
+Featured_member-Link_to_member_directory_on_hover-Text_decoration = ;
+Featured_member-Link_to_member_directory_on_hover-Font_color = ;
+
+
+
+Table-Column_headings-Font_family = ;
+Table-Column_headings-Font_size = ;
+Table-Column_headings-Font_weight = ;
+Table-Column_headings-Font_style = ;
+Table-Column_headings-Text_decoration = ;
+Table-Column_headings-Font_color = ;
+Table-Column_headings-Background_color = ;
+
+Table-Table_row-Font_family = ;
+Table-Table_row-Font_size = ;
+Table-Table_row-Font_weight = ;
+Table-Table_row-Font_style = ;
+Table-Table_row-Text_decoration = ;
+Table-Table_row-Font_color = ;
+Table-Table_row-Background_color = ;
+Table-Table_row_on_hover-Background_color = ;
+Table-Table_links-Font_color = ;
+Table-Table_links_on_hover-Font_color = ;
+
+
+
+Blog-Author-Font_family = ;
+Blog-Author-Font_size = ;
+Blog-Author-Font_weight = ;
+Blog-Author-Font_style = ;
+Blog-Author-Text_decoration = ;
+Blog-Author-Font_color = ;
+Blog-Date_and_time-Font_family = ;
+Blog-Date_and_time-Font_size = ;
+Blog-Date_and_time-Font_weight = ;
+Blog-Date_and_time-Font_style = ;
+Blog-Date_and_time-Text_decoration = ;
+Blog-Date_and_time-Font_color = ;
+Blog-Links-Font_color = ;
+Blog-Links_on_hover-Font_color = ;
+Blog-Icons-Font_color = ;
+
+
+
+
+Forum-Forum_category-Font_family = ;
+Forum-Forum_category-Font_size = ;
+Forum-Forum_category-Font_weight = ;
+Forum-Forum_category-Font_style = ;
+Forum-Forum_category-Text_decoration = ;
+Forum-Forum_category-Font_color = ;
+Forum-Forum_category-Background_color = ;
+
+Forum-Column_headings-Font_family = ;
+Forum-Column_headings-Font_size = ;
+Forum-Column_headings-Font_weight = ;
+Forum-Column_headings-Font_style = ;
+Forum-Column_headings-Text_decoration = ;
+Forum-Column_headings-Font_color = ;
+
+Forum-Table_row-Font_family = ;
+Forum-Table_row-Font_size = ;
+Forum-Table_row-Font_weight = ;
+Forum-Table_row-Font_style = ;
+Forum-Table_row-Text_decoration = ;
+Forum-Table_row-Font_color = ;
+Forum-Table_row-Background_color = ;
+
+Forum-Table_row_on_hover-Background_color = ;
+
+Forum-Table_links-Font_color = ;
+
+Forum-Table_links_on_hover-Font_color = ;
+
+Forum-Author-Font_family = ;
+Forum-Author-Font_size = ;
+Forum-Author-Font_weight = ;
+Forum-Author-Font_style = ;
+Forum-Author-Text_decoration = ;
+Forum-Author-Font_color = ;
+
+Forum-Date_and_time-Font_family = ;
+Forum-Date_and_time-Font_size = ;
+Forum-Date_and_time-Font_weight = ;
+Forum-Date_and_time-Font_style = ;
+Forum-Date_and_time-Text_decoration = ;
+Forum-Date_and_time-Font_color = ;
+
+Forum-Icons-Font_color = ;
+
+
+
+
+Log_in_gadgets-Text-Font_color = ;
+Log_in_gadgets-Input_fields-Font_color = ;
+Log_in_gadgets-Input_fields-Background_color = ;
+Log_in_gadgets-Labels-Font_color = ;
+Log_in_gadgets-Links-Font_color = ;
+Log_in_gadgets-Links_on_hover-Font_color = ;
+Log_in_gadgets-Button-Font_color = ;
+Log_in_gadgets-Button-Background_color = ;
+Log_in_gadgets-Button_on_hover-Font_color = ;
+Log_in_gadgets-Button_on_hover-Background_color = ;
+
+
+
+
+Button_styles-Style_1-Normal-Background_color = ;
+Button_styles-Style_1-Normal-Font_family = ;
+Button_styles-Style_1-Normal-Font_size = ;
+Button_styles-Style_1-Normal-Font_weight = ;
+Button_styles-Style_1-Normal-Font_style = ;
+Button_styles-Style_1-Normal-Text_decoration = ;
+Button_styles-Style_1-Normal-Font_color = ;
+
+Button_styles-Style_1-Hover-Background_color = ;
+Button_styles-Style_1-Hover-Font_family = ;
+Button_styles-Style_1-Hover-Font_size = ;
+Button_styles-Style_1-Hover-Font_weight = ;
+Button_styles-Style_1-Hover-Font_style = ;
+Button_styles-Style_1-Hover-Text_decoration = ;
+Button_styles-Style_1-Hover-Font_color = ;
+
+Button_styles-Style_2-Normal-Background_color = ;
+Button_styles-Style_2-Normal-Font_family = ;
+Button_styles-Style_2-Normal-Font_size = ;
+Button_styles-Style_2-Normal-Font_weight = ;
+Button_styles-Style_2-Normal-Font_style = ;
+Button_styles-Style_2-Normal-Text_decoration = ;
+Button_styles-Style_2-Normal-Font_color = ;
+
+Button_styles-Style_2-Hover-Background_color = ;
+Button_styles-Style_2-Hover-Font_family = ;
+Button_styles-Style_2-Hover-Font_size = ;
+Button_styles-Style_2-Hover-Font_weight = ;
+Button_styles-Style_2-Hover-Font_style = ;
+Button_styles-Style_2-Hover-Text_decoration = ;
+Button_styles-Style_2-Hover-Font_color = ;
+
+Button_styles-Style_3-Normal-Background_color = ;
+Button_styles-Style_3-Normal-Font_family = ;
+Button_styles-Style_3-Normal-Font_size = ;
+Button_styles-Style_3-Normal-Font_weight = ;
+Button_styles-Style_3-Normal-Font_style = ;
+Button_styles-Style_3-Normal-Text_decoration = ;
+Button_styles-Style_3-Normal-Font_color = ;
+
+Button_styles-Style_3-Hover-Background_color = ;
+Button_styles-Style_3-Hover-Font_family = ;
+Button_styles-Style_3-Hover-Font_size = ;
+Button_styles-Style_3-Hover-Font_weight = ;
+Button_styles-Style_3-Hover-Font_style = ;
+Button_styles-Style_3-Hover-Text_decoration = ;
+Button_styles-Style_3-Hover-Font_color = ;
+
+
+Button_styles-Style_4-Normal-Background_color = ;
+Button_styles-Style_4-Normal-Font_family = ;
+Button_styles-Style_4-Normal-Font_size = ;
+Button_styles-Style_4-Normal-Font_weight = ;
+Button_styles-Style_4-Normal-Font_style = ;
+Button_styles-Style_4-Normal-Text_decoration = ;
+Button_styles-Style_4-Normal-Font_color = ;
+
+Button_styles-Style_4-Hover-Background_color = ;
+Button_styles-Style_4-Hover-Font_family = ;
+Button_styles-Style_4-Hover-Font_size = ;
+Button_styles-Style_4-Hover-Font_weight = ;
+Button_styles-Style_4-Hover-Font_style = ;
+Button_styles-Style_4-Hover-Text_decoration = ;
+Button_styles-Style_4-Hover-Font_color = ;
+
+Navigation_gadgets-Breadcrumbs-Style_Basic-General-Font_family = ;
+Navigation_gadgets-Breadcrumbs-Style_Basic-General-Font_size = ;
+Navigation_gadgets-Breadcrumbs-Style_Basic-General-Font_weight = ;
+Navigation_gadgets-Breadcrumbs-Style_Basic-General-Font_style = ;
+Navigation_gadgets-Breadcrumbs-Style_Basic-General-Text_decoration = ;
+Navigation_gadgets-Breadcrumbs-Style_Basic-General-Font_color = ;
+Navigation_gadgets-Breadcrumbs-Style_Basic-Link-Font_color = ;
+Navigation_gadgets-Breadcrumbs-Style_Basic-Link_on_hover-Font_color = ;
+Navigation_gadgets-Breadcrumbs-Style_Basic-Current_page-Font_color = ;
+
+Navigation_gadgets-Breadcrumbs-Style_1-General-Font_family = ;
+Navigation_gadgets-Breadcrumbs-Style_1-General-Font_size = ;
+Navigation_gadgets-Breadcrumbs-Style_1-General-Font_weight = ;
+Navigation_gadgets-Breadcrumbs-Style_1-General-Font_style = ;
+Navigation_gadgets-Breadcrumbs-Style_1-General-Text_decoration = ;
+Navigation_gadgets-Breadcrumbs-Style_1-General-Font_color = ;
+Navigation_gadgets-Breadcrumbs-Style_1-Link-Font_color = ;
+Navigation_gadgets-Breadcrumbs-Style_1-Link_on_hover-Font_color = ;
+Navigation_gadgets-Breadcrumbs-Style_1-Current_page-Font_color = ;
+
+
+Navigation_gadgets-Navigation_links-Style_basic-Link-Font_color = ;
+Navigation_gadgets-Navigation_links-Style_basic-Link_on_hover-Font_color = ;
+Navigation_gadgets-Navigation_links-Style_1-Link-Font_color = ;
+Navigation_gadgets-Navigation_links-Style_1-Link_on_hover-Font_color = ;
+Navigation_gadgets-Horizontal_Menu-Normal_state-Main-Border_color = ;
+Navigation_gadgets-Horizontal_Menu-Normal_state-Main-Normal-Background_color = ;
+Navigation_gadgets-Horizontal_Menu-Normal_state-Main-Normal-Font_family = ;
+Navigation_gadgets-Horizontal_Menu-Normal_state-Main-Normal-Font_color = ;
+Navigation_gadgets-Horizontal_Menu-Normal_state-Main-Hover-Font_color = ;
+Navigation_gadgets-Horizontal_Menu-Normal_state-Drop_down-Normal-Background_color = ;
+Navigation_gadgets-Horizontal_Menu-Normal_state-Drop_down-Normal-Font_family = ;
+Navigation_gadgets-Horizontal_Menu-Normal_state-Drop_down-Normal-Font_color = ;
+Navigation_gadgets-Horizontal_Menu-Normal_state-Drop_down-Hover-Background_color = ;
+Navigation_gadgets-Horizontal_Menu-Normal_state-Drop_down-Hover-Font_color = ;
+Navigation_gadgets-Horizontal_Menu-Wide_state-Main-Normal-Background_color = ;
+Navigation_gadgets-Horizontal_Menu-Wide_state-Main-Normal-Font_family = ;
+Navigation_gadgets-Horizontal_Menu-Wide_state-Main-Normal-Font_color = ;
+Navigation_gadgets-Horizontal_Menu-Wide_state-Main-Hover-Font_color = ;
+Navigation_gadgets-Horizontal_Menu-Wide_state-Drop_down-Normal-Background_color = ;
+Navigation_gadgets-Horizontal_Menu-Wide_state-Drop_down-Normal-Font_family = ;
+Navigation_gadgets-Horizontal_Menu-Wide_state-Drop_down-Normal-Font_color = ;
+Navigation_gadgets-Horizontal_Menu-Wide_state-Drop_down-Hover-Background_color = ;
+Navigation_gadgets-Horizontal_Menu-Wide_state-Drop_down-Hover-Font_color = ;
+
+Navigation_gadgets-Vertical_Menu-Style_basic-Main-Normal-Background_color = ;
+Navigation_gadgets-Vertical_Menu-Style_basic-Main-Normal-Font_family = ;
+Navigation_gadgets-Vertical_Menu-Style_basic-Main-Normal-Font_color = ;
+Navigation_gadgets-Vertical_Menu-Style_basic-Main-Hover-Font_color = ;
+Navigation_gadgets-Vertical_Menu-Style_basic-Drop_down-Normal-Background_color = ;
+Navigation_gadgets-Vertical_Menu-Style_basic-Drop_down-Normal-Font_family = ;
+Navigation_gadgets-Vertical_Menu-Style_basic-Drop_down-Normal-Font_color = ;
+Navigation_gadgets-Vertical_Menu-Style_basic-Drop_down-Hover-Background_color = ;
+Navigation_gadgets-Vertical_Menu-Style_basic-Drop_down-Hover-Font_color = ;
+Navigation_gadgets-Vertical_Menu-Style_1-Main-Normal-Background_color = ;
+Navigation_gadgets-Vertical_Menu-Style_1-Main-Normal-Font_family = ;
+Navigation_gadgets-Vertical_Menu-Style_1-Main-Normal-Font_color = ;
+Navigation_gadgets-Vertical_Menu-Style_1-Main-Hover-Font_color = ;
+Navigation_gadgets-Vertical_Menu-Style_1-Drop_down-Normal-Background_color = ;
+Navigation_gadgets-Vertical_Menu-Style_1-Drop_down-Normal-Font_family = ;
+Navigation_gadgets-Vertical_Menu-Style_1-Drop_down-Normal-Font_color = ;
+Navigation_gadgets-Vertical_Menu-Style_1-Drop_down-Hover-Background_color = ;
+Navigation_gadgets-Vertical_Menu-Style_1-Drop_down-Hover-Font_color = ;
+
+Navigation_gadgets-Secondary_menu-Style_basic-Font_family = ;
+Navigation_gadgets-Secondary_menu-Style_basic-Font_size = ;
+Navigation_gadgets-Secondary_menu-Style_basic-Font_weight = ;
+Navigation_gadgets-Secondary_menu-Style_basic-Font_style = ;
+Navigation_gadgets-Secondary_menu-Style_basic-Link-Font_color = ;
+Navigation_gadgets-Secondary_menu-Style_basic-Link_on_hover-Font_color = ;
+Navigation_gadgets-Secondary_menu-Style_1-Font_family = ;
+Navigation_gadgets-Secondary_menu-Style_1-Font_size = ;
+Navigation_gadgets-Secondary_menu-Style_1-Font_weight = ;
+Navigation_gadgets-Secondary_menu-Style_1-Font_style = ;
+Navigation_gadgets-Secondary_menu-Style_1-Link-Font_color = ;
+Navigation_gadgets-Secondary_menu-Style_1-Link_on_hover-Font_color = ;
+Navigation_gadgets-Secondary_menu-Style_2-Font_family = ;
+Navigation_gadgets-Secondary_menu-Style_2-Font_size = ;
+Navigation_gadgets-Secondary_menu-Style_2-Font_weight = ;
+Navigation_gadgets-Secondary_menu-Style_2-Font_style = ;
+Navigation_gadgets-Secondary_menu-Style_2-Link-Font_color = ;
+Navigation_gadgets-Secondary_menu-Style_2-Link_on_hover-Font_color = ;
+
+
+Navigation_gadgets-Sitemap-Style_basic-General-Font_family = ;
+Navigation_gadgets-Sitemap-Style_basic-General-Font_size = ;
+Navigation_gadgets-Sitemap-Style_basic-General-Font_weight = ;
+Navigation_gadgets-Sitemap-Style_basic-General-Font_style = ;
+Navigation_gadgets-Sitemap-Style_basic-General-Text_decoration = ;
+Navigation_gadgets-Sitemap-Style_basic-Link-Font_color = ;
+Navigation_gadgets-Sitemap-Style_basic-Link_on_hover-Font_color = ;
+
+Navigation_gadgets-Sitemap-Style_1-General-Font_family = ;
+Navigation_gadgets-Sitemap-Style_1-General-Font_size = ;
+Navigation_gadgets-Sitemap-Style_1-General-Font_weight = ;
+Navigation_gadgets-Sitemap-Style_1-General-Font_style = ;
+Navigation_gadgets-Sitemap-Style_1-General-Text_decoration = ;
+Navigation_gadgets-Sitemap-Style_1-Link-Font_color = ;
+Navigation_gadgets-Sitemap-Style_1-Link_on_hover-Font_color = ;
+
+
+WA_Branding-Backgrounds-Outer_branding-Background_color = ;
+WA_Branding-Backgrounds-Outer_branding-Background_image = ;
+WA_Branding-Backgrounds-Outer_branding-Background_position = ;
+WA_Branding-Backgrounds-Outer_branding-Background_repeat = ;
+
+WA_Branding-Backgrounds-Branding-Background_color = ;
+WA_Branding-Backgrounds-Branding-Background_image = ;
+WA_Branding-Backgrounds-Branding-Background_position = ;
+WA_Branding-Backgrounds-Branding-Background_repeat = ;
+
+WA_Branding-Text-Font_family = ;
+WA_Branding-Text-Font_size = ;
+WA_Branding-Text-Font_weight = ;
+WA_Branding-Text-Font_style = ;
+WA_Branding-Text-Font_color = ;
+
+WA_Branding-Link-Background_color = ;
+WA_Branding-Link-Font_family = ;
+WA_Branding-Link-Font_size = ;
+WA_Branding-Link-Font_weight = ;
+WA_Branding-Link-Font_style = ;
+WA_Branding-Link-Text_decoration = ;
+WA_Branding-Link-Font_color = ;
+
+WA_Branding-Link_on_hover-Background_color = ;
+WA_Branding-Link_on_hover-Text_decoration = ;
+WA_Branding-Link_on_hover-Font_color = ;

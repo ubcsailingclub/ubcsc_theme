@@ -1,0 +1,335 @@
+/* ---- Gadget contact profile adaptive behavior. State 3 ---- */
+
+.gadget-contactProfile-state3()
+{
+
+    .WaGadgetContactProfile
+    {
+
+        .topButtonsOuterContainer
+        {
+          .topButtonsContainer
+          {
+            .inner
+            {
+              a
+              {
+                display: block;
+                margin-top: 10px;
+              }
+
+              div:first-child
+              {
+                float: none;
+
+              }
+              span.totalBalance
+              {
+                float: none;
+                display: block;
+                margin-top: 10px;
+                padding-top: 0;
+              }
+            }
+          }
+        }
+        .memberDetailsTabsOuterContainer
+        {
+
+            ul.memberDetailsTabMenu
+            {
+
+                li
+                {
+                    display: block;
+                    float: none;
+                    margin: 5px 0;
+                }
+            }
+        }
+
+        .profileMainOuterContainer
+        {
+
+            #idMembershipLevelContainerHolder,
+            #idExpirationDateContainerHolder,
+            #idSectionGroupAccountContainer
+            {
+                .actionButtonContainer
+                {
+                    margin: 0 0 10px 0;
+                }
+            }
+        }
+    }
+
+    .WaGadgetContactProfileStateFinances,
+    .WaGadgetContactProfileStateDonations
+    {
+
+        .genericList
+        {
+            .genericListHeaderContainer
+            {
+              table
+              {
+                td.infoContainer
+                {
+                  display: block;
+                  padding-left: 0;
+                  padding-top: 10px;
+                }
+              }
+            }
+
+            .genericListTable
+            {
+                tbody
+                {
+
+                    tr
+                    {
+                        td,
+                        td.firstTd
+                        {
+                            padding-left: 30% !important;
+                        }
+
+                        td
+                        {
+                            position: relative;
+                            text-align: left;
+                            width: auto;
+
+                            &:before
+                            {
+                                display: inline-block;
+                                left: 0;
+                                top: 0;
+                                position: absolute;
+                                width: 30%;
+                            }
+                        }
+
+                        td:nth-of-type(1):before
+                        {
+                            content: 'Date';
+                        }
+
+                        td:nth-of-type(2)
+                        {
+
+                            div
+                            {
+                                margin: 0;
+
+                                &:first-child
+                                {
+                                    display: inline-block;
+                                    padding: 0;
+                                }
+                            }
+
+                            &:before
+                            {
+                                content: 'Transaction';
+                            }
+                        }
+
+                        td:nth-of-type(3)
+                        {
+                            div
+                            {
+                                margin: 0;
+                            }
+
+                            &::before
+                            {
+                                content: 'Balance due';
+                                vertical-align: top;
+                            }
+                        }
+
+                        td.lastTd
+                        {
+                            text-align: left;
+
+                            .alert
+                            {
+                                display: inline-block;
+                                float: none;
+                            }
+                        }
+                    }
+
+                    tr.bottomRow
+                    {
+
+                        td
+                        {
+                            padding-left: 0 !important;
+
+                            &:before
+                            {
+                                display: none;
+                                content: '';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .WaGadgetContactProfileStateEventRegistrations {
+        .genericList {
+            .genericListHeaderContainer {
+                table {
+                    td.infoContainer {
+                        display: block;
+                        padding-left: 0;
+                        padding-top: 10px;
+                    }
+                }
+            }
+
+            .genericListTable {
+                tbody {
+                    tr {
+                        td,
+                        td.firstTd {
+                            padding-left: 30% !important;
+                        }
+
+                        td {
+                            position: relative;
+                            text-align: left;
+                            width: auto;
+
+                            &:before {
+                                display: inline-block;
+                                left: 0;
+                                top: 0;
+                                position: absolute;
+                                width: 30%;
+                            }
+                        }
+
+                        td:nth-of-type(1):before {
+                            content: 'Event';
+                        }
+
+                        td:nth-of-type(2) {
+                            div {
+                                margin: 0;
+
+                                &:first-child {
+                                    display: inline-block;
+                                    padding: 0;
+                                }
+                            }
+
+                            &:before {
+                                content: 'Registration type';
+                            }
+                        }
+
+                        td:nth-of-type(3) {
+                            div {
+                                margin: 0;
+                            }
+
+                            &::before {
+                                content: 'Status';
+                                vertical-align: top;
+                            }
+                        }
+
+                        td.lastTd {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .WaGadgetContactProfileStatePhotoGallery
+    {
+
+        #idMemberPhotoAlbumContainer
+        {
+
+            #idPhotoAlbumHeaderContainer
+            {
+
+                .buttonsInTitleContainer
+                {
+                    float: left;
+                    width: 100%;
+
+                    input.typeButton
+                    {
+                        margin: 15px 15px 0 0;
+                    }
+                }
+            }
+
+
+            #idPhotoAlbumTitleMainContainer
+            {
+                .titleLeftContainer
+                {
+                    padding-right: 15px;
+                }
+
+                .titleRightContainer
+                {
+                    float: left;
+
+                    span.photoLabel
+                    {
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+
+        #idPhotoHeaderContainer
+        {
+
+            .buttonsInTitleContainer
+            {
+                float: left;
+                width: 100%;
+
+                input.typeButton
+                {
+                    margin: 15px 15px 0 0;
+                }
+            }
+        }
+
+
+        #idPhotoMainContainer
+        {
+
+            #idPhotoMainSectionContainer
+            {
+
+                #idImageContainer
+                {
+
+                    a
+                    {
+
+                        img
+                        {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

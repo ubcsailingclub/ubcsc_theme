@@ -1,0 +1,564 @@
+// Misc
+.functionalPageContainer a.additionalLink { margin-left: 15px; }
+
+.WaGadgetPublicWizard[class^="WaGadget"] { overflow: visible; }
+
+
+// Symbol for required field
+.mandatorySymbol,
+.requiredSymbol { color: red; font-weight: bold; font-size: 1em; padding-right: 2px; }
+
+.fieldSubContainer td.right .fieldBody .mandatorySymbol { display: block; color: red; font-weight: normal; font-size: 12px; padding-right: 2px; padding-top: 3px; }
+
+
+// Symbol for required field
+.validationError { display: block; color: red; font-size: 12px; }
+.calculatedExtraChargeContainer
+{
+
+  .validationError[style*='display: inline'] // to recover inline style 'display: inline', when validation message appears
+  {
+	  display: block !important;
+	  margin-top: 5px;
+  }
+}
+
+// Error text
+[type="button"],
+[type="submit"],
+[type="submitButton"] { cursor: pointer; padding: 2px 7px; overflow: visible; width: auto; }
+
+
+// Clear selection
+.clearSelectionLabel { cursor: pointer; display: inline-block; margin: 0 0 8px; text-decoration: underline; }
+
+
+// Basic structure of form
+.generalFormOuterContainer {
+	.formTitleOuterContainer {  } // title block ->
+	.captionoutercontainer {  } // section divider and name ->
+	.sectionOuterContainer {
+		.sectionContainer {
+			.fieldContainer {  } // different fields ->
+		}
+	}
+	.navigationOuterContainer {  } // control link and bottoms under form ->
+}
+
+
+// Title block
+.formTitleOuterContainer { margin: 0 0 20px 0;
+	.formTitleContainer { padding: 0 0 3px 0; border-bottom: 1px solid #a0a0a0;
+		.inner { .clearfix();
+			h3.formTitle { padding: 0; margin: 0; float: left; font-size: 16px; font-weight: normal; color: #555; } // title form
+			.mandatoryFieldsTitle { float: right; text-align: right; font-size: 12px; padding: 5px 0 0 0;
+				span.mandatorySymbol {  } // symbol "*"
+				strong { color: #7c7c7c; } // text "Mandatory fields"
+			}
+		}
+	}
+}
+
+
+// Section divider and name
+.captionOuterContainer { padding: 6px 0 5px 0; margin-top: 30px; margin-bottom: 20px; background-color: #e5eaea;
+	.captionContainer { .clearfix();
+		.fieldLabel { width: 25%; float: left;
+			div {  } // empty div
+		}
+		.fieldBody { width: 75%; float: left;
+			h4 { margin: 0; padding: 0; color: #444; font-size: 14px; 
+				div {
+					span {  } // section name
+				}
+				.explanation { display: block; }
+			}
+		}
+	}
+}
+
+
+// Common field
+.fieldSubContainer { margin-bottom: 10px; .clearfix();
+	// label
+	.fieldLabel { width: 23%; float: left; text-align: right; padding: 4px 2% 0 0; color: #555; font-size: 13px; line-height: 16px;
+		span.mandatorySymbol {  }
+		span {  } // text of field label
+		strong.mandatoryLabel {  }
+		.subscriptionType { vertical-align: top; }
+		.labeledImage { white-space: nowrap; vertical-align: top;
+			span { display: inline-block; vertical-align: baseline; }
+	  		img { display: inline-block; vertical-align: baseline; margin: 0px 0px 0 5px; position: relative; top: 0.1em; }
+		}
+		.memberFormCheckBox { display: inline-block;
+			input[type=checkbox] { display: inline-block; width: 13px; height: 13px; margin: 0px 5px 0 0; padding: 0; vertical-align: baseline; position: relative; top: 0.1em; }
+			label { display: inline-block; vertical-align: baseline; }
+		}
+	}
+	// input
+	.fieldBody { width: 75%; float: left; font-size: 13px; padding: 4px 0 0 0;
+		table { width: auto; }
+		& > .typeInstruction { padding: 3px 0 0 0; color: #555; font-size: 12px; font-style: italic; }
+		& > .textLine { display: block; }
+		.fieldItem { margin: 0 0 6px 0;
+			span.typeCheckboxContainer,
+			span.typeRadioContainer { display: block; vertical-align: top; margin: 1px 9px 0 0; width: 13px; float: left;
+				input.typeCheckbox,
+				input.typeRadio { display: inline-block; width: 13px; height: 13px; margin: 0px 0 0 0; padding: 0; vertical-align: top; }
+			}
+			span.label { display: block; font-size: 13px; line-height: 16px; overflow: hidden; zoom: 1;
+				.textLine { display: block; margin: 0 0 0px 0; }
+				img { vertical-align: top; }
+				label {
+					span.textLine {  } // text for radiobutton
+				}
+				.typeInstruction { color: #888888;
+					.levelDescription { font-size: 0.9em; }
+				}
+				label.levelProperties {  }
+				.labelSubTitle {  }
+			}
+
+			&.disabled .label span:first-child label { color: #888; padding-right: 20px; background: url(<$StaticModel.ThemeUrl$>/images/icons/icon-warning.png) no-repeat right 1px; }
+		
+			// event registration type radio group customization
+			&.eventRegistrationTypeRadioWrapper.disabled .label span:first-child label { padding-right: 0; background: none; }
+			&.eventRegistrationTypeRadioWrapper .availableRegistrationCount { color: #888; }
+			&.eventRegistrationTypeRadioWrapper a.warningDetailsLink { cursor: help; text-decoration: underline; }
+			&.eventRegistrationTypeRadioWrapper .warningLabel { padding-left: 23px; background: url(<$StaticModel.ThemeUrl$>/images/icons/icon-warning-new.png) no-repeat 5px center; }
+		}
+		.groupBodyVertical { padding: 0px 0 0 0; }
+		& > .fieldItem { padding: 0px 0 0 0; }                      
+		a.inactiveLink { text-decoration: line-through !important; }
+
+		// just value
+		& > span,
+		& > strong { display: inline-block; padding: 0px 0 0 0; }
+		& > .memberIdDescription { display: inline; }
+	  	& > a { }
+		ul.list { margin: 0 0 -2px 0; padding: 0px 0 0 0; list-style: none;
+			li { height: auto; min-height: 16px; margin: 0 0 2px 0;
+				&.checked { padding-left: 20px; background: url(<$StaticModel.ThemeUrl$>/images/recEmails.gif) left top no-repeat; }
+				&.unchecked { padding-left: 20px; background: url(<$StaticModel.ThemeUrl$>/images/recEmails-n.gif) left top no-repeat; }
+				ul.list { margin-left: 17px; }
+			}
+		}
+	}
+	table { margin: 0; padding: 0; border: 0; border-collapse: collapse; width: 100%;
+		table { width: auto; }
+		td.left { width: 25%; padding: 0; text-align: right; vertical-align: top;
+			.ie8 & { padding-right: 15px; }
+			.fieldLabel { width: auto; float: none; padding: 4px 8% 0 0; }
+		}
+		td.right { width: 75%; padding: 0; text-align: left; vertical-align: top;
+			.fieldBody { width: auto; float: none; }
+		}
+	}
+}
+
+.pleaseWait {
+	img { vertical-align: top; margin-right: 5px; }
+	span {  }
+}
+
+#idButtonField { margin: 30px 0 0 0; }
+#idActionButtonsContainer { margin: 30px 0 0 0; }
+
+
+// Field - file
+.fieldContainer.fileFieldContainer {
+	.fieldSubContainer {
+		.fieldLabel {
+			span {  } // text of field label
+		}
+		.fieldBody {
+			.pleaseWait { // wait progress if file is uploading
+				img {  }
+			}
+			iframe { margin-top: -3px; } // there are input file
+			.typeInstruction {  } // hint text
+		}
+	}
+}
+
+
+// Field - text
+.fieldContainer.textFieldContainer {
+	.fieldSubContainer.singleStringContainer {
+		table {
+			td.left {
+				.fieldLabel {
+					span {  } // text of field label
+					strong.mandatoryLabel { // if Mandatory field
+						span {  }  // text of field label
+					}
+				}
+			}
+			td.right {
+				.fieldBody {
+					input.subjectTextBox,
+					input.typeText,
+					input[type=text] { width: 70%; border: 1px solid #c1cbcc; margin: -3px 0 0 0; padding: 3px 4px 3px 4px; font-size: 13px; line-height: 16px; color: #000; .box-sizing(border-box); z-index: e("expression( runtimeStyle.zIndex = 1, runtimeStyle.width = parentNode.offsetWidth*0.7 - 10 + 'px');"); }
+					span.validationError { // error message
+						div {  }
+					}
+				}
+			}
+		}
+	}
+}
+
+// Field - extra charge calculation
+.fieldContainer.calculatedExtraChargeContainer {
+	.fieldSubContainer {
+		table {
+			td.left {
+				.fieldLabel {
+					span {  } // text of field label
+					strong.mandatoryLabel { // if Mandatory field
+						span {  }  // text of field label
+					}
+				}
+			}
+			td.right {
+				.fieldBody {
+					input.subjectTextBox,
+					input.typeText,
+					input[type=text] { border: 1px solid #c1cbcc; margin: -3px 0 0 0; padding: 3px 4px 3px 4px; font-size: 13px; line-height: 16px; color: #000; .box-sizing(border-box); }
+					span.validationError { // error message
+						div {  }
+					}
+				}
+			}
+		}
+	}
+}
+
+// Field - number of guest limits
+.fieldContainer.textFieldContainer {
+	.fieldSubContainer.singleStringContainer {
+		table {
+			td.right {
+				.fieldBody {
+					input.numberOfGuestsInput, select.numberOfGuestsInput {
+						width: 45px;
+					}
+					select.numberOfGuestsInput {
+						padding: 1px 1px 2px 1px;
+						margin: -2px 0 0 0;
+						font-size: 15px;
+						font-family: 'Open Sans';
+						border: 1px solid #908f8f;
+						background: white;
+						color: #373737;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Field - number of guest limits
+.fieldContainer.textFieldContainer {
+	.fieldSubContainer.singleStringContainer {
+		table {
+			td.right {
+				.fieldBody {
+					input.numberOfGuestsInput, select.numberOfGuestsInput {
+						width: 45px;
+					}
+					select.numberOfGuestsInput {
+						padding: 1px 1px 2px 1px;
+						margin: -2px 0 0 0;
+						font-size: 15px;
+						font-family: 'Open Sans';
+						border: 1px solid #908f8f;
+						background: white;
+						color: #373737;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Field - radio
+.fieldContainer.groupContainer {
+	.fieldSubContainer.radioGroupContainer {
+		.fieldLabel {
+			span {  } // text of field label
+		}
+		.fieldBody	{
+			.groupBodyVertical {
+				.fieldItem {
+					span.typeRadioContainer {
+						input.typeRadio {  } // radiobutton
+					}
+					span.label {
+						label {
+							span.textLine {  } // text for radiobutton
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Field - checkbox
+.fieldContainer.groupContainer {
+	.fieldSubContainer.checkboxGroupContainer {
+		.fieldLabel {
+			span {  } // text of field label
+		}
+		.fieldBody {
+			.groupBodyVertical {
+				.fieldItem {
+					span.typeCheckboxContainer {
+						input.typeCheckbox {  } // checkbox
+					}
+					span.label {
+						label {
+							span.textLine { // text for checkbox
+								a {  } // rarely
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.groupContainer
+{
+	.fieldSubContainer.radioGroupContainer,
+	.fieldSubContainer.checkboxGroupContainer
+	{
+
+		.fieldBody
+		{
+			text-decoration: none;
+		}
+	}
+}
+
+// Field - select
+.fieldContainer.dropdownFieldContainer {
+	.fieldSubContainer.singleStringContainer {
+		table {
+			td.left {
+				.fieldLabel {
+					span {  } // text of field label
+				}
+			}
+			td.right {
+				.fieldBody {
+					select { width: 70%; margin: -3px 0 0 0; padding: 3px 4px 3px 4px; }
+				}
+			}
+		}
+	}
+}
+
+
+// Field - date picker
+.fieldContainer.textFieldContainer {
+	.fieldSubContainer.singleStringContainer {
+		table {
+			td.left {
+				.fieldLabel {
+					span {  } // text of field label
+				}
+			}
+			td.right {
+				.fieldBody
+				{
+					text-decoration: none;
+
+					span {
+						input { width: 80px; border: 1px solid #c1cbcc; margin: -3px 5px 0 0; padding: 3px 4px 3px 4px; font-size: 13px; line-height: 16px; color: #000; } // for input date
+						div {
+							img.DES_CalPopup {  } // click image - popup calendar
+						}
+					}
+					.mandatorySymbol.validationError {  } // error text
+					.requiredValidator.validationError {  } // error text
+				}
+			}
+		}
+	}
+}
+
+
+// Field - donation
+.fieldContainer.donationAmountContainer {
+	.fieldSubContainer {
+		.fieldBody {
+			input.typeText { width: 80px; margin: -3px 5px 0 0; padding: 3px 4px 3px 4px; border: 1px solid #c1cbcc; font-size: 13px; line-height: 16px; color: #000; }
+			.paymentSystemsIcons { padding-top: 5px; clear: both; }
+		}
+	}
+}
+
+
+// Field - calculatedExtraCharge
+.fieldContainer.calculatedExtraChargeContainer {
+	.fieldSubContainer {
+		.fieldBody {
+			input.typeText { width: 45px; margin: -3px 5px 0 0; padding: 3px 4px 3px 4px; border: 1px solid #c1cbcc; font-size: 13px; line-height: 16px; color: #000; }
+		}
+	}
+}
+
+
+// Field - textarea
+.fieldContainer.textFieldContainer {
+	.fieldSubContainer {
+		.fieldLabel {
+			span {  } // text of field label
+		}
+		.fieldBody {
+			textarea { width: 70%; height: 120px; border: 1px solid #c1cbcc; margin: -3px 0 0 0; padding: 3px 4px 3px 4px; font-size: 13px; line-height: 16px; color: #000; .box-sizing(border-box); z-index: e("expression( runtimeStyle.zIndex = 1, runtimeStyle.width = parentNode.offsetWidth*0.7 - 10 + 'px');"); } // for input text
+			span.mandatory {  } // limit for input
+		}
+	}
+}
+
+
+// Field - WYSIWYG
+.fieldContainer.textFieldContainer {
+	.fieldSubContainer.singleStringContainer {
+		.fieldLabel {
+			span {  } // text of field label
+		}
+		.fieldBody {
+			#idEditorContainer { width: 70%; border: 1px solid #c1cbcc; margin: -3px 0 0 0; .box-sizing(border-box); z-index: e("expression( runtimeStyle.zIndex = 1, runtimeStyle.width = parentNode.offsetWidth*0.7 - 2 + 'px');");
+				width: 550px;
+				overflow: hidden;
+				position: relative;
+
+				img { max-width: none; }
+
+				#idEditorToolbarContainer
+				{
+					.clearfix;
+					border-bottom: 1px solid #8cc63f;
+					background: #FFFFFF url(<$StaticModel.ThemeUrl$>/images/editor-toolbar-bg.gif) left center repeat-x;
+				}
+				TEXTAREA
+				{
+					width: 548px;
+					height: 250px;
+				}
+
+
+
+			}
+			span.mandatory {  } // limit for input
+		}
+	}
+}
+
+
+
+
+
+// Field - Captcha
+#idCaptchaImageContainer {
+	.fieldSubContainer {
+		.fieldLabel {  }
+	    .fieldBody {
+	        .captchaImageContainer { .clearfix;
+	            .captchaGuiding { margin-bottom: 7px; } // text message for to do
+	            .captchaImage { float: left; padding-right: 10px; max-width: calc(100% - 35px);
+	            	img { vertical-align: top; max-width: 100%; } // image with code
+				}
+	            .captchaIcons { float: left; width: 25px; // 2 images controls for captcha
+	            	a {
+	            		img {  }
+					}
+				}
+			}
+
+		}
+	}
+}
+
+
+
+// Control links and bottoms under form
+.navigationOuterContainer { margin: 20px 0 20px 0;
+	.navigationContainer { .clearfix;
+		.left { float: left;
+			input.nextButton,
+			input.typeButton,
+			input[type=submit] { margin-right: 10px; } // wizard button
+			a.additionalLink { margin: 0 10px 0 0; }
+		}
+		.right { float: right;
+			a.backLink { margin-left: 10px; } // "back" link
+			input.nextButton,
+			input.typeButton,
+			input[type=submit] { margin-left: 10px; } // wizard button
+		}
+	}
+}
+.generalFieldsContainer {
+	.fieldSubContainer {
+		input[type=submit],
+		input.typeButton { margin-right: 10px; } // wizard button
+	}
+}
+
+
+
+.bundlContact {
+	img { vertical-align: middle; }
+	a.bundlContact {  }
+}
+
+
+// additional for editor
+#idEditorContainer { overflow: hidden; position: relative; }
+#idEditorToolbarContainer {  }
+#idEditorFloatingToolbarContainer { border: 1px solid #A2A6AB; border-radius: 1px; background-color: #F5F5F5; box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.3); }
+#idEditorBodyContainer
+{
+  border: 1px solid #A2A6AB;
+  border-top: none;
+  padding: 7px;
+
+  #idEditorContainerHolder,
+  #idForumEditorContainer,
+  .gadgetBlogEditableArea
+  {
+    min-height: 200px;
+  }
+}
+
+#idEditorContainer {
+	input,
+	textarea { .box-sizing(content-box); }
+}
+
+
+/* WaGadgetContactProfile open Authorization buttons row (Facebook, GooglePlus) */
+
+#socialLoginContainer
+{
+
+    .fieldSubContainer
+    {
+
+        table
+        {
+
+            td
+            {
+                vertical-align: middle;
+            }
+        }
+    }
+}

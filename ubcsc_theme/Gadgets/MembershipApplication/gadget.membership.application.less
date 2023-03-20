@@ -1,0 +1,49 @@
+/****************************************************************************************************/
+/*	WaGadgetMembershipApplication                                                                         */
+/*		WaGadgetMembershipApplicationStateSelectLevel                                                          */
+/*		WaGadgetMembershipApplicationStateNotAvailable                                                         */
+/*		WaGadgetMembershipApplicationStateFillData                                                             */
+/*		WaGadgetMembershipApplicationStateReview                                                               */
+/*		WaGadgetMembershipApplicationIdentify                                                             */
+/*		WaGadgetMembershipApplicationStateDiscountCode                                                         */
+/****************************************************************************************************/
+
+.WaGadgetMembershipApplication
+{
+
+    &.WaGadgetMembershipApplicationStateIdentify
+    {
+
+        #idSectionIdentifyUserContainer
+        {
+
+            .fieldContainer
+            {
+
+                + .fieldContainer // remove margins and '&nbsp' label from message 'This e-mail already in use'
+                {
+
+                    .fieldSubContainer
+                    {
+                        margin: 0;
+                    }
+
+                    &#idCaptchaImageContainer
+                    {
+
+                        .fieldSubContainer
+                        {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import 'gadget.membership.application.state3.less';
+@media only screen and (max-width:@state3-maxwidth)
+{
+    .gadget-membershipApplication-state3();
+}
